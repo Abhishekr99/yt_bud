@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit import spinner
 from streamlit.web.server.server import server_port_is_manually_set
+import pandas as pd
 
 from utility import (
      extract_video_id,
@@ -13,6 +14,14 @@ from utility import (
      rag_answer
 )
 
+# Load language codes
+@st.cache_data
+def load_languages():
+    df = pd.read_csv("language_code.csv")
+    return dict(zip(df['Language'], df['Language_Code']))
+
+languages = load_languages()
+
 # --- Sidebar (Inputs) ---
 with st.sidebar:
     st.title("🎬 YT Buddy")
@@ -22,8 +31,14 @@ with st.sidebar:
     st.markdown("### Input Details")
 
     youtube_url = st.text_input("YouTube URL", placeholder="https://www.youtube.com/watch?v=...")
-    language = st.text_input("Video Language Code", placeholder="e.g., en, hi, es, fr", value="en")
-
+    
+    selected_language_name = st.selectbox(
+        "Video Language",
+        options=sorted(list(languages.keys())),
+        index=sorted(list(languages.keys())).index("English")
+    )
+    language = languages[selected_language_name]
+    print('language:', language)
     task_option = st.radio(
         "Choose what you want to generate:",
         ["Chat with Video", "Notes For You"]

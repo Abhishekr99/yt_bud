@@ -19,3 +19,4 @@ langchainhub
 pypdf
 rapidocr-onnxruntime
 requests
+pandas
