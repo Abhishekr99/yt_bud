@@ -7,11 +7,15 @@ from utility import (
      extract_video_id,
      get_transcript,
      translate_transcript,
-     generate_notes,
      get_important_topics,
      create_chunks,
      create_vector_store,
      rag_answer
+)
+from knowledge_gaps import (
+     identify_knowledge_gaps,
+     fetch_gap_contexts,
+     generate_enriched_notes
 )
 
 # Load language codes
@@ -65,18 +69,32 @@ if submit_button:
 
 
             if task_option=="Notes For You":
-                with spinner("Step 2/3: Extracting important Topics..."):
+                with spinner("Step 2/4: Extracting important Topics..."):
                     import_topics= get_important_topics(full_transcript)
                     st.subheader("Important Topics")
                     st.write(import_topics)
                     st.markdown("---")
 
-                with spinner("Step 3/3 : Generating Notes for you."):
-                    notes= generate_notes(full_transcript)
-                    st.subheader("Notes for you")
+                with spinner("Step 3/4: Spotting knowledge gaps and fetching context..."):
+                    gaps = identify_knowledge_gaps(full_transcript)
+                    print('gaps:', gaps)
+                    gap_contexts = fetch_gap_contexts(gaps)
+                    print('gap_contexts:', gap_contexts)
+                    st.subheader("Knowledge Gaps & Context")
+                    if gap_contexts:
+                        for item in gap_contexts:
+                            st.markdown(f"**{item['term']}** — {item['reason']}")
+                            st.caption(item["context"])
+                        st.markdown("---")
+                    else:
+                        st.info("No knowledge gaps detected for this transcript.")
+
+                with spinner("Step 4/4 : Generating enriched notes for you."):
+                    notes= generate_enriched_notes(full_transcript, gap_contexts)
+                    st.subheader("Enriched Notes")
                     st.write(notes)
 
-                st.success("Summary and Notes Generated.")
+                st.success("Enriched summary and notes generated.")
 
             if task_option == "Chat with Video":
                 with st.spinner("Step 2/3: Creating chunks and vector store...."):
