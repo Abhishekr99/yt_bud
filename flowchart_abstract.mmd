@@ -1,0 +1,9 @@
+```mermaid
+flowchart TD
+    A[User inputs URL & selects task] --> B[Fetch transcript\n(+ translate if needed)]
+    B --> C{Task?}
+    C -- Notes --> D[LLM summaries + gap context\n+ quality check]
+    C -- Chat --> E[RAG: chunk, embed, retrieve\nLLM answers with context]
+    D --> Z[Results shown in app]
+    E --> Z
+```

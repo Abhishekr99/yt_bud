@@ -1,54 +1,70 @@
-import streamlit as st
-from streamlit import spinner
-from streamlit.web.server.server import server_port_is_manually_set
 import pandas as pd
+import streamlit as st
 
-from utility import (
-     extract_video_id,
-     get_transcript,
-     translate_transcript,
-     get_important_topics,
-     create_chunks,
-     create_vector_store,
-     rag_answer
-)
 from knowledge_gaps import (
-     identify_knowledge_gaps,
-     fetch_gap_contexts,
-     generate_enriched_notes
+    evaluate_summaries_with_judge,
+    fetch_gap_contexts,
+    generate_enriched_notes,
+    identify_knowledge_gaps,
+)
+from utility import (
+    create_chunks,
+    create_vector_store,
+    extract_video_id,
+    generate_notes,
+    get_important_topics,
+    get_transcript,
+    rag_answer,
+    translate_transcript,
 )
 
-# Load language codes
+
 @st.cache_data
 def load_languages():
     df = pd.read_csv("language_code.csv")
-    return dict(zip(df['Language'], df['Language_Code']))
+    return dict(zip(df["Language"], df["Language_Code"]))
+
 
 languages = load_languages()
 
 # --- Sidebar (Inputs) ---
 with st.sidebar:
-    st.title("🎬 YT Buddy")
+    st.title("dYZ YT Buddy")
     st.markdown("Your AI-powered YouTube Companion")
     st.markdown("---")
-    #st.markdown("Transform any YouTube video into key topics, a podcast, or a chatbot.")
     st.markdown("### Input Details")
 
-    youtube_url = st.text_input("YouTube URL", placeholder="https://www.youtube.com/watch?v=...")
-    
+    youtube_url = st.text_input(
+        "YouTube URL", placeholder="https://www.youtube.com/watch?v=..."
+    )
+
     selected_language_name = st.selectbox(
         "Video Language",
         options=sorted(list(languages.keys())),
-        index=sorted(list(languages.keys())).index("English")
+        index=sorted(list(languages.keys())).index("English"),
     )
     language = languages[selected_language_name]
-    print('language:', language)
+
     task_option = st.radio(
-        "Choose what you want to generate:",
-        ["Chat with Video", "Notes For You"]
+        "Choose what you want to generate:", ["Chat with Video", "Notes For You"]
     )
 
-    submit_button = st.button("✨ Start Processing")
+    # Chat memory configuration
+    memory_default = st.session_state.get("memory_turns", 2)
+    memory_turns = (
+        st.slider(
+            "Chat memory (turns to remember)",
+            min_value=0,
+            max_value=8,
+            value=memory_default,
+            help="Number of previous chat turns (user + assistant) to carry into each answer.",
+        )
+        if task_option == "Chat with Video"
+        else memory_default
+    )
+    st.session_state["memory_turns"] = memory_turns
+
+    submit_button = st.button("Start Processing")
     st.markdown("---")
 
 # --- Main Page ---
@@ -58,28 +74,33 @@ st.markdown("Paste a video link and select a task from the sidebar.")
 # --- Processing Flow ---
 if submit_button:
     if youtube_url and language:
-        video_id= extract_video_id(youtube_url)
+        video_id = extract_video_id(youtube_url)
         if video_id:
-            with spinner("Step 1/3 : Fetching Transcript....."):
-                full_transcript= get_transcript(video_id, language)
+            with st.spinner("Step 1/3: Fetching transcript..."):
+                full_transcript = get_transcript(video_id, language)
 
-                if language!="en":
-                    with spinner("Step 1.5/3 : Translating Transcript into English, This may take few moments......"):
-                        full_transcript= translate_transcript(full_transcript)
+                if language != "en":
+                    with st.spinner(
+                        "Step 1.5/3: Translating transcript to English..."
+                    ):
+                        full_transcript = translate_transcript(full_transcript)
 
+            if task_option == "Notes For You":
+                with st.spinner("Step 2/5: Building a quick transcript summary..."):
+                    base_summary = generate_notes(full_transcript)
+                    st.subheader("Transcript Summary")
+                    st.write(base_summary)
+                    st.markdown("---")
 
-            if task_option=="Notes For You":
-                with spinner("Step 2/4: Extracting important Topics..."):
-                    import_topics= get_important_topics(full_transcript)
+                with st.spinner("Step 3/5: Extracting important topics..."):
+                    import_topics = get_important_topics(full_transcript)
                     st.subheader("Important Topics")
                     st.write(import_topics)
                     st.markdown("---")
 
-                with spinner("Step 3/4: Spotting knowledge gaps and fetching context..."):
+                with st.spinner("Step 4/5: Spotting knowledge gaps and fetching context..."):
                     gaps = identify_knowledge_gaps(full_transcript)
-                    print('gaps:', gaps)
                     gap_contexts = fetch_gap_contexts(gaps)
-                    print('gap_contexts:', gap_contexts)
                     st.subheader("Knowledge Gaps & Context")
                     if gap_contexts:
                         for item in gap_contexts:
@@ -89,39 +110,70 @@ if submit_button:
                     else:
                         st.info("No knowledge gaps detected for this transcript.")
 
-                with spinner("Step 4/4 : Generating enriched notes for you."):
-                    notes= generate_enriched_notes(full_transcript, gap_contexts)
+                with st.spinner("Step 5/5: Generating enriched notes..."):
+                    notes = generate_enriched_notes(full_transcript, gap_contexts)
                     st.subheader("Enriched Notes")
                     st.write(notes)
 
-                st.success("Enriched summary and notes generated.")
+                with st.spinner("Scoring summaries with LLM-as-judge..."):
+                    eval_scores = evaluate_summaries_with_judge(
+                        full_transcript, base_summary, notes
+                    )
+                    st.subheader("Summary Quality Check (LLM Judge)")
+                    base_scores = eval_scores.get("base", {})
+                    enriched_scores = eval_scores.get("enriched", {})
+
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.markdown("**Base Summary**")
+                        if base_scores:
+                            for metric, data in base_scores.items():
+                                st.write(f"{metric.title()}: {data.get('score', '—')}")
+                                st.caption(data.get("notes", ""))
+                        else:
+                            st.write("No scores available.")
+                    with col2:
+                        st.markdown("**Enriched Summary**")
+                        if enriched_scores:
+                            for metric, data in enriched_scores.items():
+                                st.write(f"{metric.replace('_', ' ').title()}: {data.get('score', '—')}")
+                                st.caption(data.get("notes", ""))
+                        else:
+                            st.write("No scores available.")
+
+                st.success("Enriched summary, notes, and evaluation generated.")
 
             if task_option == "Chat with Video":
-                with st.spinner("Step 2/3: Creating chunks and vector store...."):
+                with st.spinner("Step 2/3: Creating chunks and vector store..."):
                     chunks = create_chunks(full_transcript)
                     vectorstore = create_vector_store(chunks)
                     st.session_state.vector_store = vectorstore
-                st.session_state.messages=[]
-                st.success('Video is ready for chat.....')
+                st.session_state.messages = []
+                st.success("Video is ready for chat.")
 
 # chatbot session
-if task_option=="Chat with Video" and "vector_store" in st.session_state:
+if task_option == "Chat with Video" and "vector_store" in st.session_state:
     st.divider()
     st.subheader("Chat with Video")
 
     # Display the entire history
-    for message in st.session_state.get('messages',[]):
-        with st.chat_message(message['role']):
-            st.write(message['content'])
+    for message in st.session_state.get("messages", []):
+        with st.chat_message(message["role"]):
+            st.write(message["content"])
 
     # user_input
-    prompt= st.chat_input("Ask me anything about the video.")
+    prompt = st.chat_input("Ask me anything about the video.")
     if prompt:
-        st.session_state.messages.append({'role':'user','content':prompt})
-        with st.chat_message('user'):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
             st.write(prompt)
 
-        with st.chat_message('assistant'):
-           response= rag_answer(prompt,st.session_state.vector_store)
-           st.write(response)
-        st.session_state.messages.append({'role': 'assistant', 'content':response})
+        with st.chat_message("assistant"):
+            response = rag_answer(
+                prompt,
+                st.session_state.vector_store,
+                chat_history=st.session_state.messages,
+                history_turns=st.session_state.get("memory_turns", 2),
+            )
+            st.write(response)
+        st.session_state.messages.append({"role": "assistant", "content": response})

@@ -9,6 +9,22 @@ from langchain_core.prompts import ChatPromptTemplate
 from utility import llm
 
 
+def _clean_json_text(text: str) -> str:
+    """
+    Remove common wrappers (like markdown fences) and isolate the JSON blob if present.
+    """
+    stripped = text.strip()
+    if stripped.startswith("```"):
+        stripped = re.sub(r"^```[a-zA-Z0-9]*", "", stripped, count=1).strip()
+        if stripped.endswith("```"):
+            stripped = stripped[:-3].strip()
+    start = stripped.find("{")
+    end = stripped.rfind("}")
+    if start != -1 and end != -1:
+        return stripped[start : end + 1]
+    return stripped
+
+
 def identify_knowledge_gaps(transcript: str, max_gaps: int = 7) -> List[Dict[str, str]]:
     """
     Ask the LLM to spot potentially unfamiliar terms in the transcript.
@@ -33,21 +49,6 @@ def identify_knowledge_gaps(transcript: str, max_gaps: int = 7) -> List[Dict[str
 
     response = (prompt | llm).invoke({"transcript": transcript, "max_gaps": max_gaps})
     raw = response.content
-
-    def _clean_json_text(text: str) -> str:
-        """Remove code fences and isolate the JSON blob if present."""
-        stripped = text.strip()
-        # Drop Markdown fences if the model used them.
-        if stripped.startswith("```"):
-            stripped = re.sub(r"^```[a-zA-Z0-9]*", "", stripped, count=1).strip()
-            if stripped.endswith("```"):
-                stripped = stripped[:-3].strip()
-        # Try to slice just the outer JSON object.
-        start = stripped.find("{")
-        end = stripped.rfind("}")
-        if start != -1 and end != -1:
-            return stripped[start : end + 1]
-        return stripped
 
     payload: Dict[str, Any] = {"domain": "general", "gaps": []}
     cleaned = _clean_json_text(raw)
@@ -158,3 +159,69 @@ def generate_enriched_notes(transcript: str, gap_contexts: List[Dict[str, str]])
         {"transcript": transcript, "context_snippets": context_snippets}
     )
     return response.content.strip()
+
+
+def evaluate_summaries_with_judge(
+    transcript: str, base_summary: str, enriched_summary: str
+) -> Dict[str, Any]:
+    """
+    Use the LLM as a judge to score both the raw transcript summary and the enriched summary.
+    Returns a dict with per-metric scores (1-5) and short rationales.
+    """
+    prompt = ChatPromptTemplate.from_template(
+        """
+        You are an impartial LLM judge. Evaluate two summaries of the same transcript:
+        - Base summary: derived only from the transcript.
+        - Enriched summary: incorporates added context for gaps.
+
+        Score each on these metrics (1=poor, 5=excellent) and add a brief note:
+        - factuality: alignment to the transcript without hallucinations.
+        - coverage: captures the main points from the transcript.
+        - clarity: easy to read and well-structured.
+        - comprehension: improves reader understanding of the material.
+        - reliability: likelihood of errors or missing context.
+        For the enriched summary also rate:
+        - context_usefulness: how well added explanations improve understanding.
+
+        Return STRICT JSON only (no markdown, no prose) in this shape:
+        {{
+          "base": {{
+            "factuality": {{"score": int, "notes": "..." }},
+            "coverage": {{"score": int, "notes": "..." }},
+            "clarity": {{"score": int, "notes": "..." }},
+            "comprehension": {{"score": int, "notes": "..." }},
+            "reliability": {{"score": int, "notes": "..." }}
+          }},
+          "enriched": {{
+            "factuality": {{"score": int, "notes": "..." }},
+            "coverage": {{"score": int, "notes": "..." }},
+            "clarity": {{"score": int, "notes": "..." }},
+            "comprehension": {{"score": int, "notes": "..." }},
+            "reliability": {{"score": int, "notes": "..." }},
+            "context_usefulness": {{"score": int, "notes": "..." }}
+          }}
+        }}
+
+        Transcript:
+        {transcript}
+
+        Base summary:
+        {base_summary}
+
+        Enriched summary:
+        {enriched_summary}
+        """
+    )
+
+    response = (prompt | llm).invoke(
+        {
+            "transcript": transcript,
+            "base_summary": base_summary,
+            "enriched_summary": enriched_summary,
+        }
+    )
+    cleaned = _clean_json_text(response.content)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        return {"raw_response": response.content}
