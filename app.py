@@ -8,12 +8,13 @@ from knowledge_gaps import (
     identify_knowledge_gaps,
 )
 from utility import (
-    create_chunks,
-    create_vector_store,
+    cache_transcript,
     extract_video_id,
     generate_notes,
     get_important_topics,
+    get_or_create_vector_store,
     get_transcript,
+    load_cached_transcript,
     rag_answer,
     translate_transcript,
 )
@@ -35,7 +36,7 @@ with st.sidebar:
     st.markdown("### Input Details")
 
     youtube_url = st.text_input(
-        "YouTube URL", placeholder="https://www.youtube.com/watch?v=..."
+        "YouTube URL", placeholder="https://www.youtube.com/watch-v=..."
     )
 
     selected_language_name = st.selectbox(
@@ -76,14 +77,34 @@ if submit_button:
     if youtube_url and language:
         video_id = extract_video_id(youtube_url)
         if video_id:
-            with st.spinner("Step 1/3: Fetching transcript..."):
-                full_transcript = get_transcript(video_id, language)
+            vectorstore = get_or_create_vector_store(video_id)
+            full_transcript = load_cached_transcript(video_id)
 
-                if language != "en":
-                    with st.spinner(
-                        "Step 1.5/3: Translating transcript to English..."
-                    ):
-                        full_transcript = translate_transcript(full_transcript)
+            if not full_transcript:
+                with st.spinner("Step 1/3: Fetching transcript..."):
+                    full_transcript = get_transcript(video_id, language)
+
+                    if language != "en":
+                        with st.spinner(
+                            "Step 1.5/3: Translating transcript to English..."
+                        ):
+                            full_transcript = translate_transcript(full_transcript)
+
+                if full_transcript:
+                    # Cache the normalized (English) transcript alongside the vector store.
+                    cache_transcript(video_id, full_transcript)
+
+            if full_transcript and not vectorstore:
+                with st.spinner("Step 2/3: Preparing persistent video index..."):
+                    vectorstore = get_or_create_vector_store(
+                        video_id, transcript=full_transcript
+                    )
+
+            if vectorstore:
+                st.session_state.vector_store = vectorstore
+            if not full_transcript:
+                st.error("Transcript unavailable. Please try again.")
+                st.stop()
 
             if task_option == "Notes For You":
                 with st.spinner("Step 2/5: Building a quick transcript summary..."):
@@ -93,9 +114,9 @@ if submit_button:
                     st.markdown("---")
 
                 with st.spinner("Step 3/5: Extracting important topics..."):
-                    import_topics = get_important_topics(full_transcript)
+                    important_topics = get_important_topics(full_transcript)
                     st.subheader("Important Topics")
-                    st.write(import_topics)
+                    st.write(important_topics)
                     st.markdown("---")
 
                 with st.spinner("Step 4/5: Spotting knowledge gaps and fetching context..."):
@@ -104,7 +125,7 @@ if submit_button:
                     st.subheader("Knowledge Gaps & Context")
                     if gap_contexts:
                         for item in gap_contexts:
-                            st.markdown(f"**{item['term']}** — {item['reason']}")
+                            st.markdown(f"**{item['term']}** - {item['reason']}")
                             st.caption(item["context"])
                         st.markdown("---")
                     else:
@@ -128,7 +149,7 @@ if submit_button:
                         st.markdown("**Base Summary**")
                         if base_scores:
                             for metric, data in base_scores.items():
-                                st.write(f"{metric.title()}: {data.get('score', '—')}")
+                                st.write(f"{metric.title()}: {data.get('score', '-')}")
                                 st.caption(data.get("notes", ""))
                         else:
                             st.write("No scores available.")
@@ -136,7 +157,7 @@ if submit_button:
                         st.markdown("**Enriched Summary**")
                         if enriched_scores:
                             for metric, data in enriched_scores.items():
-                                st.write(f"{metric.replace('_', ' ').title()}: {data.get('score', '—')}")
+                                st.write(f"{metric.replace('_', ' ').title()}: {data.get('score', '-')}")
                                 st.caption(data.get("notes", ""))
                         else:
                             st.write("No scores available.")
@@ -144,12 +165,11 @@ if submit_button:
                 st.success("Enriched summary, notes, and evaluation generated.")
 
             if task_option == "Chat with Video":
-                with st.spinner("Step 2/3: Creating chunks and vector store..."):
-                    chunks = create_chunks(full_transcript)
-                    vectorstore = create_vector_store(chunks)
-                    st.session_state.vector_store = vectorstore
-                st.session_state.messages = []
-                st.success("Video is ready for chat.")
+                if "vector_store" in st.session_state:
+                    st.session_state.messages = []
+                    st.success("Video is ready for chat.")
+                else:
+                    st.error("Vector store is not ready. Please try again.")
 
 # chatbot session
 if task_option == "Chat with Video" and "vector_store" in st.session_state:

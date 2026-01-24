@@ -6,7 +6,7 @@ from typing import List, Dict, Any
 import requests
 from langchain_core.prompts import ChatPromptTemplate
 
-from utility import llm
+from utility import compress_transcript_for_gaps, compress_transcript_for_topics, llm
 
 
 def _clean_json_text(text: str) -> str:
@@ -47,7 +47,10 @@ def identify_knowledge_gaps(transcript: str, max_gaps: int = 7) -> List[Dict[str
         """
     )
 
-    response = (prompt | llm).invoke({"transcript": transcript, "max_gaps": max_gaps})
+    source_text = compress_transcript_for_gaps(transcript)
+    response = (prompt | llm).invoke(
+        {"transcript": source_text, "max_gaps": max_gaps}
+    )
     raw = response.content
 
     payload: Dict[str, Any] = {"domain": "general", "gaps": []}
@@ -133,6 +136,7 @@ def generate_enriched_notes(transcript: str, gap_contexts: List[Dict[str, str]])
     Produce notes that weave in the newly fetched context.
     Only the top few gap explanations are used to avoid clutter.
     """
+    source_text = compress_transcript_for_topics(transcript)
     context_snippets = "\n".join(
         f"- {item['term']}: {item['context']}" for item in gap_contexts[:5]
     )
@@ -142,7 +146,7 @@ def generate_enriched_notes(transcript: str, gap_contexts: List[Dict[str, str]])
         You create concise, structured notes for a YouTube transcript enriched with background info.
 
         Inputs:
-        - Transcript (verbatim): {transcript}
+        - Transcript (verbatim or condensed): {transcript}
         - Gap Explanations (brief, authoritative): 
         {context_snippets}
 
@@ -156,7 +160,7 @@ def generate_enriched_notes(transcript: str, gap_contexts: List[Dict[str, str]])
     )
 
     response = (prompt | llm).invoke(
-        {"transcript": transcript, "context_snippets": context_snippets}
+        {"transcript": source_text, "context_snippets": context_snippets}
     )
     return response.content.strip()
 
