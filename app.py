@@ -11,6 +11,7 @@ from knowledge_gaps import (
 )
 from graph_rag import (
     compare_video_concepts,
+    compare_videos_detailed,
     compare_with_reference,
     ensure_video_graph,
     graph_enabled,
@@ -40,7 +41,7 @@ languages = load_languages()
 
 # --- Sidebar (Inputs) ---
 with st.sidebar:
-    st.title("dYZ YT Buddy")
+    st.title("YT Bud")
     st.markdown("Your AI-powered YouTube Companion")
     st.markdown("---")
     st.markdown("### Input Details")
@@ -75,12 +76,17 @@ with st.sidebar:
     enable_graph_analysis = False
     reference_terms = ""
     compare_video_url = ""
+    comparison_mode = "Detailed (flow + prereq + bridge)"
     if task_option == "Notes For You":
         enable_graph_analysis = st.checkbox("Enable Graph Gap Analysis (Neo4j)")
         if enable_graph_analysis:
             reference_terms = st.text_area(
                 "Reference concepts (one per line, optional)",
                 height=120,
+            )
+            comparison_mode = st.selectbox(
+                "Comparison Mode",
+                ["Detailed (flow + prereq + bridge)", "Simple (set difference)"],
             )
             compare_video_url = st.text_input(
                 "Second video URL for graph gap analysis (optional)",
@@ -293,21 +299,231 @@ if submit_button:
                                             other_transcript,
                                             language,
                                         )
-                                    comparison = compare_video_concepts(
-                                        video_id, other_video_id
-                                    )
                                     st.markdown("**Graph Gap vs. Comparison Video**")
-                                    st.write(
-                                        f"Only in current: {len(comparison['only_in_a'])} | "
-                                        f"Only in comparison: {len(comparison['only_in_b'])} | "
-                                        f"Shared: {len(comparison['shared'])}"
-                                    )
-                                    if comparison["only_in_a"]:
-                                        st.markdown("Only in current video")
-                                        st.write(comparison["only_in_a"])
-                                    if comparison["only_in_b"]:
-                                        st.markdown("Only in comparison video")
-                                        st.write(comparison["only_in_b"])
+                                    if comparison_mode == "Simple (set difference)":
+                                        comparison = compare_video_concepts(
+                                            video_id, other_video_id
+                                        )
+                                        st.write(
+                                            f"Only in current: {len(comparison['only_in_a'])} | "
+                                            f"Only in comparison: {len(comparison['only_in_b'])} | "
+                                            f"Shared: {len(comparison['shared'])}"
+                                        )
+                                        if comparison["only_in_a"]:
+                                            st.markdown("Only in current video")
+                                            st.write(comparison["only_in_a"])
+                                        if comparison["only_in_b"]:
+                                            st.markdown("Only in comparison video")
+                                            st.write(comparison["only_in_b"])
+                                    else:
+                                        comparison = compare_videos_detailed(
+                                            video_id, other_video_id
+                                        )
+                                        summary = comparison.get("summary", {})
+                                        st.write(
+                                            "Concepts A: "
+                                            f"{summary.get('concepts_a', 0)} | "
+                                            "Concepts B: "
+                                            f"{summary.get('concepts_b', 0)} | "
+                                            "Shared: "
+                                            f"{summary.get('shared', 0)} | "
+                                            "Jaccard: "
+                                            f"{summary.get('jaccard', 0.0)}"
+                                        )
+                                        if summary.get("topic_shift_flag"):
+                                            st.warning(
+                                                summary.get(
+                                                    "topic_shift_reason",
+                                                    "Topic shift detected.",
+                                                )
+                                            )
+                                        else:
+                                            st.info(
+                                                summary.get(
+                                                    "topic_shift_reason",
+                                                    "No topic shift detected.",
+                                                )
+                                            )
+
+                                        with st.expander(
+                                            "New concepts introduced in comparison video"
+                                        ):
+                                            new_in_b = comparison.get("new_in_b", [])
+                                            if not new_in_b:
+                                                st.write("No new concepts found.")
+                                            else:
+                                                st.table(
+                                                    [
+                                                        {
+                                                            "concept": item["concept"],
+                                                            "first_chunk": item[
+                                                                "first_seen"
+                                                            ].get("chunk_index"),
+                                                            "importance": item[
+                                                                "importance"
+                                                            ],
+                                                        }
+                                                        for item in new_in_b
+                                                    ]
+                                                )
+                                                for item in new_in_b[:12]:
+                                                    first_seen = item.get(
+                                                        "first_seen", {}
+                                                    )
+                                                    st.caption(
+                                                        f"{item['concept']} | "
+                                                        f"chunk {first_seen.get('chunk_index')}"
+                                                    )
+                                                    if first_seen.get("snippet"):
+                                                        st.write(
+                                                            first_seen.get("snippet")
+                                                        )
+
+                                        with st.expander("Prerequisite gaps"):
+                                            prereq_gaps = comparison.get(
+                                                "prereq_gaps", []
+                                            )
+                                            if not prereq_gaps:
+                                                st.write("No prerequisite gaps found.")
+                                            else:
+                                                for gap in prereq_gaps:
+                                                    st.markdown(
+                                                        f"**{gap['advanced_concept']}**"
+                                                    )
+                                                    st.write(
+                                                        "Missing prerequisites: "
+                                                        + ", ".join(
+                                                            gap.get(
+                                                                "missing_prerequisites",
+                                                                [],
+                                                            )
+                                                        )
+                                                    )
+                                                    st.caption(
+                                                        gap.get("why_gap", "")
+                                                    )
+                                                    for ev in gap.get(
+                                                        "evidence_in_b", []
+                                                    ):
+                                                        st.caption(
+                                                            f"chunk {ev.get('chunk_index')}: "
+                                                            f"{ev.get('snippet')}"
+                                                        )
+
+                                        with st.expander("Order violations in video B"):
+                                            order_violations = comparison.get(
+                                                "order_violations_b", []
+                                            )
+                                            if not order_violations:
+                                                st.write(
+                                                    "No order violations detected."
+                                                )
+                                            else:
+                                                st.table(
+                                                    [
+                                                        {
+                                                            "prerequisite": item[
+                                                                "prerequisite"
+                                                            ],
+                                                            "dependent": item[
+                                                                "dependent"
+                                                            ],
+                                                            "prereq_first": item[
+                                                                "prereq_first_chunk"
+                                                            ],
+                                                            "dependent_first": item[
+                                                                "dependent_first_chunk"
+                                                            ],
+                                                        }
+                                                        for item in order_violations
+                                                    ]
+                                                )
+                                                for item in order_violations[:8]:
+                                                    if item.get("evidence"):
+                                                        st.caption(
+                                                            item.get("evidence")
+                                                        )
+
+                                        with st.expander("Bridge gaps / topic jump"):
+                                            bridge_gaps = comparison.get(
+                                                "bridge_gaps", []
+                                            )
+                                            if not bridge_gaps:
+                                                st.write("No bridge gaps found.")
+                                            else:
+                                                for gap in bridge_gaps:
+                                                    st.write(
+                                                        "End of A topics: "
+                                                        + ", ".join(
+                                                            gap.get(
+                                                                "from_video_end_topic",
+                                                                [],
+                                                            )
+                                                        )
+                                                    )
+                                                    st.write(
+                                                        "Start of B topics: "
+                                                        + ", ".join(
+                                                            gap.get(
+                                                                "to_video_start_topic",
+                                                                [],
+                                                            )
+                                                        )
+                                                    )
+                                                    if gap.get(
+                                                        "missing_bridge_concepts"
+                                                    ):
+                                                        st.write(
+                                                            "Missing bridges: "
+                                                            + ", ".join(
+                                                                gap.get(
+                                                                    "missing_bridge_concepts",
+                                                                    [],
+                                                                )
+                                                            )
+                                                        )
+                                                    if gap.get(
+                                                        "suggested_bridge_query"
+                                                    ):
+                                                        st.caption(
+                                                            gap.get(
+                                                                "suggested_bridge_query"
+                                                            )
+                                                        )
+
+                                        with st.expander("Relation mismatches"):
+                                            mismatches = comparison.get(
+                                                "relation_mismatches", []
+                                            )
+                                            if not mismatches:
+                                                st.write(
+                                                    "No relation mismatches found."
+                                                )
+                                            else:
+                                                st.table(
+                                                    [
+                                                        {
+                                                            "source": item["source"],
+                                                            "relation": item[
+                                                                "relation"
+                                                            ],
+                                                            "target": item["target"],
+                                                            "present_in": item[
+                                                                "present_in"
+                                                            ],
+                                                        }
+                                                        for item in mismatches
+                                                    ]
+                                                )
+                                                for item in mismatches[:10]:
+                                                    if item.get("evidence_a"):
+                                                        st.caption(
+                                                            f"A: {item.get('evidence_a')}"
+                                                        )
+                                                    if item.get("evidence_b"):
+                                                        st.caption(
+                                                            f"B: {item.get('evidence_b')}"
+                                                        )
 
                 st.success("Enriched summary, notes, and evaluation generated.")
 
