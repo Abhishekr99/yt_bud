@@ -1,3 +1,5 @@
+import time
+
 import pandas as pd
 import streamlit as st
 
@@ -7,6 +9,14 @@ from knowledge_gaps import (
     generate_enriched_notes,
     identify_knowledge_gaps,
 )
+from graph_rag import (
+    compare_video_concepts,
+    compare_with_reference,
+    ensure_video_graph,
+    graph_enabled,
+    graph_rag_answer,
+)
+from rag_metrics import evaluate_rag_answers
 from utility import (
     cache_transcript,
     extract_video_id,
@@ -49,6 +59,33 @@ with st.sidebar:
     task_option = st.radio(
         "Choose what you want to generate:", ["Chat with Video", "Notes For You"]
     )
+
+    rag_mode = "Vanilla RAG"
+    run_comparison_eval = False
+    if task_option == "Chat with Video":
+        rag_mode = st.selectbox(
+            "Retrieval Mode",
+            ["Vanilla RAG", "Graph RAG", "Compare (Both)"],
+        )
+        if rag_mode == "Compare (Both)":
+            run_comparison_eval = st.checkbox(
+                "Score answers with LLM judge", value=True
+            )
+
+    enable_graph_analysis = False
+    reference_terms = ""
+    compare_video_url = ""
+    if task_option == "Notes For You":
+        enable_graph_analysis = st.checkbox("Enable Graph Gap Analysis (Neo4j)")
+        if enable_graph_analysis:
+            reference_terms = st.text_area(
+                "Reference concepts (one per line, optional)",
+                height=120,
+            )
+            compare_video_url = st.text_input(
+                "Second video URL for graph gap analysis (optional)",
+                placeholder="https://www.youtube.com/watch?v=...",
+            )
 
     # Chat memory configuration
     memory_default = st.session_state.get("memory_turns", 2)
@@ -106,6 +143,35 @@ if submit_button:
                 st.error("Transcript unavailable. Please try again.")
                 st.stop()
 
+            st.session_state.video_id = video_id
+            st.session_state.transcript = full_transcript
+
+            graph_needed = (
+                (task_option == "Chat with Video" and rag_mode != "Vanilla RAG")
+                or (task_option == "Notes For You" and enable_graph_analysis)
+            )
+            if graph_needed:
+                if not graph_enabled():
+                    st.error(
+                        "Neo4j is not configured. Set NEO4J_URI, NEO4J_USERNAME, "
+                        "and NEO4J_PASSWORD in your .env."
+                    )
+                    st.session_state.graph_ready = False
+                else:
+                    with st.spinner("Preparing Neo4j graph for this video..."):
+                        try:
+                            graph_status = ensure_video_graph(
+                                video_id, full_transcript, language
+                            )
+                        except Exception as exc:
+                            st.error(f"Graph build failed: {exc}")
+                            st.session_state.graph_ready = False
+                        else:
+                            st.session_state.graph_ready = bool(
+                                graph_status.get("ready")
+                            )
+                            st.session_state.graph_video_id = video_id
+
             if task_option == "Notes For You":
                 with st.spinner("Step 2/5: Building a quick transcript summary..."):
                     base_summary = generate_notes(full_transcript)
@@ -162,12 +228,98 @@ if submit_button:
                         else:
                             st.write("No scores available.")
 
+                if enable_graph_analysis:
+                    st.markdown("---")
+                    st.subheader("Graph Gap Analysis (Neo4j)")
+
+                    if not graph_enabled():
+                        st.error(
+                            "Neo4j is not configured. Set NEO4J_URI, NEO4J_USERNAME, "
+                            "and NEO4J_PASSWORD in your .env."
+                        )
+                    elif not st.session_state.get("graph_ready", False):
+                        st.info("Graph is not ready. Re-run with Neo4j configured.")
+                    else:
+                        reference_list = [
+                            line.strip()
+                            for line in reference_terms.splitlines()
+                            if line.strip()
+                        ]
+                        if reference_list:
+                            ref_result = compare_with_reference(video_id, reference_list)
+                            st.markdown("**Reference Graph Coverage**")
+                            st.write(
+                                f"Missing concepts: {len(ref_result['missing'])} | "
+                                f"Covered: {len(ref_result['covered'])}"
+                            )
+                            if ref_result["missing"]:
+                                st.markdown("Missing from video")
+                                st.write(ref_result["missing"])
+                            if ref_result["covered"]:
+                                st.markdown("Covered in video")
+                                st.write(ref_result["covered"])
+
+                        if compare_video_url:
+                            other_video_id = extract_video_id(compare_video_url)
+                            if not other_video_id:
+                                st.error("Second video URL is invalid.")
+                            else:
+                                other_transcript = load_cached_transcript(other_video_id)
+                                if not other_transcript:
+                                    with st.spinner(
+                                        "Fetching transcript for comparison video..."
+                                    ):
+                                        other_transcript = get_transcript(
+                                            other_video_id, language
+                                        )
+                                        if language != "en" and other_transcript:
+                                            other_transcript = translate_transcript(
+                                                other_transcript
+                                            )
+                                        if other_transcript:
+                                            cache_transcript(
+                                                other_video_id, other_transcript
+                                            )
+                                if not other_transcript:
+                                    st.error(
+                                        "Transcript unavailable for comparison video."
+                                    )
+                                else:
+                                    with st.spinner(
+                                        "Preparing Neo4j graph for comparison video..."
+                                    ):
+                                        ensure_video_graph(
+                                            other_video_id,
+                                            other_transcript,
+                                            language,
+                                        )
+                                    comparison = compare_video_concepts(
+                                        video_id, other_video_id
+                                    )
+                                    st.markdown("**Graph Gap vs. Comparison Video**")
+                                    st.write(
+                                        f"Only in current: {len(comparison['only_in_a'])} | "
+                                        f"Only in comparison: {len(comparison['only_in_b'])} | "
+                                        f"Shared: {len(comparison['shared'])}"
+                                    )
+                                    if comparison["only_in_a"]:
+                                        st.markdown("Only in current video")
+                                        st.write(comparison["only_in_a"])
+                                    if comparison["only_in_b"]:
+                                        st.markdown("Only in comparison video")
+                                        st.write(comparison["only_in_b"])
+
                 st.success("Enriched summary, notes, and evaluation generated.")
 
             if task_option == "Chat with Video":
                 if "vector_store" in st.session_state:
                     st.session_state.messages = []
-                    st.success("Video is ready for chat.")
+                    if rag_mode != "Vanilla RAG" and not st.session_state.get(
+                        "graph_ready", False
+                    ):
+                        st.error("Neo4j graph is not ready. Check configuration.")
+                    else:
+                        st.success("Video is ready for chat.")
                 else:
                     st.error("Vector store is not ready. Please try again.")
 
@@ -175,6 +327,7 @@ if submit_button:
 if task_option == "Chat with Video" and "vector_store" in st.session_state:
     st.divider()
     st.subheader("Chat with Video")
+    current_video_id = st.session_state.get("video_id")
 
     # Display the entire history
     for message in st.session_state.get("messages", []):
@@ -189,11 +342,127 @@ if task_option == "Chat with Video" and "vector_store" in st.session_state:
             st.write(prompt)
 
         with st.chat_message("assistant"):
-            response = rag_answer(
-                prompt,
-                st.session_state.vector_store,
-                chat_history=st.session_state.messages,
-                history_turns=st.session_state.get("memory_turns", 2),
-            )
-            st.write(response)
-        st.session_state.messages.append({"role": "assistant", "content": response})
+            if rag_mode == "Vanilla RAG":
+                start = time.perf_counter()
+                response, context_docs = rag_answer(
+                    prompt,
+                    st.session_state.vector_store,
+                    chat_history=st.session_state.messages,
+                    history_turns=st.session_state.get("memory_turns", 2),
+                    return_context=True,
+                )
+                latency = time.perf_counter() - start
+                st.write(response)
+                st.caption(
+                    f"Vanilla RAG: {len(context_docs)} chunks | {latency:.2f}s"
+                )
+                st.session_state.messages.append(
+                    {"role": "assistant", "content": response}
+                )
+            elif rag_mode == "Graph RAG":
+                if not st.session_state.get("graph_ready", False):
+                    st.error("Neo4j graph is not ready for this video.")
+                elif st.session_state.get("graph_video_id") != current_video_id:
+                    st.error("Graph is out of sync. Re-run processing.")
+                else:
+                    start = time.perf_counter()
+                    response, stats = graph_rag_answer(
+                        prompt,
+                        current_video_id,
+                        chat_history=st.session_state.messages,
+                        history_turns=st.session_state.get("memory_turns", 2),
+                    )
+                    latency = time.perf_counter() - start
+                    st.write(response)
+                    st.caption(
+                        "Graph RAG: "
+                        f"{stats.get('concepts', 0)} concepts | "
+                        f"{stats.get('chunks', 0)} chunks | "
+                        f"{latency:.2f}s"
+                    )
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": response}
+                    )
+            else:
+                if not st.session_state.get("graph_ready", False):
+                    st.error("Neo4j graph is not ready for this video.")
+                elif st.session_state.get("graph_video_id") != current_video_id:
+                    st.error("Graph is out of sync. Re-run processing.")
+                else:
+                    start = time.perf_counter()
+                    vanilla_response, vanilla_docs = rag_answer(
+                        prompt,
+                        st.session_state.vector_store,
+                        chat_history=st.session_state.messages,
+                        history_turns=st.session_state.get("memory_turns", 2),
+                        return_context=True,
+                    )
+                    vanilla_latency = time.perf_counter() - start
+
+                    start = time.perf_counter()
+                    graph_response, graph_stats = graph_rag_answer(
+                        prompt,
+                        current_video_id,
+                        chat_history=st.session_state.messages,
+                        history_turns=st.session_state.get("memory_turns", 2),
+                    )
+                    graph_latency = time.perf_counter() - start
+
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.markdown("**Vanilla RAG**")
+                        st.write(vanilla_response)
+                        st.caption(
+                            f"{len(vanilla_docs)} chunks | {vanilla_latency:.2f}s"
+                        )
+                    with col2:
+                        st.markdown("**Graph RAG**")
+                        st.write(graph_response)
+                        st.caption(
+                            f"{graph_stats.get('concepts', 0)} concepts | "
+                            f"{graph_stats.get('chunks', 0)} chunks | "
+                            f"{graph_latency:.2f}s"
+                        )
+
+                    if run_comparison_eval and st.session_state.get("transcript"):
+                        eval_scores = evaluate_rag_answers(
+                            prompt,
+                            st.session_state.transcript,
+                            vanilla_response,
+                            graph_response,
+                        )
+                        st.markdown("**Answer Evaluation**")
+                        if "raw_response" in eval_scores:
+                            st.write(eval_scores["raw_response"])
+                        else:
+                            rows = []
+                            for metric in [
+                                "groundedness",
+                                "relevance",
+                                "completeness",
+                                "clarity",
+                            ]:
+                                rows.append(
+                                    {
+                                        "metric": metric,
+                                        "vanilla": eval_scores["vanilla"][metric][
+                                            "score"
+                                        ],
+                                        "graph": eval_scores["graph"][metric]["score"],
+                                    }
+                                )
+                            st.table(rows)
+                            st.caption(
+                                f"Winner: {eval_scores.get('winner')} | "
+                                f"{eval_scores.get('rationale')}"
+                            )
+
+                    combined = (
+                        "[Vanilla RAG]\n"
+                        f"{vanilla_response}\n\n"
+                        "[Graph RAG]\n"
+                        f"{graph_response}"
+                    )
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": combined}
+                    )

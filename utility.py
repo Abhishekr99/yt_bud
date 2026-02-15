@@ -465,7 +465,9 @@ def _retrieve_context(question: str, vectorstore: Chroma, k: int = 4) -> List[Do
 
 
 # RAG FUNCTION WITH CHAT HISTORY SUPPORT
-def rag_answer(question, vectorstore, chat_history=None, history_turns=2):
+def rag_answer(
+    question, vectorstore, chat_history=None, history_turns=2, return_context=False
+):
     """
     Answer user questions using retrieved transcript context and recent chat history.
     - chat_history: list of {"role": "...", "content": "..."} entries from the chat UI.
@@ -515,4 +517,6 @@ def rag_answer(question, vectorstore, chat_history=None, history_turns=2):
         {"context": context_text, "question": question, "history": history_text}
     )
 
+    if return_context:
+        return response.content, results
     return response.content

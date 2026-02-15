@@ -20,3 +20,4 @@ pypdf
 rapidocr-onnxruntime
 requests
 pandas
+neo4j
