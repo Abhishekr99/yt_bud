@@ -10,7 +10,15 @@ from neo4j import GraphDatabase
 
 from langchain_core.prompts import ChatPromptTemplate
 
-from utility import create_chunks, llm
+from utility import (
+    create_chunks,
+    embedding_similarity,
+    explanation_score,
+    is_generic,
+    is_intro_like,
+    llm,
+    normalize_concept,
+)
 
 load_dotenv()
 
@@ -59,9 +67,7 @@ def _clean_json_text(text: str) -> str:
 
 
 def _normalize_concept(name: str) -> str:
-    key = re.sub(r"[^a-z0-9]+", " ", name.lower()).strip()
-    key = re.sub(r"\s+", " ", key)
-    return key
+    return normalize_concept(name)
 
 
 def _hash_transcript(text: str) -> str:
@@ -91,6 +97,18 @@ def setup_graph_schema():
             "CREATE FULLTEXT INDEX "
             f"{CHUNK_INDEX} IF NOT EXISTS FOR (c:Chunk) ON EACH [c.text]"
         )
+        try:
+            records = session.run(
+                "SHOW CONSTRAINTS YIELD name, type, entityType, labelsOrTypes, properties "
+                "WHERE type = 'UNIQUENESS' AND entityType = 'NODE' "
+                "AND labelsOrTypes = ['Concept'] AND properties = ['name']"
+            )
+            for record in records:
+                name = record.get("name")
+                if name:
+                    session.run(f"DROP CONSTRAINT {name} IF EXISTS")
+        except Exception:
+            pass
 
 
 def get_video_graph_state(video_id: str) -> Dict[str, Any]:
@@ -338,7 +356,9 @@ def ensure_video_graph(
                     "MERGE (b:Concept {key: $target}) "
                     "MERGE (a)-[r:RELATED_TO {video_id: $video_id, relation: $label}]->(b) "
                     "SET r.evidence = coalesce(r.evidence, $evidence), "
-                    "r.confidence = coalesce(r.confidence, $confidence)",
+                    "r.confidence = CASE "
+                    "WHEN coalesce(r.confidence, 0) >= $confidence THEN r.confidence "
+                    "ELSE $confidence END",
                     source=source,
                     target=target,
                     label=label,
@@ -616,27 +636,49 @@ def get_first_occurrence(video_id: str, concept_key: str) -> int:
 
 
 def get_concept_occurrences(
-    video_id: str, concept_key: str, limit: int = 5, snippet_len: int = 220
+    video_id: str,
+    concept_key: str,
+    concept_name: str = "",
+    limit: int = 5,
+    snippet_len: int = 220,
 ) -> List[Dict[str, Any]]:
     driver = get_neo4j_driver()
     with driver.session(database=NEO4J_DATABASE) as session:
-        records = list(
-            session.run(
-                "MATCH (ch:Chunk {video_id: $video_id})-[m:MENTIONS {video_id: $video_id}]->(c:Concept {key: $key}) "
-                "RETURN coalesce(m.chunk_index, ch.index) AS idx, substring(ch.text, 0, $snippet_len) AS snippet "
-                "ORDER BY idx ASC "
-                "LIMIT $limit",
-                video_id=video_id,
-                key=concept_key,
-                snippet_len=snippet_len,
-                limit=limit,
-            )
+        query = (
+            "MATCH (ch:Chunk {video_id: $video_id})-[m:MENTIONS {video_id: $video_id}]->(c:Concept {key: $key}) "
+            "RETURN coalesce(m.chunk_index, ch.index) AS idx, ch.text AS text "
+            "ORDER BY idx ASC "
         )
-    return [
-        {"chunk_index": int(record["idx"]), "snippet": record.get("snippet", "")}
-        for record in records
-        if record.get("idx") is not None
-    ]
+        if limit is not None:
+            query += "LIMIT $limit"
+        params = {"video_id": video_id, "key": concept_key}
+        if limit is not None:
+            params["limit"] = limit
+        records = list(session.run(query, **params))
+
+    target = (concept_name or concept_key or "").strip().lower()
+    results = []
+    for record in records:
+        idx = record.get("idx")
+        text = record.get("text") or ""
+        if idx is None:
+            continue
+        snippet = ""
+        if text:
+            lower = text.lower()
+            pos = lower.find(target) if target else -1
+            if pos == -1 and concept_key:
+                pos = lower.find(concept_key)
+            if pos != -1:
+                start = max(0, pos - 120)
+                end = min(len(text), pos + 120)
+                snippet = text[start:end]
+            else:
+                snippet = text[:snippet_len]
+        results.append(
+            {"chunk_index": int(idx), "snippet": snippet, "text": text}
+        )
+    return results
 
 
 def _get_concept_frequency(video_id: str, concept_key: str) -> Tuple[int, int]:
@@ -721,6 +763,106 @@ def get_window_concepts(
     }
 
 
+def get_window_concepts_with_chunks(
+    video_id: str, start_idx: int, end_idx: int
+) -> List[Dict[str, Any]]:
+    driver = get_neo4j_driver()
+    with driver.session(database=NEO4J_DATABASE) as session:
+        records = list(
+            session.run(
+                "MATCH (v:Video {video_id: $video_id})-[:HAS_CHUNK]->(ch:Chunk) "
+                "WHERE ch.index >= $start AND ch.index <= $end "
+                "OPTIONAL MATCH (ch)-[:MENTIONS {video_id: $video_id}]->(c:Concept) "
+                "RETURN ch.index AS idx, ch.text AS text, "
+                "collect(DISTINCT c.key) AS keys, collect(DISTINCT c.name) AS names "
+                "ORDER BY idx ASC",
+                video_id=video_id,
+                start=start_idx,
+                end=end_idx,
+            )
+        )
+    items = []
+    for record in records:
+        keys = record.get("keys") or []
+        names = record.get("names") or []
+        mapping = {}
+        for idx, key in enumerate(keys):
+            if not key:
+                continue
+            name = ""
+            if idx < len(names) and names[idx]:
+                name = names[idx]
+            mapping[key] = name or key
+        items.append(
+            {
+                "chunk_index": record.get("idx"),
+                "text": record.get("text") or "",
+                "concepts": mapping,
+            }
+        )
+    return items
+
+
+def _get_window_chunk_texts(video_id: str, start_idx: int, end_idx: int) -> List[str]:
+    driver = get_neo4j_driver()
+    with driver.session(database=NEO4J_DATABASE) as session:
+        records = list(
+            session.run(
+                "MATCH (ch:Chunk {video_id: $video_id}) "
+                "WHERE ch.index >= $start AND ch.index <= $end "
+                "RETURN ch.text AS text "
+                "ORDER BY ch.index ASC",
+                video_id=video_id,
+                start=start_idx,
+                end=end_idx,
+            )
+        )
+    return [record.get("text") or "" for record in records if record.get("text")]
+
+
+def _select_explanation_occurrence(
+    occurrences: List[Dict[str, Any]]
+) -> Dict[str, Any]:
+    if not occurrences:
+        return {
+            "first_seen": -1,
+            "first_explanation": -1,
+            "preview_only": False,
+            "evidence_snippet": "",
+        }
+    first_seen_idx = occurrences[0].get("chunk_index", -1)
+    first_text = occurrences[0].get("text", "")
+    first_expl_idx = first_seen_idx
+    evidence_snippet = occurrences[0].get("snippet", "")
+
+    for occ in occurrences:
+        idx = occ.get("chunk_index", -1)
+        text = occ.get("text", "")
+        score = explanation_score(text)
+        if idx <= 1 and is_intro_like(text) and score < 2:
+            continue
+        if score >= 2:
+            first_expl_idx = idx
+            evidence_snippet = occ.get("snippet", "")
+            break
+
+    preview_only = False
+    if (
+        first_expl_idx == first_seen_idx
+        and first_seen_idx <= 1
+        and is_intro_like(first_text)
+        and explanation_score(first_text) < 2
+    ):
+        preview_only = True
+
+    return {
+        "first_seen": first_seen_idx,
+        "first_explanation": first_expl_idx,
+        "preview_only": preview_only,
+        "evidence_snippet": evidence_snippet,
+    }
+
+
 def _get_max_chunk_index(video_id: str) -> int:
     driver = get_neo4j_driver()
     with driver.session(database=NEO4J_DATABASE) as session:
@@ -797,6 +939,7 @@ def compare_videos_detailed(
     max_new: int = 40,
     max_occurrences: int = 4,
     use_llm_prereq: bool = True,
+    transition_emb_th: float = 0.35,
 ) -> Dict[str, Any]:
     concepts_a = get_video_concept_keys(video_id_a)
     concepts_b = get_video_concept_keys(video_id_b)
@@ -808,22 +951,79 @@ def compare_videos_detailed(
     jaccard = float(len(shared) / len(union)) if union else 0.0
 
     max_idx_a = _get_max_chunk_index(video_id_a)
-    end_start = max(max_idx_a - window_k + 1, 0)
-    end_concepts = get_window_concepts(video_id_a, end_start, max_idx_a) if max_idx_a >= 0 else {}
-    start_concepts = get_window_concepts(video_id_b, 0, max(window_k - 1, 0))
+    max_idx_b = _get_max_chunk_index(video_id_b)
+    end_start = max(max_idx_a - window_k + 1, 0) if max_idx_a >= 0 else 0
+    start_end = min(max_idx_b, max(window_k - 1, 0)) if max_idx_b >= 0 else -1
 
-    end_keys = set(end_concepts.keys())
-    start_keys = set(start_concepts.keys())
-    window_union = end_keys | start_keys
-    window_shared = end_keys & start_keys
-    window_jaccard = float(len(window_shared) / len(window_union)) if window_union else 0.0
-    topic_shift_flag = bool(window_union) and window_jaccard < topic_jump_th
+    end_window = (
+        get_window_concepts_with_chunks(video_id_a, end_start, max_idx_a)
+        if max_idx_a >= 0
+        else []
+    )
+    start_window = (
+        get_window_concepts_with_chunks(video_id_b, 0, start_end)
+        if start_end >= 0
+        else []
+    )
+
+    end_concepts_all: Dict[str, str] = {}
+    start_concepts_all: Dict[str, str] = {}
+    end_concepts_expl: Dict[str, str] = {}
+    start_concepts_expl: Dict[str, str] = {}
+
+    for item in end_window:
+        end_concepts_all.update(item.get("concepts", {}))
+        if explanation_score(item.get("text", "")) >= 1:
+            end_concepts_expl.update(item.get("concepts", {}))
+
+    for item in start_window:
+        start_concepts_all.update(item.get("concepts", {}))
+        if explanation_score(item.get("text", "")) >= 1:
+            start_concepts_expl.update(item.get("concepts", {}))
+
+    transition_end = end_concepts_expl or end_concepts_all
+    transition_start = start_concepts_expl or start_concepts_all
+    end_keys = set(end_concepts_all.keys())
+    start_keys = set(start_concepts_all.keys())
+
+    transition_keys = set(transition_end.keys())
+    transition_start_keys = set(transition_start.keys())
+    transition_union = transition_keys | transition_start_keys
+    transition_shared = transition_keys & transition_start_keys
+    transition_jaccard = (
+        float(len(transition_shared) / len(transition_union))
+        if transition_union
+        else 0.0
+    )
+
+    end_texts = (
+        _get_window_chunk_texts(video_id_a, end_start, max_idx_a)
+        if max_idx_a >= 0
+        else []
+    )
+    start_texts = (
+        _get_window_chunk_texts(video_id_b, 0, start_end)
+        if start_end >= 0
+        else []
+    )
+    transition_embedding_similarity = embedding_similarity(end_texts, start_texts)
+    if transition_embedding_similarity < 0:
+        transition_embedding_similarity = 1.0
+
+    topic_shift_flag = (
+        bool(transition_union)
+        and transition_jaccard < topic_jump_th
+        and transition_embedding_similarity < transition_emb_th
+    )
     topic_shift_reason = (
-        f"Low overlap between end of A and start of B (Jaccard={window_jaccard:.2f})."
+        "Low overlap between end of A and start of B "
+        f"(Jaccard={transition_jaccard:.2f}, "
+        f"Embedding={transition_embedding_similarity:.2f})."
         if topic_shift_flag
         else "End/start overlap above threshold."
     )
 
+    occurrence_scan_limit = max(12, max_occurrences * 3)
     new_keys = [key for key in keys_b - keys_a]
     new_items = []
     raw_scores: Dict[str, float] = {}
@@ -831,22 +1031,40 @@ def compare_videos_detailed(
         mentions, first_idx = _get_concept_frequency(video_id_b, key)
         co_strength = _get_concept_co_strength(video_id_b, key)
         raw_scores[key] = mentions + 0.2 * co_strength
+        concept_name = concepts_b.get(key, key)
         occurrences = get_concept_occurrences(
-            video_id_b, key, limit=max_occurrences
+            video_id_b, key, concept_name=concept_name, limit=occurrence_scan_limit
         )
-        first_seen = occurrences[0] if occurrences else {"chunk_index": first_idx, "snippet": ""}
+        selection = _select_explanation_occurrence(occurrences)
+        first_seen = (
+            occurrences[0]
+            if occurrences
+            else {"chunk_index": first_idx, "snippet": "", "text": ""}
+        )
+        evidence_snippet = selection.get("evidence_snippet") or first_seen.get(
+            "snippet", ""
+        )
+        preview_only = selection.get("preview_only", False)
+        first_expl = selection.get("first_explanation", first_idx)
+        occurrences_out = [
+            {"chunk_index": occ["chunk_index"], "snippet": occ.get("snippet", "")}
+            for occ in occurrences[:max_occurrences]
+        ]
         new_items.append(
             {
-                "concept": concepts_b.get(key, key),
+                "concept": concept_name,
                 "concept_key": key,
                 "first_seen": {
                     "video": "B",
                     "chunk_index": first_seen.get("chunk_index", first_idx),
                     "snippet": first_seen.get("snippet", ""),
                 },
-                "occurrences": occurrences,
+                "occurrences": occurrences_out,
                 "importance": 0.0,
                 "confidence": 0.0,
+                "first_explanation_chunk": first_expl,
+                "preview_only": preview_only,
+                "evidence_snippet": evidence_snippet,
             }
         )
 
@@ -858,10 +1076,14 @@ def compare_videos_detailed(
         item["importance"] = round(importance, 3)
         item["confidence"] = round(importance, 3)
 
-    new_items.sort(key=lambda x: x["importance"], reverse=True)
-    new_items = new_items[:max_new]
+    filtered_items = []
+    for item in new_items:
+        if is_generic(item["concept_key"]) and item["importance"] < 0.6:
+            continue
+        filtered_items.append(item)
+    filtered_items.sort(key=lambda x: x["importance"], reverse=True)
+    new_items = filtered_items[:max_new]
 
-    first_idx_b = get_first_occurrence_map(video_id_b)
     relations_b = get_relations(video_id_b)
     relations_a = get_relations(video_id_a)
     prereq_labels = {"prerequisite_of", "depends_on"}
@@ -869,14 +1091,33 @@ def compare_videos_detailed(
     prereq_gaps = []
     order_violations = []
     prereq_gap_map: Dict[str, Dict[str, Any]] = {}
+    prereq_confidence_th = 0.7
 
     for rel in relations_b:
         if rel["rel"] not in prereq_labels:
             continue
+        if rel.get("confidence", 0.0) < prereq_confidence_th:
+            continue
+        if rel["skey"] == rel["tkey"]:
+            continue
         prereq_key = rel["skey"]
         advanced_key = rel["tkey"]
-        prereq_first = first_idx_b.get(prereq_key)
-        advanced_first = first_idx_b.get(advanced_key)
+        prereq_occ = get_concept_occurrences(
+            video_id_b,
+            prereq_key,
+            concept_name=rel["sname"],
+            limit=occurrence_scan_limit,
+        )
+        advanced_occ = get_concept_occurrences(
+            video_id_b,
+            advanced_key,
+            concept_name=rel["tname"],
+            limit=occurrence_scan_limit,
+        )
+        prereq_sel = _select_explanation_occurrence(prereq_occ)
+        advanced_sel = _select_explanation_occurrence(advanced_occ)
+        prereq_first = prereq_sel.get("first_explanation", -1)
+        advanced_first = advanced_sel.get("first_explanation", -1)
         prereq_missing_a = prereq_key not in keys_a
         order_violation = (
             prereq_first is not None
@@ -886,9 +1127,11 @@ def compare_videos_detailed(
         if prereq_missing_a or order_violation:
             gap_key = f"{advanced_key}::{prereq_key}"
             evidence = rel.get("evidence") or ""
-            occurrences = get_concept_occurrences(
-                video_id_b, advanced_key, limit=2
-            )
+            occurrences = [
+                {"chunk_index": occ["chunk_index"], "snippet": occ.get("snippet", "")}
+                for occ in advanced_occ[:2]
+            ]
+            reason = "missing_in_A" if prereq_missing_a else "late_in_B"
             entry = prereq_gap_map.get(
                 gap_key,
                 {
@@ -897,17 +1140,25 @@ def compare_videos_detailed(
                     "evidence_in_b": occurrences,
                     "why_gap": "",
                     "confidence": 0.6,
+                    "relation_confidence": rel.get("confidence", 0.0),
+                    "reason": reason,
                 },
             )
             entry["missing_prerequisites"].append(rel["sname"])
             if prereq_missing_a:
                 entry["why_gap"] = "Prerequisite is missing in video A."
                 entry["confidence"] = max(entry["confidence"], 0.65)
+                entry["reason"] = "missing_in_A"
             if order_violation:
-                entry["why_gap"] = "Prerequisite appears after the dependent concept in video B."
+                entry["why_gap"] = (
+                    "Prerequisite appears after the dependent concept in video B."
+                )
                 entry["confidence"] = max(entry["confidence"], 0.7)
+                entry["reason"] = "late_in_B"
             if evidence and not entry.get("evidence_in_b"):
-                entry["evidence_in_b"] = [{"chunk_index": advanced_first or -1, "snippet": evidence}]
+                entry["evidence_in_b"] = [
+                    {"chunk_index": advanced_first or -1, "snippet": evidence}
+                ]
             prereq_gap_map[gap_key] = entry
 
         if order_violation:
@@ -926,8 +1177,11 @@ def compare_videos_detailed(
         top_new = new_items[: min(6, len(new_items))]
         a_norm_keys = {key for key in keys_a}
         for item in top_new:
-            first_seen = item.get("first_seen", {})
-            snippet = first_seen.get("snippet", "")
+            if item.get("preview_only"):
+                continue
+            snippet = item.get("evidence_snippet", "") or item.get("first_seen", {}).get(
+                "snippet", ""
+            )
             prereqs = _infer_prereqs_from_chunk(item["concept"], snippet)
             missing = []
             for prereq in prereqs:
@@ -944,13 +1198,15 @@ def compare_videos_detailed(
                         "evidence_in_b": [],
                         "why_gap": "Assumed prerequisites are missing in video A.",
                         "confidence": 0.45,
+                        "relation_confidence": 0.0,
+                        "reason": "missing_in_A",
                     },
                 )
                 entry["missing_prerequisites"].extend(missing)
                 if snippet:
                     entry["evidence_in_b"] = [
                         {
-                            "chunk_index": first_seen.get("chunk_index", -1),
+                            "chunk_index": item.get("first_explanation_chunk", -1),
                             "snippet": snippet,
                         }
                     ]
@@ -983,20 +1239,36 @@ def compare_videos_detailed(
                 suggested_query = "Search for: " + ", ".join(top_start_names)
         bridge_gaps.append(
             {
-                "from_video_end_topic": [end_concepts[k] for k in end_keys],
-                "to_video_start_topic": [start_concepts[k] for k in start_keys],
+                "from_video_end_topic": [end_concepts_all[k] for k in end_keys],
+                "to_video_start_topic": [start_concepts_all[k] for k in start_keys],
                 "missing_bridge_concepts": missing_bridge_concepts,
                 "suggested_bridge_query": suggested_query,
             }
         )
 
-    rel_map_a = {(rel["skey"], rel["rel"], rel["tkey"]): rel for rel in relations_a}
-    rel_map_b = {(rel["skey"], rel["rel"], rel["tkey"]): rel for rel in relations_b}
+    def _relation_reliable(rel: Dict[str, Any]) -> bool:
+        confidence = rel.get("confidence", 0.0)
+        if rel.get("rel") == "related_to":
+            return confidence >= 0.8
+        return confidence >= 0.6
+
+    rel_map_a = {
+        (rel["skey"], rel["rel"], rel["tkey"]): rel
+        for rel in relations_a
+        if _relation_reliable(rel)
+    }
+    rel_map_b = {
+        (rel["skey"], rel["rel"], rel["tkey"]): rel
+        for rel in relations_b
+        if _relation_reliable(rel)
+    }
     relation_mismatches = []
 
     conflicts = set()
     for rel in relations_a:
         if rel["rel"] != "prerequisite_of":
+            continue
+        if rel.get("confidence", 0.0) < prereq_confidence_th:
             continue
         reverse_key = (rel["tkey"], "prerequisite_of", rel["skey"])
         if reverse_key in rel_map_b:
@@ -1053,6 +1325,8 @@ def compare_videos_detailed(
         "jaccard": round(jaccard, 3),
         "topic_shift_flag": topic_shift_flag,
         "topic_shift_reason": topic_shift_reason,
+        "transition_jaccard": round(transition_jaccard, 3),
+        "transition_embedding_similarity": round(transition_embedding_similarity, 3),
     }
 
     return {

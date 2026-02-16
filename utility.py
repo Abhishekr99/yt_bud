@@ -1,3 +1,4 @@
+import math
 import re
 import time
 from pathlib import Path
@@ -20,6 +21,40 @@ TRANSCRIPT_CACHE_FILENAME = "transcript.txt"
 DIRECT_LLM_CHAR_LIMIT = 30000
 SECTION_SUMMARY_CHAR_LIMIT = 12000
 SECTION_SUMMARY_OVERLAP = 600
+
+PREVIEW_PATTERNS = [
+    "in this video",
+    "today we will",
+    "we will cover",
+    "we are going to",
+    "overview of",
+]
+
+EXPLANATION_PATTERNS = [
+    "is defined as",
+    "means",
+    "refers to",
+    "we call this",
+    "the idea is",
+    "works like",
+    "let us understand",
+    "for example",
+    "in other words",
+    "space complexity",
+    "time complexity",
+]
+
+GENERIC_CONCEPTS = {
+    "input",
+    "output",
+    "data",
+    "file",
+    "example",
+    "implementation",
+    "code",
+    "program",
+    "overview",
+}
 
 
 # Function to extract video ID from a YouTube URL (Helper Function)
@@ -53,6 +88,75 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.2)
 
 def get_vector_store_dir(video_id: str) -> Path:
     return VECTOR_STORE_ROOT / video_id
+
+
+def normalize_concept(name: str) -> str:
+    n = name.lower().strip()
+    n = re.sub(r"[^a-z0-9\s]", "", n)
+    n = re.sub(r"\s+", " ", n)
+    if len(n) > 3 and n.endswith("s"):
+        n = n[:-1]
+    return n
+
+
+def is_intro_like(text: str) -> bool:
+    t = text.lower()
+    return any(p in t for p in PREVIEW_PATTERNS)
+
+
+def explanation_score(text: str) -> int:
+    t = text.lower()
+    return sum(1 for p in EXPLANATION_PATTERNS if p in t)
+
+
+def is_generic(concept_key: str) -> bool:
+    return concept_key in GENERIC_CONCEPTS
+
+
+@st.cache_resource(show_spinner=False)
+def _get_embedding_model():
+    return GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+
+
+def _average_vector(vectors: List[List[float]]) -> List[float]:
+    if not vectors:
+        return []
+    length = len(vectors[0])
+    sums = [0.0] * length
+    for vec in vectors:
+        for idx, val in enumerate(vec):
+            sums[idx] += float(val)
+    return [val / len(vectors) for val in sums]
+
+
+def _cosine_similarity(vec_a: List[float], vec_b: List[float]) -> float:
+    if not vec_a or not vec_b:
+        return 0.0
+    dot = 0.0
+    norm_a = 0.0
+    norm_b = 0.0
+    for a, b in zip(vec_a, vec_b):
+        dot += a * b
+        norm_a += a * a
+        norm_b += b * b
+    if norm_a == 0 or norm_b == 0:
+        return 0.0
+    return dot / (math.sqrt(norm_a) * math.sqrt(norm_b))
+
+
+def embedding_similarity(texts_a: List[str], texts_b: List[str]) -> float:
+    if not texts_a or not texts_b:
+        return -1.0
+    model = _get_embedding_model()
+    try:
+        embeddings = model.embed_documents(texts_a + texts_b)
+    except Exception:
+        return -1.0
+    if not embeddings or len(embeddings) < len(texts_a) + len(texts_b):
+        return -1.0
+    vec_a = _average_vector(embeddings[: len(texts_a)])
+    vec_b = _average_vector(embeddings[len(texts_a) :])
+    return _cosine_similarity(vec_a, vec_b)
 
 
 def get_transcript_cache_path(video_id: str) -> Path:
