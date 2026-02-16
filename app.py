@@ -345,6 +345,31 @@ if submit_button:
                                                 )
                                             )
 
+                                        with st.expander("Metrics"):
+                                            st.write(
+                                                "Learning Continuity Score (LCS): "
+                                                f"{summary.get('LCS', 0.0)} "
+                                                f"({summary.get('lcs_label', '')})"
+                                            )
+                                            st.write(
+                                                "Sub-scores: "
+                                                f"Concept={summary.get('S_concept', 0.0)}, "
+                                                f"Bridge={summary.get('S_bridge', 0.0)}, "
+                                                f"Prereq={summary.get('S_prereq', 0.0)}, "
+                                                f"Sequence={summary.get('S_sequence', 0.0)}"
+                                            )
+                                            st.write(
+                                                "Baselines: "
+                                                f"TF-IDF={summary.get('tfidf_similarity_full', 0.0)}, "
+                                                f"Embedding={summary.get('embedding_similarity_full', 0.0)}"
+                                            )
+                                            st.write(
+                                                "Rates: "
+                                                f"New={summary.get('new_concept_rate', 0.0)}, "
+                                                f"PrereqGap={summary.get('prereq_gap_rate', 0.0)}, "
+                                                f"OrderViolation={summary.get('order_violation_rate', 0.0)}"
+                                            )
+
                                         with st.expander(
                                             "New concepts introduced in comparison video"
                                         ):

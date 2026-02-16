@@ -21,3 +21,4 @@ rapidocr-onnxruntime
 requests
 pandas
 neo4j
+scikit-learn

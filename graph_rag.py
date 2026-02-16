@@ -10,6 +10,8 @@ from neo4j import GraphDatabase
 
 from langchain_core.prompts import ChatPromptTemplate
 
+from baselines import embedding_cosine_similarity_full, tfidf_cosine_similarity
+from continuity_metrics import compute_continuity_metrics
 from utility import (
     create_chunks,
     embedding_similarity,
@@ -875,6 +877,20 @@ def _get_max_chunk_index(video_id: str) -> int:
     return int(record["max_idx"])
 
 
+def get_full_video_text(video_id: str) -> str:
+    driver = get_neo4j_driver()
+    with driver.session(database=NEO4J_DATABASE) as session:
+        records = list(
+            session.run(
+                "MATCH (ch:Chunk {video_id: $video_id}) "
+                "RETURN ch.text AS text "
+                "ORDER BY ch.index ASC",
+                video_id=video_id,
+            )
+        )
+    return "\n".join(record.get("text", "") for record in records if record.get("text"))
+
+
 def _infer_prereqs_from_chunk(
     concept: str, snippet: str, max_items: int = 5
 ) -> List[str]:
@@ -1092,6 +1108,7 @@ def compare_videos_detailed(
     order_violations = []
     prereq_gap_map: Dict[str, Dict[str, Any]] = {}
     prereq_confidence_th = 0.7
+    prereq_edges_considered_b = 0
 
     for rel in relations_b:
         if rel["rel"] not in prereq_labels:
@@ -1100,6 +1117,7 @@ def compare_videos_detailed(
             continue
         if rel["skey"] == rel["tkey"]:
             continue
+        prereq_edges_considered_b += 1
         prereq_key = rel["skey"]
         advanced_key = rel["tkey"]
         prereq_occ = get_concept_occurrences(
@@ -1318,16 +1336,44 @@ def compare_videos_detailed(
             }
         )
 
+    concepts_a_count = len(keys_a)
+    concepts_b_count = len(keys_b)
+    shared_count = len(shared)
+    new_in_b_count = len(new_items)
+    prereq_gaps_count = len(prereq_gaps)
+    order_violations_count = len(order_violations)
+    new_concept_rate = new_in_b_count / max(1, concepts_b_count)
+    prereq_gap_rate = prereq_gaps_count / max(1, new_in_b_count)
+    order_violation_rate = order_violations_count / max(1, prereq_edges_considered_b)
+
+    text_a = get_full_video_text(video_id_a)
+    text_b = get_full_video_text(video_id_b)
+    tfidf_similarity_full = tfidf_cosine_similarity(text_a, text_b)
+    embedding_similarity_full = embedding_cosine_similarity_full(text_a, text_b)
+
     summary = {
-        "concepts_a": len(keys_a),
-        "concepts_b": len(keys_b),
-        "shared": len(shared),
+        "concepts_a": concepts_a_count,
+        "concepts_b": concepts_b_count,
+        "shared": shared_count,
         "jaccard": round(jaccard, 3),
         "topic_shift_flag": topic_shift_flag,
         "topic_shift_reason": topic_shift_reason,
         "transition_jaccard": round(transition_jaccard, 3),
         "transition_embedding_similarity": round(transition_embedding_similarity, 3),
+        "concepts_a_count": concepts_a_count,
+        "concepts_b_count": concepts_b_count,
+        "shared_count": shared_count,
+        "new_in_b_count": new_in_b_count,
+        "prereq_gaps_count": prereq_gaps_count,
+        "order_violations_count": order_violations_count,
+        "prereq_edges_considered_b": prereq_edges_considered_b,
+        "new_concept_rate": round(new_concept_rate, 3),
+        "prereq_gap_rate": round(prereq_gap_rate, 3),
+        "order_violation_rate": round(order_violation_rate, 3),
+        "tfidf_similarity_full": round(tfidf_similarity_full, 3),
+        "embedding_similarity_full": round(embedding_similarity_full, 3),
     }
+    summary.update(compute_continuity_metrics({"summary": summary}))
 
     return {
         "summary": summary,
