@@ -1,0 +1,24 @@
+today i'm going to teach you breadth-first 
+search breadth-first search or bfs is an   algorithm for searching a graph when you 
+think of bfs i want two things to come to mind   first breath means broad or wide in other 
+words our algorithm will progress horizontally   before we proceed vertically second the important 
+data structure for keeping track of vertices   is a cue specifically a first in first out 
+queue bfs is best taught with an example   so let's use the following graph which 
+is a collection of vertices and edges   we want to know all the nodes that are 
+discoverable from the root node a along   the way we'll keep track of two things first 
+nodes we've visited will be colored black   nodes that are in the queue that are in 
+line to be visited will be colored gray starting our algorithm a is 
+the first node we'll visit   we'll keep track of the q in the top left corner we pop a from the queue and mark it as visited we also add its adjacent nodes into the queue b is the next node out of the queue we mark it as visited and add 
+its adjacent nodes into the queue same with c here i'll pause our algorithm and 
+illustrate what we mean by breadth   visit nodes at the same level before we progress 
+vertically d is the next item out of the queue i'll let the rest of the 
+algorithm finish without voiceover there's nothing left in the queue 
+so our algorithm is finished here is the code for breadth first search there is a link to a working 
+python example in the description   on the left is our graph represented as an 
+adjacency list let's walk through the code   on the right we first add the root node 
+to both the visited list and the queue we loop while the queue is not empty removing 
+the node that was first added to the queue we iterate through the adjacent nodes 
+and if the node has not yet been visited   we add it both to the visited list and the queue let's discuss time complexity if you think 
+about our example in the worst case we're   going to visit each node and explore every edge 
+therefore the time complexity of bfs is big o   of the number of vertices plus the number of edges 
+thank you for watching please subscribe and share

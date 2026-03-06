@@ -17,6 +17,7 @@ from graph_rag import (
     graph_enabled,
     graph_rag_answer,
 )
+from experiment_logger import build_row, write_row
 from rag_metrics import evaluate_rag_answers
 from utility import (
     cache_transcript,
@@ -77,6 +78,8 @@ with st.sidebar:
     reference_terms = ""
     compare_video_url = ""
     comparison_mode = "Detailed (flow + prereq + bridge)"
+    log_metrics = False
+    csv_path = "metrics_log.csv"
     if task_option == "Notes For You":
         enable_graph_analysis = st.checkbox("Enable Graph Gap Analysis (Neo4j)")
         if enable_graph_analysis:
@@ -92,6 +95,12 @@ with st.sidebar:
                 "Second video URL for graph gap analysis (optional)",
                 placeholder="https://www.youtube.com/watch?v=...",
             )
+            log_metrics = st.checkbox("Log comparison metrics to CSV")
+            if log_metrics:
+                csv_path = st.text_input(
+                    "CSV path for metrics log",
+                    value="metrics_log.csv",
+                )
 
     # Chat memory configuration
     memory_default = st.session_state.get("memory_turns", 2)
@@ -315,6 +324,10 @@ if submit_button:
                                         if comparison["only_in_b"]:
                                             st.markdown("Only in comparison video")
                                             st.write(comparison["only_in_b"])
+                                        if log_metrics:
+                                            st.info(
+                                                "Metrics logging is available only in Detailed mode."
+                                            )
                                     else:
                                         comparison = compare_videos_detailed(
                                             video_id, other_video_id
@@ -549,6 +562,19 @@ if submit_button:
                                                         st.caption(
                                                             f"B: {item.get('evidence_b')}"
                                                         )
+                                        if log_metrics:
+                                            try:
+                                                row = build_row(
+                                                    video_id, other_video_id, comparison
+                                                )
+                                                write_row(csv_path, row)
+                                                st.caption(
+                                                    f"Metrics logged to {csv_path}"
+                                                )
+                                            except Exception as exc:
+                                                st.error(
+                                                    f"Failed to log metrics: {exc}"
+                                                )
 
                 st.success("Enriched summary, notes, and evaluation generated.")
 

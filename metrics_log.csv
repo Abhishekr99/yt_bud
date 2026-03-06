@@ -1,0 +1,2 @@
+videoA_id,videoB_id,concepts_a_count,concepts_b_count,shared_count,jaccard_full,transition_jaccard,transition_embedding_similarity,tfidf_similarity_full,embedding_similarity_full,new_in_b_count,new_concept_rate,prereq_gaps_count,prereq_gap_rate,prereq_edges_considered_b,order_violations_count,order_violation_rate,topic_shift_flag,S_concept,S_bridge,S_prereq,S_sequence,LCS,lcs_label,timestamp
+fNk_zzaMoSs,k7RM-ot2NWY,17,10,2,0.08,0.08,0.9,0.524,0.897,8,0.8,8,1.0,4,0,0.0,False,0.118,0.08,0.0,1.0,0.299,abrupt,2026-02-16T05:56:12.127894

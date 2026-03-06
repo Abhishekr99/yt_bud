@@ -1,0 +1,7 @@
+model,missing_precision,missing_recall,missing_f1,explained_precision,explained_recall,explained_f1,explained_accuracy
+mention_only,0.0,0.0,0.0,0.667,0.667,0.667,0.75
+explanation_heuristic,0.0,0.0,0.0,0.667,0.667,0.667,1.0
+tfidf_definition,0.0,0.0,0.0,0.667,0.583,0.619,0.667
+embedding_definition,0.0,0.0,0.0,0.667,0.667,0.667,0.667
+llm_reasoning,0.0,0.0,0.0,0.333,0.167,0.222,0.5
+neo4j_graph,0.0,0.0,0.0,0.667,0.583,0.619,0.667

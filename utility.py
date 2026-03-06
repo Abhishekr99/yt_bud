@@ -417,9 +417,23 @@ def generate_notes(transcript):
 
 
 # FUNCTION TO CREATE CHUNKS
-def create_chunks(transcript):
-    chunk_size, chunk_overlap = _select_chunk_params(len(transcript))
-    return _split_text_to_documents(transcript, chunk_size, chunk_overlap)
+def create_chunks(
+    transcript, chunker_kind: str = "char", chunker_config: Optional[dict] = None
+):
+    chunker_config = chunker_config or {}
+    try:
+        from chunking.factory import get_chunker
+
+        chunker = get_chunker(chunker_kind, **chunker_config)
+        docs = chunker.chunk(transcript)
+        for idx, doc in enumerate(docs):
+            doc.metadata.setdefault("chunk_index", idx)
+            doc.metadata.setdefault("chunker_name", chunker_kind)
+            doc.metadata.setdefault("level", "detail")
+        return docs
+    except Exception:
+        chunk_size, chunk_overlap = _select_chunk_params(len(transcript))
+        return _split_text_to_documents(transcript, chunk_size, chunk_overlap)
 
 
 # function to create embedding and store it into an vector space.
@@ -513,10 +527,21 @@ def _build_hierarchical_documents(transcript: str) -> List[Document]:
     return summary_docs + detailed_docs
 
 
-def build_vector_store(video_id: str, transcript: str) -> Chroma:
+def build_vector_store(
+    video_id: str,
+    transcript: str,
+    chunker_kind: str = "char",
+    chunker_config: Optional[dict] = None,
+) -> Chroma:
     store_dir = get_vector_store_dir(video_id)
     store_dir.mkdir(parents=True, exist_ok=True)
-    docs = _build_hierarchical_documents(transcript)
+    chunker_config = chunker_config or {}
+    if chunker_kind == "char" and not chunker_config:
+        docs = _build_hierarchical_documents(transcript)
+    else:
+        docs = create_chunks(
+            transcript, chunker_kind=chunker_kind, chunker_config=chunker_config
+        )
     return create_vector_store(
         docs,
         persist_directory=str(store_dir),
@@ -525,12 +550,20 @@ def build_vector_store(video_id: str, transcript: str) -> Chroma:
 
 
 def get_or_create_vector_store(
-    video_id: str, transcript: Optional[str] = None
+    video_id: str,
+    transcript: Optional[str] = None,
+    chunker_kind: str = "char",
+    chunker_config: Optional[dict] = None,
 ) -> Optional[Chroma]:
     if vector_store_exists(video_id):
         return load_vector_store(video_id)
     if transcript:
-        return build_vector_store(video_id, transcript)
+        return build_vector_store(
+            video_id,
+            transcript,
+            chunker_kind=chunker_kind,
+            chunker_config=chunker_config,
+        )
     return None
 
 

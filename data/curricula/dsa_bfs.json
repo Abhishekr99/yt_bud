@@ -1,0 +1,36 @@
+{
+  "curriculum_id": "dsa_bfs",
+  "domain": "DSA",
+  "topic": "BFS",
+  "created_at": "2026-03-05T00:00:00Z",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": ["graph data structure"],
+      "short_definition": "A set of nodes connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A FIFO data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "bfs",
+      "name": "Breadth-first search",
+      "aliases": ["BFS"],
+      "short_definition": "Traverses a graph level by level.",
+      "prerequisites": ["graph", "queue"]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency list",
+      "aliases": ["adjacency lists"],
+      "short_definition": "Graph representation as neighbor lists.",
+      "prerequisites": ["graph"]
+    }
+  ]
+}

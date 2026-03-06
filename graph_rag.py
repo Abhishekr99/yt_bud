@@ -2,7 +2,7 @@ import hashlib
 import json
 import os
 import re
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -253,6 +253,8 @@ def ensure_video_graph(
     transcript: str,
     language: str,
     rebuild: bool = False,
+    chunker_kind: str = "char",
+    chunker_config: Optional[dict] = None,
 ) -> Dict[str, Any]:
     setup_graph_schema()
     transcript_hash = _hash_transcript(transcript)
@@ -279,7 +281,9 @@ def ensure_video_graph(
             transcript_hash=transcript_hash,
         )
 
-    docs = create_chunks(transcript)
+    docs = create_chunks(
+        transcript, chunker_kind=chunker_kind, chunker_config=chunker_config
+    )
     concept_count = 0
     relation_count = 0
 
@@ -290,15 +294,18 @@ def ensure_video_graph(
             if not chunk_text:
                 continue
             chunk_id = f"{video_id}::{idx}"
+            chunker_name = doc.metadata.get("chunker_name", chunker_kind)
             session.run(
                 "MERGE (v:Video {video_id: $video_id}) "
                 "MERGE (ch:Chunk {chunk_id: $chunk_id}) "
-                "SET ch.text = $text, ch.index = $index, ch.video_id = $video_id "
+                "SET ch.text = $text, ch.index = $index, ch.video_id = $video_id, "
+                "ch.chunker = $chunker "
                 "MERGE (v)-[:HAS_CHUNK]->(ch)",
                 video_id=video_id,
                 chunk_id=chunk_id,
                 text=chunk_text,
                 index=idx,
+                chunker=chunker_name,
             )
             if prev_chunk_id:
                 session.run(

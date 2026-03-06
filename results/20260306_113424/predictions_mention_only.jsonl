@@ -1,0 +1,3 @@
+{"video_id": "-tgVpUgsQ5k", "model": "mention_only", "missing_pred": [], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "HZ5YTanv5QE", "model": "mention_only", "missing_pred": [], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "xlVX7dXLS64", "model": "mention_only", "missing_pred": ["adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 0.0}}
