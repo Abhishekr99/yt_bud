@@ -1,0 +1,53 @@
+{"video_id": "M3_pLsDdeuU", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "3oI-34aPMWM", "model": "mention_only", "missing_pred": ["queue", "bfs"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "-tgVpUgsQ5k", "model": "mention_only", "missing_pred": [], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "Qzf1a--rhp8", "model": "mention_only", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "zQ3zgFypzX4", "model": "mention_only", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "5lZ0iJMrUMk", "model": "mention_only", "missing_pred": ["queue", "bfs"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "C4gxoTaI71U", "model": "mention_only", "missing_pred": [], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "V6H1qAeB-l4", "model": "mention_only", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "0vVofAhAYjc", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "ZSPjZuZWCME", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "mJcZjjKzeqk", "model": "mention_only", "missing_pred": ["bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "DMnDM_sxVig", "model": "mention_only", "missing_pred": ["queue", "bfs"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "aBxjDBC4M1U", "model": "mention_only", "missing_pred": ["queue", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 0.0}}
+{"video_id": "_ANrF3FJm7I", "model": "mention_only", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "ctCpP0RFDFc", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "jmy0LaGET1I", "model": "mention_only", "missing_pred": ["graph", "queue", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 0.0}}
+{"video_id": "EoAsWbO7sqg", "model": "mention_only", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "p7-9UvDQZ3w", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "FiFiNvM29ps", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "YNstP0ESndU", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "joewRl1CTL8", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "-aTLjoDT1GQ", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "HaHsqDjWMLU", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "WiOdQQYLMU4", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "xaCPDMEkbig", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "UjTTx2eYrx8", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "H5tD_NtPDuU", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "4T3aOIfNdTY", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "KjdS_o5HNII", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "akClB1J6b28", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "-7QG2itL1u4", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "QMwwplztQfY", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "LHsPJ2bQX1U", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "dFc2XK9dyNs", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "UWaeMiP_vK8", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "ofAcvZVEfBk", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "yh5ABTeNUpE", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "C2iKgnGby0I", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "4yNrSg7b4JA", "model": "mention_only", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "1MYkWhpuLtY", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "bxRVz8zklWM", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "VmsTAVpz0xo", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "T_UXDTy23DQ", "model": "mention_only", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "zp6pBNbUB2U", "model": "mention_only", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "dn01XST9-bI", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "pqg0SOPRlJ4", "model": "mention_only", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "dmb1i4oN5oE", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "nquQ_fYGGA4", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "Tk_fi5l8cag", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "wiOo4DC5GGA", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "jXu-H7XuClE", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "pULw1Fpru0E", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "oQ5sAfT_3V4", "model": "mention_only", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}

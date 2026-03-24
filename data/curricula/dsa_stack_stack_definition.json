@@ -1,0 +1,124 @@
+{
+  "curriculum_id": "dsa_stack_stack_definition",
+  "domain": "DSA",
+  "module": "Stack",
+  "topic": "Stack definition",
+  "created_at": "2026-03-23T10:52:55.007193",
+  "concepts": [
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [
+        "LIFO structure"
+      ],
+      "short_definition": "A linear data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "lifo",
+      "name": "LIFO",
+      "aliases": [
+        "Last-In, First-Out"
+      ],
+      "short_definition": "The principle where the last element added to a structure is the first one to be removed.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "push_operation",
+      "name": "Push operation",
+      "aliases": [
+        "Add element"
+      ],
+      "short_definition": "The operation of adding an element to the top of the stack.",
+      "prerequisites": [
+        "lifo",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "pop_operation",
+      "name": "Pop operation",
+      "aliases": [
+        "Remove element"
+      ],
+      "short_definition": "The operation of removing and returning the element from the top of the stack.",
+      "prerequisites": [
+        "lifo",
+        "push_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "peek_operation",
+      "name": "Peek operation",
+      "aliases": [
+        "Top element"
+      ],
+      "short_definition": "The operation of viewing the element at the top of the stack without removing it.",
+      "prerequisites": [
+        "lifo",
+        "push_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "empty_stack",
+      "name": "Empty stack",
+      "aliases": [
+        "Underflow"
+      ],
+      "short_definition": "A stack that contains no elements.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "full_stack",
+      "name": "Full stack",
+      "aliases": [
+        "Overflow"
+      ],
+      "short_definition": "A stack that has reached its maximum capacity (relevant for fixed-size implementations).",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "stack_implementation",
+      "name": "Stack implementation",
+      "aliases": [
+        "Array stack",
+        "Linked list stack"
+      ],
+      "short_definition": "Methods for realizing a stack data structure, typically using arrays or linked lists.",
+      "prerequisites": [
+        "pop_operation",
+        "push_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "abstract_data_type",
+      "name": "Abstract Data Type",
+      "aliases": [
+        "ADT"
+      ],
+      "short_definition": "A logical description of a data structure, defining its operations and behavior without specifying implementation details.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "applications_of_stack",
+      "name": "Applications of Stack",
+      "aliases": [
+        "Use cases"
+      ],
+      "short_definition": "Real-world scenarios and problems where stacks are effectively utilized.",
+      "prerequisites": [
+        "lifo",
+        "stack"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "curriculum_id": "dsa_graph_graph_representation",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Graph representation",
+  "created_at": "2026-03-23T10:52:16.323360",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit in a graph, representing an entity.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [
+        "Matrix representation"
+      ],
+      "short_definition": "A 2D array representing graph connections, where rows and columns correspond to vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "List representation"
+      ],
+      "short_definition": "A collection of lists, where each list contains the neighbors of a vertex.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction, from one vertex to another.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have a direction; connections are bidirectional.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges have associated numerical values (weights).",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "The amount of memory required by a data structure or algorithm.",
+      "prerequisites": [
+        "adjacency_list",
+        "adjacency_matrix"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "The amount of time an algorithm takes to run as a function of input size.",
+      "prerequisites": [
+        "adjacency_list",
+        "adjacency_matrix"
+      ]
+    }
+  ]
+}

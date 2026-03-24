@@ -1,0 +1,135 @@
+# Neo4j-only semantic tuning ablations (multi-knob)
+# Run:
+# python -m eval.run_ablations --config ablations_neo4j_semantic_tuning.yml --out results
+
+base:
+  videos: data/videos/videos.jsonl
+  curricula_dir: data/curricula
+  labels: data/labels/concept_coverage_labels.jsonl
+  models: neo4j_graph
+  chunker: semantic
+  build_graph: true
+  graph_rebuild: true
+  log_level: INFO
+  no_progress: false
+
+grid:
+  # Stage 1: similarity sweep
+  - chunker_config:
+      similarity_threshold: 0.45
+      window_sentences: 4
+      overlap_sentences: 1
+      min_chars: 600
+      max_chars: 2200
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: similarity
+      sim: 0.45
+
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 4
+      overlap_sentences: 1
+      min_chars: 600
+      max_chars: 2200
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: similarity
+      sim: 0.55
+
+  - chunker_config:
+      similarity_threshold: 0.65
+      window_sentences: 4
+      overlap_sentences: 1
+      min_chars: 600
+      max_chars: 2200
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: similarity
+      sim: 0.65
+
+  # Stage 2: window behavior (fixed sim=0.55)
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 3
+      overlap_sentences: 0
+      min_chars: 600
+      max_chars: 2200
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: window
+      win: 3
+      ov: 0
+
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 5
+      overlap_sentences: 1
+      min_chars: 600
+      max_chars: 2200
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: window
+      win: 5
+      ov: 1
+
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 6
+      overlap_sentences: 2
+      min_chars: 600
+      max_chars: 2200
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: window
+      win: 6
+      ov: 2
+
+  # Stage 3: size behavior (fixed sim=0.55, win=4, ov=1)
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 4
+      overlap_sentences: 1
+      min_chars: 450
+      max_chars: 1800
+      fallback_char_chunk_size: 1000
+    ablation_flags:
+      family: neo4j_semantic
+      stage: size
+      min_chars: 450
+      max_chars: 1800
+      fallback: 1000
+
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 4
+      overlap_sentences: 1
+      min_chars: 800
+      max_chars: 2400
+      fallback_char_chunk_size: 1200
+    ablation_flags:
+      family: neo4j_semantic
+      stage: size
+      min_chars: 800
+      max_chars: 2400
+      fallback: 1200
+
+  - chunker_config:
+      similarity_threshold: 0.55
+      window_sentences: 4
+      overlap_sentences: 1
+      min_chars: 1000
+      max_chars: 3000
+      fallback_char_chunk_size: 1500
+    ablation_flags:
+      family: neo4j_semantic
+      stage: size
+      min_chars: 1000
+      max_chars: 3000
+      fallback: 1500

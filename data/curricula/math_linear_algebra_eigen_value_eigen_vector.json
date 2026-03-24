@@ -1,0 +1,120 @@
+{
+  "curriculum_id": "math_linear_algebra_eigen_value_eigen_vector",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "eigen value, eigen vector",
+  "created_at": "2026-03-23T10:53:43.056936",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors that can be added together and scaled, satisfying certain axioms.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map"
+      ],
+      "short_definition": "A function between vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [],
+      "short_definition": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "matrixvector_multiplication",
+      "name": "Matrix-Vector Multiplication",
+      "aliases": [
+        "Linear Transformation by Matrix"
+      ],
+      "short_definition": "The operation of multiplying a matrix by a vector.",
+      "prerequisites": [
+        "matrix",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue",
+      "name": "Eigenvalue",
+      "aliases": [
+        "Characteristic Value"
+      ],
+      "short_definition": "A scalar that represents how a linear transformation scales a corresponding eigenvector.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "eigenvector",
+      "name": "Eigenvector",
+      "aliases": [
+        "Characteristic Vector"
+      ],
+      "short_definition": "A non-zero vector that, when a linear transformation is applied to it, only changes by a scalar factor (the eigenvalue).",
+      "prerequisites": [
+        "eigenvalue",
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "characteristic_equation",
+      "name": "Characteristic Equation",
+      "aliases": [
+        "Secular Equation"
+      ],
+      "short_definition": "A polynomial equation derived from a matrix that, when solved, yields the eigenvalues.",
+      "prerequisites": [
+        "eigenvalue",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "eigenspace",
+      "name": "Eigenspace",
+      "aliases": [
+        "Eigenvector Space"
+      ],
+      "short_definition": "The set of all eigenvectors corresponding to a particular eigenvalue, along with the zero vector.",
+      "prerequisites": [
+        "eigenvector",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "diagonalization",
+      "name": "Diagonalization",
+      "aliases": [],
+      "short_definition": "The process of transforming a matrix into a diagonal matrix using its eigenvectors and eigenvalues.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "applications_of_eigenvalue",
+      "name": "Applications of Eigenvalues",
+      "aliases": [
+        "Uses of Eigenvalues"
+      ],
+      "short_definition": "Real-world problems and mathematical scenarios where eigenvalues and eigenvectors are utilized.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector"
+      ]
+    }
+  ]
+}

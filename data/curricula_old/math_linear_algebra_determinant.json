@@ -1,0 +1,419 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Determinants",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Determinants",
+  "created_at": "2026-03-21T11:13:38.254607",
+  "concepts": [
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [
+        "Matrices"
+      ],
+      "short_definition": "A rectangular array of numbers or symbols.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "square_matrix",
+      "name": "Square Matrix",
+      "aliases": [],
+      "short_definition": "A matrix with an equal number of rows and columns.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant",
+      "name": "Determinant",
+      "aliases": [
+        "Det"
+      ],
+      "short_definition": "A scalar value associated with a square matrix.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "scalar",
+      "name": "Scalar",
+      "aliases": [],
+      "short_definition": "A single number.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "1x1_determinant",
+      "name": "1x1 Determinant",
+      "aliases": [],
+      "short_definition": "The determinant of a 1x1 matrix is its single element.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "2x2_determinant",
+      "name": "2x2 Determinant",
+      "aliases": [],
+      "short_definition": "The determinant of a 2x2 matrix calculated by a specific formula.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "3x3_determinant",
+      "name": "3x3 Determinant",
+      "aliases": [],
+      "short_definition": "The determinant of a 3x3 matrix calculated using cofactor expansion or Sarrus' rule.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "cofactor_expansion",
+      "name": "Cofactor Expansion",
+      "aliases": [
+        "Laplace Expansion"
+      ],
+      "short_definition": "A method to calculate determinants by expanding along a row or column.",
+      "prerequisites": [
+        "determinant",
+        "minor",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "minor",
+      "name": "Minor",
+      "aliases": [],
+      "short_definition": "The determinant of a submatrix formed by deleting a row and column.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "cofactor",
+      "name": "Cofactor",
+      "aliases": [],
+      "short_definition": "A minor multiplied by a sign determined by its position.",
+      "prerequisites": [
+        "minor",
+        "scalar"
+      ]
+    },
+    {
+      "concept_id": "sarrus_rule",
+      "name": "Sarrus' Rule",
+      "aliases": [],
+      "short_definition": "A mnemonic for calculating 3x3 determinants.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "properties_of_determinant",
+      "name": "Properties of Determinants",
+      "aliases": [],
+      "short_definition": "Rules governing how determinants behave under matrix operations.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "row_operation",
+      "name": "Row Operations",
+      "aliases": [],
+      "short_definition": "Elementary operations performed on the rows of a matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "column_operation",
+      "name": "Column Operations",
+      "aliases": [],
+      "short_definition": "Elementary operations performed on the columns of a matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant_of_transpose",
+      "name": "Determinant of Transpose",
+      "aliases": [],
+      "short_definition": "The determinant of a matrix is equal to the determinant of its transpose.",
+      "prerequisites": [
+        "determinant",
+        "transpose"
+      ]
+    },
+    {
+      "concept_id": "transpose",
+      "name": "Transpose",
+      "aliases": [
+        "Matrix Transpose"
+      ],
+      "short_definition": "A matrix obtained by interchanging rows and columns.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant_of_product",
+      "name": "Determinant of Product",
+      "aliases": [],
+      "short_definition": "The determinant of a product of matrices is the product of their determinants.",
+      "prerequisites": [
+        "determinant",
+        "matrix_multiplication"
+      ]
+    },
+    {
+      "concept_id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "aliases": [],
+      "short_definition": "A binary operation that produces a new matrix from two matrices.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant_of_inverse",
+      "name": "Determinant of Inverse",
+      "aliases": [],
+      "short_definition": "The determinant of an invertible matrix is the reciprocal of the determinant of its inverse.",
+      "prerequisites": [
+        "determinant",
+        "inverse_matrix"
+      ]
+    },
+    {
+      "concept_id": "inverse_matrix",
+      "name": "Inverse Matrix",
+      "aliases": [
+        "Matrix Inverse"
+      ],
+      "short_definition": "A matrix that, when multiplied by another matrix, yields the identity matrix.",
+      "prerequisites": [
+        "identity_matrix",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "identity_matrix",
+      "name": "Identity Matrix",
+      "aliases": [
+        "I"
+      ],
+      "short_definition": "A square matrix with ones on the main diagonal and zeros elsewhere.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "singular_matrix",
+      "name": "Singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a determinant of zero.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "nonsingular_matrix",
+      "name": "Non-singular Matrix",
+      "aliases": [
+        "Invertible Matrix"
+      ],
+      "short_definition": "A square matrix with a non-zero determinant.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant_and_linear_independence",
+      "name": "Determinant and Linear Independence",
+      "aliases": [],
+      "short_definition": "A matrix has linearly independent columns (or rows) if and only if its determinant is non-zero.",
+      "prerequisites": [
+        "determinant",
+        "linear_independence"
+      ]
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [],
+      "short_definition": "A set of vectors is linearly independent if no vector can be written as a linear combination of the others.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "vector",
+      "name": "Vector",
+      "aliases": [
+        "Vectors"
+      ],
+      "short_definition": "A quantity having direction as well as magnitude.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "determinant_and_rank",
+      "name": "Determinant and Rank",
+      "aliases": [],
+      "short_definition": "The rank of a square matrix is equal to its size if and only if its determinant is non-zero.",
+      "prerequisites": [
+        "determinant",
+        "rank"
+      ]
+    },
+    {
+      "concept_id": "rank",
+      "name": "Rank",
+      "aliases": [
+        "Matrix Rank"
+      ],
+      "short_definition": "The maximum number of linearly independent row or column vectors in a matrix.",
+      "prerequisites": [
+        "linear_independence",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant_and_eigenvalue",
+      "name": "Determinant and Eigenvalues",
+      "aliases": [],
+      "short_definition": "The determinant of a matrix is the product of its eigenvalues.",
+      "prerequisites": [
+        "determinant",
+        "eigenvalue"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue",
+      "name": "Eigenvalue",
+      "aliases": [
+        "Eigenvalues"
+      ],
+      "short_definition": "A scalar associated with an eigenvector of a linear transformation.",
+      "prerequisites": [
+        "eigenvector",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "eigenvector",
+      "name": "Eigenvector",
+      "aliases": [
+        "Eigenvectors"
+      ],
+      "short_definition": "A non-zero vector that, when a linear transformation is applied to it, changes only by a scalar factor.",
+      "prerequisites": [
+        "square_matrix",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "characteristic_polynomial",
+      "name": "Characteristic Polynomial",
+      "aliases": [],
+      "short_definition": "A polynomial whose roots are the eigenvalues of a matrix.",
+      "prerequisites": [
+        "eigenvalue",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant_of_characteristic_polynomial",
+      "name": "Determinant of Characteristic Polynomial",
+      "aliases": [],
+      "short_definition": "The constant term of the characteristic polynomial is related to the determinant.",
+      "prerequisites": [
+        "characteristic_polynomial",
+        "determinant"
+      ]
+    },
+    {
+      "concept_id": "geometric_interpretation_of_determinant",
+      "name": "Geometric Interpretation of Determinant",
+      "aliases": [],
+      "short_definition": "The absolute value of the determinant represents the scaling factor of area or volume under a linear transformation.",
+      "prerequisites": [
+        "determinant",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [],
+      "short_definition": "A function between two vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "area_scaling",
+      "name": "Area Scaling",
+      "aliases": [],
+      "short_definition": "How a 2D linear transformation scales areas.",
+      "prerequisites": [
+        "determinant",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "volume_scaling",
+      "name": "Volume Scaling",
+      "aliases": [],
+      "short_definition": "How a 3D linear transformation scales volumes.",
+      "prerequisites": [
+        "determinant",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "orientation",
+      "name": "Orientation",
+      "aliases": [],
+      "short_definition": "The sign of the determinant indicates whether a linear transformation preserves or reverses orientation.",
+      "prerequisites": [
+        "determinant",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "adjugate_matrix",
+      "name": "Adjugate Matrix",
+      "aliases": [
+        "Adjoint Matrix"
+      ],
+      "short_definition": "The transpose of the cofactor matrix.",
+      "prerequisites": [
+        "cofactor",
+        "transpose"
+      ]
+    },
+    {
+      "concept_id": "determinant_using_adjugate",
+      "name": "Determinant using Adjugate",
+      "aliases": [],
+      "short_definition": "A formula for the inverse of a matrix using its adjugate and determinant.",
+      "prerequisites": [
+        "adjugate_matrix",
+        "determinant",
+        "inverse_matrix"
+      ]
+    }
+  ]
+}

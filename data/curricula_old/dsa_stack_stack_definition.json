@@ -1,0 +1,460 @@
+{
+  "curriculum_id": "DSA_Stack_Stack definition",
+  "domain": "DSA",
+  "module": "Stack",
+  "topic": "Stack definition",
+  "created_at": "2026-03-21T11:11:35.578369",
+  "concepts": [
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [
+        "LIFO structure"
+      ],
+      "short_definition": "A linear data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "lifo",
+      "name": "LIFO",
+      "aliases": [
+        "Last-In, First-Out"
+      ],
+      "short_definition": "The principle where the last element added to a structure is the first one to be removed.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "abstract_data_type",
+      "name": "Abstract Data Type",
+      "aliases": [
+        "ADT"
+      ],
+      "short_definition": "A logical description of data and a set of operations that can be performed on that data, independent of implementation.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "push_operation",
+      "name": "Push Operation",
+      "aliases": [
+        "Add element",
+        "Insert element"
+      ],
+      "short_definition": "The operation of adding an element to the top of the stack.",
+      "prerequisites": [
+        "lifo",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "pop_operation",
+      "name": "Pop Operation",
+      "aliases": [
+        "Remove element",
+        "Delete element"
+      ],
+      "short_definition": "The operation of removing and returning the element from the top of the stack.",
+      "prerequisites": [
+        "lifo",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "peek_operation",
+      "name": "Peek Operation",
+      "aliases": [
+        "Top element",
+        "View top"
+      ],
+      "short_definition": "The operation of viewing the element at the top of the stack without removing it.",
+      "prerequisites": [
+        "lifo",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "empty_stack",
+      "name": "Empty Stack",
+      "aliases": [
+        "Is empty"
+      ],
+      "short_definition": "A stack that contains no elements.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "full_stack",
+      "name": "Full Stack",
+      "aliases": [
+        "Is full"
+      ],
+      "short_definition": "A stack that has reached its maximum capacity (relevant for fixed-size implementations).",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "top_pointer",
+      "name": "Top Pointer",
+      "aliases": [
+        "Head pointer",
+        "Stack pointer"
+      ],
+      "short_definition": "A variable that keeps track of the index or position of the top element in the stack.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "underflow",
+      "name": "Underflow",
+      "aliases": [
+        "Stack underflow"
+      ],
+      "short_definition": "An error condition that occurs when attempting to pop or peek from an empty stack.",
+      "prerequisites": [
+        "empty_stack",
+        "peek_operation",
+        "pop_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "overflow",
+      "name": "Overflow",
+      "aliases": [
+        "Stack overflow"
+      ],
+      "short_definition": "An error condition that occurs when attempting to push an element onto a full stack (relevant for fixed-size implementations).",
+      "prerequisites": [
+        "full_stack",
+        "push_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "array_implementation",
+      "name": "Array Implementation",
+      "aliases": [
+        "Array-based stack"
+      ],
+      "short_definition": "Implementing a stack using an array as the underlying storage mechanism.",
+      "prerequisites": [
+        "array",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "linked_list_implementation",
+      "name": "Linked List Implementation",
+      "aliases": [
+        "Node-based stack"
+      ],
+      "short_definition": "Implementing a stack using a linked list as the underlying storage mechanism.",
+      "prerequisites": [
+        "linked_list",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [
+        "List"
+      ],
+      "short_definition": "A contiguous block of memory storing elements of the same data type.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [
+        "LL"
+      ],
+      "short_definition": "A linear data structure where elements are not stored contiguously in memory; each element points to the next.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Element"
+      ],
+      "short_definition": "A basic unit in a linked list, typically containing data and a pointer to the next node.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O notation"
+      ],
+      "short_definition": "A measure of how the execution time of an algorithm grows as the input size increases.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory usage"
+      ],
+      "short_definition": "A measure of how the memory usage of an algorithm grows as the input size increases.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "constant_time",
+      "name": "Constant Time",
+      "aliases": [
+        "O(1)"
+      ],
+      "short_definition": "An operation whose execution time does not depend on the size of the input.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linear_time",
+      "name": "Linear Time",
+      "aliases": [
+        "O(n)"
+      ],
+      "short_definition": "An operation whose execution time grows linearly with the size of the input.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "applications_of_stack",
+      "name": "Applications of Stack",
+      "aliases": [
+        "Stack use cases"
+      ],
+      "short_definition": "Real-world scenarios and problems where stacks are effectively used.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "function_call_stack",
+      "name": "Function Call Stack",
+      "aliases": [
+        "Call stack"
+      ],
+      "short_definition": "A mechanism used by programming languages to manage function calls and their local variables.",
+      "prerequisites": [
+        "applications_of_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "expression_evaluation",
+      "name": "Expression Evaluation",
+      "aliases": [
+        "Infix to postfix",
+        "Postfix evaluation"
+      ],
+      "short_definition": "Using stacks to convert and evaluate mathematical expressions.",
+      "prerequisites": [
+        "applications_of_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "backtracking_algorithm",
+      "name": "Backtracking Algorithms",
+      "aliases": [
+        "Recursion simulation"
+      ],
+      "short_definition": "Algorithms that explore possibilities and undo choices, often using stacks.",
+      "prerequisites": [
+        "applications_of_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "undoredo_functionality",
+      "name": "Undo/Redo Functionality",
+      "aliases": [
+        "History tracking"
+      ],
+      "short_definition": "Implementing undo and redo features in applications using stacks.",
+      "prerequisites": [
+        "applications_of_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "syntax_parsing",
+      "name": "Syntax Parsing",
+      "aliases": [
+        "Compiler design"
+      ],
+      "short_definition": "Using stacks to analyze the grammatical structure of code.",
+      "prerequisites": [
+        "applications_of_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "data_storage",
+      "name": "Data Storage",
+      "aliases": [
+        "Memory management"
+      ],
+      "short_definition": "How stacks manage temporary data storage during program execution.",
+      "prerequisites": [
+        "function_call_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [
+        "Recursive calls"
+      ],
+      "short_definition": "A programming technique where a function calls itself.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "base_case",
+      "name": "Base Case",
+      "aliases": [
+        "Termination condition"
+      ],
+      "short_definition": "The condition in a recursive function that stops the recursion.",
+      "prerequisites": [
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "recursive_step",
+      "name": "Recursive Step",
+      "aliases": [
+        "Recursive call logic"
+      ],
+      "short_definition": "The part of a recursive function that breaks down the problem and calls itself.",
+      "prerequisites": [
+        "base_case",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "stack_frame",
+      "name": "Stack Frame",
+      "aliases": [
+        "Activation record"
+      ],
+      "short_definition": "A block of memory on the call stack that stores information about a function call.",
+      "prerequisites": [
+        "function_call_stack",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "memory_allocation",
+      "name": "Memory Allocation",
+      "aliases": [
+        "Dynamic memory"
+      ],
+      "short_definition": "The process of assigning memory to data during program execution.",
+      "prerequisites": [
+        "function_call_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "scope",
+      "name": "Scope",
+      "aliases": [
+        "Variable scope"
+      ],
+      "short_definition": "The region of a program where a variable is accessible.",
+      "prerequisites": [
+        "stack",
+        "stack_frame"
+      ]
+    },
+    {
+      "concept_id": "return_addres",
+      "name": "Return Address",
+      "aliases": [
+        "Program counter"
+      ],
+      "short_definition": "The memory location to which control returns after a function call completes.",
+      "prerequisites": [
+        "function_call_stack",
+        "stack_frame"
+      ]
+    },
+    {
+      "concept_id": "local_variable",
+      "name": "Local Variables",
+      "aliases": [
+        "Function variables"
+      ],
+      "short_definition": "Variables declared within a function that are only accessible within that function.",
+      "prerequisites": [
+        "scope",
+        "stack_frame"
+      ]
+    },
+    {
+      "concept_id": "parameter",
+      "name": "Parameters",
+      "aliases": [
+        "Function arguments"
+      ],
+      "short_definition": "Values passed into a function when it is called.",
+      "prerequisites": [
+        "function_call_stack",
+        "stack_frame"
+      ]
+    },
+    {
+      "concept_id": "infix_notation",
+      "name": "Infix Notation",
+      "aliases": [
+        "Standard notation"
+      ],
+      "short_definition": "Mathematical notation where operators appear between operands (e.g., a + b).",
+      "prerequisites": [
+        "expression_evaluation"
+      ]
+    },
+    {
+      "concept_id": "postfix_notation",
+      "name": "Postfix Notation",
+      "aliases": [
+        "Reverse Polish Notation",
+        "RPN"
+      ],
+      "short_definition": "Mathematical notation where operators appear after operands (e.g., ab+).",
+      "prerequisites": [
+        "expression_evaluation"
+      ]
+    },
+    {
+      "concept_id": "prefix_notation",
+      "name": "Prefix Notation",
+      "aliases": [
+        "Polish Notation"
+      ],
+      "short_definition": "Mathematical notation where operators appear before operands (e.g., +ab).",
+      "prerequisites": [
+        "expression_evaluation"
+      ]
+    }
+  ]
+}

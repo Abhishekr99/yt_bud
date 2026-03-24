@@ -1,0 +1,475 @@
+[Music] 
+ we are done with the chapter of 
+ asymptotic notations where we discussed 
+ different types of asymptotic notations 
+ and the problems based on it now from 
+ this lecture onwards we are starting a 
+ new chapter where we will discuss how to 
+ find the time complexity and the space 
+ complexity of algorithms involving 
+ Loops in this lecture we will first 
+ understand the time complexity in great 
+ details and then through an example we 
+ will understand how to analyze the time 
+ complexity of an algorithm in involving 
+ Loops so let's get started with this 
+ lecture and let's see what are the 
+ topics the first topic of this lecture 
+ is priori versus posterior analysis 
+ recap we will first get the quick recap 
+ of priori and posterior 
+ analysis and then we will understand CPU 
+ computations and Main memory space we 
+ will understand these two terms in great 
+ depth and then we will understand the 
+ time complexity and finally through an 
+ example we will understand how to 
+ analyze an algorithm and that to an 
+ algorithm which involves Loops so let's 
+ get started and let's get the quick 
+ recap of the priori versus posteriori 
+ analysis we know the difference between 
+ priori and posterior analysis from our 
+ previous 
+ chapters let's get the quick recap of 
+ priori and posterior 
+ analysis in case of priori analysis we 
+ estimate time and memory space required 
+ by an algorithm before executing it on 
+ the system but in case of posterior 
+ analysis we calculate time and memory 
+ space required by an algorithm after 
+ executing it on the 
+ system here in case of priori analysis 
+ we estimate time and memory space this 
+ means we do not calculate the actual 
+ time and memory space required by an 
+ algorithm and we estimate time and 
+ memory space before exit executing our 
+ algorithm on the 
+ system so before executing the algorithm 
+ we estimate time and memory space it 
+ takes in case of posterior analysis we 
+ calculate the actual time and memory 
+ space required by an algorithm after 
+ executing it on the system so 
+ posteriority analysis depends upon the 
+ system priori analysis does not depend 
+ upon the system because we are analyzing 
+ the time and memory space required by an 
+ algorithm before executing it on the 
+ system in case of priori analysis our 
+ focus is on priori analysis because 
+ priori analysis is the easiest and it is 
+ the most practical 
+ analysis so keeping this in mind we will 
+ use priori analysis to analyze our 
+ algorithms now how do we estimate time 
+ and memory space is the main question 
+ the estimation of time is same as the 
+ estimation of total number of CPU 
+ computations an algorithm takes and 
+ estimation of memory space means 
+ estimation of main memory 
+ space we will understand how do we 
+ estimate main memory space later but in 
+ this lecture we will understand how to 
+ estimate time or in other words how to 
+ estimate 
+ the total number of CPU computations an 
+ algorithm needs to 
+ execute now what is the meaning of CPU 
+ computations let's understand the 
+ meaning of CPU computations and Main 
+ memory space first after this we will 
+ learn how to analyze an algorithm or in 
+ other words how to estimate time and 
+ memory space required by an algorithm so 
+ now we will understand the meaning of 
+ CPU computations and Main memory 
+ space so what is the meaning of CPU 
+ computation a CPU computation refers to 
+ a task performed by the CPU or 
+ instruction executed by the CPU so CPU 
+ computation refers to a task which is 
+ performed by the CPU at any point of 
+ time or it refers to an instruction 
+ executed by the CPU in simpler terms so 
+ the meaning of CPU computation is an 
+ instruction executed by the CPU now what 
+ is the meaning of main memory space main 
+ memory space is used to temporarily 
+ store data and instructions that CPU 
+ needs for quick access during program 
+ execution one thing is clear that our 
+ focus is on CPU or Central Processing 
+ Unit whenever a CPU performs a task we 
+ call it a CPU computation or we can say 
+ whenever an instruction is executed by 
+ the CPU we call it a CPU 
+ computation and we are focusing on the 
+ main memory space because main memory or 
+ random access memory which we also call 
+ RAM is required by the CPU for quick 
+ access of the data and instructions 
+ stored in it main memory space is of 
+ concern to us and we are also concerned 
+ with the total number of CPU 
+ computations required by an algorithm so 
+ these are the two terms which I hope are 
+ completely clear to you the meaning of 
+ CPU computation is an instruction 
+ executed by the CPU and Main memory 
+ space is the memory space required by 
+ the CPU for quick access of data and 
+ instructions during program 
+ execution now as we have understood the 
+ meaning of CPU computations and Main 
+ memory space we are in the state to 
+ understand the time 
+ complexity so what is time 
+ complexity time complexity refers to the 
+ estimation of total CPU 
+ computations record IR ired to execute 
+ an algorithm we just understood the 
+ meaning of CPU 
+ computations we are not bothering about 
+ main memory space at this moment later 
+ we will understand how to estimate main 
+ memory space but right now our focus is 
+ to understand the time complexity and 
+ time complexity is the estimation of 
+ total CPU computations required to 
+ execute an algorithm now the main 
+ question is how do we estimate total CPU 
+ computations we now know time complexity 
+ of an algorithm is equal to total number 
+ of CPU computations but the question is 
+ how do we know the total number of CPU 
+ computations of an 
+ algorithm we can calculate the total 
+ number of CPU computations by using the 
+ method which we call the frequ quency 
+ count 
+ method according to this method we 
+ calculate the sum of frequency count of 
+ each instruction of an 
+ algorithm so frequency count method is 
+ the method in which we calculate the sum 
+ of frequency count of each instruction 
+ of an 
+ algorithm so total number of CPU 
+ computations is equal to the sum of 
+ frequency count of each instruction of 
+ an algorithm now what is the meaning of 
+ frequency count frequency count refers 
+ to the number of times an instruction is 
+ executed so in order to calculate the 
+ time complexity of an algorithm we 
+ calculate the sum of frequency count of 
+ each instruction of an algorithm and 
+ frequency count refers to the number of 
+ times an instruction is executed so by 
+ seeing an algorithm you can calculate 
+ its time 
+ complexity and now we will understand 
+ how to do this so now we're going to 
+ take a simple example algorithm and 
+ through that algorithm we will 
+ understand how to calculate the time 
+ complexity and that to using the 
+ frequency count method so now let's move 
+ to the next topic where we will consider 
+ a simple example algorithm to understand 
+ the time complexity 
+ properly here is the example algorithm 
+ here I have written the algorithm in C 
+ like syntax because C like syntax is 
+ simpler to understand and many students 
+ might already know C programming 
+ language so it is my assumption that you 
+ are familiar with at least one 
+ programming language if not C if you 
+ know C programming language AG then it 
+ is great but if you don't know C 
+ programming language you can still 
+ follow along there is no 
+ issue this algorithm is written in C 
+ like syntax and I've mentioned algo here 
+ to indicate that this is not a c program 
+ this is an algorithm this algorithm is 
+ non-executable this algorithm is written 
+ for us to understand how to analyze the 
+ time 
+ complexity so now we are going to 
+ analyze the time complexity of this 
+ algorithm using the formula which we 
+ just saw we are going to use the 
+ frequency count method to calculate the 
+ time complexity of this algorithm so we 
+ will do the priori analysis of this 
+ algorithm this means we will estimate 
+ the time complexity of this algorithm 
+ through the frequency count method now 
+ let's proceed and let's do this the job 
+ of this algorithm is to calculate the 
+ sum of N elements of the list 
+ a so n represents number of elements and 
+ a represents list of n 
+ elements here in this algorithm the 
+ first instruction is sum equal to0 this 
+ instruction tells CPU to assign zero to 
+ variable sum here only one operation is 
+ per formed hence this is just a single 
+ instruction and this instruction is 
+ executed only once so the frequency 
+ count of this instruction is 
+ one now why is that the case we know the 
+ meaning of frequency count frequency 
+ count refers to the number of times an 
+ instruction is 
+ executed this instruction is executed 
+ once here we have just one assignment 
+ that's it only one operation and it is 
+ executed only once therefore the 
+ frequency count of this instruction is 
+ one and let's assume that one 
+ instruction takes one unit of time 
+ therefore this instruction takes one 
+ unit of time now if you want to know the 
+ time complexity of this algorithm we 
+ need to calculate the sum of frequency 
+ count of each instruction in this 
+ algorithm 
+ so let's put one here here we will 
+ calculate the sum of frequency count of 
+ each instruction the frequency count of 
+ this instruction is one and this is the 
+ reason why I have written one here now 
+ what is the next 
+ instruction this is the for Loop and I 
+ hope you already know the meaning of for 
+ Loop for Loop allows us to execute 
+ instructions a certain number of times 
+ this Loop will allow us to execute this 
+ instruction which is part of the for 
+ Loop a certain number of 
+ times in this for Loop we have this 
+ instruction I equal to 
+ 1 this is an assignment instruction and 
+ this instruction will be executed only 
+ once because this represents the 
+ initialization of I so clearly the 
+ frequency count of I = 1 is 1 and 
+ therefore the time it takes is 1 unit 
+ and hence one can be added in this sum 
+ now what's the next instruction the next 
+ instruction is I less than or equal to 
+ n what can we say about this instruction 
+ what is the frequency count of this 
+ instruction I want you to pause this 
+ video and I want you think about this 
+ what is the frequency count of this 
+ instruction so pause the video 
+ now I hope you're done okay so what's 
+ the Frequency count of this instruction 
+ the frequency count of this instruction 
+ is n + 1 and hence it will take n+ 1 
+ units of time now why is this the case 
+ you might have given the answer as n and 
+ you are quite close but n is not the 
+ correct 
+ answer n + 1 is the correct answer why 
+ let's find out we know here we are 
+ checking a condition we are checking is 
+ I less than or equal to n if it is the 
+ case that I is less than or equal to n 
+ then this statement sum equal to sum + 
+ AI will be exec Ute 
+ it then I is incremented and the 
+ condition is checked once again so we 
+ know the initial value of I I is 1 one 
+ is compared with n this is the first 
+ condition checking first we are checking 
+ is 1 less than or equal to n if true we 
+ will get inside and execute the 
+ statement then I is incremented I 
+ becomes 2 then we will check this 
+ condition once again is 2 less than or 
+ equal to n this is the second condition 
+ check then we will go inside execute the 
+ statement I is again incremented it 
+ becomes three then three is compared 
+ with n this is the third time the 
+ condition is 
+ checked and this will continue and then 
+ we will compare n with n eventually I 
+ becomes n and we will compare n with n 
+ but we know n is equal to it is not less 
+ than n still the condition is true and 
+ hence the statement inside the for Loop 
+ that is Su equal to Su plus a I will be 
+ executed and I is incremented by one we 
+ know I is n and n ++ is equal to n + 1 
+ so the next condition check is n + 1 
+ less than or equal to 
+ n can we say n + 1 is less than or equal 
+ to n 
+ no right n + 1 is not less than or equal 
+ to n it is greater than n therefore at 
+ this point this condition becomes false 
+ hence we will go outside this 
+ Loop we are done with this loop at this 
+ point how many times this instruction is 
+ executed a total of n + 1 
+ times therefore there are n + 1 
+ comparisons and hence we can say the 
+ frequency count of this instruction is n 
+ + 1 and this is the reason why this 
+ instruction will take n + 1 units of 
+ time so now we can add n + one here I 
+ hope this point is clear now what can we 
+ say about this instruction 
+ i++ how many times do you think this 
+ instruction will execute 
+ let's try to understand this now this 
+ instruction will execute based on this 
+ condition if this condition is satisfied 
+ this means if this condition is true 
+ then this instruction will execute if 
+ this condition is false then this 
+ instruction will not execute why am I 
+ saying this let's now try to understand 
+ this the initial value of I is 1 let's 
+ say 1 is less than n this condition is 
+ true if this condition is true we will 
+ go inside the for Loop and execute the 
+ statement after execution of the 
+ statement I ++ will execute so it is 
+ clear when this condition is satisfied 
+ i++ will 
+ execute but what when this condition 
+ becomes false if this condition is false 
+ then this statement sum equal to sum 
+ plus AI will not execute and hence this 
+ instruction will also not execute 
+ because i++ can only execute after 
+ execution of the 
+ statement so one thing is clear that 
+ when this condition is true I ++ will 
+ execute if this condition is false then 
+ i++ will not 
+ execute now let's use this idea to 
+ understand how many times this 
+ instruction will execute the initial 
+ value of I is 1 and I'm assuming 1 is 
+ less than n therefore the condition is 
+ true after execution of the statement I 
+ is incremented by 1 this means I ++ is 
+ executed for I = 
+ 1 after execution of this instruction I 
+ becomes 2 after I becomes 2 this 
+ condition will again 
+ checked let's say 2 is also less than n 
+ the condition is once again satisfied as 
+ this condition is satisfied I ++ will 
+ definitely execute so for I equal to 2 
+ also this instruction will 
+ execute what about I = to 3 let's say 
+ for I equal to 3 also this condition is 
+ true then it is surely the case that I 
+ ++ will execute and hence for I = 3 also 
+ I ++ will execute 
+ similarly for i = 4 also this 
+ instruction will execute again assuming 
+ the same thing that 4 is less than n now 
+ let's say this process continues up to I 
+ = to n when I becomes n then n is 
+ compared with n as this condition is 
+ satisfied I ++ will again execute 
+ therefore for I = 1 to n this in 
+ instruction will definitely execute 
+ after I equal to n this instruction will 
+ execute and hence I becomes n + 1 we 
+ know that this condition will be checked 
+ once again for I = to n + 1 but this 
+ time this condition is not satisfied 
+ because n + 1 is neither less than n nor 
+ it is equal to n as we know the 
+ condition is not satisfied therefore I 
+ ++ will not execute this time so for i = 
+ n + 1 this instruction will not execute 
+ only for i = 1 up to n this instruction 
+ will 
+ execute and this clearly shows that i++ 
+ will execute n times not n + 1 times 
+ hence the frequency count of this 
+ instruction is n and the amount of time 
+ this instruction will take is n n 
+ units so now we got to know that this 
+ instruction will take n units of time so 
+ now we can add in here for this 
+ instruction now what about this 
+ statement sum equal to sum plus 
+ AI this is one statement but in this 
+ statement we have a total of two 
+ instructions here we are performing the 
+ addition operation and we are also 
+ assigning the result of sum plus AI to 
+ sum so there are a total of two 
+ instructions now how many times do you 
+ think this statement will 
+ execute this entire statement will 
+ execute n times because of the same 
+ reason which we saw in case of I 
+ ++ the execution of this statement also 
+ depends upon this 
+ condition hence when this condition is 
+ true then this statement will execute 
+ when this condition is false then this 
+ statement will not execute so it is 
+ clear the number of times this statement 
+ will execute is also 
+ n but here we have a total of two 
+ instructions therefore the total time 
+ required to execute the statement is 2N 
+ units the frequency count of the 
+ statement is 2 
+ N so now we can add 2 N here here as 
+ well now what can we say about this 
+ statement return sum this is just one 
+ instruction and hence it will take one 
+ unit of time so we can add one here for 
+ this 
+ instruction now here we can calculate 
+ the total frequency count of this 
+ algorithm this is equal to 4n + 4 
+ because 2 n + n + n is equal to 4N 
+ 1 + 1 + 1 + 1 is equal to 4 so we got 4 
+ n + 4 as 4 n is the dominating term 
+ therefore big of n is the time 
+ complexity of this 
+ algorithm we can use different notations 
+ here to represent the time complexity 
+ but I'm using the biger notation which 
+ is also correct so the time required to 
+ solve this algorithm is Big of n which 
+ is the linear time as the size of the 
+ input grows the time required to solve 
+ this algorithm grows 
+ linearly it is Big go of 
+ n now we know what is the time 
+ complexity of this algorithm and we got 
+ to know this by knowing the frequency 
+ count of each instruction of the 
+ algorithm in this way we can calculate 
+ the time complexity of any algorithm so 
+ I hope the idea is completely clear with 
+ this we are done with all the topics of 
+ this lecture and hence we are done with 
+ this 
+ lecture okay friends this is it for now 
+ thank you for watching this presentation 
+ I will see you in the next one 
+ [Applause] 
+ [Music]

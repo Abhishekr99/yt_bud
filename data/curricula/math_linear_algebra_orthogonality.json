@@ -1,0 +1,120 @@
+{
+  "curriculum_id": "math_linear_algebra_orthogonality",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Orthogonality",
+  "created_at": "2026-03-23T10:53:52.682019",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Spaces",
+      "aliases": [
+        "Vector Spaces",
+        "Linear Spaces"
+      ],
+      "short_definition": "A set of vectors that can be added together and scaled, forming a structure with specific properties.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "inner_product",
+      "name": "Inner Product",
+      "aliases": [
+        "Dot Product",
+        "Scalar Product"
+      ],
+      "short_definition": "A function that takes two vectors and returns a scalar, often used to define length and angle.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "orthogonality",
+      "name": "Orthogonality",
+      "aliases": [
+        "Perpendicularity"
+      ],
+      "short_definition": "The property of two vectors being perpendicular, meaning their inner product is zero.",
+      "prerequisites": [
+        "inner_product"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_vector",
+      "name": "Orthogonal Vectors",
+      "aliases": [
+        "Perpendicular Vectors"
+      ],
+      "short_definition": "A set of vectors where every pair of distinct vectors is orthogonal.",
+      "prerequisites": [
+        "orthogonality"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_basi",
+      "name": "Orthogonal Basis",
+      "aliases": [
+        "Orthogonal Set"
+      ],
+      "short_definition": "A basis for a vector space where all basis vectors are mutually orthogonal.",
+      "prerequisites": [
+        "orthogonal_vector"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_basi",
+      "name": "Orthonormal Basis",
+      "aliases": [
+        "Orthonormal Set"
+      ],
+      "short_definition": "An orthogonal basis where each basis vector has a magnitude (norm) of one.",
+      "prerequisites": [
+        "orthogonal_basi"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_complement",
+      "name": "Orthogonal Complement",
+      "aliases": [
+        "Orthogonal Subspace"
+      ],
+      "short_definition": "The set of all vectors orthogonal to every vector in a given subspace.",
+      "prerequisites": [
+        "orthogonality"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_projection",
+      "name": "Orthogonal Projection",
+      "aliases": [
+        "Projection onto Subspace"
+      ],
+      "short_definition": "The component of a vector that lies in a specific subspace, perpendicular to the remaining component.",
+      "prerequisites": [
+        "orthogonality"
+      ]
+    },
+    {
+      "concept_id": "gramschmidt_proces",
+      "name": "Gram-Schmidt Process",
+      "aliases": [
+        "Gram-Schmidt Orthonormalization"
+      ],
+      "short_definition": "An algorithm for constructing an orthonormal basis from any given basis of an inner product space.",
+      "prerequisites": [
+        "orthogonal_basi",
+        "orthonormal_basi"
+      ]
+    },
+    {
+      "concept_id": "least_square",
+      "name": "Least Squares",
+      "aliases": [
+        "Linear Least Squares"
+      ],
+      "short_definition": "A method for finding the best approximate solution to an overdetermined system of linear equations, often involving orthogonal projections.",
+      "prerequisites": [
+        "orthogonal_projection"
+      ]
+    }
+  ]
+}

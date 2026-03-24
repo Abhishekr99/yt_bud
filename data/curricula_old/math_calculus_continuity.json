@@ -1,0 +1,425 @@
+{
+  "curriculum_id": "MATH_Calculus_Continuity",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Continuity",
+  "created_at": "2026-03-21T11:13:01.285365",
+  "concepts": [
+    {
+      "concept_id": "function",
+      "name": "Function",
+      "aliases": [
+        "mapping"
+      ],
+      "short_definition": "A relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "domain",
+      "name": "Domain",
+      "aliases": [],
+      "short_definition": "The set of all possible input values for a function.",
+      "prerequisites": [
+        "function"
+      ]
+    },
+    {
+      "concept_id": "range",
+      "name": "Range",
+      "aliases": [
+        "image"
+      ],
+      "short_definition": "The set of all possible output values for a function.",
+      "prerequisites": [
+        "function"
+      ]
+    },
+    {
+      "concept_id": "real_number",
+      "name": "Real Number",
+      "aliases": [
+        "real"
+      ],
+      "short_definition": "A value that represents a quantity along a continuous line.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "interval",
+      "name": "Interval",
+      "aliases": [],
+      "short_definition": "A set of real numbers that lie between two given numbers.",
+      "prerequisites": [
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "open_interval",
+      "name": "Open Interval",
+      "aliases": [],
+      "short_definition": "An interval that does not include its endpoints.",
+      "prerequisites": [
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "closed_interval",
+      "name": "Closed Interval",
+      "aliases": [],
+      "short_definition": "An interval that includes its endpoints.",
+      "prerequisites": [
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "limit_of_a_function",
+      "name": "Limit of a Function",
+      "aliases": [
+        "function limit"
+      ],
+      "short_definition": "The value that a function approaches as the input approaches some value.",
+      "prerequisites": [
+        "function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "limit_point",
+      "name": "Limit Point",
+      "aliases": [
+        "accumulation point"
+      ],
+      "short_definition": "A point such that every open interval containing it also contains a point of the set other than the point itself.",
+      "prerequisites": [
+        "interval",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "epsilondelta_definition",
+      "name": "Epsilon-Delta Definition",
+      "aliases": [
+        "epsilon-delta criterion"
+      ],
+      "short_definition": "A formal definition of a limit using epsilon and delta.",
+      "prerequisites": [
+        "limit_of_a_function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "continuity_at_a_point",
+      "name": "Continuity at a Point",
+      "aliases": [
+        "point continuity"
+      ],
+      "short_definition": "A function is continuous at a point if its limit at that point exists and equals the function's value at that point.",
+      "prerequisites": [
+        "function",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "continuity_on_an_interval",
+      "name": "Continuity on an Interval",
+      "aliases": [
+        "interval continuity"
+      ],
+      "short_definition": "A function is continuous on an interval if it is continuous at every point in that interval.",
+      "prerequisites": [
+        "continuity_at_a_point",
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "discontinuity",
+      "name": "Discontinuity",
+      "aliases": [
+        "non-continuity"
+      ],
+      "short_definition": "A point where a function is not continuous.",
+      "prerequisites": [
+        "continuity_at_a_point"
+      ]
+    },
+    {
+      "concept_id": "removable_discontinuity",
+      "name": "Removable Discontinuity",
+      "aliases": [
+        "hole"
+      ],
+      "short_definition": "A discontinuity that can be removed by redefining the function at a single point.",
+      "prerequisites": [
+        "discontinuity",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "jump_discontinuity",
+      "name": "Jump Discontinuity",
+      "aliases": [
+        "step discontinuity"
+      ],
+      "short_definition": "A discontinuity where the left-hand limit and right-hand limit exist but are not equal.",
+      "prerequisites": [
+        "discontinuity",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "infinite_discontinuity",
+      "name": "Infinite Discontinuity",
+      "aliases": [
+        "asymptotic discontinuity"
+      ],
+      "short_definition": "A discontinuity where the function approaches infinity or negative infinity.",
+      "prerequisites": [
+        "discontinuity",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "oscillating_discontinuity",
+      "name": "Oscillating Discontinuity",
+      "aliases": [],
+      "short_definition": "A discontinuity where the function oscillates infinitely often near a point.",
+      "prerequisites": [
+        "discontinuity",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "lefthand_limit",
+      "name": "Left-Hand Limit",
+      "aliases": [
+        "LHL"
+      ],
+      "short_definition": "The limit of a function as the input approaches a value from the left side.",
+      "prerequisites": [
+        "limit_of_a_function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "righthand_limit",
+      "name": "Right-Hand Limit",
+      "aliases": [
+        "RHL"
+      ],
+      "short_definition": "The limit of a function as the input approaches a value from the right side.",
+      "prerequisites": [
+        "limit_of_a_function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "intermediate_value_theorem",
+      "name": "Intermediate Value Theorem",
+      "aliases": [
+        "IVT"
+      ],
+      "short_definition": "States that for a continuous function on an interval, any value between the function's values at the endpoints is attained by the function at some point within the interval.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "function",
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "extreme_value_theorem",
+      "name": "Extreme Value Theorem",
+      "aliases": [
+        "EVT"
+      ],
+      "short_definition": "States that a continuous function on a closed interval attains both a maximum and a minimum value on that interval.",
+      "prerequisites": [
+        "closed_interval",
+        "continuity_on_an_interval",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "uniform_continuity",
+      "name": "Uniform Continuity",
+      "aliases": [],
+      "short_definition": "A stronger form of continuity where the epsilon-delta condition is independent of the point being considered.",
+      "prerequisites": [
+        "continuity_at_a_point",
+        "epsilondelta_definition",
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "continuous_function_propertie",
+      "name": "Continuous Function Properties",
+      "aliases": [
+        "properties of continuous functions"
+      ],
+      "short_definition": "Rules and theorems that apply to functions that are continuous.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "extreme_value_theorem",
+        "intermediate_value_theorem"
+      ]
+    },
+    {
+      "concept_id": "sum_of_continuous_function",
+      "name": "Sum of Continuous Functions",
+      "aliases": [],
+      "short_definition": "The sum of two continuous functions is also continuous.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "product_of_continuous_function",
+      "name": "Product of Continuous Functions",
+      "aliases": [],
+      "short_definition": "The product of two continuous functions is also continuous.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "quotient_of_continuous_function",
+      "name": "Quotient of Continuous Functions",
+      "aliases": [],
+      "short_definition": "The quotient of two continuous functions is continuous wherever the denominator is non-zero.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "composition_of_continuous_function",
+      "name": "Composition of Continuous Functions",
+      "aliases": [],
+      "short_definition": "The composition of two continuous functions is also continuous.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "polynomial_function",
+      "name": "Polynomial Function",
+      "aliases": [],
+      "short_definition": "A function consisting of terms with non-negative integer exponents.",
+      "prerequisites": [
+        "function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "rational_function",
+      "name": "Rational Function",
+      "aliases": [],
+      "short_definition": "A function that can be written as the ratio of two polynomial functions.",
+      "prerequisites": [
+        "function",
+        "polynomial_function"
+      ]
+    },
+    {
+      "concept_id": "trigonometric_function",
+      "name": "Trigonometric Function",
+      "aliases": [],
+      "short_definition": "Functions that relate an angle of a right-angled triangle to ratios of side lengths.",
+      "prerequisites": [
+        "function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "exponential_function",
+      "name": "Exponential Function",
+      "aliases": [],
+      "short_definition": "A function where the variable appears in the exponent.",
+      "prerequisites": [
+        "function",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "logarithmic_function",
+      "name": "Logarithmic Function",
+      "aliases": [],
+      "short_definition": "The inverse function of an exponential function.",
+      "prerequisites": [
+        "exponential_function",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "piecewise_function",
+      "name": "Piecewise Function",
+      "aliases": [],
+      "short_definition": "A function defined by multiple sub-functions, each applying to a certain interval of the main function's domain.",
+      "prerequisites": [
+        "function",
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "continuity_of_polynomial",
+      "name": "Continuity of Polynomials",
+      "aliases": [],
+      "short_definition": "Polynomial functions are continuous everywhere.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "polynomial_function"
+      ]
+    },
+    {
+      "concept_id": "continuity_of_rational",
+      "name": "Continuity of Rationals",
+      "aliases": [],
+      "short_definition": "Rational functions are continuous on their domains.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "rational_function"
+      ]
+    },
+    {
+      "concept_id": "continuity_of_trigonometric",
+      "name": "Continuity of Trigonometrics",
+      "aliases": [],
+      "short_definition": "Standard trigonometric functions are continuous on their domains.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "trigonometric_function"
+      ]
+    },
+    {
+      "concept_id": "continuity_of_exponential",
+      "name": "Continuity of Exponentials",
+      "aliases": [],
+      "short_definition": "Exponential functions are continuous everywhere.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "exponential_function"
+      ]
+    },
+    {
+      "concept_id": "continuity_of_logarithm",
+      "name": "Continuity of Logarithms",
+      "aliases": [],
+      "short_definition": "Logarithmic functions are continuous on their domains.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "logarithmic_function"
+      ]
+    },
+    {
+      "concept_id": "continuity_of_piecewise_function",
+      "name": "Continuity of Piecewise Functions",
+      "aliases": [],
+      "short_definition": "Continuity of piecewise functions must be checked at the boundary points between sub-functions.",
+      "prerequisites": [
+        "continuity_on_an_interval",
+        "piecewise_function"
+      ]
+    }
+  ]
+}

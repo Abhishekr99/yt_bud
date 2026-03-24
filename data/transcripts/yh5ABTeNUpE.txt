@@ -1,0 +1,314 @@
+in this lesson we will study 
+ eigenvectors and eigenvalues so what are 
+ they well an eigenvector of an N by n so 
+ we're looking at square matrix square 
+ matrices an eigenvector is a vector X 
+ that is nonzero such that ax is equal to 
+ lambda X for some lambda then lambda is 
+ just a scalar in addition the scaler 
+ itself is called the eigenvalue if there 
+ is a non trivial solution X for that 
+ equation ax equals lambda X so before we 
+ look at you know making sense of all of 
+ this let's make sure we understand 
+ graphically what's happening so if I 
+ have some vector U or I guess I could 
+ have called it vector X essentially what 
+ we're saying is that lambda is going to 
+ be some scalar which might make you 
+ [Music] 
+ compress a little bit or stretch or 
+ possibly go in the opposite direction 
+ and so essentially lambda is going to 
+ create our resulting vector somewhere 
+ along that line so now let's take a look 
+ at mathematically what does this do for 
+ us the first thing we can do is to 
+ determine if X is an eigenvector of a 
+ and they've given us an X vector so I 
+ have a is 2 3 negative 1 6 and my 
+ question is is X 3 1 an eigenvector of a 
+ so all we have to do here if you'll 
+ recall we said that ax had to be equal 
+ to lambda X and so I'm going to take ax 
+ and see what happens in this case that's 
+ 2 3 negative 1 6 and then 3 1 then we 
+ all know how to multiply matrices so I'm 
+ going to get 6 plus 3 
+ and negative three plus six and that 
+ gives me nine three so ax is nine three 
+ the question is is that equal to some 
+ scalar times X well I can see that nine 
+ three can be written as 3 times 3 one 
+ and three one is actually just X from 
+ the question so is X and eigenvector of 
+ a absolutely because 3 is my eigenvalue 
+ and I can take three times X and that is 
+ equal to ax so it really just fits the 
+ definition so that's how you're going to 
+ determine if some vector is an 
+ eigenvector is you're just going to 
+ multiply a times X and see if it's 
+ equivalent to some lambda lambda times X 
+ let's look at another question and this 
+ one again is using my same matrix a but 
+ I'm asking a different question I'm 
+ asking to determine the eigen value of a 
+ for X which in this case is 1 1 so in 
+ the last question I was asked to 
+ determine if a vector was an eigen 
+ vector now I'm asking to find the eigen 
+ value if one exists so it could be that 
+ I asked you to find the eigen value and 
+ it doesn't exist 
+ but in this case obviously I'm not going 
+ to do that but the good news is we're 
+ going to do this the same way that we 
+ did the last question because I'm still 
+ saying that if an eigen value exists 
+ then it's going to you know then a times 
+ X is going to be equal to lambda times X 
+ for some lambda and of course the eigen 
+ value is just lambda so all I'm gonna do 
+ is exactly what I did on the last 
+ question I'm going to take a I'm going 
+ to multiply it by X and that's going to 
+ give me in this case 2 plus 3 and 
+ negative 1 plus 6 and that gives me 5 5 
+ and just like I did last time I'm saying 
+ is five five are we able to write that 
+ as some scalar times vector X and of 
+ course this is five times one one which 
+ is five times vector X and therefore the 
+ eigenvalue lambda is five so we could 
+ have easily been asked is x and 
+ eigenvector and we would say yes or what 
+ is the eigenvalue and the eigenvalue is 
+ five let's do a practice now that's just 
+ a bit more difficult and again we're 
+ still using that same equation that says 
+ ax is going to equal lambda x if lambda 
+ is an eigenvalue and of course that's 
+ what we're trying to do is show that 
+ some value is an eigenvalue now I've 
+ already done a practice like this in the 
+ opposite order so our very first 
+ practice practice one actually use the 
+ same matrix a and instead it gave me a 
+ vector and said is this an eigenvector 
+ and then we had to solve to find an 
+ eigenvalue this is the opposite of that 
+ so here I'm giving you an eigenvalue and 
+ we already know in this case it's an 
+ eigenvalue because we did practice one 
+ but typically you won't know that and 
+ you would have to show that it was true 
+ you might be asking how do we do that 
+ well I'm glad you asked we're still 
+ using this equation and we're going to 
+ say well if that's true then ax minus 
+ lambda X must be equal to zero and then 
+ I could say well a minus lambda X is 
+ equal to zero but can i really take a 
+ which is a matrix and subtract lambda 
+ which is a scaler no I can't so what am 
+ I going to do I'm going to take lambda 
+ times the identity matrix so for 
+ obviously a two by two my identity 
+ matrix is 1 0 0 1 
+ so here's how this is going to work I'm 
+ going to take a which is 2/3 negative 
+ 1/6 and I'm going to subtract lambda 
+ which is 3 times the identity matrix so 
+ I'm going to take 3 times the identity 
+ matrix and get 3 0 0 3 and I'm going to 
+ subtract this so 2 minus 3 negative 1 3 
+ minus 0 is 3 negative 1 minus 0 is 
+ negative 1 6 minus 3 is 3 so you might 
+ be asking ok great but what am I looking 
+ for well if you'll recall our original 
+ definition said that the scaler is an 
+ eigenvalue if there is a non-trivial 
+ solution so let's remember that if I end 
+ up like I do here with a free variable 
+ because what's going to happen I'm going 
+ to reduce this by making this positive 1 
+ negative 3 and then I can obviously get 
+ 0 0 here which tells me that x1 is a 
+ pivot and x2 is free why is this 
+ important because if I ended up with the 
+ identity matrix then that would tell me 
+ that I had only the trivial solution and 
+ if I have only the trivial solution then 
+ it's not an eigenvalue and that's not 
+ what I have what I have is a free 
+ variable and when you end up with a free 
+ variable then obviously we have a 
+ non-trivial solution and therefore it's 
+ an eigenvalue so what I've done so far 
+ is answer the first part of this 
+ question that says show that 3 is an 
+ eigenvalue and by doing these 
+ calculations and finding that I have a 
+ free variable I have shown that in fact 
+ 3 is an eigenvalue the next part of this 
+ question says find that the 
+ corresponding eigenvectors 
+ so not a lot more work here and in fact 
+ work that we're quite used to this row 
+ says and again I didn't augment the 
+ matrix with zero and if you look at your 
+ textbook it does in fact show the zero 
+ zero column vector for the Augmented 
+ matrix and but what this is telling me 
+ is as X 1 minus X minus 3 X 2 is equal 
+ to 0 so again we're very used to this we 
+ know that I can describe my solutions by 
+ writing X 1 and X 2 and that would give 
+ me X 1 is actually by moving that to the 
+ opposite side 3 X 2 and X 2 is X 2 and I 
+ can factor out my X 2 and I would get 3 
+ 1 so here's what I have this is an eigen 
+ vector and this is for specifically the 
+ eigen value of 3 the question says find 
+ the corresponding eigen vectors so the 
+ corresponding eigen vectors are all 
+ vectors in this form so I wouldn't find 
+ I wouldn't list all of the eigen vectors 
+ well because I can't I can only say that 
+ they're all in this form but I want you 
+ to think about what this looks like 
+ first of all 3 1 is right here and X 2 
+ is obviously a scalar so they're saying 
+ any value I plug in for X 2 multiply 
+ that by 3 1 and then I would end up with 
+ some other eigen vector so what if I 
+ plugged in 2 for X 2 well that would 
+ give me 6 
+ - where is 6 2 
+ well it's over here notice it's on the 
+ same line what if I plugged in negative 
+ one well that would be negative three 
+ negative one 
+ where is negative three negative one why 
+ it's on the same line and I could 
+ continue that for any values of x2 and 
+ what's going to happen I'm going to end 
+ up with values all along that line this 
+ line and notice that it goes through 
+ zero zero which is important is called 
+ the eigen space and again it's the null 
+ space and the subspace of RN so this is 
+ just a subspace and it's all the values 
+ along this line going through that point 
+ zero zero or zero zero zero zero however 
+ many zeros you need this obviously is 
+ two-dimensional I do also want to point 
+ out that when we did questions like this 
+ before we might be asked to find a basis 
+ well that's really what I have done 
+ already this is obviously a 2 by 2 
+ matrix and when I'm finding the basis 
+ which I have already done the work for 
+ it's just going to be that 3 1 and if 
+ you'll notice I have one vector for a 2 
+ by 2 and it makes perfect sense for that 
+ because I have a free variable so it 
+ wouldn't make sense to have two vectors 
+ in a 2 by 2 matrix 
+ unless you know I was having only the 
+ trivial solution which would mean it 
+ wouldn't work anyway so you should 
+ always have one fewer let's try another 
+ question where we are asked to find the 
+ basis and again this one is a 3 by 3 
+ matrix and we are given again the eigen 
+ value of 
+ - and we are asked to find the basis for 
+ the corresponding eigen space so again 
+ all I'm going to do is use that same 
+ formula a minus lambda I X equal to zero 
+ so in this case that means for negative 
+ 1 6 - 1 6 2 negative 1 8 subtracting 2 
+ times the identity matrix so 2 0 0 0 2 0 
+ 0 0 2 subtracting gives me 2 negative 1 
+ 6 2 negative 1 6 2 negative 1 6 doing 
+ row operations obviously I end up at 2 
+ negative 1 6 0 0 0 0 0 0 and I could 
+ continue further to get 1 negative 1/2 3 
+ 0 0 0 0 0 0 which means of course that I 
+ can write this as we have X 1 X 2 X 3 X 
+ we have X 1 and in my free variables are 
+ of course X 2 and X 3 which means I can 
+ write X 1 I'm just going to go straight 
+ to having X 2 and X 3 on the outside so 
+ X 1 can be written as 1/2 X 2 - 3 X 3 
+ and then of course X 2 is X 2 and then 0 
+ X 3 and X 3 is X 3 so again the question 
+ says find the basis so what I have done 
+ is right in its general form which means 
+ my basis is those I keep forgetting to 
+ put those brackets there's one half one 
+ zero and negative three zero one and 
+ again just as we talked about last time 
+ this is a three by three matrix but 
+ notice I'm only going to have two 
+ vectors in my basis I do have this one 
+ last practice for you to try on your own 
+ but before you do it I just want to 
+ point out that section five one I've 
+ really broken it into two parts this 
+ video that you're watching now is the 
+ very practical here's how you actually 
+ do it video the next video is the more 
+ theoretical video so we're going to be 
+ looking at a couple of theorems dealing 
+ with eigenvectors and eigenvalues so 
+ back to this question this should be 
+ very similar to the last two questions 
+ that we did I want you to show that 
+ lambda equals two is an eigenvalue or 
+ show that it is not once you are done 
+ press play to see how you did so no 
+ surprises here I'm using an eigenvector 
+ I'm so you excuse me an eigenvalue of 
+ two and I'm going to take a which is 
+ seven three three negative one 
+ I'm going to subtract two times the 
+ identity so again I've got a minus 
+ lambda I X equal to zero so I'm taking 
+ to 0 0 to 7 minus 2 is 5 3 minus 0 is 3 
+ 3 minus 0 is 3 and negative 1 minus 2 is 
+ negative 3 and I should be able to stop 
+ right here because it's very clear to me 
+ that I can start doing some row 
+ operations and I'm going to go ahead and 
+ reduce this but hopefully at this very 
+ first point before I ever do row 
+ operations you can see that I'm not 
+ going to end up with a free variable 
+ but in case you can't that's okay let's 
+ add rows one and two together that's 
+ going to give me 8 here and 0 here and 
+ I'm gonna do a roast because I want 
+ my first value to be to be 1 so I'm 
+ going to now take 1/8 so I'm doing a 
+ scalar so I have 1 0 5 3 I can take 
+ negative 5 times Row 1 and end up with 0 
+ and negative 2 I'm sorry just kidding 0 
+ & 3 and then I can do one third of Row 
+ two and end up with 1 0 0 1 
+ but again hopefully when you got to this 
+ point you could see what the outcome was 
+ going to be but even if you couldn't 
+ what I have ended up with now is the 
+ identity matrix 
+ now if you'll keep in mind what we did 
+ before I had a free variable before and 
+ the free variable before told me that I 
+ had more than just the trivial solution 
+ this guy is the identity matrix which 
+ means I have only the trivial solution 
+ and what does only the trivial solution 
+ tell me that lambda equals 2 is not an 
+ eigenvalue for matrix a

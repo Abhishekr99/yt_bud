@@ -1,0 +1,112 @@
+{
+  "curriculum_id": "dsa_graph_disjoint_set_union",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Disjoint Set Union (Union-Find)",
+  "created_at": "2026-03-23T10:52:11.921772",
+  "concepts": [
+    {
+      "concept_id": "disjoint_set",
+      "name": "Disjoint Sets",
+      "aliases": [
+        "Disjoint Set Data Structure"
+      ],
+      "short_definition": "A collection of sets where no two sets share common elements.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "union_operation",
+      "name": "Union Operation",
+      "aliases": [
+        "Union by Rank",
+        "Union by Size"
+      ],
+      "short_definition": "Merges two disjoint sets into a single set.",
+      "prerequisites": [
+        "disjoint_set"
+      ]
+    },
+    {
+      "concept_id": "find_operation",
+      "name": "Find Operation",
+      "aliases": [
+        "Find with Path Compression"
+      ],
+      "short_definition": "Determines which set a particular element belongs to.",
+      "prerequisites": [
+        "disjoint_set"
+      ]
+    },
+    {
+      "concept_id": "path_compression",
+      "name": "Path Compression",
+      "aliases": [],
+      "short_definition": "An optimization for the Find operation that flattens the tree structure.",
+      "prerequisites": [
+        "find_operation"
+      ]
+    },
+    {
+      "concept_id": "union_by_rank",
+      "name": "Union by Rank",
+      "aliases": [],
+      "short_definition": "An optimization for the Union operation that attaches the shorter tree to the root of the taller tree.",
+      "prerequisites": [
+        "union_operation"
+      ]
+    },
+    {
+      "concept_id": "union_by_size",
+      "name": "Union by Size",
+      "aliases": [],
+      "short_definition": "An optimization for the Union operation that attaches the smaller tree to the root of the larger tree.",
+      "prerequisites": [
+        "union_operation"
+      ]
+    },
+    {
+      "concept_id": "forest_representation",
+      "name": "Forest Representation",
+      "aliases": [
+        "Tree Representation"
+      ],
+      "short_definition": "Representing disjoint sets as a collection of trees, where each tree represents a set.",
+      "prerequisites": [
+        "disjoint_set"
+      ]
+    },
+    {
+      "concept_id": "parent_array",
+      "name": "Parent Array",
+      "aliases": [],
+      "short_definition": "An array used to store the parent of each element in the forest representation.",
+      "prerequisites": [
+        "forest_representation"
+      ]
+    },
+    {
+      "concept_id": "ranksize_array",
+      "name": "Rank/Size Array",
+      "aliases": [],
+      "short_definition": "An array used to store the rank or size of each tree in the forest representation for optimization.",
+      "prerequisites": [
+        "forest_representation",
+        "union_by_rank",
+        "union_by_size"
+      ]
+    },
+    {
+      "concept_id": "application",
+      "name": "Applications",
+      "aliases": [
+        "Use Cases"
+      ],
+      "short_definition": "Real-world problems that can be solved efficiently using the Disjoint Set Union data structure.",
+      "prerequisites": [
+        "disjoint_set",
+        "find_operation",
+        "union_operation"
+      ]
+    }
+  ]
+}

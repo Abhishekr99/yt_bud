@@ -1,0 +1,403 @@
+{
+  "curriculum_id": "MATH_Probability_Conditional probability",
+  "domain": "MATH",
+  "module": "Probability",
+  "topic": "Conditional probability",
+  "created_at": "2026-03-21T11:14:54.434144",
+  "concepts": [
+    {
+      "concept_id": "probability",
+      "name": "Probability",
+      "aliases": [
+        "P"
+      ],
+      "short_definition": "The likelihood of an event occurring.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "event",
+      "name": "Event",
+      "aliases": [],
+      "short_definition": "A specific outcome or set of outcomes in a probability experiment.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "sample_space",
+      "name": "Sample Space",
+      "aliases": [
+        "S"
+      ],
+      "short_definition": "The set of all possible outcomes of an experiment.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "independent_event",
+      "name": "Independent Events",
+      "aliases": [],
+      "short_definition": "Events where the occurrence of one does not affect the probability of the other.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "dependent_event",
+      "name": "Dependent Events",
+      "aliases": [],
+      "short_definition": "Events where the occurrence of one affects the probability of the other.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "conditional_probability",
+      "name": "Conditional Probability",
+      "aliases": [
+        "P(A|B)"
+      ],
+      "short_definition": "The probability of an event A occurring given that event B has already occurred.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "joint_probability",
+      "name": "Joint Probability",
+      "aliases": [
+        "P(A and B)",
+        "P(A ∩ B)"
+      ],
+      "short_definition": "The probability of two or more events occurring simultaneously.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "marginal_probability",
+      "name": "Marginal Probability",
+      "aliases": [
+        "P(A)",
+        "P(B)"
+      ],
+      "short_definition": "The probability of a single event occurring, without considering other events.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "addition_rule",
+      "name": "Addition Rule",
+      "aliases": [],
+      "short_definition": "Used to calculate the probability of the union of two events.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "multiplication_rule",
+      "name": "Multiplication Rule",
+      "aliases": [],
+      "short_definition": "Used to calculate the probability of the intersection of two events.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "law_of_total_probability",
+      "name": "Law of Total Probability",
+      "aliases": [],
+      "short_definition": "States that the probability of an event is the sum of its conditional probabilities over a partition of the sample space.",
+      "prerequisites": [
+        "conditional_probability",
+        "partition"
+      ]
+    },
+    {
+      "concept_id": "bayes_theorem",
+      "name": "Bayes' Theorem",
+      "aliases": [],
+      "short_definition": "A formula that describes the probability of an event based on prior knowledge of conditions that might be related to the event.",
+      "prerequisites": [
+        "conditional_probability",
+        "joint_probability",
+        "marginal_probability"
+      ]
+    },
+    {
+      "concept_id": "prior_probability",
+      "name": "Prior Probability",
+      "aliases": [],
+      "short_definition": "The initial probability of an event before new evidence is considered.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "posterior_probability",
+      "name": "Posterior Probability",
+      "aliases": [],
+      "short_definition": "The updated probability of an event after new evidence is considered.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "likelihood",
+      "name": "Likelihood",
+      "aliases": [],
+      "short_definition": "The probability of observing the data given a particular hypothesis or parameter value.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "partition",
+      "name": "Partition",
+      "aliases": [],
+      "short_definition": "A set of mutually exclusive and exhaustive events that cover the entire sample space.",
+      "prerequisites": [
+        "event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "contingency_table",
+      "name": "Contingency Table",
+      "aliases": [
+        "Two-way Table"
+      ],
+      "short_definition": "A table that displays the frequency distribution of variables, often used for conditional probability calculations.",
+      "prerequisites": [
+        "joint_probability",
+        "marginal_probability"
+      ]
+    },
+    {
+      "concept_id": "tree_diagram",
+      "name": "Tree Diagram",
+      "aliases": [],
+      "short_definition": "A visual tool used to represent sequential events and their probabilities, useful for conditional probability.",
+      "prerequisites": [
+        "conditional_probability",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "set_theory",
+      "name": "Set Theory",
+      "aliases": [],
+      "short_definition": "Mathematical study of sets, fundamental for understanding events and sample spaces.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "union_of_event",
+      "name": "Union of Events",
+      "aliases": [
+        "A or B",
+        "A ∪ B"
+      ],
+      "short_definition": "The event that either A or B or both occur.",
+      "prerequisites": [
+        "event",
+        "set_theory"
+      ]
+    },
+    {
+      "concept_id": "intersection_of_event",
+      "name": "Intersection of Events",
+      "aliases": [
+        "A and B",
+        "A ∩ B"
+      ],
+      "short_definition": "The event that both A and B occur.",
+      "prerequisites": [
+        "event",
+        "set_theory"
+      ]
+    },
+    {
+      "concept_id": "complement_of_an_event",
+      "name": "Complement of an Event",
+      "aliases": [
+        "A'",
+        "A^c"
+      ],
+      "short_definition": "The event that A does not occur.",
+      "prerequisites": [
+        "event",
+        "set_theory"
+      ]
+    },
+    {
+      "concept_id": "mutually_exclusive_event",
+      "name": "Mutually Exclusive Events",
+      "aliases": [],
+      "short_definition": "Events that cannot occur at the same time.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "random_variable",
+      "name": "Random Variable",
+      "aliases": [],
+      "short_definition": "A variable whose value is a numerical outcome of a random phenomenon.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "probability_distribution",
+      "name": "Probability Distribution",
+      "aliases": [],
+      "short_definition": "A function that describes the likelihood of obtaining the possible values that a random variable can assume.",
+      "prerequisites": [
+        "probability",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "conditional_distribution",
+      "name": "Conditional Distribution",
+      "aliases": [],
+      "short_definition": "The probability distribution of a random variable given that another random variable takes a specific value.",
+      "prerequisites": [
+        "probability_distribution",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "statistical_independence",
+      "name": "Statistical Independence",
+      "aliases": [],
+      "short_definition": "A property of random variables where the joint probability distribution is the product of their marginal distributions.",
+      "prerequisites": [
+        "independent_event",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "statistical_dependence",
+      "name": "Statistical Dependence",
+      "aliases": [],
+      "short_definition": "The absence of statistical independence between random variables.",
+      "prerequisites": [
+        "dependent_event",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "causal_inference",
+      "name": "Causal Inference",
+      "aliases": [],
+      "short_definition": "The process of determining whether a relationship between variables is causal, often relying on conditional probability.",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "diagnostic_testing",
+      "name": "Diagnostic Testing",
+      "aliases": [],
+      "short_definition": "Using conditional probability to evaluate the accuracy of medical tests.",
+      "prerequisites": [
+        "bayes_theorem",
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "sensitivity",
+      "name": "Sensitivity",
+      "aliases": [],
+      "short_definition": "The probability that a test correctly identifies a condition when it is present (True Positive Rate).",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "specificity",
+      "name": "Specificity",
+      "aliases": [],
+      "short_definition": "The probability that a test correctly identifies a condition when it is absent (True Negative Rate).",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "false_positive_rate",
+      "name": "False Positive Rate",
+      "aliases": [],
+      "short_definition": "The probability that a test incorrectly indicates a condition when it is absent.",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "false_negative_rate",
+      "name": "False Negative Rate",
+      "aliases": [],
+      "short_definition": "The probability that a test incorrectly indicates a condition is absent when it is present.",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "predictive_value",
+      "name": "Predictive Value",
+      "aliases": [],
+      "short_definition": "The probability that a person with a positive or negative test result actually has or does not have the condition.",
+      "prerequisites": [
+        "bayes_theorem",
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_of_probability",
+      "name": "Chain Rule of Probability",
+      "aliases": [],
+      "short_definition": "A generalization of the multiplication rule for any number of events.",
+      "prerequisites": [
+        "conditional_probability",
+        "multiplication_rule"
+      ]
+    },
+    {
+      "concept_id": "independence_of_multiple_event",
+      "name": "Independence of Multiple Events",
+      "aliases": [],
+      "short_definition": "The condition where the occurrence of any subset of events does not affect the probability of the remaining events.",
+      "prerequisites": [
+        "independent_event"
+      ]
+    },
+    {
+      "concept_id": "conditional_independence",
+      "name": "Conditional Independence",
+      "aliases": [],
+      "short_definition": "Two events are conditionally independent given a third event if their conditional probabilities are independent.",
+      "prerequisites": [
+        "conditional_probability",
+        "independent_event"
+      ]
+    },
+    {
+      "concept_id": "stochastic_proces",
+      "name": "Stochastic Process",
+      "aliases": [],
+      "short_definition": "A process involving a sequence of random variables, where conditional probabilities play a key role in transitions.",
+      "prerequisites": [
+        "conditional_probability",
+        "random_variable"
+      ]
+    }
+  ]
+}

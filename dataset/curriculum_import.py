@@ -9,6 +9,7 @@ def build_curriculum_from_list(
     concepts: Iterable[str],
     curriculum_id: str,
     domain: str,
+    module: str,
     topic: str,
 ) -> dict:
     items: List[CurriculumConcept] = []
@@ -28,6 +29,7 @@ def build_curriculum_from_list(
     return {
         "curriculum_id": curriculum_id,
         "domain": domain,
+        "module": module,
         "topic": topic,
         "created_at": datetime.utcnow().isoformat(),
         "concepts": [item.to_dict() for item in items],

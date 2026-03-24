@@ -1,0 +1,426 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Rank",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Rank",
+  "created_at": "2026-03-21T11:14:28.181012",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors that is closed under addition and scalar multiplication.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [
+        "Linearly Independent"
+      ],
+      "short_definition": "A set of vectors where no vector can be expressed as a linear combination of the others.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "linear_dependence",
+      "name": "Linear Dependence",
+      "aliases": [
+        "Linearly Dependent"
+      ],
+      "short_definition": "A set of vectors where at least one vector can be expressed as a linear combination of the others.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [
+        "Linear Span"
+      ],
+      "short_definition": "The set of all possible linear combinations of a given set of vectors.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [],
+      "short_definition": "A linearly independent set of vectors that spans a vector space.",
+      "prerequisites": [
+        "linear_independence",
+        "span",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "dimension",
+      "name": "Dimension",
+      "aliases": [],
+      "short_definition": "The number of vectors in any basis of a vector space.",
+      "prerequisites": [
+        "basi"
+      ]
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map",
+        "Homomorphism"
+      ],
+      "short_definition": "A function between vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [],
+      "short_definition": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "column_space",
+      "name": "Column Space",
+      "aliases": [
+        "Image of a Matrix"
+      ],
+      "short_definition": "The span of the column vectors of a matrix.",
+      "prerequisites": [
+        "matrix",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "row_space",
+      "name": "Row Space",
+      "aliases": [],
+      "short_definition": "The span of the row vectors of a matrix.",
+      "prerequisites": [
+        "matrix",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "rank_of_a_matrix",
+      "name": "Rank of a Matrix",
+      "aliases": [
+        "Matrix Rank"
+      ],
+      "short_definition": "The dimension of the column space (or row space) of a matrix.",
+      "prerequisites": [
+        "column_space",
+        "dimension",
+        "row_space"
+      ]
+    },
+    {
+      "concept_id": "null_space",
+      "name": "Null Space",
+      "aliases": [
+        "Kernel of a Matrix"
+      ],
+      "short_definition": "The set of all vectors that are mapped to the zero vector by a linear transformation (or matrix).",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "ranknullity_theorem",
+      "name": "Rank-Nullity Theorem",
+      "aliases": [
+        "Dimension Theorem"
+      ],
+      "short_definition": "Relates the rank and nullity of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "null_space",
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "nullity",
+      "name": "Nullity",
+      "aliases": [],
+      "short_definition": "The dimension of the null space of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "null_space"
+      ]
+    },
+    {
+      "concept_id": "image_of_a_linear_transformation",
+      "name": "Image of a Linear Transformation",
+      "aliases": [
+        "Range of a Linear Transformation"
+      ],
+      "short_definition": "The set of all possible output vectors of a linear transformation.",
+      "prerequisites": [
+        "linear_transformation",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "rank_of_a_linear_transformation",
+      "name": "Rank of a Linear Transformation",
+      "aliases": [
+        "Linear Transformation Rank"
+      ],
+      "short_definition": "The dimension of the image of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "image_of_a_linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "row_echelon_form",
+      "name": "Row Echelon Form",
+      "aliases": [
+        "REF"
+      ],
+      "short_definition": "A matrix form where leading entries are to the right of leading entries in rows above.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "reduced_row_echelon_form",
+      "name": "Reduced Row Echelon Form",
+      "aliases": [
+        "RREF"
+      ],
+      "short_definition": "A row echelon form where leading entries are 1 and all other entries in their columns are 0.",
+      "prerequisites": [
+        "row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "pivot_position",
+      "name": "Pivot Position",
+      "aliases": [
+        "Leading Entry"
+      ],
+      "short_definition": "The position of the first non-zero entry in a row of a matrix in echelon form.",
+      "prerequisites": [
+        "row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "pivot_column",
+      "name": "Pivot Column",
+      "aliases": [],
+      "short_definition": "A column of a matrix that contains a pivot position.",
+      "prerequisites": [
+        "pivot_position"
+      ]
+    },
+    {
+      "concept_id": "rank_from_refrref",
+      "name": "Rank from REF/RREF",
+      "aliases": [],
+      "short_definition": "The rank of a matrix is the number of non-zero rows in its row echelon form.",
+      "prerequisites": [
+        "rank_of_a_matrix",
+        "row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "rank_from_pivot_column",
+      "name": "Rank from Pivot Columns",
+      "aliases": [],
+      "short_definition": "The rank of a matrix is the number of pivot columns.",
+      "prerequisites": [
+        "pivot_column",
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "full_rank",
+      "name": "Full Rank",
+      "aliases": [],
+      "short_definition": "A matrix has full rank if its rank equals the minimum of its number of rows and columns.",
+      "prerequisites": [
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "rank_deficient",
+      "name": "Rank Deficient",
+      "aliases": [],
+      "short_definition": "A matrix that does not have full rank.",
+      "prerequisites": [
+        "full_rank"
+      ]
+    },
+    {
+      "concept_id": "singular_matrix",
+      "name": "Singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a determinant of zero, implying it is not invertible and has a rank less than its dimension.",
+      "prerequisites": [
+        "determinant",
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "nonsingular_matrix",
+      "name": "Non-singular Matrix",
+      "aliases": [
+        "Invertible Matrix"
+      ],
+      "short_definition": "A square matrix with a non-zero determinant, implying it is invertible and has full rank.",
+      "prerequisites": [
+        "determinant",
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "transpose_of_a_matrix",
+      "name": "Transpose of a Matrix",
+      "aliases": [
+        "Matrix Transpose"
+      ],
+      "short_definition": "A matrix obtained by interchanging rows and columns of the original matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "rank_of_transpose",
+      "name": "Rank of Transpose",
+      "aliases": [],
+      "short_definition": "The rank of a matrix is equal to the rank of its transpose.",
+      "prerequisites": [
+        "rank_of_a_matrix",
+        "transpose_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "linear_system",
+      "name": "Linear System",
+      "aliases": [
+        "System of Linear Equations"
+      ],
+      "short_definition": "A collection of linear equations involving the same set of variables.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "consistent_system",
+      "name": "Consistent System",
+      "aliases": [],
+      "short_definition": "A linear system that has at least one solution.",
+      "prerequisites": [
+        "linear_system"
+      ]
+    },
+    {
+      "concept_id": "inconsistent_system",
+      "name": "Inconsistent System",
+      "aliases": [],
+      "short_definition": "A linear system that has no solution.",
+      "prerequisites": [
+        "linear_system"
+      ]
+    },
+    {
+      "concept_id": "augmented_matrix",
+      "name": "Augmented Matrix",
+      "aliases": [],
+      "short_definition": "A matrix formed by appending the columns of two given matrices, often used for solving linear systems.",
+      "prerequisites": [
+        "linear_system",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "rank_and_solution",
+      "name": "Rank and Solutions",
+      "aliases": [],
+      "short_definition": "The rank of the coefficient matrix and augmented matrix determines the consistency of a linear system.",
+      "prerequisites": [
+        "augmented_matrix",
+        "consistent_system",
+        "inconsistent_system",
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "subspace",
+      "name": "Subspace",
+      "aliases": [],
+      "short_definition": "A vector space that is a subset of another vector space.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "rank_of_a_subspace",
+      "name": "Rank of a Subspace",
+      "aliases": [],
+      "short_definition": "The dimension of a subspace.",
+      "prerequisites": [
+        "dimension",
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_complement",
+      "name": "Orthogonal Complement",
+      "aliases": [
+        "Orthocomplement"
+      ],
+      "short_definition": "The set of all vectors orthogonal to every vector in a given subspace.",
+      "prerequisites": [
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "fundamental_subspace",
+      "name": "Fundamental Subspaces",
+      "aliases": [],
+      "short_definition": "The four key subspaces associated with a matrix: column space, null space, row space, and left null space.",
+      "prerequisites": [
+        "column_space",
+        "null_space",
+        "row_space"
+      ]
+    },
+    {
+      "concept_id": "left_null_space",
+      "name": "Left Null Space",
+      "aliases": [],
+      "short_definition": "The null space of the transpose of a matrix.",
+      "prerequisites": [
+        "null_space",
+        "transpose_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "rank_of_a_submatrix",
+      "name": "Rank of a Submatrix",
+      "aliases": [],
+      "short_definition": "The rank of a matrix formed by selecting a subset of rows and columns.",
+      "prerequisites": [
+        "matrix",
+        "rank_of_a_matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant",
+      "name": "Determinant",
+      "aliases": [],
+      "short_definition": "A scalar value that can be computed from the elements of a square matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    }
+  ]
+}

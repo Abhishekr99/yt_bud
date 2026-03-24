@@ -1,0 +1,124 @@
+{
+  "curriculum_id": "dsa_linked_list_singly_linked_list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Singly linked list",
+  "created_at": "2026-03-23T10:52:44.280395",
+  "concepts": [
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Element",
+        "Cell"
+      ],
+      "short_definition": "A fundamental building block of a linked list, containing data and a reference to the next node.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "singly_linked_list",
+      "name": "Singly Linked List",
+      "aliases": [
+        "Linked List"
+      ],
+      "short_definition": "A linear data structure where elements are linked sequentially using pointers, with each node pointing to the next.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "Start"
+      ],
+      "short_definition": "A reference to the first node in the linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [
+        "End"
+      ],
+      "short_definition": "A reference to the last node in the linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Iteration"
+      ],
+      "short_definition": "The process of visiting each node in the linked list sequentially.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Adding"
+      ],
+      "short_definition": "The operation of adding a new node to the linked list at a specified position.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Removal"
+      ],
+      "short_definition": "The operation of removing a node from the linked list.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "search",
+      "name": "Search",
+      "aliases": [
+        "Finding"
+      ],
+      "short_definition": "The operation of locating a specific node within the linked list.",
+      "prerequisites": [
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "empty_list",
+      "name": "Empty List",
+      "aliases": [
+        "Null List"
+      ],
+      "short_definition": "A linked list that contains no nodes.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "The reference within a node that points to the subsequent node in the sequence.",
+      "prerequisites": [
+        "node"
+      ]
+    }
+  ]
+}

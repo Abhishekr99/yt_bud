@@ -1,0 +1,443 @@
+{
+  "curriculum_id": "DSA_Trees_Tree traversal (DFS)",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Tree traversal (DFS)",
+  "created_at": "2026-03-21T11:12:34.055074",
+  "concepts": [
+    {
+      "concept_id": "tree_traversal",
+      "name": "Tree Traversal",
+      "aliases": [
+        "Tree Walk"
+      ],
+      "short_definition": "Visiting each node in a tree data structure exactly once.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "depthfirst_search_df",
+      "name": "Depth-First Search (DFS)",
+      "aliases": [
+        "DFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "tree_node",
+      "name": "Tree Node",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit in a tree data structure, containing data and references to children.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [
+        "Root"
+      ],
+      "short_definition": "The topmost node in a tree, with no parent.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Children"
+      ],
+      "short_definition": "A node directly connected to another node (parent) in a hierarchical structure.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node that has one or more child nodes.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "Leaves"
+      ],
+      "short_definition": "A node with no children.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "binary_tree",
+      "name": "Binary Tree",
+      "aliases": [
+        "BT"
+      ],
+      "short_definition": "A tree where each node has at most two children, referred to as the left child and right child.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "binary_search_tree_bst",
+      "name": "Binary Search Tree (BST)",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in the left subtree are less than the node's value, and all values in the right subtree are greater.",
+      "prerequisites": [
+        "binary_tree"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [
+        "Recursive Functions"
+      ],
+      "short_definition": "A programming technique where a function calls itself to solve smaller instances of the same problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [
+        "LIFO"
+      ],
+      "short_definition": "A data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "call_stack",
+      "name": "Call Stack",
+      "aliases": [
+        "Function Call Stack"
+      ],
+      "short_definition": "The stack used by a program to keep track of active function calls.",
+      "prerequisites": [
+        "recursion",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "preorder_traversal",
+      "name": "Pre-order Traversal",
+      "aliases": [
+        "Preorder"
+      ],
+      "short_definition": "DFS traversal: Visit the current node, then traverse the left subtree, then traverse the right subtree.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "inorder_traversal",
+      "name": "In-order Traversal",
+      "aliases": [
+        "Inorder"
+      ],
+      "short_definition": "DFS traversal: Traverse the left subtree, then visit the current node, then traverse the right subtree.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "postorder_traversal",
+      "name": "Post-order Traversal",
+      "aliases": [
+        "Postorder"
+      ],
+      "short_definition": "DFS traversal: Traverse the left subtree, then traverse the right subtree, then visit the current node.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "recursive_preorder",
+      "name": "Recursive Pre-order",
+      "aliases": [
+        "Recursive Preorder"
+      ],
+      "short_definition": "Implementing pre-order traversal using recursive function calls.",
+      "prerequisites": [
+        "preorder_traversal",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "iterative_preorder",
+      "name": "Iterative Pre-order",
+      "aliases": [
+        "Iterative Preorder"
+      ],
+      "short_definition": "Implementing pre-order traversal using an explicit stack.",
+      "prerequisites": [
+        "preorder_traversal",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "recursive_inorder",
+      "name": "Recursive In-order",
+      "aliases": [
+        "Recursive Inorder"
+      ],
+      "short_definition": "Implementing in-order traversal using recursive function calls.",
+      "prerequisites": [
+        "inorder_traversal",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "iterative_inorder",
+      "name": "Iterative In-order",
+      "aliases": [
+        "Iterative Inorder"
+      ],
+      "short_definition": "Implementing in-order traversal using an explicit stack.",
+      "prerequisites": [
+        "inorder_traversal",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "recursive_postorder",
+      "name": "Recursive Post-order",
+      "aliases": [
+        "Recursive Postorder"
+      ],
+      "short_definition": "Implementing post-order traversal using recursive function calls.",
+      "prerequisites": [
+        "postorder_traversal",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "iterative_postorder",
+      "name": "Iterative Post-order",
+      "aliases": [
+        "Iterative Postorder"
+      ],
+      "short_definition": "Implementing post-order traversal using an explicit stack.",
+      "prerequisites": [
+        "postorder_traversal",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "tree_reconstruction",
+      "name": "Tree Reconstruction",
+      "aliases": [
+        "Tree Building"
+      ],
+      "short_definition": "Constructing a tree from traversal sequences.",
+      "prerequisites": [
+        "inorder_traversal",
+        "postorder_traversal",
+        "preorder_traversal"
+      ]
+    },
+    {
+      "concept_id": "tree_height",
+      "name": "Tree Height",
+      "aliases": [
+        "Tree Depth"
+      ],
+      "short_definition": "The length of the longest path from the root to a leaf node.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "tree_width",
+      "name": "Tree Width",
+      "aliases": [
+        "Node Count at Level"
+      ],
+      "short_definition": "The maximum number of nodes at any level of the tree.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "tree_serialization",
+      "name": "Tree Serialization",
+      "aliases": [
+        "Tree Encoding"
+      ],
+      "short_definition": "Converting a tree into a format that can be stored or transmitted.",
+      "prerequisites": [
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "tree_deserialization",
+      "name": "Tree Deserialization",
+      "aliases": [
+        "Tree Decoding"
+      ],
+      "short_definition": "Reconstructing a tree from its serialized representation.",
+      "prerequisites": [
+        "tree_serialization"
+      ]
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Graph Data Structure"
+      ],
+      "short_definition": "Ways to represent a graph, such as adjacency list or adjacency matrix.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "Adj List"
+      ],
+      "short_definition": "A representation of a graph where each node has a list of its adjacent nodes.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [
+        "Adj Matrix"
+      ],
+      "short_definition": "A representation of a graph where a matrix indicates the presence of edges between nodes.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "tree_as_a_graph",
+      "name": "Tree as a Graph",
+      "aliases": [
+        "Tree Graph"
+      ],
+      "short_definition": "Understanding a tree as a specific type of graph.",
+      "prerequisites": [
+        "graph_representation",
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "dfs_on_general_graph",
+      "name": "DFS on General Graphs",
+      "aliases": [
+        "Graph DFS"
+      ],
+      "short_definition": "Applying Depth-First Search to graphs that may contain cycles.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Visited Nodes"
+      ],
+      "short_definition": "A collection to keep track of nodes that have already been visited during traversal.",
+      "prerequisites": [
+        "depthfirst_search_df"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [
+        "Finding Cycles"
+      ],
+      "short_definition": "Identifying if a graph contains any cycles.",
+      "prerequisites": [
+        "dfs_on_general_graph",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "topological_sort",
+      "name": "Topological Sort",
+      "aliases": [
+        "Toposort"
+      ],
+      "short_definition": "A linear ordering of vertices in a directed acyclic graph (DAG) such that for every directed edge uv, vertex u comes before v in the ordering.",
+      "prerequisites": [
+        "dfs_on_general_graph"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [
+        "Graph Components"
+      ],
+      "short_definition": "Finding the maximal connected subgraphs within an undirected graph.",
+      "prerequisites": [
+        "dfs_on_general_graph"
+      ]
+    },
+    {
+      "concept_id": "backtracking",
+      "name": "Backtracking",
+      "aliases": [
+        "Backtrack"
+      ],
+      "short_definition": "A general algorithmic technique for finding all (or some) solutions to computational problems, notably constraint satisfaction problems, that incrementally builds candidates to the solutions, and abandons a candidate ('backtracks') as soon as it determines that the candidate cannot possibly be completed to a valid solution.",
+      "prerequisites": [
+        "depthfirst_search_df"
+      ]
+    },
+    {
+      "concept_id": "tree_propertie",
+      "name": "Tree Properties",
+      "aliases": [
+        "Tree Characteristics"
+      ],
+      "short_definition": "Fundamental attributes and rules that define a tree data structure.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "tree_algorithm",
+      "name": "Tree Algorithms",
+      "aliases": [
+        "Tree Procedures"
+      ],
+      "short_definition": "Common algorithms and operations performed on trees.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    },
+    {
+      "concept_id": "tree_application",
+      "name": "Tree Applications",
+      "aliases": [
+        "Tree Uses"
+      ],
+      "short_definition": "Real-world scenarios and problems where trees are effectively used.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    }
+  ]
+}

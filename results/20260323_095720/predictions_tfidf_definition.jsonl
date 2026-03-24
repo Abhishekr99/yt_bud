@@ -1,0 +1,53 @@
+{"video_id": "M3_pLsDdeuU", "model": "tfidf_definition", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "3oI-34aPMWM", "model": "tfidf_definition", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "-tgVpUgsQ5k", "model": "tfidf_definition", "missing_pred": ["graph"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "Qzf1a--rhp8", "model": "tfidf_definition", "missing_pred": ["queue", "bfs"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "zQ3zgFypzX4", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "5lZ0iJMrUMk", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "C4gxoTaI71U", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "V6H1qAeB-l4", "model": "tfidf_definition", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "0vVofAhAYjc", "model": "tfidf_definition", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "ZSPjZuZWCME", "model": "tfidf_definition", "missing_pred": ["queue"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 1.0}}
+{"video_id": "mJcZjjKzeqk", "model": "tfidf_definition", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "DMnDM_sxVig", "model": "tfidf_definition", "missing_pred": ["bfs"], "explained_scores": {"graph": 1.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "aBxjDBC4M1U", "model": "tfidf_definition", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "_ANrF3FJm7I", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 1.0, "adjacency_list": 0.0}}
+{"video_id": "ctCpP0RFDFc", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "jmy0LaGET1I", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "EoAsWbO7sqg", "model": "tfidf_definition", "missing_pred": ["graph", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 1.0, "adjacency_list": 0.0}}
+{"video_id": "p7-9UvDQZ3w", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "FiFiNvM29ps", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "YNstP0ESndU", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "joewRl1CTL8", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "-aTLjoDT1GQ", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "HaHsqDjWMLU", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "WiOdQQYLMU4", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "xaCPDMEkbig", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "UjTTx2eYrx8", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "H5tD_NtPDuU", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "4T3aOIfNdTY", "model": "tfidf_definition", "missing_pred": ["queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 1.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "KjdS_o5HNII", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "akClB1J6b28", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "-7QG2itL1u4", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "QMwwplztQfY", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "LHsPJ2bQX1U", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "dFc2XK9dyNs", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "UWaeMiP_vK8", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "ofAcvZVEfBk", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "yh5ABTeNUpE", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "C2iKgnGby0I", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "4yNrSg7b4JA", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "1MYkWhpuLtY", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "bxRVz8zklWM", "model": "tfidf_definition", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "VmsTAVpz0xo", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "T_UXDTy23DQ", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "zp6pBNbUB2U", "model": "tfidf_definition", "missing_pred": ["graph", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "dn01XST9-bI", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "pqg0SOPRlJ4", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "dmb1i4oN5oE", "model": "tfidf_definition", "missing_pred": ["graph", "bfs"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "nquQ_fYGGA4", "model": "tfidf_definition", "missing_pred": ["graph", "bfs"], "explained_scores": {"graph": 0.0, "queue": 1.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "Tk_fi5l8cag", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "wiOo4DC5GGA", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "jXu-H7XuClE", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 1.0}}
+{"video_id": "pULw1Fpru0E", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}
+{"video_id": "oQ5sAfT_3V4", "model": "tfidf_definition", "missing_pred": ["graph", "queue", "bfs", "adjacency_list"], "explained_scores": {"graph": 0.0, "queue": 0.0, "bfs": 0.0, "adjacency_list": 0.0}}

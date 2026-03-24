@@ -1,0 +1,106 @@
+{
+  "curriculum_id": "dsa_graph_dfs_traversal",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "DFS traversal",
+  "created_at": "2026-03-23T10:52:06.392638",
+  "concepts": [
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Graph Data Structure"
+      ],
+      "short_definition": "Ways to store graph data, such as adjacency lists or matrices.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "depthfirst_search",
+      "name": "Depth-First Search",
+      "aliases": [
+        "DFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [],
+      "short_definition": "A programming technique where a function calls itself to solve smaller instances of the same problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "stack_data_structure",
+      "name": "Stack Data Structure",
+      "aliases": [
+        "Stack"
+      ],
+      "short_definition": "A linear data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Visited Nodes"
+      ],
+      "short_definition": "A mechanism to keep track of nodes that have already been explored during traversal.",
+      "prerequisites": [
+        "depthfirst_search"
+      ]
+    },
+    {
+      "concept_id": "traversal_order",
+      "name": "Traversal Order",
+      "aliases": [],
+      "short_definition": "The sequence in which nodes are visited during a graph traversal.",
+      "prerequisites": [
+        "depthfirst_search"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [],
+      "short_definition": "Subgraphs where any two vertices are connected to each other by paths.",
+      "prerequisites": [
+        "depthfirst_search"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [],
+      "short_definition": "Identifying if a graph contains a cycle.",
+      "prerequisites": [
+        "depthfirst_search",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "topological_sort",
+      "name": "Topological Sort",
+      "aliases": [],
+      "short_definition": "A linear ordering of vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.",
+      "prerequisites": [
+        "depthfirst_search",
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "applications_of_df",
+      "name": "Applications of DFS",
+      "aliases": [],
+      "short_definition": "Real-world problems that can be solved using Depth-First Search.",
+      "prerequisites": [
+        "connected_component",
+        "cycle_detection",
+        "depthfirst_search",
+        "topological_sort"
+      ]
+    }
+  ]
+}

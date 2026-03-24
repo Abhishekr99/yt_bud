@@ -1,0 +1,694 @@
+in this video we're going to talk about 
+ how to find the antiderivative 
+ of a function so what is the 
+ antiderivative 
+ well as the name implies it is 
+ the opposite of differentiation we know 
+ the derivative of f of x 
+ is f prime of x so 
+ the anti-derivative or the integral of f 
+ prime of x 
+ is f of x so f 
+ of x is the antiderivative of f prime of 
+ x 
+ whereas f prime of x is the derivative 
+ of f of x 
+ now the integral or the antiderivative 
+ of regular f 
+ x is capital 
+ f of x 
+ so capital f is the antiderivative of 
+ lowercase f 
+ and lowercase f is the antiderivative of 
+ f prime of x 
+ so hopefully that gives you a good idea 
+ of what the anti-derivative 
+ is 
+ so let's say if we have the second 
+ derivative of a function 
+ and we want to find the first derivative 
+ and we can go we can keep going forward 
+ in this direction 
+ i just want to give you an overview of 
+ these different 
+ symbols and functions 
+ so going to the right we're looking for 
+ the anti derivative 
+ going to the left we're looking for 
+ the derivative 
+ the process of finding the 
+ antiderivative is 
+ basically integration 
+ the process of finding the derivative is 
+ differentiation 
+ so hopefully that summarizes everything 
+ that you need to know about this 
+ conceptually 
+ now we said that capital f is the 
+ integral 
+ of f of x dx 
+ now you you get capital f plus c you 
+ always get the 
+ a constant of integration but we're not 
+ going to worry about that here 
+ what i'd like to do right now is 
+ distinguish 
+ what is an indefinite integral versus a 
+ definite integral 
+ so this here is what is known as 
+ an indefinite integral 
+ an indefinite integral gives you a 
+ function 
+ typically in terms of x but it could be 
+ in terms of some other variable like 
+ y or z or something like that a definite 
+ integral doesn't give you a function 
+ but it gives you a number so this 
+ is a definite integral 
+ the result of a definite integral is 
+ always a number like 20 negative 8 
+ 45 or something and you can easily 
+ identify 
+ or distinguish a definite integral from 
+ an indefinite integral 
+ a definite integral have limits of 
+ integration 
+ it has a lower limit and an upper limit 
+ an indefinite integral does not have 
+ the limits of integration so that's how 
+ you can easily distinguish between them 
+ now we know that the derivative 
+ of x cubed 
+ is three x squared according to the 
+ power rule 
+ the derivative of a variable raised to a 
+ constant is 
+ the constant times the variable raised 
+ to the constant minus one 
+ well the antiderivative 
+ of a variable raised to a constant 
+ it's going to be that variable raised to 
+ the constant plus 1 
+ divided by the constant plus 1 and then 
+ plus c 
+ the constant of integration 
+ so that's how we could find the 
+ antiderivative of a variable raised to a 
+ constant 
+ so let's find the antiderivative of 
+ three x squared 
+ so let's rewrite the constant now the 
+ variable raised to the constant that's 
+ x squared so we're going to do is we're 
+ going to add 1 to the exponent 
+ so it's going to be 2 plus 1 and then 
+ we're going to divide by that result 
+ so it becomes 3 x cubed divided by 3 
+ and this gives us the original 
+ function x cubed but we need to add 
+ the constant of integration plus c 
+ if you were to find the derivative of x 
+ cubed plus c 
+ x cubed will become three x squared 
+ the derivative of a constant will become 
+ zero so you end up with the same thing 
+ so always when you're looking for the 
+ indefinite integral of something or the 
+ anti-derivative 
+ you need to put the constant of 
+ integration the only time 
+ you don't need to worry about the 
+ constant of integration is if you're 
+ finding 
+ the definite integral where you get a 
+ number 
+ besides that anytime you get a function 
+ add plus c when you're looking for the 
+ indefinite integral or the 
+ antiderivative 
+ so now let's work on some problems 
+ go ahead and find the antiderivative 
+ of the following functions 
+ feel free to pause the video and work on 
+ these examples 
+ so for the first one we're just going to 
+ add one to the exponent 
+ 4 plus 1 is 5 and then we're going to 
+ divide by the result 
+ and then add the constant of integration 
+ so it's x to the fifth power over 
+ five plus c for the next one 
+ it's going to be x to the eight 
+ over eight plus c for the next one it's 
+ gonna be six 
+ and then we're gonna add one to nine 
+ that becomes ten divided by 
+ 10 plus c now this one we can reduce 
+ 6 over 10 if we divide both numbers by 2 
+ that becomes 3 over 5. 
+ so we could say this equals 3 over 5 
+ x to the 10 plus c 
+ for the next one it's going to be eight 
+ x to the four over four plus c 
+ and we know eight divided by 4 is 2. so 
+ this is 2 
+ x to the 4 plus c 
+ so as you can see it's not that 
+ difficult to find the anti-derivative 
+ of a function so go ahead and try this 
+ one 
+ find the antiderivative of 
+ so let's write it this way let's say f 
+ of x 
+ is x cubed minus 
+ 4x squared plus 8x 
+ what is the antiderivative capital f of 
+ x 
+ of that function so go ahead and find 
+ the antiderivative f of x 
+ to do that we're going to find the 
+ indefinite integral 
+ of x cubed minus 4x squared plus 8x 
+ but just to show our work let's do it 
+ this way first 
+ so the antiderivative is going to be the 
+ indefinite integral 
+ of f of x dx so that's the formula 
+ and now let's replace f of x with 
+ x cubed minus 4x squared 
+ plus 8x dx 
+ so the antiderivative of x cubed is 
+ going to be x to the four 
+ over four and then for four x squared is 
+ going to be four x 
+ cubed over three and then for eight x 
+ it's eight x 
+ squared over two plus c 
+ now let's rewrite it so we're going to 
+ write it as 
+ 1 4 x to the 4 
+ minus 4 over 3 x 
+ cubed and then 8 over 2 is 4. 
+ so we'll write that as 4x squared plus c 
+ so this is the antiderivative 
+ of the original function 
+ now let's try another problem so let's 
+ say 
+ f prime of x that is the first 
+ derivative of x 
+ i mean the first derivative of f rather 
+ let's say that's equal to 
+ eight x cubed minus 
+ six x squared 
+ plus four x minus seven 
+ so given f prime of x find the 
+ anti-derivative 
+ f of x 
+ go ahead and try that 
+ so first let's write an expression 
+ involving indefinite integral so we 
+ could say that 
+ f of x is the indefinite integral of 
+ f prime of x dx 
+ so f of x is the antiderivative of f 
+ prime of x 
+ so f of x is going to be the indefinite 
+ integral 
+ of 8x cubed 
+ minus six x squared plus four 
+ x minus seven 
+ feel free to pause the video if you 
+ wanna try this 
+ so the antiderivative of x cubed is 
+ x to the fourth over four for x squared 
+ it's 
+ x cubed over three and for x to the 
+ first power 
+ it's x squared over two and then if you 
+ have a constant like seven 
+ all you gotta do is add an x to it 
+ we'll talk more about that shortly and 
+ then finally plus c 
+ so now let's simplify our answer 
+ so the antiderivative is going to be 8 
+ divided by 4 is 2 so we have 2 
+ x to the fourth power 6 divided by 3 is 
+ also 2 
+ 4 divided by 2 is the same 
+ so this is the anti-derivative of our 
+ original function 
+ two x to the fourth power minus two x 
+ cubed plus two x squared 
+ minus seven x plus c 
+ so as you can see it's not too difficult 
+ to find the anti-derivative 
+ but there are other things that you need 
+ to know 
+ go ahead and find the indefinite 
+ integral of 
+ these expressions 
+ let's make this a z 
+ all right so go ahead and try those 
+ so let's start with the first one we 
+ want to find the indefinite integral of 
+ a constant 
+ 5 and we have dx in front of it 
+ so we know it's going to be 5x but 
+ let's see if we can get the answer using 
+ the power rule five 
+ is the same as five x to the zero 
+ any variable raised to the zero power is 
+ one so 
+ x to the zero is one times five which is 
+ equivalent to five 
+ now using the power rule this is going 
+ to be 5 
+ we're going to add one to the exponent 
+ and then divide by that result 
+ so the end result is that you get 5x 
+ plus c 
+ so whenever you have a constant and you 
+ wish to integrate that constant 
+ just add a variable to it now the 
+ variable that you should add is based on 
+ what you see here either dx dy 
+ dr or dz 
+ so what is the indefinite integral of 
+ 70y so instead of 7x this is going to be 
+ 7 times y plus c 
+ so the differential dx dy it tells us 
+ what variable we should be adding to the 
+ constants 
+ the indefinite integral of 8 dr that's 
+ going to be 
+ 8 times r plus c 
+ for six z plus four it's going to be six 
+ and then z to the first power that 
+ becomes z squared over two 
+ four becomes four z and then we'll add 
+ plus c 
+ so this we could simplify it as three 
+ z squared plus four z plus c 
+ so that is the indefinite integral of 
+ six 
+ z plus four 
+ try this problem so let's say you're 
+ given 
+ the first derivative of f 
+ and let's say it's seven 
+ this should be not f of x but f prime of 
+ y 
+ so let's say it's seven y cubed 
+ minus three y plus eight 
+ and your goal is to find capital 
+ f of y how would you do it 
+ feel free to pause the video and try it 
+ so first let's write a mental outline of 
+ what we need to do here 
+ we're given the first derivative of f 
+ we need to find f so f 
+ is the antiderivative of f prime but 
+ we're not going to stop there we need to 
+ find capital f 
+ so what we need to do is we need to 
+ integrate the function two times 
+ so we have a successive integration 
+ problem 
+ so first let's integrate it the first 
+ time 
+ let's find regular f or little f 
+ so this is going to be the indefinite 
+ integral of f prime of y 
+ d y so that is the indefinite integral 
+ of 
+ 7 y cubed minus three y plus eight 
+ so the antiderivative of y to the third 
+ is going to be y to the fourth over four 
+ the antiderivative of y is y squared 
+ over two 
+ and for the constant eight there's just 
+ going to be eight y 
+ based on what we have here d y 
+ and then plus the constant c 
+ so that's f of y we don't know what the 
+ value of c is 
+ if we were given a point of f of y we 
+ could find c but 
+ we'll save that for another problem 
+ so this here is the general function 
+ of f of y 
+ so now let's find capital f of y 
+ that's going to be the indefinite 
+ integral of f of y 
+ d y so that is the indefinite integral 
+ of 
+ seven over four y to the fourth 
+ minus three over two 
+ y squared plus 8y plus c as well 
+ and we're going to have d y 
+ so the anti-derivative of this 
+ we're going to rewrite the constant and 
+ then we'll find the anti-derivative of y 
+ to the fourth 
+ so that's going to be y to the fifth 
+ over five 
+ and then minus let's rewrite the 
+ constant first 
+ so we have three over two and then the 
+ anti-derivative of y squared is going to 
+ be 
+ y to the third over three and then it's 
+ going to be plus eight 
+ times y squared over two 
+ now we have the constant of integration 
+ c 
+ so we're going to add a y to it it's 
+ going to be c 
+ times y and then plus a new constant 
+ which we'll call d 
+ so this becomes seven over twenty 
+ y to the fifth here we can cancel the 
+ threes 
+ so it's going to be minus one half y to 
+ the third 
+ plus four y squared plus c 
+ y plus d 
+ so that is the second antiderivative 
+ of f prime of y which is capital f of y 
+ by the way for those of you who want 
+ access to the full length version of 
+ this video 
+ check out the links in the description 
+ section below 
+ if you join my youtube channel 
+ membership program you can get access 
+ not only to 
+ the full-length version of this video 
+ but many 
+ other full-length versions of other 
+ videos that i have on youtube which 
+ you'll see over time so feel free to 
+ take a look at that when you get a 
+ chance 
+ now let's work on finding the indefinite 
+ integral of other types of functions 
+ what is the indefinite integral of pi d 
+ theta 
+ feel free to pause the video and work on 
+ that and what is the 
+ indefinite integral of e 
+ let's say 
+ e d s 
+ so pi is a constant 
+ let's compare to the indefinite integral 
+ of seven 
+ d y 7 is a constant 
+ and we would add the variable y to it so 
+ this will be 7 y plus c 
+ so pi is a constant and here we're going 
+ to add the variable theta to it 
+ plus c so that's the indefinite integral 
+ of pi 
+ d theta 
+ so remember pi is a constant it's 3.14 
+ with some other numbers after that let 
+ me find 
+ out what those other numbers are 
+ so it's 3.141592654 with some other 
+ numbers 
+ so whenever you see pi it's just a 
+ constant 
+ so treat it as if it's any other number 
+ like seven or eight or negative four 
+ the same is true for e e is not a 
+ variable it's a constant 
+ e is equal to two point seven one 
+ 8 2 8 and so forth 
+ so when looking at a problem like this e 
+ is the constant s is the variable 
+ so this is going to be e times s plus c 
+ whenever you're finding the indefinite 
+ integral of something you need to be 
+ able to distinguish the constant from 
+ the variable 
+ in order to integrate it properly 
+ now let's focus on finding the 
+ indefinite integral of rational 
+ functions 
+ what is the indefinite integral of 1 
+ over x squared 
+ to find this before you integrate it you 
+ need to rewrite the expression we need 
+ to move the variable 
+ from the bottom to the top 
+ so this is x to the negative 2. 
+ at this point we could use the power 
+ rule so we can integrate it by adding 
+ one to the exponent 
+ so it's going to be negative two plus 
+ one and then dividing by that result 
+ plus c negative two plus one 
+ that's negative one 
+ and after you integrate it you need to 
+ rewrite it again so we want to get rid 
+ of this negative exponent 
+ and we can do so by moving the variable 
+ back to the bottom 
+ so that leaves a 1 on top and then we're 
+ going to have x to the first power on 
+ the bottom 
+ which we can just leave as x the 
+ negative sign 
+ i'm going to move it to the top so the 
+ final answer is negative 1 over 
+ x plus c 
+ now let's try this one what is the 
+ indefinite integral of one over 
+ x to the fifth power dx 
+ so feel free to pause the video and try 
+ it 
+ so just like before let's move the 
+ variable to the top 
+ so we have the integral of x 
+ raised to the negative 5 dx and then 
+ let's add one to that 
+ so negative five plus one is negative 
+ four and then we're going to divide by 
+ that result 
+ next let's rewrite the expression so 
+ we're going to move the variable 
+ back to the bottom and the negative sign 
+ we're going to move it to the top 
+ so we're going to have negative 1 
+ we have a 4 on the bottom and x and then 
+ this negative 4 becomes 
+ positive 4 plus c so negative 1 over 4x 
+ to the fourth plus c 
+ that is the indefinite integral of 1 
+ over 
+ x to the fifth power 
+ try this find the indefinite integral of 
+ 7 
+ over x cubed dx 
+ so like before we're going to move the 
+ variable to the top 
+ so we're going to rewrite the integral 
+ so this is 7 
+ x to the negative 3 dx 
+ and now let's integrate so negative 3 
+ plus 
+ 1 that's negative 2 and then we're going 
+ to divide by negative 2 
+ and then we'll have plus c 
+ so next we're going to move the variable 
+ back to the bottom and the negative sign 
+ i'm going to move to the top 
+ so this becomes negative seven we have a 
+ two on the bottom 
+ and we have x squared as well so it's 
+ negative seven 
+ over two x squared plus c so that's how 
+ you can integrate 
+ rational functions 
+ go ahead and try this expression 
+ find the indefinite integral of 5 
+ x to the 7 minus 9 over x squared 
+ plus 4x minus 8 
+ dx 
+ so this is going to be 5 x to the 8 
+ over 8. now for negative 9x squared we 
+ need to write that as 
+ negative nine x to the negative two so 
+ that's gonna be negative nine 
+ x negative two plus one is negative one 
+ divided by negative one and then for 
+ four x to the first power that will be 
+ four x squared over two and then minus 
+ eight x 
+ plus c 
+ so we can rewrite this as five over 
+ eight 
+ x to the eight plus nine 
+ the two negative signs will cancel and 
+ then we can move the x variable to the 
+ bottom 
+ so it's plus whoops 
+ it's plus 9 over x 
+ and then plus 2x squared 
+ minus 8x plus c so that is the 
+ indefinite integral 
+ or the antiderivative 
+ of this expression 
+ now what is the antiderivative of 1 over 
+ x 
+ dx what do you think we need to do here 
+ well if we were to try the same approach 
+ that we've been using 
+ for rational functions let's say if we 
+ were to 
+ rewrite the expression by moving x to 
+ the top we would get the indefinite 
+ integral of 
+ x to the negative 1 dx 
+ now using the power rule if we add 1 to 
+ negative 1 we'll get x to the zero 
+ and if we were to divide by that result 
+ we would get something that is undefined 
+ so this technique 
+ doesn't work for one over x instead 
+ this is an integral that you should 
+ commit to memory 
+ the integral of one over x dx is simply 
+ ln x so you may want to add that to 
+ your list of notes and if you recall 
+ the derivative of ln 
+ u 
+ where u is a function of x is u prime 
+ over u 
+ so the derivative of ln x 
+ is going to be u prime if u is x 
+ u prime the derivative of x is one so we 
+ get one over x 
+ so that's the anti-derivative of one 
+ over x to the first power 
+ so if the anti-derivative of one over x 
+ is l and x 
+ what is the antiderivative of one over 
+ x plus three 
+ this is simply the natural log 
+ of x plus three 
+ so based on that go ahead and find the 
+ antiderivative 
+ of the following expressions 1 over 
+ x minus 5 dx 
+ 5 over x plus 2 dx 
+ and 7 over x plus 4 
+ dx 
+ so this is going to be the natural log 
+ of x minus 5 plus c 
+ now typically if your answer is like 
+ different than l and x 
+ normally you'll see an absolute value 
+ around x minus 5. 
+ and the reason for this is that you can 
+ have a negative number inside the 
+ natural log 
+ it's going to be like it's going to give 
+ you an error in the calculator 
+ so typically you'll see an absolute 
+ value symbol for expressions that can be 
+ negative 
+ for the next one let's move the constant 
+ to the front 
+ so think of this as 5 times the integral 
+ of 1 over x plus 2 dx 
+ so this is going to be 5 times the 
+ natural log 
+ and let's put our absolute value symbol 
+ so it's 5 ln 
+ x plus 2 plus the constant of 
+ integration 
+ for the next one let's do the same thing 
+ let's move the constant to the front 
+ so this is going to be 7 natural log 
+ x plus 4 and then plus c 
+ so that's how you can integrate rational 
+ functions where 
+ the denominator is a linear function 
+ like x plus 2 
+ x minus 5 and so forth 
+ now here's a general formula that you 
+ can use when integrating 
+ rational functions like one over u we 
+ use a function of x 
+ it's going to be one over u prime 
+ times the natural log of u 
+ plus c now this works 
+ if and this is a big if if u 
+ is a linear function in the form ax plus 
+ b 
+ now a could be zero b could be zero well 
+ if a is zero doesn't work but 
+ b could be zero 
+ but u has to be a linear function in 
+ that form if 
+ there's like an x squared or an x cube 
+ this formula is not going to work so let 
+ me repeat that 
+ u has to be linear function if you have 
+ a square root of x or 
+ anything but x to the first power this 
+ will not work 
+ so now let's try some harder examples 
+ based on that what is the indefinite 
+ integral 
+ of one over three x plus four 
+ and let's compare that to the indefinite 
+ integral of one over 
+ x plus seven 
+ so in this case we can see that u is 
+ 3x plus 4. the derivative of u 
+ which is u prime the derivative of 3x is 
+ 3 the derivative of 4 
+ is just nothing c u prime is 3. so this 
+ becomes 1 
+ over 3 ln absolute value 
+ 3x plus 4. 
+ and then plus c 
+ so this fraction is a result of the 
+ derivative 
+ of that expression for the next one the 
+ derivative of 
+ x plus seven is just one here the 
+ derivative of three x plus four is three 
+ so that's why you gotta incorporate that 
+ so for the next one u is gonna be x plus 
+ seven 
+ and u prime is just gonna be one so this 
+ becomes 
+ ln absolute value 
+ x plus 7 
+ plus c so knowing that go ahead and try 
+ these two oh by the way 
+ let's go back to what we had before 
+ let's prove 
+ that this is indeed the right answer 
+ so let's find the derivative 
+ of one third times ln 
+ three x plus four 
+ so this is going to be 1 over 3 and keep 
+ in mind the derivative 
+ of ln x or lnu rather 
+ is u prime over u so the u part is what 
+ is inside of the natural log function 
+ and so that's three x plus four 
+ u prime the derivative of three x plus 
+ four 
+ is just three and the derivative of 
+ c is zero and so when we cancel 
+ the threes we're going to start with our 
+ original function 
+ which is what we had here so that shows 
+ you that the process 
+ works 
+ you

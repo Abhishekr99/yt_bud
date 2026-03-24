@@ -1,0 +1,121 @@
+{
+  "curriculum_id": "math_linear_algebra_matrix_operation",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Matrix Operations",
+  "created_at": "2026-03-23T10:53:50.226674",
+  "concepts": [
+    {
+      "concept_id": "matrix_definition",
+      "name": "Matrix Definition",
+      "aliases": [
+        "Matrix",
+        "Matrices"
+      ],
+      "short_definition": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "matrix_addition",
+      "name": "Matrix Addition",
+      "aliases": [
+        "Adding Matrices"
+      ],
+      "short_definition": "Combining two matrices of the same dimensions by adding their corresponding elements.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "scalar_multiplication",
+      "name": "Scalar Multiplication",
+      "aliases": [
+        "Multiplying Matrix by Scalar"
+      ],
+      "short_definition": "Multiplying every element of a matrix by a single number (scalar).",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "aliases": [
+        "Multiplying Matrices"
+      ],
+      "short_definition": "A binary operation that produces a new matrix from two matrices, with specific rules for element calculation.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "identity_matrix",
+      "name": "Identity Matrix",
+      "aliases": [
+        "I",
+        "Unit Matrix"
+      ],
+      "short_definition": "A square matrix with ones on the main diagonal and zeros elsewhere.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "zero_matrix",
+      "name": "Zero Matrix",
+      "aliases": [
+        "Null Matrix"
+      ],
+      "short_definition": "A matrix where all elements are zero.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "transpose_of_a_matrix",
+      "name": "Transpose of a Matrix",
+      "aliases": [
+        "Matrix Transpose"
+      ],
+      "short_definition": "A new matrix formed by interchanging the rows and columns of the original matrix.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "matrix_inverse",
+      "name": "Matrix Inverse",
+      "aliases": [
+        "Inverse Matrix"
+      ],
+      "short_definition": "For a square matrix, another matrix that, when multiplied by the original, results in the identity matrix.",
+      "prerequisites": [
+        "identity_matrix",
+        "matrix_definition",
+        "matrix_multiplication"
+      ]
+    },
+    {
+      "concept_id": "determinant_of_a_matrix",
+      "name": "Determinant of a Matrix",
+      "aliases": [
+        "Matrix Determinant"
+      ],
+      "short_definition": "A scalar value that can be computed from the elements of a square matrix and encodes certain properties of the linear transformation described by the matrix.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    },
+    {
+      "concept_id": "augmented_matrix",
+      "name": "Augmented Matrix",
+      "aliases": [
+        "Augmented Matrices"
+      ],
+      "short_definition": "A matrix formed by appending the columns of two given matrices, usually to represent the coefficients and constants of a system of linear equations.",
+      "prerequisites": [
+        "matrix_definition"
+      ]
+    }
+  ]
+}

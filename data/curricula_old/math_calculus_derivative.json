@@ -1,0 +1,457 @@
+{
+  "curriculum_id": "MATH_Calculus_Derivatives",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Derivatives",
+  "created_at": "2026-03-21T11:13:09.988985",
+  "concepts": [
+    {
+      "concept_id": "limit",
+      "name": "Limit",
+      "aliases": [
+        "Limits"
+      ],
+      "short_definition": "The value a function approaches as its input approaches a certain value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "continuity",
+      "name": "Continuity",
+      "aliases": [
+        "Continuous Functions"
+      ],
+      "short_definition": "A function is continuous if its graph can be drawn without lifting the pen.",
+      "prerequisites": [
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "instantaneous_rate_of_change",
+      "name": "Instantaneous Rate of Change",
+      "aliases": [
+        "Instantaneous Velocity",
+        "Instantaneous Slope"
+      ],
+      "short_definition": "The rate at which a quantity changes at a specific point in time.",
+      "prerequisites": [
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "average_rate_of_change",
+      "name": "Average Rate of Change",
+      "aliases": [
+        "Average Velocity",
+        "Average Slope"
+      ],
+      "short_definition": "The rate of change of a quantity over an interval.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "tangent_line",
+      "name": "Tangent Line",
+      "aliases": [
+        "Tangent"
+      ],
+      "short_definition": "A line that touches a curve at a single point and has the same slope as the curve at that point.",
+      "prerequisites": [
+        "instantaneous_rate_of_change",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "derivative",
+      "name": "Derivative",
+      "aliases": [
+        "Derivatives",
+        "Differentiation"
+      ],
+      "short_definition": "The instantaneous rate of change of a function, or the slope of the tangent line.",
+      "prerequisites": [
+        "instantaneous_rate_of_change",
+        "limit",
+        "tangent_line"
+      ]
+    },
+    {
+      "concept_id": "derivative_notation",
+      "name": "Derivative Notation",
+      "aliases": [
+        "Leibniz Notation",
+        "Lagrange Notation"
+      ],
+      "short_definition": "Symbols used to represent the derivative of a function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "power_rule",
+      "name": "Power Rule",
+      "aliases": [
+        "Power Rule for Differentiation"
+      ],
+      "short_definition": "A rule for finding the derivative of a power function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "constant_rule",
+      "name": "Constant Rule",
+      "aliases": [
+        "Derivative of a Constant"
+      ],
+      "short_definition": "The derivative of a constant function is zero.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "constant_multiple_rule",
+      "name": "Constant Multiple Rule",
+      "aliases": [
+        "Derivative of a Constant Multiple"
+      ],
+      "short_definition": "The derivative of a constant times a function is the constant times the derivative of the function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "sum_rule",
+      "name": "Sum Rule",
+      "aliases": [
+        "Derivative of a Sum"
+      ],
+      "short_definition": "The derivative of a sum of functions is the sum of their derivatives.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "difference_rule",
+      "name": "Difference Rule",
+      "aliases": [
+        "Derivative of a Difference"
+      ],
+      "short_definition": "The derivative of a difference of functions is the difference of their derivatives.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "product_rule",
+      "name": "Product Rule",
+      "aliases": [
+        "Derivative of a Product"
+      ],
+      "short_definition": "A rule for finding the derivative of the product of two functions.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "quotient_rule",
+      "name": "Quotient Rule",
+      "aliases": [
+        "Derivative of a Quotient"
+      ],
+      "short_definition": "A rule for finding the derivative of the quotient of two functions.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "chain_rule",
+      "name": "Chain Rule",
+      "aliases": [
+        "Chain Rule for Differentiation"
+      ],
+      "short_definition": "A rule for finding the derivative of a composite function.",
+      "prerequisites": [
+        "derivative",
+        "product_rule"
+      ]
+    },
+    {
+      "concept_id": "implicit_differentiation",
+      "name": "Implicit Differentiation",
+      "aliases": [
+        "Implicit Derivatives"
+      ],
+      "short_definition": "A technique for finding the derivative of an implicitly defined function.",
+      "prerequisites": [
+        "chain_rule",
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "higherorder_derivative",
+      "name": "Higher-Order Derivatives",
+      "aliases": [
+        "Second Derivative",
+        "Third Derivative"
+      ],
+      "short_definition": "Derivatives of derivatives.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "second_derivative",
+      "name": "Second Derivative",
+      "aliases": [
+        "Second Order Derivative"
+      ],
+      "short_definition": "The derivative of the first derivative.",
+      "prerequisites": [
+        "higherorder_derivative"
+      ]
+    },
+    {
+      "concept_id": "concavity",
+      "name": "Concavity",
+      "aliases": [
+        "Concave Up",
+        "Concave Down"
+      ],
+      "short_definition": "The curvature of a function's graph, determined by the second derivative.",
+      "prerequisites": [
+        "second_derivative"
+      ]
+    },
+    {
+      "concept_id": "inflection_point",
+      "name": "Inflection Point",
+      "aliases": [
+        "Points of Inflection"
+      ],
+      "short_definition": "A point on a curve where the concavity changes.",
+      "prerequisites": [
+        "concavity",
+        "second_derivative"
+      ]
+    },
+    {
+      "concept_id": "critical_point",
+      "name": "Critical Point",
+      "aliases": [
+        "Critical Numbers"
+      ],
+      "short_definition": "A point where the derivative is zero or undefined.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "local_extrema",
+      "name": "Local Extrema",
+      "aliases": [
+        "Local Maxima",
+        "Local Minima"
+      ],
+      "short_definition": "The highest or lowest points in a neighborhood of a function.",
+      "prerequisites": [
+        "critical_point"
+      ]
+    },
+    {
+      "concept_id": "first_derivative_test",
+      "name": "First Derivative Test",
+      "aliases": [
+        "FDT"
+      ],
+      "short_definition": "A test using the first derivative to find local extrema.",
+      "prerequisites": [
+        "critical_point",
+        "local_extrema"
+      ]
+    },
+    {
+      "concept_id": "second_derivative_test",
+      "name": "Second Derivative Test",
+      "aliases": [
+        "SDT"
+      ],
+      "short_definition": "A test using the second derivative to find local extrema.",
+      "prerequisites": [
+        "concavity",
+        "critical_point",
+        "local_extrema"
+      ]
+    },
+    {
+      "concept_id": "absolute_extrema",
+      "name": "Absolute Extrema",
+      "aliases": [
+        "Global Maxima",
+        "Global Minima"
+      ],
+      "short_definition": "The highest or lowest points of a function over its entire domain.",
+      "prerequisites": [
+        "local_extrema"
+      ]
+    },
+    {
+      "concept_id": "optimization",
+      "name": "Optimization",
+      "aliases": [
+        "Optimization Problems"
+      ],
+      "short_definition": "Finding the maximum or minimum value of a function.",
+      "prerequisites": [
+        "absolute_extrema"
+      ]
+    },
+    {
+      "concept_id": "related_rate",
+      "name": "Related Rates",
+      "aliases": [
+        "Related Rate Problems"
+      ],
+      "short_definition": "Problems involving rates of change of multiple related variables.",
+      "prerequisites": [
+        "chain_rule",
+        "implicit_differentiation"
+      ]
+    },
+    {
+      "concept_id": "lhpitals_rule",
+      "name": "L'Hôpital's Rule",
+      "aliases": [
+        "L'Hopital's Rule"
+      ],
+      "short_definition": "A rule for evaluating limits of indeterminate forms.",
+      "prerequisites": [
+        "derivative",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "antiderivative",
+      "name": "Antiderivative",
+      "aliases": [
+        "Indefinite Integral"
+      ],
+      "short_definition": "A function whose derivative is a given function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "indefinite_integral",
+      "name": "Indefinite Integral",
+      "aliases": [
+        "Antiderivatives"
+      ],
+      "short_definition": "The set of all antiderivatives of a function.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "integral_notation",
+      "name": "Integral Notation",
+      "aliases": [
+        "Integral Symbol"
+      ],
+      "short_definition": "Symbols used to represent integration.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "power_rule_for_integration",
+      "name": "Power Rule for Integration",
+      "aliases": [
+        "Power Rule for Antiderivatives"
+      ],
+      "short_definition": "A rule for finding the antiderivative of a power function.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "constant_rule_for_integration",
+      "name": "Constant Rule for Integration",
+      "aliases": [
+        "Antiderivative of a Constant"
+      ],
+      "short_definition": "The antiderivative of a constant function.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "sum_rule_for_integration",
+      "name": "Sum Rule for Integration",
+      "aliases": [
+        "Antiderivative of a Sum"
+      ],
+      "short_definition": "The antiderivative of a sum of functions is the sum of their antiderivatives.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "difference_rule_for_integration",
+      "name": "Difference Rule for Integration",
+      "aliases": [
+        "Antiderivative of a Difference"
+      ],
+      "short_definition": "The antiderivative of a difference of functions is the difference of their antiderivatives.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "constant_multiple_rule_for_integration",
+      "name": "Constant Multiple Rule for Integration",
+      "aliases": [
+        "Antiderivative of a Constant Multiple"
+      ],
+      "short_definition": "The antiderivative of a constant times a function is the constant times the antiderivative of the function.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "integration_by_substitution",
+      "name": "Integration by Substitution",
+      "aliases": [
+        "u-Substitution"
+      ],
+      "short_definition": "A technique for finding antiderivatives of composite functions.",
+      "prerequisites": [
+        "antiderivative",
+        "chain_rule"
+      ]
+    },
+    {
+      "concept_id": "definite_integral",
+      "name": "Definite Integral",
+      "aliases": [
+        "Definite Integrals"
+      ],
+      "short_definition": "The net area under the curve of a function between two points.",
+      "prerequisites": [
+        "continuity",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculu",
+      "name": "Fundamental Theorem of Calculus",
+      "aliases": [
+        "FTC"
+      ],
+      "short_definition": "Connects differentiation and integration.",
+      "prerequisites": [
+        "antiderivative",
+        "definite_integral",
+        "derivative"
+      ]
+    }
+  ]
+}

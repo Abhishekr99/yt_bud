@@ -1,0 +1,439 @@
+{
+  "curriculum_id": "DSA_basics_Time complexity",
+  "domain": "DSA",
+  "module": "basics",
+  "topic": "Time complexity",
+  "created_at": "2026-03-21T10:39:38.713942",
+  "concepts": [
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [
+        "Algorithmic process"
+      ],
+      "short_definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Algorithmic time",
+        "Execution time"
+      ],
+      "short_definition": "A measure of the amount of time an algorithm takes to run as a function of the input size.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "input_size",
+      "name": "Input Size",
+      "aliases": [
+        "Problem size"
+      ],
+      "short_definition": "The number of elements or data points that an algorithm processes.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "asymptotic_analysi",
+      "name": "Asymptotic Analysis",
+      "aliases": [
+        "Growth rate analysis"
+      ],
+      "short_definition": "Analyzing the performance of an algorithm as the input size approaches infinity.",
+      "prerequisites": [
+        "input_size",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "big_o_notation",
+      "name": "Big O Notation",
+      "aliases": [
+        "O notation",
+        "Upper bound"
+      ],
+      "short_definition": "A mathematical notation used to describe the limiting behavior of a function when the argument tends towards a particular value or infinity.",
+      "prerequisites": [
+        "asymptotic_analysi"
+      ]
+    },
+    {
+      "concept_id": "big_omega_notation",
+      "name": "Big Omega Notation",
+      "aliases": [
+        "Ω notation",
+        "Lower bound"
+      ],
+      "short_definition": "A mathematical notation used to describe the lower bound of an algorithm's running time.",
+      "prerequisites": [
+        "asymptotic_analysi"
+      ]
+    },
+    {
+      "concept_id": "big_theta_notation",
+      "name": "Big Theta Notation",
+      "aliases": [
+        "Θ notation",
+        "Tight bound"
+      ],
+      "short_definition": "A mathematical notation used to describe both the lower and upper bound of an algorithm's running time.",
+      "prerequisites": [
+        "big_o_notation",
+        "big_omega_notation"
+      ]
+    },
+    {
+      "concept_id": "constant_time",
+      "name": "Constant Time",
+      "aliases": [
+        "O(1)"
+      ],
+      "short_definition": "An algorithm whose execution time is independent of the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "logarithmic_time",
+      "name": "Logarithmic Time",
+      "aliases": [
+        "O(log n)"
+      ],
+      "short_definition": "An algorithm whose execution time grows logarithmically with the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "linear_time",
+      "name": "Linear Time",
+      "aliases": [
+        "O(n)"
+      ],
+      "short_definition": "An algorithm whose execution time grows linearly with the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "linearithmic_time",
+      "name": "Linearithmic Time",
+      "aliases": [
+        "O(n log n)"
+      ],
+      "short_definition": "An algorithm whose execution time grows by a factor of n multiplied by the logarithm of n.",
+      "prerequisites": [
+        "big_o_notation",
+        "linear_time",
+        "logarithmic_time"
+      ]
+    },
+    {
+      "concept_id": "quadratic_time",
+      "name": "Quadratic Time",
+      "aliases": [
+        "O(n^2)"
+      ],
+      "short_definition": "An algorithm whose execution time grows by the square of the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "cubic_time",
+      "name": "Cubic Time",
+      "aliases": [
+        "O(n^3)"
+      ],
+      "short_definition": "An algorithm whose execution time grows by the cube of the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "polynomial_time",
+      "name": "Polynomial Time",
+      "aliases": [
+        "O(n^k)"
+      ],
+      "short_definition": "An algorithm whose execution time is bounded by a polynomial function of the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "exponential_time",
+      "name": "Exponential Time",
+      "aliases": [
+        "O(2^n)"
+      ],
+      "short_definition": "An algorithm whose execution time grows exponentially with the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "factorial_time",
+      "name": "Factorial Time",
+      "aliases": [
+        "O(n!)"
+      ],
+      "short_definition": "An algorithm whose execution time grows by the factorial of the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "worstcase_time",
+      "name": "Worst-Case Time",
+      "aliases": [
+        "Max execution time"
+      ],
+      "short_definition": "The maximum amount of time an algorithm can take to run for a given input size.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "bestcase_time",
+      "name": "Best-Case Time",
+      "aliases": [
+        "Min execution time"
+      ],
+      "short_definition": "The minimum amount of time an algorithm can take to run for a given input size.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "averagecase_time",
+      "name": "Average-Case Time",
+      "aliases": [
+        "Expected execution time"
+      ],
+      "short_definition": "The average amount of time an algorithm takes to run over all possible inputs of a given size.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "recursive_algorithm",
+      "name": "Recursive Algorithm",
+      "aliases": [
+        "Recursion"
+      ],
+      "short_definition": "An algorithm that calls itself to solve smaller instances of the same problem.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "recurrence_relation",
+      "name": "Recurrence Relation",
+      "aliases": [
+        "Recurrence equation"
+      ],
+      "short_definition": "An equation that recursively defines a sequence or function.",
+      "prerequisites": [
+        "recursive_algorithm"
+      ]
+    },
+    {
+      "concept_id": "master_theorem",
+      "name": "Master Theorem",
+      "aliases": [
+        "Master method"
+      ],
+      "short_definition": "A theorem used to find the asymptotic behavior of recurrence relations.",
+      "prerequisites": [
+        "big_o_notation",
+        "recurrence_relation"
+      ]
+    },
+    {
+      "concept_id": "substitution_method",
+      "name": "Substitution Method",
+      "aliases": [
+        "Guess and prove"
+      ],
+      "short_definition": "A method for solving recurrence relations by guessing a solution and proving it by induction.",
+      "prerequisites": [
+        "big_o_notation",
+        "recurrence_relation"
+      ]
+    },
+    {
+      "concept_id": "recursion_tree_method",
+      "name": "Recursion Tree Method",
+      "aliases": [
+        "Tree method"
+      ],
+      "short_definition": "A method for solving recurrence relations by visualizing the recursive calls as a tree.",
+      "prerequisites": [
+        "big_o_notation",
+        "recurrence_relation"
+      ]
+    },
+    {
+      "concept_id": "amortized_analysi",
+      "name": "Amortized Analysis",
+      "aliases": [
+        "Aggregated analysis"
+      ],
+      "short_definition": "Analyzing the average performance of an operation over a sequence of operations.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory usage"
+      ],
+      "short_definition": "A measure of the amount of memory an algorithm uses as a function of the input size.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "auxiliary_space",
+      "name": "Auxiliary Space",
+      "aliases": [
+        "Extra space"
+      ],
+      "short_definition": "The extra memory used by an algorithm, not including the input.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "inplace_algorithm",
+      "name": "In-place Algorithm",
+      "aliases": [
+        "Constant space algorithm"
+      ],
+      "short_definition": "An algorithm that uses a constant amount of auxiliary space.",
+      "prerequisites": [
+        "auxiliary_space"
+      ]
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [
+        "List"
+      ],
+      "short_definition": "A data structure that stores a collection of elements of the same type in contiguous memory locations.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [
+        "LL"
+      ],
+      "short_definition": "A linear data structure where elements are not stored at contiguous memory locations.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [],
+      "short_definition": "A linear data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A linear data structure that follows the First-In, First-Out (FIFO) principle.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [],
+      "short_definition": "A hierarchical data structure consisting of nodes connected by edges.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [],
+      "short_definition": "A non-linear data structure consisting of nodes (vertices) and edges.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "hash_table",
+      "name": "Hash Table",
+      "aliases": [
+        "Hash map"
+      ],
+      "short_definition": "A data structure that implements an associative array abstract data type, mapping keys to values.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "sorting_algorithm",
+      "name": "Sorting Algorithm",
+      "aliases": [
+        "Sort"
+      ],
+      "short_definition": "An algorithm that puts elements of a list into a certain order.",
+      "prerequisites": [
+        "algorithm",
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "searching_algorithm",
+      "name": "Searching Algorithm",
+      "aliases": [
+        "Search"
+      ],
+      "short_definition": "An algorithm for finding an item in a list of items.",
+      "prerequisites": [
+        "algorithm",
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "big_data",
+      "name": "Big Data",
+      "aliases": [],
+      "short_definition": "Extremely large data sets that may be analyzed computationally to reveal patterns, trends, and associations.",
+      "prerequisites": [
+        "input_size"
+      ]
+    }
+  ]
+}

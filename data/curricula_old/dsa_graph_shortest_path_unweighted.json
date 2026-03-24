@@ -1,0 +1,450 @@
+{
+  "curriculum_id": "DSA_Graph_Shortest path (unweighted)",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Shortest path (unweighted)",
+  "created_at": "2026-03-21T10:40:57.261657",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Network"
+      ],
+      "short_definition": "A collection of nodes connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Vertex",
+        "Point"
+      ],
+      "short_definition": "An individual element within a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link",
+        "Connection"
+      ],
+      "short_definition": "A connection between two nodes in a graph.",
+      "prerequisites": [
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "unweighted_graph",
+      "name": "Unweighted Graph",
+      "aliases": [
+        "Simple Graph"
+      ],
+      "short_definition": "A graph where edges do not have associated costs or weights.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [
+        "Walk"
+      ],
+      "short_definition": "A sequence of nodes connected by edges.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [
+        "Minimum Path"
+      ],
+      "short_definition": "A path between two nodes with the minimum number of edges.",
+      "prerequisites": [
+        "path",
+        "unweighted_graph"
+      ]
+    },
+    {
+      "concept_id": "source_node",
+      "name": "Source Node",
+      "aliases": [
+        "Start Node",
+        "Origin"
+      ],
+      "short_definition": "The starting node for finding a shortest path.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "destination_node",
+      "name": "Destination Node",
+      "aliases": [
+        "End Node",
+        "Target"
+      ],
+      "short_definition": "The target node for finding a shortest path.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores neighbors level by level.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A First-In, First-Out (FIFO) data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "visited_node",
+      "name": "Visited Nodes",
+      "aliases": [
+        "Explored Nodes"
+      ],
+      "short_definition": "Nodes that have already been processed by a traversal algorithm.",
+      "prerequisites": [
+        "breadthfirst_search",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "distance",
+      "name": "Distance",
+      "aliases": [
+        "Path Length"
+      ],
+      "short_definition": "The number of edges in a path.",
+      "prerequisites": [
+        "path"
+      ]
+    },
+    {
+      "concept_id": "minimum_distance",
+      "name": "Minimum Distance",
+      "aliases": [
+        "Shortest Distance"
+      ],
+      "short_definition": "The smallest possible distance between two nodes.",
+      "prerequisites": [
+        "distance",
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "Adjacency Map"
+      ],
+      "short_definition": "A representation of a graph where each node has a list of its neighbors.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A representation of a graph using a matrix where entries indicate connections.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "level",
+      "name": "Level",
+      "aliases": [
+        "Depth"
+      ],
+      "short_definition": "The distance of a node from the source node in a BFS traversal.",
+      "prerequisites": [
+        "breadthfirst_search",
+        "node",
+        "source_node"
+      ]
+    },
+    {
+      "concept_id": "parent_pointer",
+      "name": "Parent Pointer",
+      "aliases": [
+        "Predecessor"
+      ],
+      "short_definition": "A pointer from a node to the node that discovered it in a traversal.",
+      "prerequisites": [
+        "breadthfirst_search",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "path_reconstruction",
+      "name": "Path Reconstruction",
+      "aliases": [
+        "Path Backtracking"
+      ],
+      "short_definition": "The process of finding the actual shortest path using parent pointers.",
+      "prerequisites": [
+        "destination_node",
+        "parent_pointer"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [],
+      "short_definition": "Subgraphs where any two nodes are connected to each other by paths.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "disconnected_graph",
+      "name": "Disconnected Graph",
+      "aliases": [],
+      "short_definition": "A graph that is not connected.",
+      "prerequisites": [
+        "connected_component",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges have no direction.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [],
+      "short_definition": "A path that starts and ends at the same node.",
+      "prerequisites": [
+        "node",
+        "path"
+      ]
+    },
+    {
+      "concept_id": "acyclic_graph",
+      "name": "Acyclic Graph",
+      "aliases": [
+        "DAG"
+      ],
+      "short_definition": "A graph that contains no cycles.",
+      "prerequisites": [
+        "cycle",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [],
+      "short_definition": "A connected acyclic graph.",
+      "prerequisites": [
+        "acyclic_graph",
+        "connected_component",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [],
+      "short_definition": "The topmost node in a tree structure.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [],
+      "short_definition": "A node with no children in a tree structure.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "The process of visiting each node in a graph.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [],
+      "short_definition": "A step-by-step procedure for solving a problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [],
+      "short_definition": "A way of organizing and storing data.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "A measure of how the runtime of an algorithm scales with input size.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of how the memory usage of an algorithm scales with input size.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Case",
+      "aliases": [],
+      "short_definition": "A specific scenario that might cause an algorithm to fail or behave unexpectedly.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [],
+      "short_definition": "Different ways to store and represent graph data.",
+      "prerequisites": [
+        "adjacency_list",
+        "adjacency_matrix",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "reachability",
+      "name": "Reachability",
+      "aliases": [],
+      "short_definition": "The ability to reach one node from another through a path.",
+      "prerequisites": [
+        "node",
+        "path"
+      ]
+    },
+    {
+      "concept_id": "unreachable_node",
+      "name": "Unreachable Nodes",
+      "aliases": [],
+      "short_definition": "Nodes that cannot be reached from a given source node.",
+      "prerequisites": [
+        "reachability",
+        "source_node"
+      ]
+    },
+    {
+      "concept_id": "shortest_path_problem",
+      "name": "Shortest Path Problem",
+      "aliases": [],
+      "short_definition": "The problem of finding the shortest path between two nodes in a graph.",
+      "prerequisites": [
+        "destination_node",
+        "shortest_path",
+        "source_node"
+      ]
+    },
+    {
+      "concept_id": "singlesource_shortest_path",
+      "name": "Single-Source Shortest Path",
+      "aliases": [
+        "SSSP"
+      ],
+      "short_definition": "Finding the shortest paths from a single source node to all other nodes.",
+      "prerequisites": [
+        "shortest_path_problem",
+        "source_node"
+      ]
+    },
+    {
+      "concept_id": "allpairs_shortest_path",
+      "name": "All-Pairs Shortest Path",
+      "aliases": [
+        "APSP"
+      ],
+      "short_definition": "Finding the shortest paths between every pair of nodes in a graph.",
+      "prerequisites": [
+        "shortest_path_problem"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search_algorithm",
+      "name": "Breadth-First Search Algorithm",
+      "aliases": [
+        "BFS Algorithm"
+      ],
+      "short_definition": "The specific implementation of BFS for finding shortest paths in unweighted graphs.",
+      "prerequisites": [
+        "breadthfirst_search",
+        "shortest_path_problem",
+        "unweighted_graph"
+      ]
+    }
+  ]
+}

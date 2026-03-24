@@ -1,0 +1,451 @@
+{
+  "curriculum_id": "DSA_Stack_Stack using linked list",
+  "domain": "DSA",
+  "module": "Stack",
+  "topic": "Stack using linked list",
+  "created_at": "2026-03-21T11:11:49.401813",
+  "concepts": [
+    {
+      "concept_id": "linked_list_basic",
+      "name": "Linked List Basics",
+      "aliases": [
+        "LL Fundamentals"
+      ],
+      "short_definition": "Understanding the fundamental structure and operations of a linked list.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node_structure",
+      "name": "Node Structure",
+      "aliases": [
+        "LL Node"
+      ],
+      "short_definition": "The basic building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": [
+        "linked_list_basic"
+      ]
+    },
+    {
+      "concept_id": "singly_linked_list",
+      "name": "Singly Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "A linked list where each node points to the next node in the sequence.",
+      "prerequisites": [
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "LL Head"
+      ],
+      "short_definition": "A reference to the first node in a linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [
+        "LL Tail"
+      ],
+      "short_definition": "A reference to the last node in a linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "LL Insert"
+      ],
+      "short_definition": "Adding a new node to a linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "LL Delete"
+      ],
+      "short_definition": "Removing a node from a linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "LL Iterate"
+      ],
+      "short_definition": "Visiting each node in a linked list sequentially.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "stack_abstract_data_type",
+      "name": "Stack Abstract Data Type",
+      "aliases": [
+        "Stack ADT"
+      ],
+      "short_definition": "The conceptual definition of a stack, emphasizing its LIFO behavior.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "lifo_principle",
+      "name": "LIFO Principle",
+      "aliases": [
+        "Last-In, First-Out"
+      ],
+      "short_definition": "The core principle of a stack where the most recently added item is the first to be removed.",
+      "prerequisites": [
+        "stack_abstract_data_type"
+      ]
+    },
+    {
+      "concept_id": "stack_operation",
+      "name": "Stack Operations",
+      "aliases": [
+        "Stack Methods"
+      ],
+      "short_definition": "The fundamental operations performed on a stack: push, pop, peek, isEmpty.",
+      "prerequisites": [
+        "stack_abstract_data_type"
+      ]
+    },
+    {
+      "concept_id": "push_operation",
+      "name": "Push Operation",
+      "aliases": [
+        "Stack Add"
+      ],
+      "short_definition": "Adding an element to the top of the stack.",
+      "prerequisites": [
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "pop_operation",
+      "name": "Pop Operation",
+      "aliases": [
+        "Stack Remove"
+      ],
+      "short_definition": "Removing and returning the element from the top of the stack.",
+      "prerequisites": [
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "peek_operation",
+      "name": "Peek Operation",
+      "aliases": [
+        "Stack Top"
+      ],
+      "short_definition": "Returning the element at the top of the stack without removing it.",
+      "prerequisites": [
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "isempty_operation",
+      "name": "isEmpty Operation",
+      "aliases": [
+        "Stack Empty Check"
+      ],
+      "short_definition": "Checking if the stack contains any elements.",
+      "prerequisites": [
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "stack_implementation",
+      "name": "Stack Implementation",
+      "aliases": [
+        "Stack Realization"
+      ],
+      "short_definition": "How to build a stack data structure using underlying components.",
+      "prerequisites": [
+        "stack_abstract_data_type"
+      ]
+    },
+    {
+      "concept_id": "stack_using_linked_list",
+      "name": "Stack using Linked List",
+      "aliases": [
+        "LL Stack"
+      ],
+      "short_definition": "Implementing a stack data structure using a linked list as the underlying storage.",
+      "prerequisites": [
+        "singly_linked_list",
+        "stack_implementation"
+      ]
+    },
+    {
+      "concept_id": "top_pointer_for_stack",
+      "name": "Top Pointer for Stack",
+      "aliases": [
+        "Stack Top Ref"
+      ],
+      "short_definition": "A pointer in the linked list implementation that always points to the top element of the stack.",
+      "prerequisites": [
+        "head_pointer",
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "push_with_linked_list",
+      "name": "Push with Linked List",
+      "aliases": [
+        "LL Stack Push"
+      ],
+      "short_definition": "Implementing the push operation by adding a new node at the beginning of the linked list.",
+      "prerequisites": [
+        "insertion",
+        "push_operation",
+        "top_pointer_for_stack"
+      ]
+    },
+    {
+      "concept_id": "pop_with_linked_list",
+      "name": "Pop with Linked List",
+      "aliases": [
+        "LL Stack Pop"
+      ],
+      "short_definition": "Implementing the pop operation by removing the node at the beginning of the linked list.",
+      "prerequisites": [
+        "deletion",
+        "pop_operation",
+        "top_pointer_for_stack"
+      ]
+    },
+    {
+      "concept_id": "peek_with_linked_list",
+      "name": "Peek with Linked List",
+      "aliases": [
+        "LL Stack Peek"
+      ],
+      "short_definition": "Implementing the peek operation by returning the data from the node pointed to by the top pointer.",
+      "prerequisites": [
+        "peek_operation",
+        "top_pointer_for_stack"
+      ]
+    },
+    {
+      "concept_id": "isempty_with_linked_list",
+      "name": "isEmpty with Linked List",
+      "aliases": [
+        "LL Stack IsEmpty"
+      ],
+      "short_definition": "Implementing isEmpty by checking if the top pointer is null.",
+      "prerequisites": [
+        "isempty_operation",
+        "top_pointer_for_stack"
+      ]
+    },
+    {
+      "concept_id": "time_complexity_of_ll_stack",
+      "name": "Time Complexity of LL Stack",
+      "aliases": [
+        "LL Stack Performance"
+      ],
+      "short_definition": "Analyzing the efficiency of stack operations when implemented with a linked list.",
+      "prerequisites": [
+        "isempty_with_linked_list",
+        "peek_with_linked_list",
+        "pop_with_linked_list",
+        "push_with_linked_list"
+      ]
+    },
+    {
+      "concept_id": "space_complexity_of_ll_stack",
+      "name": "Space Complexity of LL Stack",
+      "aliases": [
+        "LL Stack Memory"
+      ],
+      "short_definition": "Analyzing the memory usage of a stack implemented with a linked list.",
+      "prerequisites": [
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "advantages_of_ll_stack",
+      "name": "Advantages of LL Stack",
+      "aliases": [
+        "LL Stack Benefits"
+      ],
+      "short_definition": "The benefits of using a linked list to implement a stack, such as dynamic sizing.",
+      "prerequisites": [
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "disadvantages_of_ll_stack",
+      "name": "Disadvantages of LL Stack",
+      "aliases": [
+        "LL Stack Drawbacks"
+      ],
+      "short_definition": "The potential drawbacks of using a linked list to implement a stack, such as overhead.",
+      "prerequisites": [
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "comparison_with_array_stack",
+      "name": "Comparison with Array Stack",
+      "aliases": [
+        "LL vs Array Stack"
+      ],
+      "short_definition": "Comparing the linked list implementation of a stack with an array-based implementation.",
+      "prerequisites": [
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "dynamic_sizing",
+      "name": "Dynamic Sizing",
+      "aliases": [
+        "Dynamic Allocation"
+      ],
+      "short_definition": "The ability of the data structure to grow or shrink in size as needed.",
+      "prerequisites": [
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "memory_overhead",
+      "name": "Memory Overhead",
+      "aliases": [
+        "Node Pointers"
+      ],
+      "short_definition": "The extra memory used by pointers in a linked list implementation.",
+      "prerequisites": [
+        "node_structure",
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Cases",
+      "aliases": [
+        "LL Stack Edge Cases"
+      ],
+      "short_definition": "Scenarios like an empty stack or a stack with a single element.",
+      "prerequisites": [
+        "isempty_with_linked_list",
+        "peek_with_linked_list",
+        "pop_with_linked_list",
+        "push_with_linked_list"
+      ]
+    },
+    {
+      "concept_id": "null_pointer_handling",
+      "name": "Null Pointer Handling",
+      "aliases": [
+        "LL Null Checks"
+      ],
+      "short_definition": "Safely managing operations when pointers might be null.",
+      "prerequisites": [
+        "node_structure",
+        "top_pointer_for_stack"
+      ]
+    },
+    {
+      "concept_id": "garbage_collection",
+      "name": "Garbage Collection",
+      "aliases": [
+        "Memory Management"
+      ],
+      "short_definition": "How memory is managed and reclaimed in a linked list implementation.",
+      "prerequisites": [
+        "node_structure",
+        "stack_using_linked_list"
+      ]
+    },
+    {
+      "concept_id": "recursive_stack_operation",
+      "name": "Recursive Stack Operations",
+      "aliases": [
+        "Recursive Stack"
+      ],
+      "short_definition": "Implementing stack operations using recursion (though less common for basic stack ops).",
+      "prerequisites": [
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "applications_of_stack",
+      "name": "Applications of Stack",
+      "aliases": [
+        "Stack Use Cases"
+      ],
+      "short_definition": "Real-world scenarios where stacks are utilized.",
+      "prerequisites": [
+        "stack_abstract_data_type"
+      ]
+    },
+    {
+      "concept_id": "function_call_stack",
+      "name": "Function Call Stack",
+      "aliases": [
+        "Call Stack"
+      ],
+      "short_definition": "The internal stack used by programming languages to manage function calls.",
+      "prerequisites": [
+        "applications_of_stack"
+      ]
+    },
+    {
+      "concept_id": "expression_evaluation",
+      "name": "Expression Evaluation",
+      "aliases": [
+        "Infix to Postfix"
+      ],
+      "short_definition": "Using stacks to convert and evaluate mathematical expressions.",
+      "prerequisites": [
+        "applications_of_stack"
+      ]
+    },
+    {
+      "concept_id": "backtracking_algorithm",
+      "name": "Backtracking Algorithms",
+      "aliases": [
+        "Search Algorithms"
+      ],
+      "short_definition": "Employing stacks in algorithms that explore multiple possibilities.",
+      "prerequisites": [
+        "applications_of_stack"
+      ]
+    },
+    {
+      "concept_id": "undoredo_functionality",
+      "name": "Undo/Redo Functionality",
+      "aliases": [
+        "History Stack"
+      ],
+      "short_definition": "Implementing undo and redo features using stacks.",
+      "prerequisites": [
+        "applications_of_stack"
+      ]
+    },
+    {
+      "concept_id": "syntax_parsing",
+      "name": "Syntax Parsing",
+      "aliases": [
+        "Compiler Design"
+      ],
+      "short_definition": "Using stacks in compilers to analyze the structure of code.",
+      "prerequisites": [
+        "applications_of_stack"
+      ]
+    }
+  ]
+}

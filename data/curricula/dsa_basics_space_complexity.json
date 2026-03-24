@@ -1,0 +1,124 @@
+{
+  "curriculum_id": "dsa_basics_space_complexity",
+  "domain": "DSA",
+  "module": "basics",
+  "topic": "Space complexity",
+  "created_at": "2026-03-23T10:51:52.007348",
+  "concepts": [
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory Usage",
+        "Storage Requirements"
+      ],
+      "short_definition": "Measures the amount of computer memory that an algorithm requires to run.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "auxiliary_space",
+      "name": "Auxiliary Space",
+      "aliases": [
+        "Extra Space"
+      ],
+      "short_definition": "The temporary space used by an algorithm, excluding the input space.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "input_space",
+      "name": "Input Space",
+      "aliases": [
+        "Input Size"
+      ],
+      "short_definition": "The space required to store the input data for an algorithm.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "constant_space",
+      "name": "Constant Space",
+      "aliases": [
+        "O(1) Space"
+      ],
+      "short_definition": "An algorithm that uses a fixed amount of memory, regardless of input size.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "linear_space",
+      "name": "Linear Space",
+      "aliases": [
+        "O(n) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows linearly with the size of the input.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "logarithmic_space",
+      "name": "Logarithmic Space",
+      "aliases": [
+        "O(log n) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows logarithmically with the size of the input.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "quadratic_space",
+      "name": "Quadratic Space",
+      "aliases": [
+        "O(n^2) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows quadratically with the size of the input.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "big_o_notation",
+      "name": "Big O Notation",
+      "aliases": [
+        "Asymptotic Notation"
+      ],
+      "short_definition": "A mathematical notation used to describe the limiting behavior of a function, often used for complexity analysis.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "recursion_space",
+      "name": "Recursion Space",
+      "aliases": [
+        "Call Stack Space"
+      ],
+      "short_definition": "The memory used by the call stack during recursive function calls.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "data_structures_space",
+      "name": "Data Structures Space",
+      "aliases": [
+        "Memory for Structures"
+      ],
+      "short_definition": "The memory required to store and manage data using various data structures.",
+      "prerequisites": [
+        "input_space",
+        "space_complexity"
+      ]
+    }
+  ]
+}

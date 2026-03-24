@@ -1,0 +1,54 @@
+Domain,Module,Topic,youtube_url,video_id,transcript_path,curriculam_id
+DSA,Graph,Graph definition,https://www.youtube.com/watch?v=M3_pLsDdeuU&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=1,M3_pLsDdeuU,data/transcripts/M3_pLsDdeuU.txt,DSA_Graph_Graph definition
+DSA,Graph,Graph representation,https://www.youtube.com/watch?v=3oI-34aPMWM&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=2,3oI-34aPMWM,data/transcripts/3oI-34aPMWM.txt,DSA_Graph_Graph representation
+DSA,Graph,BFS traversal,https://www.youtube.com/watch?v=-tgVpUgsQ5k&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=5,-tgVpUgsQ5k,data/transcripts/-tgVpUgsQ5k.txt,DSA_Graph_BFS traversal
+DSA,Graph,DFS traversal,https://www.youtube.com/watch?v=Qzf1a--rhp8&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=6,Qzf1a--rhp8,data/transcripts/Qzf1a--rhp8.txt,DSA_Graph_DFS traversal
+DSA,Graph,Cycle detection (undirected),https://www.youtube.com/watch?v=zQ3zgFypzX4&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=12,zQ3zgFypzX4,data/transcripts/zQ3zgFypzX4.txt,DSA_Graph_Cycle detection (undirected)
+DSA,Graph,Topological sorting,https://www.youtube.com/watch?v=5lZ0iJMrUMk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=21,5lZ0iJMrUMk,data/transcripts/5lZ0iJMrUMk.txt,DSA_Graph_Topological sorting
+DSA,Graph,Shortest path (unweighted),https://www.youtube.com/watch?v=C4gxoTaI71U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=28,C4gxoTaI71U,data/transcripts/C4gxoTaI71U.txt,DSA_Graph_Shortest path (unweighted)
+DSA,Graph,Dijkstra algorithm,https://www.youtube.com/watch?v=V6H1qAeB-l4&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=32,V6H1qAeB-l4,data/transcripts/V6H1qAeB-l4.txt,DSA_Graph_Dijkstra algorithm
+DSA,Graph,Bellman-Ford algorithm,https://www.youtube.com/watch?v=0vVofAhAYjc&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=41,0vVofAhAYjc,data/transcripts/0vVofAhAYjc.txt,DSA_Graph_Bellman-Ford algorithm
+DSA,Graph,Minimum spanning tree,https://www.youtube.com/watch?v=ZSPjZuZWCME&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=44,ZSPjZuZWCME,data/transcripts/ZSPjZuZWCME.txt,DSA_Graph_Minimum spanning tree
+DSA,Graph,Prim’s algorithm,https://www.youtube.com/watch?v=mJcZjjKzeqk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=45,mJcZjjKzeqk,data/transcripts/mJcZjjKzeqk.txt,DSA_Graph_Prim’s algorithm
+DSA,Graph,Kruskal’s algorithm,https://www.youtube.com/watch?v=DMnDM_sxVig&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=47,DMnDM_sxVig,data/transcripts/DMnDM_sxVig.txt,DSA_Graph_Kruskal’s algorithm
+DSA,Graph,Disjoint Set Union (Union-Find),https://www.youtube.com/watch?v=aBxjDBC4M1U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=46,aBxjDBC4M1U,data/transcripts/aBxjDBC4M1U.txt,DSA_Graph_Disjoint Set Union (Union-Find)
+DSA,Trees,Tree definition,https://www.youtube.com/watch?v=_ANrF3FJm7I&list=PLkjdNRgDmcc0Pom5erUBU4ZayeU9AyRRu&index=1,_ANrF3FJm7I,data/transcripts/_ANrF3FJm7I.txt,DSA_Trees_Tree definition
+DSA,Trees,Binary tree,https://www.youtube.com/watch?v=ctCpP0RFDFc&list=PLkjdNRgDmcc0Pom5erUBU4ZayeU9AyRRu&index=2,ctCpP0RFDFc,data/transcripts/ctCpP0RFDFc.txt,DSA_Trees_Binary tree
+DSA,Trees,Tree traversal (DFS),https://www.youtube.com/watch?v=jmy0LaGET1I&list=PLkjdNRgDmcc0Pom5erUBU4ZayeU9AyRRu&index=4,jmy0LaGET1I,data/transcripts/jmy0LaGET1I.txt,DSA_Trees_Tree traversal (DFS)
+DSA,Trees,Level order traversal (BFS),https://www.youtube.com/watch?v=EoAsWbO7sqg&list=PLkjdNRgDmcc0Pom5erUBU4ZayeU9AyRRu&index=8,EoAsWbO7sqg,data/transcripts/EoAsWbO7sqg.txt,DSA_Trees_Level order traversal (BFS)
+DSA,Trees,Binary Search Tree (BST),https://www.youtube.com/watch?v=p7-9UvDQZ3w&list=PLkjdNRgDmcc0Pom5erUBU4ZayeU9AyRRu&index=39,p7-9UvDQZ3w,data/transcripts/p7-9UvDQZ3w.txt,DSA_Trees_Binary Search Tree (BST)
+DSA,Trees,BST insertion,https://www.youtube.com/watch?v=FiFiNvM29ps&list=PLkjdNRgDmcc0Pom5erUBU4ZayeU9AyRRu&index=43,FiFiNvM29ps,data/transcripts/FiFiNvM29ps.txt,DSA_Trees_BST insertion
+MATH,Calculus,Limits,https://www.youtube.com/watch?v=YNstP0ESndU&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=27,YNstP0ESndU,data/transcripts/YNstP0ESndU.txt,MATH_Calculus_Limits
+MATH,Calculus,Continuity,https://www.youtube.com/watch?v=joewRl1CTL8&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=53,joewRl1CTL8,data/transcripts/joewRl1CTL8.txt,MATH_Calculus_Continuity
+MATH,Calculus,Derivatives,https://www.youtube.com/watch?v=-aTLjoDT1GQ&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=63,-aTLjoDT1GQ,data/transcripts/-aTLjoDT1GQ.txt,MATH_Calculus_Derivatives
+MATH,Calculus,Chain rule,https://www.youtube.com/watch?v=HaHsqDjWMLU&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=84,HaHsqDjWMLU,data/transcripts/HaHsqDjWMLU.txt,MATH_Calculus_Chain rule
+MATH,Calculus,Applications of derivatives,https://www.youtube.com/watch?v=WiOdQQYLMU4&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=133,WiOdQQYLMU4,data/transcripts/WiOdQQYLMU4.txt,MATH_Calculus_Applications of derivatives
+MATH,Calculus,Integrals,https://www.youtube.com/watch?v=xaCPDMEkbig&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=146,xaCPDMEkbig,data/transcripts/xaCPDMEkbig.txt,MATH_Calculus_Integrals
+MATH,Calculus,Area under curve,https://www.youtube.com/watch?v=UjTTx2eYrx8&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=168,UjTTx2eYrx8,data/transcripts/UjTTx2eYrx8.txt,MATH_Calculus_Area under curve
+MATH,Calculus,Differential equations,https://www.youtube.com/watch?v=H5tD_NtPDuU&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv&index=162,H5tD_NtPDuU,data/transcripts/H5tD_NtPDuU.txt,MATH_Calculus_Differential equations
+MATH,Probability,Probability basics,https://www.youtube.com/watch?v=4T3aOIfNdTY&list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V&index=2,4T3aOIfNdTY,data/transcripts/4T3aOIfNdTY.txt,MATH_Probability_Probability basics
+MATH,Probability,Conditional probability,https://www.youtube.com/watch?v=KjdS_o5HNII&list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V&index=8,KjdS_o5HNII,data/transcripts/KjdS_o5HNII.txt,MATH_Probability_Conditional probability
+MATH,Probability,Bayes Theorem,https://www.youtube.com/watch?v=akClB1J6b28&list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V&index=10,akClB1J6b28,data/transcripts/akClB1J6b28.txt,MATH_Probability_Bayes Theorem
+MATH,Probability,Random Variables and Probability Distributions,https://www.youtube.com/watch?v=-7QG2itL1u4&list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V&index=13,-7QG2itL1u4,data/transcripts/-7QG2itL1u4.txt,MATH_Probability_Random Variables and Probability Distributions
+MATH,Linear Algebra,Vector Space,https://www.youtube.com/watch?v=QMwwplztQfY&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=26,QMwwplztQfY,data/transcripts/QMwwplztQfY.txt,MATH_Linear Algebra_Vector Space
+MATH,Linear Algebra,Systems of Linear Equations,https://www.youtube.com/watch?v=LHsPJ2bQX1U&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=1,LHsPJ2bQX1U,data/transcripts/LHsPJ2bQX1U.txt,MATH_Linear Algebra_Systems of Linear Equations
+MATH,Linear Algebra,Matrix Operations,https://www.youtube.com/watch?v=dFc2XK9dyNs&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=17,dFc2XK9dyNs,data/transcripts/dFc2XK9dyNs.txt,MATH_Linear Algebra_Matrix Operations
+MATH,Linear Algebra,Determinants,https://www.youtube.com/watch?v=UWaeMiP_vK8&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=23,UWaeMiP_vK8,data/transcripts/UWaeMiP_vK8.txt,MATH_Linear Algebra_Determinants
+MATH,Linear Algebra,Linear transformation,https://www.youtube.com/watch?v=ofAcvZVEfBk&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=16,ofAcvZVEfBk,data/transcripts/ofAcvZVEfBk.txt,MATH_Linear Algebra_Linear transformation
+MATH,Linear Algebra,"eigen value, eigen vector",https://www.youtube.com/watch?v=yh5ABTeNUpE&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=36,yh5ABTeNUpE,data/transcripts/yh5ABTeNUpE.txt,"MATH_Linear Algebra_eigen value, eigen vector"
+MATH,Linear Algebra,Inner Product,https://www.youtube.com/watch?v=C2iKgnGby0I&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=40,C2iKgnGby0I,data/transcripts/C2iKgnGby0I.txt,MATH_Linear Algebra_Inner Product
+MATH,Linear Algebra,Orthogonality,https://www.youtube.com/watch?v=4yNrSg7b4JA&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=41,4yNrSg7b4JA,data/transcripts/4yNrSg7b4JA.txt,MATH_Linear Algebra_Orthogonality
+MATH,Linear Algebra,Rank,https://www.youtube.com/watch?v=1MYkWhpuLtY&list=PLl-gb0E4MII03hiCrZa7YqxUMEeEPmZqK&index=35,1MYkWhpuLtY,data/transcripts/1MYkWhpuLtY.txt,MATH_Linear Algebra_Rank
+DSA,Stack,Stack definition,https://www.youtube.com/watch?v=bxRVz8zklWM&list=PLem0ek-rNu-8D6QNefyWItyJxrRv6LaLw&index=1,bxRVz8zklWM,data/transcripts/bxRVz8zklWM.txt,DSA_Stack_Stack definition
+DSA,Stack,Stack using array,https://www.youtube.com/watch?v=VmsTAVpz0xo&list=PLem0ek-rNu-8D6QNefyWItyJxrRv6LaLw&index=2,VmsTAVpz0xo,data/transcripts/VmsTAVpz0xo.txt,DSA_Stack_Stack using array
+DSA,Stack,Stack using linked list,https://www.youtube.com/watch?v=T_UXDTy23DQ&list=PLem0ek-rNu-8D6QNefyWItyJxrRv6LaLw&index=3,T_UXDTy23DQ,data/transcripts/T_UXDTy23DQ.txt,DSA_Stack_Stack using linked list
+DSA,queue,Queue definition,https://www.youtube.com/watch?v=zp6pBNbUB2U&list=PLeAhnsNZXmcEi9hyBb6LtE0_KNHh1QCxf&index=1,zp6pBNbUB2U,data/transcripts/zp6pBNbUB2U.txt,DSA_queue_Queue definition
+DSA,queue,Circular queue,https://www.youtube.com/watch?v=dn01XST9-bI&list=PLeAhnsNZXmcEi9hyBb6LtE0_KNHh1QCxf&index=4,dn01XST9-bI,data/transcripts/dn01XST9-bI.txt,DSA_queue_Circular queue
+DSA,queue,Deque,https://www.youtube.com/watch?v=pqg0SOPRlJ4&list=PLeAhnsNZXmcEi9hyBb6LtE0_KNHh1QCxf&index=7,pqg0SOPRlJ4,data/transcripts/pqg0SOPRlJ4.txt,DSA_queue_Deque
+DSA,Linked list,Singly linked list,https://www.youtube.com/watch?v=dmb1i4oN5oE&list=PLnccP3XNVxGrks-guEVjE1xj9V9YC5oQ7&index=1,dmb1i4oN5oE,data/transcripts/dmb1i4oN5oE.txt,DSA_Linked list_Singly linked list
+DSA,Linked list,Doubly linked list,https://www.youtube.com/watch?v=nquQ_fYGGA4&list=PLnccP3XNVxGrks-guEVjE1xj9V9YC5oQ7&index=9,nquQ_fYGGA4,data/transcripts/nquQ_fYGGA4.txt,DSA_Linked list_Doubly linked list
+DSA,Linked list,Reverse linked list,https://www.youtube.com/watch?v=Tk_fi5l8cag&list=PLnccP3XNVxGrks-guEVjE1xj9V9YC5oQ7&index=8,Tk_fi5l8cag,data/transcripts/Tk_fi5l8cag.txt,DSA_Linked list_Reverse linked list
+DSA,Linked list,Cycle detection,https://www.youtube.com/watch?v=wiOo4DC5GGA&list=PLgUwDviBIf0rAuz8tVcM0AymmhTRsfaLU&index=15,wiOo4DC5GGA,data/transcripts/wiOo4DC5GGA.txt,DSA_Linked list_Cycle detection
+DSA,Linked list,Merge linked lists,https://www.youtube.com/watch?v=jXu-H7XuClE&list=PLgUwDviBIf0rAuz8tVcM0AymmhTRsfaLU&index=24,jXu-H7XuClE,data/transcripts/jXu-H7XuClE.txt,DSA_Linked list_Merge linked lists
+DSA,basics,Time complexity,https://www.youtube.com/watch?v=pULw1Fpru0E&list=PLBlnK6fEyqRiJVBw-unZdfJyqFyG9VWRy&index=1,pULw1Fpru0E,data/transcripts/pULw1Fpru0E.txt,DSA_basics_Time complexity
+DSA,basics,Space complexity,https://www.youtube.com/watch?v=oQ5sAfT_3V4&list=PLBlnK6fEyqRiJVBw-unZdfJyqFyG9VWRy&index=2,oQ5sAfT_3V4,data/transcripts/oQ5sAfT_3V4.txt,DSA_basics_Space complexity

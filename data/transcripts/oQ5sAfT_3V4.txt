@@ -1,0 +1,200 @@
+[Music] 
+ in our previous presentation we 
+ understood the time complexity now in 
+ this presentation we will understand the 
+ space complexity so let's get started 
+ and let's see what are the topics of 
+ this 
+ lecture the first topic of this lecture 
+ is priori versus posterior analysis 
+ recap in this lecture also we will get a 
+ quick recap of priori versus posteriori 
+ analysis it is important to get the 
+ quick recap of priori versus posterior 
+ analysis to properly understand the 
+ space 
+ complexity after getting the quick recap 
+ we will then understand the space 
+ complexity and finally through an 
+ example we will properly understand how 
+ to find the space complexity of a 
+ specific algorithm so these are all the 
+ topics of this lecture 
+ let's get started and let's get the 
+ quick recap of priori versus posteriori 
+ analysis here is the quick recap in case 
+ of priori analysis we estimate time and 
+ memory space required by an algorithm 
+ before executing it on the system and in 
+ case of posterior analysis we calculate 
+ time and memory space required by an 
+ algorithm after executing it on the the 
+ system we are interested in priori 
+ analysis because it is the most 
+ straightforward the easiest and the most 
+ practical analysis available in this 
+ type of analysis we estimate time and 
+ memory space we learned in the last 
+ lecture what is the meaning of 
+ estimation of time the estimation of 
+ time is same as the estimation of number 
+ of CPU 
+ computations and the estimation of 
+ memory space is same as the estimation 
+ of main memory space we do estimate the 
+ main memory space because CPU interacts 
+ with main memory space directly in order 
+ to execute an algorithm so we are 
+ concerned about estimating the main 
+ memory space required by an algorithm 
+ before executing it on the 
+ system now how do we estimate main 
+ memory space that's the main question in 
+ this lecture we will understand how to 
+ estimate the main memory space required 
+ by an 
+ algorithm before understanding through 
+ an example how to estimate the main 
+ memory space required by an algorithm 
+ let's first understand the meaning of 
+ space complexity so now let's move to 
+ the next topic where we will understand 
+ the space 
+ complexity so what is the space 
+ complexity space complexity is the 
+ estimation of main memory space required 
+ to execute an algorithm 
+ so space complexity is the estimation of 
+ main memory space and how do we estimate 
+ main memory space or how do we find the 
+ space complexity of an 
+ algorithm space complexity of an 
+ algorithm is equal to the space required 
+ to store The Source Code plus the space 
+ required for simple variables plus space 
+ required for the data structures used 
+ plus space required for stack for 
+ recursive 
+ algorithms so these are all the 
+ parameters and we need to add these 
+ parameters in order to calculate the 
+ space complexity of an 
+ algorithm now out of these parameters 
+ the first two are not so important to 
+ find the space complexity of an 
+ algorithm we will not consider these two 
+ parameters the reason is that space 
+ required to store The Source Code and 
+ the space required for simple variables 
+ are 
+ constants and just like time complexity 
+ we do not bother about constants in 
+ space complexity as well we learned that 
+ while finding the time complexity we 
+ eliminate the constants similarly in 
+ case of space complexity also we 
+ eliminate the 
+ constants so we should not worry about 
+ these two parameters met what about the 
+ last two we should worry about them 
+ because the space for the data 
+ structures used and space required for 
+ stack for recursive algorithms these two 
+ are not constants their memory space 
+ requirement may vary space for the data 
+ structures used depends upon the number 
+ of elements stored in them and space 
+ required for stack for recursive 
+ algorithms depends upon how many times a 
+ function is called called so these are 
+ the two parameters we should worry about 
+ in order to find the space complexity of 
+ an algorithm in this lecture we will 
+ discuss an example algorithm which is 
+ not a recursive algorithm it will be an 
+ iterative algorithm a recursive 
+ algorithm is an algorithm which calls 
+ itself within its own body we will not 
+ discuss a recursive algorithm hence we 
+ will not consider this parameter as well 
+ because according to this parameter 
+ we should estimate the space required 
+ for stack for recursive algorithms as 
+ the algorithm which we will discuss is 
+ not a recursive algorithm therefore this 
+ parameter is not a concern for us so 
+ right now in order to calculate the 
+ space complexity of an iterative 
+ algorithm we just need to focus on 
+ estimating the space required by the 
+ data structures used in that algorithm 
+ so now let's understand how to estimate 
+ the main memory space or in other words 
+ how to find the space complexity of an 
+ iterative algorithm through an example 
+ so now we will discuss an example 
+ algorithm to properly understand how to 
+ estimate the main memory 
+ space here is the algorithm we already 
+ saw this algorithm in our previous 
+ presentation this algorithm is capable 
+ of calculating the sum of N element of a 
+ list the list in this algorithm is a and 
+ N represents the size of this list now 
+ we know in order to find the space 
+ complexity of an algorithm we need to 
+ consider these factors space required to 
+ store The Source Code and space required 
+ for simple variables are constant 
+ therefore we will not consider these two 
+ factors this is the source code and the 
+ space required to store The Source Code 
+ is constant similarly the space required 
+ for simple variables is also constant in 
+ this source code we have three simple 
+ variables n sum and I the space required 
+ to store these variables as 
+ constant so we will not consider these 
+ two factors what about the last Factor 
+ space required for stack for recursive 
+ algorithms this algorithm is not 
+ recursive this is an iterated ative 
+ algorithm as it involves a loop also we 
+ can observe that this algorithm is not 
+ recursive because this algorithm is not 
+ calling itself within its own body so we 
+ will not consider this Factor as well 
+ what about this Factor space for the 
+ data structures used we are using this 
+ data structure a this represents the 
+ list of n elements so the space required 
+ for this data structure is of concern to 
+ us so the space complexity of this 
+ algorithm depends upon this data 
+ structure this is the only data 
+ structure used in this 
+ algorithm how much space does it 
+ needs let us assume that each element of 
+ this list takes one unit of memory space 
+ then as it contain n elements therefore 
+ the amount of space it takes will be n 
+ units and therefore the space complexity 
+ of this algorithm is Big O of n why Big 
+ O of n because there are n elements in 
+ this list and we are assuming that each 
+ element takes one unit of memory space 
+ hence n elements of this data structure 
+ will take n units of memory space so 
+ clearly the space complexity is Big of n 
+ so with this we understood how to find 
+ the space comp complexity of an 
+ algorithm as we have understood how to 
+ find the space complexity of an 
+ algorithm we are done with this topic 
+ and this means we are done with this 
+ lecture okay friends this is it for now 
+ thank you for watching this presentation 
+ I will see you in the next one 
+ [Applause] 
+ [Music] 
+ he

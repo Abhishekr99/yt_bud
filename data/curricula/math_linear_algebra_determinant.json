@@ -1,0 +1,111 @@
+{
+  "curriculum_id": "math_linear_algebra_determinant",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Determinants",
+  "created_at": "2026-03-23T10:53:40.088291",
+  "concepts": [
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [
+        "Matrices"
+      ],
+      "short_definition": "A rectangular array of numbers or symbols.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "square_matrix",
+      "name": "Square Matrix",
+      "aliases": [],
+      "short_definition": "A matrix with an equal number of rows and columns.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant",
+      "name": "Determinant",
+      "aliases": [
+        "Det"
+      ],
+      "short_definition": "A scalar value that can be computed from the elements of a square matrix.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "minor",
+      "name": "Minor",
+      "aliases": [],
+      "short_definition": "The determinant of a submatrix obtained by deleting one row and one column.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "cofactor",
+      "name": "Cofactor",
+      "aliases": [],
+      "short_definition": "A minor multiplied by a sign determined by the position of the element.",
+      "prerequisites": [
+        "minor"
+      ]
+    },
+    {
+      "concept_id": "laplace_expansion",
+      "name": "Laplace Expansion",
+      "aliases": [
+        "Cofactor Expansion"
+      ],
+      "short_definition": "A method to compute the determinant of a matrix using cofactors.",
+      "prerequisites": [
+        "cofactor",
+        "determinant"
+      ]
+    },
+    {
+      "concept_id": "singular_matrix",
+      "name": "Singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a determinant of zero.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "nonsingular_matrix",
+      "name": "Non-singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a non-zero determinant.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "matrix_inverse",
+      "name": "Matrix Inverse",
+      "aliases": [
+        "Inverse Matrix"
+      ],
+      "short_definition": "A matrix that, when multiplied by the original matrix, results in the identity matrix.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "geometric_interpretation",
+      "name": "Geometric Interpretation",
+      "aliases": [],
+      "short_definition": "The determinant represents the scaling factor of the volume of a parallelepiped.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "curriculum_id": "dsa_linked_list_merge_linked_list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Merge linked lists",
+  "created_at": "2026-03-23T10:52:38.137600",
+  "concepts": [
+    {
+      "concept_id": "singly_linked_list",
+      "name": "Singly Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "A linear data structure where each element points to the next element.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [],
+      "short_definition": "The basic building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [],
+      "short_definition": "A reference to the first node in a linked list.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [],
+      "short_definition": "A reference to the last node in a linked list.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "iterative_traversal",
+      "name": "Iterative Traversal",
+      "aliases": [],
+      "short_definition": "Visiting each node in a linked list sequentially using a loop.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "pointer_manipulation",
+      "name": "Pointer Manipulation",
+      "aliases": [],
+      "short_definition": "Modifying the 'next' references between nodes to alter the list structure.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "merging_sorted_list",
+      "name": "Merging Sorted Lists",
+      "aliases": [],
+      "short_definition": "Combining two or more sorted linked lists into a single sorted linked list.",
+      "prerequisites": [
+        "iterative_traversal",
+        "node",
+        "pointer_manipulation",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "dummy_node",
+      "name": "Dummy Node",
+      "aliases": [],
+      "short_definition": "A temporary node often used to simplify the logic of list manipulation, especially at the head.",
+      "prerequisites": [
+        "node",
+        "pointer_manipulation",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "comparison_of_node_value",
+      "name": "Comparison of Node Values",
+      "aliases": [],
+      "short_definition": "Determining the relative order of elements in linked lists based on their data.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "recursive_merging",
+      "name": "Recursive Merging",
+      "aliases": [],
+      "short_definition": "A method of merging linked lists by breaking the problem into smaller, self-similar subproblems.",
+      "prerequisites": [
+        "merging_sorted_list",
+        "node",
+        "singly_linked_list"
+      ]
+    }
+  ]
+}

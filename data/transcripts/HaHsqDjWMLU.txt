@@ -1,0 +1,359 @@
+let's move on to the chain rule we're 
+ going to cover a lot of examples the 
+ first Formula you need to be familiar 
+ with is the derivative of the composite 
+ function f of g 
+ ofx a composite function is one where 
+ you have one function inside of another 
+ notice that g is inside of f which makes 
+ it a composite function so the first 
+ thing you need to do is differentiate 
+ the outside portion of the function that 
+ is f and you need to keep the inside the 
+ same 
+ and then multiply it by the derivative 
+ of the inside that's the main idea 
+ behind the chain rule if you follow this 
+ process you're going to get the answer 
+ right so let's say for 
+ example if we have a function U raised 
+ to the N where U is another function in 
+ terms of X using the chain Rule and the 
+ power rule combined it's going to be n * 
+ U you have to keep that the same raised 
+ to the N minus one times the derivative 
+ of what's on the inside that's the 
+ general power rule formula with the 
+ chain rule combine so never forget to 
+ multiply by the derivative of the inside 
+ function so let's use an example let's 
+ say if we want to find the 
+ derivative of 5x + 
+ 3 raised to the 4th power so the first 
+ thing we're going to do is we're going 
+ to move the constant I mean the exponent 
+ to the front so it's going to be four 
+ and then keep the inside stuff the same 
+ * 5x + 3 subtract the exponent by 1 4 - 
+ 1 is 3 and then multiply by the 
+ derivative of the 
+ inside the inside function is four it's 
+ 5x + 3 the derivative of 5x + 3 is just 
+ 5 and so that's the answer we can 
+ multiply four and 5 that's going to give 
+ us 20 so it's 20 * 5x + 3 ra the thir 
+ power so that's the final answer fully 
+ simplified now let's work on some more 
+ examples find the derivative of x^2 - 3x 
+ raised to the 5th 
+ power so first let's bring down to five 
+ so it's going to be five and then keep 
+ the inside function the 
+ same and then subtract the exponent by 1 
+ so this is four and then multiply by the 
+ derivative of the inside the derivative 
+ of x^2 - 3x is 2x - 3 and so that's the 
+ answer once you get used to the process 
+ it's not that 
+ bad here's another example that you can 
+ try find the derivative of s of 
+ 6X the derivative of the outside part of 
+ the function s is cosine and you got to 
+ keep the inside function the same then 
+ you multiply by the derivative of the 
+ inside function the derivative of 6X is 
+ 6 so the answer is simply 6 cosine 
+ 6X now what is the 
+ derivative of cosine 
+ x^2 so first differentiate the outside 
+ part of the function cosine the 
+ derivative of cosine is negative sign 
+ now the inside part of the function has 
+ to remain the same that is the angle of 
+ cosine so it's going to be x^2 and then 
+ differentiate the inside function x^2 
+ which is 
+ 2x so basically you're working away from 
+ the outside towards the inside the final 
+ answer is 
+ -2X sin 
+ X2 find the derivative of tangent X CU 
+ so first let's differentiate tangent the 
+ derivative of tangent is secant squ and 
+ the inside function has to remain the 
+ same next differentiate the inside 
+ function X Cub so that's 
+ 3x^2 and it's always multiplication so 
+ it's going to be 
+ 3x^2 secant 2 x 
+ Cub as you can see it's not that 
+ bad here's another problem what is the 
+ derivative of secant 4X 
+ the derivative of secant 4X is going to 
+ be secant tangent that's the derivative 
+ of 
+ secant now the inside function has to 
+ remain the same for secant and 
+ tangent next we need to differentiate 4X 
+ so it's just going to be time4 and so 
+ that's the 
+ solution what is the 
+ derivative of Ln X raised to the 7th 
+ power try that 
+ problem so this is going to be 
+ S keep the inside part the same and then 
+ subtract the exponent by one so 7 - 1 is 
+ 6 now we got to multiply by the 
+ derivative of the inside function the 
+ derivative of Ln X is simply 1 /x so the 
+ final answer is 7 Ln X raised to 6 power 
+ / 
+ X What is the dtive of 
+ theun of XB - 
+ 7 take a minute and work on that example 
+ the first thing I would do is rewrite it 
+ so this is the same as X Cub - 7 raised 
+ to the 
+ 12 and so that's going to be equal 
+ to2 we got to bring the exponent to the 
+ front keep the inside function the same 
+ and then subtract the exponent by one 1 
+ 12 - 1 which is 12 - 2 2 that's a half 
+ and then we got to multiply by the 
+ derivative of the 
+ inside the derivative of x Cub - 7 is 
+ simply 
+ 3x^2 so we could bring this back to the 
+ bottom since it has a negative exponent 
+ so it's 3x^2 / we have a two on the 
+ bottom 2 XB - 7 and now the exponent is 
+ going to change from negative half to 
+ positive half and now we could put it 
+ back in its radical form so it's 3x^2 / 
+ 2 < TK XB - 7 and so that's the final 
+ answer for this 
+ problem find the 
+ derivative of 1 
+ / x^2 + 8 raised to the 3 
+ power so first let's rewrite the 
+ expression let's bring the variables to 
+ the top so this is is x^2 + 8 raed Theus 
+ 3 and now we can use the chain 
+ rule combined with the power rule let's 
+ move the3 to the front and let's keep 
+ the inside function let's rewrite it 
+ exactly the way we see it and then let's 
+ subtract this by 1 -3 - 1 
+ is4 and now let's multiply by the 
+ derivative of the inside function which 
+ is 
+ 2x so now let's take this term move it 
+ back to the bottom so we have 
+ -3 * 2x which is -6x on top and on the 
+ bottom it's x^2 + 8 raised to the 4th 
+ power and so that's all we need to do 
+ for this 
+ problem so for some examples you need to 
+ rewrite it before you find the 
+ derivative now what if we have a trig 
+ function inside another trig 
+ function find the Der 
+ of this uh 
+ function so first we need to 
+ differentiate the outside function s the 
+ derivative of s is 
+ cosine now what's inside of cosine since 
+ cosine came from s everything inside of 
+ s is going to be the stuff inside of 
+ cosine so that's tangent X 
+ 4th now let's move on to tangent the 
+ derivative of tangent is secant squ 
+ and the stuff that's inside of tangent 
+ is going to be the stuff that's inside 
+ of secant squ so that's x 
+ 4 and then we got to move on further 
+ towards the inside the derivative of x 
+ 4th is 4X cub and so that's the 
+ answer how about this example find the 
+ derivative of s raised to the 5th 
+ power 
+ tangent 
+ cosine X cub 
+ the first thing I would do is rewrite 
+ the 
+ expression so this is 
+ s 
+ tangent 
+ cosine XB all rais the 5th power so 
+ first let's deal with the exponents 
+ let's use the power rule so we got to 
+ bring the five to the front and keep 
+ everything inside the same so always 
+ start with the outside portion of the 
+ function which is going to be the 
+ exponents in this case and then subtract 
+ the exponent by one so it's going to be 
+ four now let's work our way towards the 
+ inside so we got a differentiate sign 
+ the derivative of s is cosine and the 
+ stuff inside of s is tan cosine X Cub so 
+ we got to put that 
+ here now let's move on to tangent the 
+ derivative of tangent is secant squ and 
+ the stuff inside of tan is cosine X cub 
+ so hopefully you're seeing a pattern 
+ with the way we're finding the 
+ derivative of everything so now that 
+ we're done with Tangent let's move on to 
+ cosine the derivative of cosine is 
+ negative sign and the angle of cosine is 
+ X Cub so that's going to be the same 
+ here and then let's move on to X Cub the 
+ derivative of x Cub is 
+ 3x2 so that's the answer and then you 
+ can combine terms you can multiply five 
+ and three to get 15 
+ what is the 
+ derivative of cosine raised to the 7th 
+ power of 
+ s of secant 
+ x^2 so try that problem so first let's 
+ rewrite it as 
+ cosine of s of secant x^2 and let's put 
+ the seven and it's exponent position so 
+ let's use the power rule let's bring the 
+ seven to the front 
+ and let's keep everything on the inside 
+ the 
+ same and then subtract the exponent by 
+ one so this is going to be six now let's 
+ find the derivative of cosine let's work 
+ our way towards the inside the 
+ derivative of cosine is negative sign 
+ and the stuff inside of that is s 
+ secant 
+ X2 so now we got to find the Der ative 
+ of s the derivative of 
+ s is 
+ cosine and the stuff inside of s is 
+ secant 
+ x^2 so now we got to find the derivative 
+ of 
+ secant so that's secant tangent so it's 
+ going to be secant x^2 tangent 
+ x^2 and the derivative of x^2 is 
+ 2x so whenever you have multiple 
+ composite functions 
+ just work your way from the outside 
+ towards the inside and everything is 
+ multiplied by each 
+ other and then when you're done simply 
+ collect terms so we have a seven a 2X 
+ and a negative so you can move that to 
+ the front and write it as -4x if you 
+ want 
+ to here's the next 
+ problem find the derivative of x 
+ Cub * 4x + 5 raised to the 4th power 
+ so what we have here is a product rule 
+ we could say that this is f and this is 
+ G and for G we have to use the quotient 
+ rule I mean not the quotient rule but 
+ the chain rule so using the product rule 
+ we need to differentiate the first part 
+ F the derivative of the first part is 
+ 3x^2 and we need to keep the second part 
+ the same so we just have to rewrite G 
+ plus now we need to keep the first part 
+ the same now for the second part we need 
+ to use the chain room so let's bring the 
+ four to the front let's keep the inside 
+ stuff the same and subtract the four by 
+ one then multiply by the derivative of 
+ the inside function which is 4x + 5 the 
+ derivative of that is 
+ four so now let's simplify so the first 
+ part we don't really need to change 
+ anything we can just leave it like this 
+ now for the second part we can multiply 
+ four and four that's 16 so this is 16 x 
+ Cub * 4x + 5 
+ raised to the thir power you can leave 
+ your answer like this or if you want to 
+ you can take out the GCF we can take out 
+ an x 
+ s and we could take out three 4x+ 5S or 
+ basically 4x + 5 to the third 
+ power so this is gone we took three of 
+ these one is left over and we have a a 
+ three left so this is going to be a 3 * 
+ 4x + 5 
+ and this is gone we took out all three 
+ of 
+ these well there's an X left over and 
+ it's 16 so plus 16 x because we took out 
+ an X squ now what we can do is basically 
+ simplify what we have 
+ here so this is x^2 4x + 5 to the 3 
+ power and let's distribute the three so 
+ 3 * 4X is 12x 3 * 5 is 15 
+ + 
+ 16x now let's add 12x and 16x so the 
+ final 
+ answer is x^2 * 4x + 5 to the 3 
+ power and then 28x + 15 so that's the 
+ solution let's try one more example 
+ let's find the 
+ derivative of 2x - 3 / 4 + 5x 
+ X raised to the 4th 
+ power so this is a chain Rule and 
+ quotient rule problem so first we need 
+ to bring the exponent down and keep the 
+ stuff on the inside the 
+ same and then subtract the exponent by 
+ one next we need to multiply by 
+ derivative of the inside so that's when 
+ we have to use a quotient 
+ rule so f is 2x - 3 and G 
+ is 4 + 
+ 5x frime is 2 G Prime is 4 and the 
+ formula for the quotient rule is it's g 
+ f Prime minus FG Prime over G ^2 so G is 
+ 4 + 
+ 5x F Prime is 
+ 2 and 
+ F is 2x - 
+ 3 G Prime is 4 / g^ 2 which is 4 + 
+ 5x^2 so as you can see this is a long 
+ problem so let's simplify what we have 
+ on the right side if we distribute the 
+ two it's going to be 
+ 8 + 10 
+ x and if we distribute the four it's 
+ going to be 8X and then * -3 * 4 that's 
+ pos2 
+ / 4 + 
+ 5x^2 and then this part is going to be 
+ the 
+ same so let's simplify the numerator so 
+ first we can add 8 and 12 
+ so that's going to be 20 and then 10 x - 
+ 8X that's positive 2x / 4 + 
+ 5x^2 now this thing we could distribute 
+ the three to the numerator and the 
+ denominator so we can write it like this 
+ if you want 2x - 3 Cub / 4 + 5x^2 the 
+ reason why I did that is because I can 
+ now combine these two terms this 
+ supposed to be Cube not 
+ squared so now what we have is 4 * 2x - 
+ 3 the 3 power and I'm going to take out 
+ a two here so if I take out a two it's 
+ going to be a x + 
+ 10 over 4 + 5x raised to the fifth power 
+ 3 + 2 is 5 so the final answer is eight 
+ 4 * 2 is 
+ 8 * x + 
+ 10 * 2x - 3 to the 3 power / 4 + 5x to 
+ the 5th 
+ power and so this is the final answer

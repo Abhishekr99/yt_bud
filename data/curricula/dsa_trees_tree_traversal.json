@@ -1,0 +1,115 @@
+{
+  "curriculum_id": "dsa_trees_tree_traversal",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Tree traversal (DFS)",
+  "created_at": "2026-03-23T10:53:15.102108",
+  "concepts": [
+    {
+      "concept_id": "tree_traversal",
+      "name": "Tree Traversal",
+      "aliases": [
+        "Tree Walking"
+      ],
+      "short_definition": "Visiting each node in a tree data structure exactly once.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "depthfirst_search_df",
+      "name": "Depth-First Search (DFS)",
+      "aliases": [
+        "DFS Algorithm"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [
+        "Recursive Functions"
+      ],
+      "short_definition": "A programming technique where a function calls itself to solve smaller instances of the same problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [
+        "LIFO Data Structure"
+      ],
+      "short_definition": "A data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "preorder_traversal",
+      "name": "Pre-order Traversal",
+      "aliases": [
+        "Root-Left-Right"
+      ],
+      "short_definition": "Visiting the root node first, then recursively traversing the left subtree, and finally the right subtree.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "inorder_traversal",
+      "name": "In-order Traversal",
+      "aliases": [
+        "Left-Root-Right"
+      ],
+      "short_definition": "Recursively traversing the left subtree, visiting the root node, and then recursively traversing the right subtree.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "postorder_traversal",
+      "name": "Post-order Traversal",
+      "aliases": [
+        "Left-Right-Root"
+      ],
+      "short_definition": "Recursively traversing the left subtree, then the right subtree, and finally visiting the root node.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "iterative_df",
+      "name": "Iterative DFS",
+      "aliases": [
+        "Non-Recursive DFS"
+      ],
+      "short_definition": "Implementing Depth-First Search using an explicit stack data structure instead of recursion.",
+      "prerequisites": [
+        "depthfirst_search_df",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "tree_node",
+      "name": "Tree Node",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental component of a tree data structure, typically containing data and references to child nodes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "binary_tree",
+      "name": "Binary Tree",
+      "aliases": [
+        "BT"
+      ],
+      "short_definition": "A tree data structure where each node has at most two children, referred to as the left child and the right child.",
+      "prerequisites": [
+        "tree_node"
+      ]
+    }
+  ]
+}

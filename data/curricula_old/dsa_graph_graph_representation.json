@@ -1,0 +1,406 @@
+{
+  "curriculum_id": "DSA_Graph_Graph representation",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Graph representation",
+  "created_at": "2026-03-21T10:40:29.806408",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit in a graph, representing an entity.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction, from one vertex to another.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have a direction; connections are bidirectional.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where each edge has an associated numerical weight.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "unweighted_graph",
+      "name": "Unweighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have associated weights.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [
+        "Matrix representation"
+      ],
+      "short_definition": "A 2D array representing graph connections, where rows and columns correspond to vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "List representation"
+      ],
+      "short_definition": "A collection of lists, where each list contains the neighbors of a vertex.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "incidence_matrix",
+      "name": "Incidence Matrix",
+      "aliases": [],
+      "short_definition": "A matrix where rows represent vertices and columns represent edges, indicating connections.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "sparse_graph",
+      "name": "Sparse Graph",
+      "aliases": [],
+      "short_definition": "A graph with relatively few edges compared to the maximum possible number of edges.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "dense_graph",
+      "name": "Dense Graph",
+      "aliases": [],
+      "short_definition": "A graph with a large number of edges, close to the maximum possible.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "degree_of_a_vertex",
+      "name": "Degree of a Vertex",
+      "aliases": [
+        "Vertex degree"
+      ],
+      "short_definition": "The number of edges incident to a vertex.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "indegree",
+      "name": "In-degree",
+      "aliases": [],
+      "short_definition": "The number of edges directed into a vertex (in directed graphs).",
+      "prerequisites": [
+        "directed_graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "outdegree",
+      "name": "Out-degree",
+      "aliases": [],
+      "short_definition": "The number of edges directed out of a vertex (in directed graphs).",
+      "prerequisites": [
+        "directed_graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "neighbor",
+      "name": "Neighbor",
+      "aliases": [
+        "Adjacent vertex"
+      ],
+      "short_definition": "A vertex directly connected to another vertex by an edge.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "Systematically visiting each vertex in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search_bf",
+      "name": "Breadth-First Search (BFS)",
+      "aliases": [],
+      "short_definition": "A graph traversal algorithm that explores neighbors level by level.",
+      "prerequisites": [
+        "graph_traversal",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "depthfirst_search_df",
+      "name": "Depth-First Search (DFS)",
+      "aliases": [],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "graph_traversal",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A First-In, First-Out (FIFO) data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [],
+      "short_definition": "A Last-In, First-Out (LIFO) data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "The amount of memory an algorithm uses.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "The amount of time an algorithm takes to run.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [
+        "List"
+      ],
+      "short_definition": "A contiguous block of memory storing elements of the same type.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [],
+      "short_definition": "A linear data structure where elements are linked using pointers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "hash_table",
+      "name": "Hash Table",
+      "aliases": [
+        "Hash Map"
+      ],
+      "short_definition": "A data structure that implements an associative array, mapping keys to values.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Case",
+      "aliases": [],
+      "short_definition": "A specific scenario that might cause an algorithm to fail or behave unexpectedly.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A particular way of organizing and storing data in a computer.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [],
+      "short_definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "big_o_notation",
+      "name": "Big O Notation",
+      "aliases": [
+        "O notation"
+      ],
+      "short_definition": "A mathematical notation used to describe the limiting behavior of a function.",
+      "prerequisites": [
+        "space_complexity",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "constant_time",
+      "name": "Constant Time",
+      "aliases": [
+        "O(1)"
+      ],
+      "short_definition": "An operation that takes the same amount of time regardless of input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "linear_time",
+      "name": "Linear Time",
+      "aliases": [
+        "O(n)"
+      ],
+      "short_definition": "An operation whose execution time grows linearly with the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "quadratic_time",
+      "name": "Quadratic Time",
+      "aliases": [
+        "O(n^2)"
+      ],
+      "short_definition": "An operation whose execution time grows with the square of the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "logarithmic_time",
+      "name": "Logarithmic Time",
+      "aliases": [
+        "O(log n)"
+      ],
+      "short_definition": "An operation whose execution time grows logarithmically with the input size.",
+      "prerequisites": [
+        "big_o_notation"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix_space",
+      "name": "Adjacency Matrix Space",
+      "aliases": [],
+      "short_definition": "The space complexity of representing a graph using an adjacency matrix.",
+      "prerequisites": [
+        "adjacency_matrix",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list_space",
+      "name": "Adjacency List Space",
+      "aliases": [],
+      "short_definition": "The space complexity of representing a graph using an adjacency list.",
+      "prerequisites": [
+        "adjacency_list",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix_time",
+      "name": "Adjacency Matrix Time",
+      "aliases": [],
+      "short_definition": "The time complexity of operations on a graph represented by an adjacency matrix.",
+      "prerequisites": [
+        "adjacency_matrix",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list_time",
+      "name": "Adjacency List Time",
+      "aliases": [],
+      "short_definition": "The time complexity of operations on a graph represented by an adjacency list.",
+      "prerequisites": [
+        "adjacency_list",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "graph_representation_choice",
+      "name": "Graph Representation Choice",
+      "aliases": [],
+      "short_definition": "Selecting the appropriate method to represent a graph based on its properties and intended operations.",
+      "prerequisites": [
+        "adjacency_list",
+        "adjacency_matrix",
+        "dense_graph",
+        "sparse_graph"
+      ]
+    }
+  ]
+}

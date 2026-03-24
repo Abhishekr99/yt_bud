@@ -1,0 +1,114 @@
+{
+  "curriculum_id": "math_linear_algebra_linear_transformation",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Linear transformation",
+  "created_at": "2026-03-23T10:53:47.158001",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors that can be added together and scaled, satisfying certain axioms.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [],
+      "short_definition": "A sum of vectors, each multiplied by a scalar.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [],
+      "short_definition": "The set of all possible linear combinations of a given set of vectors.",
+      "prerequisites": [
+        "linear_combination",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [],
+      "short_definition": "A minimal set of vectors that spans a vector space.",
+      "prerequisites": [
+        "span",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "dimension",
+      "name": "Dimension",
+      "aliases": [],
+      "short_definition": "The number of vectors in a basis for a vector space.",
+      "prerequisites": [
+        "basi",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map",
+        "Homomorphism"
+      ],
+      "short_definition": "A function between vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "kernel",
+      "name": "Kernel",
+      "aliases": [
+        "Null Space"
+      ],
+      "short_definition": "The set of all vectors in the domain of a linear transformation that map to the zero vector.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "image",
+      "name": "Image",
+      "aliases": [
+        "Range"
+      ],
+      "short_definition": "The set of all vectors in the codomain that are the result of applying the linear transformation to vectors in the domain.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "matrix_representation",
+      "name": "Matrix Representation",
+      "aliases": [],
+      "short_definition": "A matrix that represents a linear transformation with respect to chosen bases.",
+      "prerequisites": [
+        "basi",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "ranknullity_theorem",
+      "name": "Rank-Nullity Theorem",
+      "aliases": [],
+      "short_definition": "A theorem relating the dimension of the kernel and the dimension of the image of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "image",
+        "kernel"
+      ]
+    }
+  ]
+}

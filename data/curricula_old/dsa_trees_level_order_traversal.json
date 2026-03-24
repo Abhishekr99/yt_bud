@@ -1,0 +1,449 @@
+{
+  "curriculum_id": "DSA_Trees_Level order traversal (BFS)",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Level order traversal (BFS)",
+  "created_at": "2026-03-21T11:12:20.532447",
+  "concepts": [
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [
+        "Data Structure Tree"
+      ],
+      "short_definition": "A hierarchical data structure consisting of nodes connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Tree Node"
+      ],
+      "short_definition": "A fundamental unit of a tree, containing data and references to children.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [
+        "Root"
+      ],
+      "short_definition": "The topmost node in a tree, with no parent.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Children"
+      ],
+      "short_definition": "A node directly connected to another node (its parent) further up the tree.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node directly connected to another node (its child) further down the tree.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "binary_tree",
+      "name": "Binary Tree",
+      "aliases": [
+        "BT"
+      ],
+      "short_definition": "A tree where each node has at most two children, referred to as the left child and the right child.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in the left subtree are less than the node's value, and all values in the right subtree are greater.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "level",
+      "name": "Level",
+      "aliases": [
+        "Tree Level"
+      ],
+      "short_definition": "The distance of a node from the root node, with the root at level 0.",
+      "prerequisites": [
+        "node",
+        "root_node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores all the neighbor nodes at the present depth prior to moving on to nodes at the next depth level.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [
+        "Graph Exploration"
+      ],
+      "short_definition": "The process of visiting each node in a graph exactly once.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Data Structure Graph"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [
+        "FIFO Queue"
+      ],
+      "short_definition": "A linear data structure that follows the First-In, First-Out (FIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "enqueue",
+      "name": "Enqueue",
+      "aliases": [
+        "Add to Queue"
+      ],
+      "short_definition": "The operation of adding an element to the rear of a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "dequeue",
+      "name": "Dequeue",
+      "aliases": [
+        "Remove from Queue"
+      ],
+      "short_definition": "The operation of removing an element from the front of a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "peek",
+      "name": "Peek",
+      "aliases": [
+        "Front of Queue"
+      ],
+      "short_definition": "The operation of viewing the element at the front of a queue without removing it.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "empty_queue",
+      "name": "Empty Queue",
+      "aliases": [
+        "Is Queue Empty"
+      ],
+      "short_definition": "Checking if a queue contains any elements.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "level_order_traversal",
+      "name": "Level Order Traversal",
+      "aliases": [
+        "BFS Traversal",
+        "Breadth-First Tree Traversal"
+      ],
+      "short_definition": "Traversing a tree by visiting nodes level by level, from left to right within each level.",
+      "prerequisites": [
+        "breadthfirst_search",
+        "queue",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_traversal",
+      "name": "Tree Traversal",
+      "aliases": [
+        "Tree Exploration"
+      ],
+      "short_definition": "The process of visiting each node in a tree exactly once.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [
+        "Procedure"
+      ],
+      "short_definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "iterative_algorithm",
+      "name": "Iterative Algorithm",
+      "aliases": [
+        "Iterative Approach"
+      ],
+      "short_definition": "An algorithm that uses loops to repeat a set of instructions.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "tree_structure",
+      "name": "Tree Structure",
+      "aliases": [
+        "Tree Organization"
+      ],
+      "short_definition": "The arrangement of nodes and edges that define a tree.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "left_child",
+      "name": "Left Child",
+      "aliases": [
+        "Left Subtree"
+      ],
+      "short_definition": "The child node on the left side of a parent node.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "right_child",
+      "name": "Right Child",
+      "aliases": [
+        "Right Subtree"
+      ],
+      "short_definition": "The child node on the right side of a parent node.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_node_value",
+      "name": "Tree Node Value",
+      "aliases": [
+        "Node Data"
+      ],
+      "short_definition": "The data stored within a node of a tree.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_traversal_order",
+      "name": "Tree Traversal Order",
+      "aliases": [
+        "Traversal Sequence"
+      ],
+      "short_definition": "The specific sequence in which nodes are visited during a traversal.",
+      "prerequisites": [
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "tree_representation",
+      "name": "Tree Representation",
+      "aliases": [
+        "Tree Implementation"
+      ],
+      "short_definition": "How a tree is represented in memory, typically using nodes and pointers.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_application",
+      "name": "Tree Application",
+      "aliases": [
+        "Use Cases for Trees"
+      ],
+      "short_definition": "Real-world scenarios where trees are used as data structures.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_propertie",
+      "name": "Tree Properties",
+      "aliases": [
+        "Tree Characteristics"
+      ],
+      "short_definition": "Key attributes and rules that define a tree structure.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_height",
+      "name": "Tree Height",
+      "aliases": [
+        "Tree Depth"
+      ],
+      "short_definition": "The length of the longest path from the root to a leaf node.",
+      "prerequisites": [
+        "node",
+        "root_node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "Terminal Node"
+      ],
+      "short_definition": "A node in a tree that has no children.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_size",
+      "name": "Tree Size",
+      "aliases": [
+        "Number of Nodes"
+      ],
+      "short_definition": "The total count of nodes in a tree.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_node_pointer",
+      "name": "Tree Node Pointer",
+      "aliases": [
+        "Node Reference"
+      ],
+      "short_definition": "A reference or pointer from one node to another, representing an edge.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_traversal_algorithm",
+      "name": "Tree Traversal Algorithm",
+      "aliases": [
+        "Tree Exploration Method"
+      ],
+      "short_definition": "A specific algorithm designed to visit all nodes in a tree.",
+      "prerequisites": [
+        "algorithm",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_level_identification",
+      "name": "Tree Level Identification",
+      "aliases": [
+        "Node Level Determination"
+      ],
+      "short_definition": "The process of determining the level of each node in a tree.",
+      "prerequisites": [
+        "level",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_node_comparison",
+      "name": "Tree Node Comparison",
+      "aliases": [
+        "Node Value Comparison"
+      ],
+      "short_definition": "Comparing the values of two nodes, often used in search operations.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_structure_analysi",
+      "name": "Tree Structure Analysis",
+      "aliases": [
+        "Tree Shape Analysis"
+      ],
+      "short_definition": "Examining the arrangement and balance of nodes in a tree.",
+      "prerequisites": [
+        "tree_structure"
+      ]
+    },
+    {
+      "concept_id": "tree_data_storage",
+      "name": "Tree Data Storage",
+      "aliases": [
+        "Tree Information Storage"
+      ],
+      "short_definition": "How data is organized and managed within a tree structure.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_node_acces",
+      "name": "Tree Node Access",
+      "aliases": [
+        "Node Retrieval"
+      ],
+      "short_definition": "The process of accessing or retrieving specific nodes within a tree.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    }
+  ]
+}

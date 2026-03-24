@@ -1,0 +1,109 @@
+in this video we will learn about rank 
+ and also the rank theorem it is simply 
+ the dimension of the column space of a 
+ and if you'll recall from our last 
+ section 4 5 we learn that the dimension 
+ of the column space of a is simply the 
+ number of pivot columns in a so the best 
+ idea is to take your matrix reduce it to 
+ a chillon form it doesn't have to be our 
+ re F it just has to be a chillon and I 
+ can see I have a pivot and a pivot and a 
+ pivot so I have three pivot columns 
+ therefore the rank of a which is equal 
+ to the dimension of the column space of 
+ a is simply three because that is the 
+ number of pivot columns and a now that 
+ we know what rank is let's talk about 
+ the rank theorem the rank theorem has 
+ two parts and I'm not going to prove 
+ either one I just want you to understand 
+ what the rank theorem is telling us the 
+ first part of the theorem says that rank 
+ of a which remember just means the 
+ dimension of the column space of a is 
+ equal to the dimension of the row space 
+ of a so for and this is for just an M by 
+ n matrix which is what we're always 
+ really talking about so how is that true 
+ well let's recall that the dimension of 
+ the column space of a is equal to the 
+ number of pivot columns we just refresh 
+ our memories of that a few moments ago 
+ and we know that that since that's the 
+ number of pivot columns then for every 
+ pivot column there must be a row that is 
+ nonzero so that means every time I have 
+ a pivot column I also have plus one 
+ non-zero row every pivot needs to have a 
+ row therefore it makes sense that every 
+ time I have a pivot column I will also 
+ have a nonzero row which adds to 
+ obviously the dimensions of the row 
+ space of a 
+ now if you thought that was easy this 
+ one is even easier so this one is saying 
+ that the rank of a which again means the 
+ dimension of the column space of a plus 
+ the dimension of the null space of a is 
+ equal to n so if you'll recall when we 
+ learned about dimension we said well the 
+ dimensions of the column space of a is 
+ just the number of pivot columns and the 
+ dimension of the null space of a is the 
+ number of free variables and we know of 
+ course that every column is either going 
+ to be a pivot column or be a free 
+ variable so it makes perfect sense in an 
+ M by n matrix where n is the number of 
+ columns that those are going to add to 
+ the total n number of columns so again 
+ no that's not a proof but it's very 
+ intuitive that's supposed to be a plus 
+ it looks like a tea you get the idea 
+ let's take a look at a couple of 
+ practice first one says if a is a 7 by 
+ 10 matrix with a 3-dimensional null 
+ space what is the rank of a well this 
+ one's very straightforward 
+ we know our equation says the rank of a 
+ plus the dimension of the null space of 
+ a is equal to n which is the number of 
+ columns in our vector or excuse me in 
+ our matrix which means obviously that 
+ the rank of a must be 7 good next one 
+ says could a 4 by 7 matrix have a 
+ two-dimensional null space 
+ so we're saying could and if this is 
+ going to equal 7 could I have a 
+ two-dimensional null space and a rank of 
+ 5 well good question can I do that keep 
+ in mind that the columns are vectors in 
+ r4 so could I have five here no I sure 
+ could not because this is a four and 
+ therefore this number 
+ cannot exceed four so this would be a no 
+ I cannot have a four by seven matrix 
+ with a two dimensional null space I 
+ could have a three dimensional null 
+ space because now I have four plus three 
+ equals seven that is okay 
+ but no I can't exceed r4 in this case 
+ I'm going to leave you with just a 
+ little bit more information to add to 
+ the invertible matrix theorem if you'll 
+ recall we learned about that in the last 
+ chapter and there were quite a few 
+ things that we're all equivalent to 
+ saying that a is an invertible n by n 
+ matrix and so now that we know a little 
+ bit more about column space and null 
+ space and rank and dimension these are 
+ all items that can be added to your 
+ invertible matrix theorem and I'm not 
+ going to go through them with you or 
+ read them through with you I'm going to 
+ let you think about each of those and 
+ then if you have questions about why 
+ they are true you can certainly let me 
+ know

@@ -1,0 +1,120 @@
+{
+  "curriculum_id": "math_calculus_limit",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Limits",
+  "created_at": "2026-03-23T10:53:38.141495",
+  "concepts": [
+    {
+      "concept_id": "limit_of_a_function",
+      "name": "Limit of a Function",
+      "aliases": [
+        "Function Limit"
+      ],
+      "short_definition": "The value a function approaches as its input approaches a certain value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "onesided_limit",
+      "name": "One-Sided Limits",
+      "aliases": [
+        "Left-Hand Limit",
+        "Right-Hand Limit"
+      ],
+      "short_definition": "The limit of a function as the input approaches a value from only one direction.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "limit_law",
+      "name": "Limit Laws",
+      "aliases": [
+        "Properties of Limits"
+      ],
+      "short_definition": "Rules for calculating limits of sums, differences, products, quotients, and powers of functions.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "continuity",
+      "name": "Continuity",
+      "aliases": [
+        "Continuous Function"
+      ],
+      "short_definition": "A function is continuous at a point if its limit at that point exists and equals the function's value.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "discontinuitie",
+      "name": "Discontinuities",
+      "aliases": [
+        "Points of Discontinuity"
+      ],
+      "short_definition": "Points where a function is not continuous.",
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "concept_id": "infinite_limit",
+      "name": "Infinite Limits",
+      "aliases": [
+        "Vertical Asymptotes"
+      ],
+      "short_definition": "When the output of a function grows without bound as the input approaches a certain value.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "limits_at_infinity",
+      "name": "Limits at Infinity",
+      "aliases": [
+        "Horizontal Asymptotes"
+      ],
+      "short_definition": "The behavior of a function as its input grows or shrinks without bound.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "squeeze_theorem",
+      "name": "Squeeze Theorem",
+      "aliases": [
+        "Sandwich Theorem"
+      ],
+      "short_definition": "A method to find a limit by bounding a function between two other functions with known limits.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "indeterminate_form",
+      "name": "Indeterminate Forms",
+      "aliases": [
+        "0/0",
+        "Infinity/Infinity"
+      ],
+      "short_definition": "Limit expressions that cannot be evaluated directly using limit laws.",
+      "prerequisites": [
+        "limit_law",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "lhpitals_rule",
+      "name": "L'Hôpital's Rule",
+      "aliases": [
+        "L'Hopital's Rule"
+      ],
+      "short_definition": "A technique for evaluating limits of indeterminate forms.",
+      "prerequisites": [
+        "indeterminate_form"
+      ]
+    }
+  ]
+}

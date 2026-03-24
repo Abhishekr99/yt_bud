@@ -1,0 +1,101 @@
+{
+  "curriculum_id": "dsa_graph_topological_sorting",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Topological sorting",
+  "created_at": "2026-03-23T10:52:29.944660",
+  "concepts": [
+    {
+      "concept_id": "directed_acyclic_graph",
+      "name": "Directed Acyclic Graph",
+      "aliases": [
+        "DAG"
+      ],
+      "short_definition": "A directed graph with no directed cycles.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "Visiting all vertices in a graph in a systematic way.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "depth_first_search",
+      "name": "Depth First Search",
+      "aliases": [
+        "DFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "indegree",
+      "name": "In-degree",
+      "aliases": [],
+      "short_definition": "The number of incoming edges to a vertex in a directed graph.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "kahns_algorithm",
+      "name": "Kahn's Algorithm",
+      "aliases": [],
+      "short_definition": "A topological sorting algorithm that uses in-degrees and a queue.",
+      "prerequisites": [
+        "directed_acyclic_graph",
+        "indegree"
+      ]
+    },
+    {
+      "concept_id": "topological_sort",
+      "name": "Topological Sort",
+      "aliases": [
+        "Topological Ordering"
+      ],
+      "short_definition": "A linear ordering of vertices such that for every directed edge uv, vertex u comes before vertex v in the ordering.",
+      "prerequisites": [
+        "directed_acyclic_graph"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [],
+      "short_definition": "Identifying if a graph contains any cycles.",
+      "prerequisites": [
+        "directed_acyclic_graph"
+      ]
+    },
+    {
+      "concept_id": "dependency_resolution",
+      "name": "Dependency Resolution",
+      "aliases": [],
+      "short_definition": "Determining the order in which tasks or items must be processed based on their dependencies.",
+      "prerequisites": [
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "dfsbased_topological_sort",
+      "name": "DFS-based Topological Sort",
+      "aliases": [],
+      "short_definition": "A topological sorting algorithm that utilizes Depth First Search.",
+      "prerequisites": [
+        "depth_first_search",
+        "directed_acyclic_graph"
+      ]
+    },
+    {
+      "concept_id": "applications_of_topological_sort",
+      "name": "Applications of Topological Sort",
+      "aliases": [],
+      "short_definition": "Real-world problems that can be solved using topological sorting.",
+      "prerequisites": [
+        "topological_sort"
+      ]
+    }
+  ]
+}

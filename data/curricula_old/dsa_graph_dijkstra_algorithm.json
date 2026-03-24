@@ -1,0 +1,432 @@
+{
+  "curriculum_id": "DSA_Graph_Dijkstra algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Dijkstra algorithm",
+  "created_at": "2026-03-21T10:40:10.764203",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Network"
+      ],
+      "short_definition": "A collection of nodes connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Vertex",
+        "Point"
+      ],
+      "short_definition": "An individual element within a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link",
+        "Connection"
+      ],
+      "short_definition": "A connection between two nodes in a graph.",
+      "prerequisites": [
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [
+        "Labeled Graph"
+      ],
+      "short_definition": "A graph where edges have associated numerical values.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge_weight",
+      "name": "Edge Weight",
+      "aliases": [
+        "Cost",
+        "Distance"
+      ],
+      "short_definition": "The numerical value assigned to an edge.",
+      "prerequisites": [
+        "edge",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges have no direction.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of connected edges from one node to another.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "path_length",
+      "name": "Path Length",
+      "aliases": [
+        "Path Cost"
+      ],
+      "short_definition": "The sum of edge weights along a path.",
+      "prerequisites": [
+        "edge_weight",
+        "path",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [],
+      "short_definition": "The path with the minimum total edge weight between two nodes.",
+      "prerequisites": [
+        "path",
+        "path_length",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "single_source_shortest_path",
+      "name": "Single Source Shortest Path",
+      "aliases": [
+        "SSSP"
+      ],
+      "short_definition": "Finding the shortest paths from a single starting node to all other nodes.",
+      "prerequisites": [
+        "node",
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "dijkstra_algorithm",
+      "name": "Dijkstra Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm to find the shortest paths from a single source node in a graph with non-negative edge weights.",
+      "prerequisites": [
+        "nonnegative_weight",
+        "single_source_shortest_path",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "nonnegative_weight",
+      "name": "Non-negative Weights",
+      "aliases": [],
+      "short_definition": "Edge weights that are zero or positive.",
+      "prerequisites": [
+        "edge_weight"
+      ]
+    },
+    {
+      "concept_id": "greedy_algorithm",
+      "name": "Greedy Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm that makes the locally optimal choice at each step with the hope of finding a global optimum.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "distance_array",
+      "name": "Distance Array",
+      "aliases": [
+        "Distances"
+      ],
+      "short_definition": "An array storing the shortest distance found so far from the source to each node.",
+      "prerequisites": [
+        "node",
+        "single_source_shortest_path"
+      ]
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Settled Nodes"
+      ],
+      "short_definition": "A set of nodes for which the shortest path from the source has been finalized.",
+      "prerequisites": [
+        "dijkstra_algorithm",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "priority_queue",
+      "name": "Priority Queue",
+      "aliases": [
+        "Min-Heap"
+      ],
+      "short_definition": "A data structure that stores elements with priorities and allows efficient retrieval of the element with the highest (or lowest) priority.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "relaxation",
+      "name": "Relaxation",
+      "aliases": [
+        "Edge Relaxation"
+      ],
+      "short_definition": "The process of updating the shortest distance to a node if a shorter path is found through an adjacent node.",
+      "prerequisites": [
+        "distance_array",
+        "edge_weight",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "initialization",
+      "name": "Initialization",
+      "aliases": [],
+      "short_definition": "Setting initial values for distances and visited status before algorithm execution.",
+      "prerequisites": [
+        "distance_array",
+        "node",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "iteration",
+      "name": "Iteration",
+      "aliases": [],
+      "short_definition": "A single pass or step within the Dijkstra algorithm's execution.",
+      "prerequisites": [
+        "dijkstra_algorithm"
+      ]
+    },
+    {
+      "concept_id": "extract_min",
+      "name": "Extract Min",
+      "aliases": [],
+      "short_definition": "Operation to remove and return the node with the smallest distance from the priority queue.",
+      "prerequisites": [
+        "distance_array",
+        "priority_queue"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "A representation of a graph where each node has a list of its adjacent nodes and edge weights.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A representation of a graph using a matrix where entries indicate the presence and weight of edges.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "node",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "A measure of how the execution time of an algorithm grows with the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of how the memory usage of an algorithm grows with the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "dijkstra_with_priority_queue",
+      "name": "Dijkstra with Priority Queue",
+      "aliases": [],
+      "short_definition": "Dijkstra's algorithm implemented using a priority queue for efficient node selection.",
+      "prerequisites": [
+        "dijkstra_algorithm",
+        "priority_queue"
+      ]
+    },
+    {
+      "concept_id": "dijkstra_without_priority_queue",
+      "name": "Dijkstra without Priority Queue",
+      "aliases": [],
+      "short_definition": "Dijkstra's algorithm implemented by linearly scanning for the minimum distance node.",
+      "prerequisites": [
+        "dijkstra_algorithm",
+        "distance_array"
+      ]
+    },
+    {
+      "concept_id": "negative_cycle",
+      "name": "Negative Cycles",
+      "aliases": [],
+      "short_definition": "A cycle in a graph where the sum of edge weights is negative.",
+      "prerequisites": [
+        "cycle",
+        "edge_weight",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [],
+      "short_definition": "A path that starts and ends at the same node.",
+      "prerequisites": [
+        "path"
+      ]
+    },
+    {
+      "concept_id": "bellmanford_algorithm",
+      "name": "Bellman-Ford Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm that finds shortest paths from a single source and can handle negative edge weights and detect negative cycles.",
+      "prerequisites": [
+        "negative_cycle",
+        "single_source_shortest_path"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "The process of visiting each node in a graph systematically.",
+      "prerequisites": [
+        "graph",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "source_node",
+      "name": "Source Node",
+      "aliases": [
+        "Start Node"
+      ],
+      "short_definition": "The node from which shortest paths are calculated.",
+      "prerequisites": [
+        "node",
+        "single_source_shortest_path"
+      ]
+    },
+    {
+      "concept_id": "destination_node",
+      "name": "Destination Node",
+      "aliases": [
+        "End Node"
+      ],
+      "short_definition": "A node for which a shortest path is being sought.",
+      "prerequisites": [
+        "node",
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "path_reconstruction",
+      "name": "Path Reconstruction",
+      "aliases": [],
+      "short_definition": "The process of determining the actual sequence of nodes forming a shortest path.",
+      "prerequisites": [
+        "predecessor_array",
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "predecessor_array",
+      "name": "Predecessor Array",
+      "aliases": [
+        "Parent Array"
+      ],
+      "short_definition": "An array storing the node that precedes a given node on the shortest path from the source.",
+      "prerequisites": [
+        "dijkstra_algorithm",
+        "distance_array",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "sparse_graph",
+      "name": "Sparse Graph",
+      "aliases": [],
+      "short_definition": "A graph with relatively few edges compared to the number of possible edges.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "dense_graph",
+      "name": "Dense Graph",
+      "aliases": [],
+      "short_definition": "A graph with a number of edges close to the maximum possible.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "application_of_dijkstra",
+      "name": "Application of Dijkstra",
+      "aliases": [],
+      "short_definition": "Real-world scenarios where Dijkstra's algorithm is used.",
+      "prerequisites": [
+        "dijkstra_algorithm"
+      ]
+    },
+    {
+      "concept_id": "shortest_path_in_map",
+      "name": "Shortest Path in Maps",
+      "aliases": [],
+      "short_definition": "Using Dijkstra to find the shortest routes between locations.",
+      "prerequisites": [
+        "application_of_dijkstra",
+        "dijkstra_algorithm"
+      ]
+    },
+    {
+      "concept_id": "network_routing",
+      "name": "Network Routing",
+      "aliases": [],
+      "short_definition": "Determining the most efficient path for data packets in computer networks.",
+      "prerequisites": [
+        "application_of_dijkstra",
+        "dijkstra_algorithm"
+      ]
+    }
+  ]
+}

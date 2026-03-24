@@ -1,0 +1,307 @@
+let's say if we have the differential 
+ equation 
+ f prime of x is equal to 3x 
+ and also we're given 
+ the initial condition 
+ that f of 0 is equal to 7. 
+ with this information find a particular 
+ solution 
+ to this differential equation 
+ so how can we solve that differential 
+ equation 
+ well 
+ let's begin by finding the 
+ anti-derivative 
+ of both sides of that equation 
+ so the anti-derivative of f prime of x 
+ is equal to the anti-derivative 
+ of 3x 
+ so the integration of f prime of x is 
+ just going to be f of x 
+ and the anti-derivative of 3x is going 
+ to be 3x squared over 2 plus c 
+ now what we need to do 
+ is we need to solve for c anytime you 
+ want to find a particular solution of a 
+ certain differential equation 
+ so what we're going to do is plug in the 
+ initial condition 
+ f of 0 is 7. 
+ so 0 is the x value 
+ 7 correlates to the y value or the 
+ function value 
+ so we're going to replace the function 
+ with 7. 
+ so i'm going to write it like this first 
+ f of 0 
+ is equal to 3 times 0 squared over 2 
+ plus c 
+ now we know that f of 0 is 7. so i can 
+ replace this with seven 
+ so seven is equal to 
+ zero squared times three over two is 
+ zero 
+ so seven is equal to c 
+ so now i can rewrite 
+ the function 
+ replacing this with c 
+ so i could say that f of x 
+ is equal to 3 over 2 x squared plus c 
+ and this is the answer i'm looking for 
+ so that is the particular solution to 
+ this differential equation 
+ now let's go ahead and work on another 
+ example 
+ let's say that 
+ f prime of x 
+ is equal to six x squared minus five 
+ and we're given the initial condition 
+ that f of one is four 
+ go ahead and solve that differential 
+ equation 
+ so let's begin by finding the 
+ antiderivative 
+ of both sides of the function 
+ so on the left side it's just going to 
+ be f of x 
+ on the right side 
+ the anti-derivative of x squared using 
+ the power rule 
+ you need to add one to the exponent 2 
+ plus 1 is 3 
+ and then divide by that number 
+ and the anti-derivative of five is 
+ simply five x 
+ and don't forget the constant c 
+ so now let's replace x with one 
+ so f of one 
+ is going to be 
+ six divided by three which is two times 
+ one to the third 
+ minus five times one plus c 
+ now 
+ let's replace f of one 
+ with four because f of one is equal to 
+ four 
+ so we have four is equal to two 
+ minus five plus c 
+ two minus five is negative three 
+ and to solve for c we need to add 3 to 
+ both sides 
+ and 4 plus 3 is 7 
+ so c 
+ is equal to 7. 
+ so now that we have the value of c 
+ we can write the final answer 
+ so this is the goal if you could solve 
+ for this 
+ then you can get the answer based on 
+ this expression 
+ you just need to replace c with 7. 
+ so f of x 
+ is going to be 6 divided by 2 which is 
+ this supposed to be a three by the way 
+ six divided by three which is two 
+ x cubed minus 
+ five x plus seven 
+ so this 
+ is the solution to the differential 
+ equation 
+ now instead of being given the first 
+ derivative 
+ sometimes we may receive 
+ the second derivative of the function 
+ let's say the second derivative is 2x 
+ minus 3. 
+ this time we need two initial conditions 
+ one for the first derivative 
+ and one for the original function 
+ so if you want to try it go ahead and 
+ determine a function for f of x solve 
+ this particular differential equation 
+ so let's begin by integrating 
+ both sides of that equation 
+ so the antiderivative of the second 
+ derivative f double prime 
+ is the first derivative f prime of x 
+ and on the right side 
+ the anti-derivative of x is going to be 
+ x squared divided by two 
+ and for negative three it becomes 
+ negative three x 
+ plus some constant c 
+ now we need to use 
+ this particular initial condition to 
+ solve for c 
+ so f prime of 1 that's going to be 2 
+ over 2 which is 1 
+ times x squared so that's 1 squared 
+ minus three times one plus c 
+ and f prime of one 
+ is equal to two 
+ one squared is one three times one is 
+ three 
+ and so this is what we have 
+ one minus three 
+ is negative two so i need to add two to 
+ both sides 
+ two plus two is four 
+ so c 
+ is equal to four 
+ so 
+ now we can write the general equation 
+ for f prime of x 
+ so f prime of x is going to be 
+ 2 divided by 2 is 1 so that's just x 
+ squared 
+ minus 3x 
+ and c is 4. 
+ so this is the first answer but we need 
+ to go all the way to f of x 
+ so now let's integrate both sides of 
+ that function 
+ so we have the anti-derivative of 
+ f prime of x 
+ and that's going to equal 
+ the anti-derivative of x squared minus 
+ 3x plus 4. 
+ so on the left this becomes f of x 
+ and on the right we have x cubed divided 
+ by three 
+ minus three x squared over two 
+ plus four x 
+ now instead of using c again we're gonna 
+ use a different constant of integration 
+ so let's choose the next letter d 
+ now f of zero is three so we have f of 
+ zero 
+ and zero to the third power is zero 
+ zero squared times three over two that's 
+ zero and then four times zero plus d 
+ now f of zero is three 
+ so d is equal to three 
+ so now we could write the final answer 
+ and that is that f of x 
+ is equal to one third 
+ x cubed 
+ minus three over two 
+ x squared plus four x 
+ and then replace d with three 
+ so this 
+ is the solution to the differential 
+ equation 
+ let's try another example 
+ so let's say that the second derivative 
+ is x squared minus four 
+ and f prime of two is three 
+ and f of one 
+ is negative four 
+ go ahead and solve the differential 
+ equation 
+ so let's start by integrating both sides 
+ so on the left the anti-derivative of 
+ the second derivative 
+ is going to be the first derivative 
+ on the right the anti-derivative of x 
+ squared is x cubed over three 
+ and for negative four becomes negative 
+ four x 
+ and plus c 
+ now we know that f prime of two is three 
+ so let's replace x with two 
+ so we have two 
+ to the third power minus three i mean 
+ divided by three minus four times two 
+ plus c 
+ now f prime of two is three 
+ and two to the third power is eight 
+ and four times two is eight 
+ so now let's add eight 
+ to both sides 
+ three plus eight 
+ is eleven 
+ and so we have eleven is equal to eight 
+ over three 
+ plus c 
+ now to get rid of the fraction i'm going 
+ to multiply everything by three 
+ and so 11 times 3 is 33 
+ 8 over 3 times 3 is just 8. 
+ and then c times 3 
+ is three c 
+ so now let's subtract both sides by 
+ eight 
+ thirty three minus eight is twenty five 
+ and then we need to divide by three 
+ so we have c 
+ is twenty five over three 
+ so now we can write the final answer 
+ f prime of x 
+ is equal to one third x cubed 
+ minus four x plus 
+ 25 over 3. 
+ so if we plugged in 2 
+ we should get 3. 
+ so now let's integrate this function 
+ so the integration of f prime is simply 
+ f 
+ and the antiderivative of x cubed is 
+ going to be x to the fourth 
+ divided by four 
+ and for x it's x squared over two 
+ and then 
+ for the constant 25 over three it's 
+ going to be 25 x over 3 plus a new 
+ constant d 
+ so now let's determine f of 1 
+ so 1 to the fourth is just 1 and 3 times 
+ 4 is 12. 
+ and then 4 divided by 2 is 2 
+ times 1 squared which is 1 
+ and then it's going to be 25 over 3 
+ plus some constant d 
+ now let's replace f of 1 with negative 
+ 4. 
+ so we have 1 over 12. minus 2 
+ plus 25 over 3 plus d 
+ now to get rid of all the fractions i'm 
+ going to multiply everything 
+ by 12. 
+ i guess i don't need this information 
+ anymore 
+ so negative 4 times 12 
+ that's negative 48. 
+ 12 divided by 12 is 1 
+ 2 times twelve is 
+ twenty-four 
+ twelve divided by three is four 
+ times twenty-five 
+ so that's gonna be a hundred 
+ and then plus twelve 
+ d now 100 minus 24 
+ is 76 
+ plus 1 that's going to be 77. 
+ so we have negative 48 
+ is equal to 77 
+ plus 12 d 
+ so negative 48 minus 77 
+ that's negative 125 
+ and then we need to divide both sides by 
+ 12. 
+ so d is negative 125 over 12. 
+ now we can write the final answer 
+ and that is that f of x 
+ is 1 over 12 
+ x to the fourth 
+ minus two x squared 
+ plus twenty five x over three 
+ minus one twenty five over twelve 
+ and so this 
+ is the solution of the differential 
+ equation 
+ it was a little bit longer than the 
+ other problems but 
+ that's how you could find it 
+ so that's it for this video thanks for 
+ watching 
+ you

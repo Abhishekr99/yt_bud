@@ -1,0 +1,117 @@
+{
+  "curriculum_id": "math_calculus_continuity",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Continuity",
+  "created_at": "2026-03-23T10:53:26.470224",
+  "concepts": [
+    {
+      "concept_id": "limit",
+      "name": "Limit",
+      "aliases": [
+        "Limits"
+      ],
+      "short_definition": "The value a function approaches as its input approaches a certain value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "function",
+      "name": "Function",
+      "aliases": [
+        "Functions"
+      ],
+      "short_definition": "A relation between a set of inputs and a set of permissible outputs.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "continuity",
+      "name": "Continuity",
+      "aliases": [
+        "Continuous Functions"
+      ],
+      "short_definition": "A function is continuous if its graph can be drawn without lifting the pen.",
+      "prerequisites": [
+        "function",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "point_discontinuity",
+      "name": "Point Discontinuity",
+      "aliases": [
+        "Removable Discontinuity"
+      ],
+      "short_definition": "A single point where a function is not defined or has a different value.",
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "concept_id": "jump_discontinuity",
+      "name": "Jump Discontinuity",
+      "aliases": [
+        "Step Discontinuity"
+      ],
+      "short_definition": "A discontinuity where the function 'jumps' from one value to another.",
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "concept_id": "infinite_discontinuity",
+      "name": "Infinite Discontinuity",
+      "aliases": [
+        "Asymptotic Discontinuity"
+      ],
+      "short_definition": "A discontinuity where the function approaches infinity or negative infinity.",
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "concept_id": "intermediate_value_theorem",
+      "name": "Intermediate Value Theorem",
+      "aliases": [
+        "IVT"
+      ],
+      "short_definition": "States that for a continuous function, all values between the function's minimum and maximum are also attained.",
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "concept_id": "domain",
+      "name": "Domain",
+      "aliases": [
+        "Function Domain"
+      ],
+      "short_definition": "The set of all possible input values for a function.",
+      "prerequisites": [
+        "function"
+      ]
+    },
+    {
+      "concept_id": "range",
+      "name": "Range",
+      "aliases": [
+        "Function Range"
+      ],
+      "short_definition": "The set of all possible output values for a function.",
+      "prerequisites": [
+        "function"
+      ]
+    },
+    {
+      "concept_id": "continuity_on_an_interval",
+      "name": "Continuity on an Interval",
+      "aliases": [
+        "Interval Continuity"
+      ],
+      "short_definition": "A function is continuous on an interval if it is continuous at every point within that interval.",
+      "prerequisites": [
+        "continuity",
+        "domain"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "curriculum_id": "dsa_trees_tree_definition",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Tree definition",
+  "created_at": "2026-03-23T10:53:12.950889",
+  "concepts": [
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [
+        "Abstract Tree"
+      ],
+      "short_definition": "A hierarchical data structure consisting of nodes connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Vertex"
+      ],
+      "short_definition": "A fundamental unit within a tree, containing data and references to other nodes.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "A connection between two nodes in a tree, representing a parent-child relationship.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "root",
+      "name": "Root",
+      "aliases": [],
+      "short_definition": "The topmost node in a tree, with no parent.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "parent",
+      "name": "Parent",
+      "aliases": [],
+      "short_definition": "A node that has one or more child nodes.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "child",
+      "name": "Child",
+      "aliases": [],
+      "short_definition": "A node directly connected to a parent node.",
+      "prerequisites": [
+        "node",
+        "parent",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "leaf",
+      "name": "Leaf",
+      "aliases": [
+        "Terminal Node"
+      ],
+      "short_definition": "A node with no children.",
+      "prerequisites": [
+        "child",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "internal_node",
+      "name": "Internal Node",
+      "aliases": [
+        "Non-leaf Node"
+      ],
+      "short_definition": "A node that has at least one child.",
+      "prerequisites": [
+        "child",
+        "leaf",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "height",
+      "name": "Height",
+      "aliases": [],
+      "short_definition": "The length of the longest path from the root to a leaf node.",
+      "prerequisites": [
+        "edge",
+        "leaf",
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "depth",
+      "name": "Depth",
+      "aliases": [],
+      "short_definition": "The number of edges from the root to a specific node.",
+      "prerequisites": [
+        "edge",
+        "node",
+        "root",
+        "tree"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "curriculum_id": "math_linear_algebra_rank",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Rank",
+  "created_at": "2026-03-23T10:53:54.628521",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors that is closed under addition and scalar multiplication.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [
+        "Linearly Independent"
+      ],
+      "short_definition": "A set of vectors where no vector can be expressed as a linear combination of the others.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [
+        "Linear Span"
+      ],
+      "short_definition": "The set of all possible linear combinations of a given set of vectors.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [],
+      "short_definition": "A minimal set of vectors that spans a vector space and is linearly independent.",
+      "prerequisites": [
+        "linear_independence",
+        "span",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "dimension",
+      "name": "Dimension",
+      "aliases": [],
+      "short_definition": "The number of vectors in any basis of a vector space.",
+      "prerequisites": [
+        "basi"
+      ]
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map"
+      ],
+      "short_definition": "A function between vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "image",
+      "name": "Image",
+      "aliases": [
+        "Range"
+      ],
+      "short_definition": "The set of all possible output vectors of a linear transformation.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "kernel",
+      "name": "Kernel",
+      "aliases": [
+        "Null Space"
+      ],
+      "short_definition": "The set of all input vectors that map to the zero vector under a linear transformation.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "rank",
+      "name": "Rank",
+      "aliases": [],
+      "short_definition": "The dimension of the image of a linear transformation or the dimension of the column space of a matrix.",
+      "prerequisites": [
+        "dimension",
+        "image",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "nullity",
+      "name": "Nullity",
+      "aliases": [],
+      "short_definition": "The dimension of the kernel of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "kernel",
+        "linear_transformation"
+      ]
+    }
+  ]
+}

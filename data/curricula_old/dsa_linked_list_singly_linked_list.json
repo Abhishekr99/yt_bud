@@ -1,0 +1,476 @@
+{
+  "curriculum_id": "DSA_Linked list_Singly linked list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Singly linked list",
+  "created_at": "2026-03-21T10:41:35.239524",
+  "concepts": [
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Linked List Node"
+      ],
+      "short_definition": "A fundamental building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_field",
+      "name": "Data Field",
+      "aliases": [
+        "Value"
+      ],
+      "short_definition": "The part of a node that stores the actual information.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [
+        "Link",
+        "Reference"
+      ],
+      "short_definition": "A pointer within a node that refers to the subsequent node in the sequence.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "Head"
+      ],
+      "short_definition": "A pointer that indicates the first node in the linked list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [
+        "Tail"
+      ],
+      "short_definition": "A pointer that indicates the last node in the linked list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "null_pointer",
+      "name": "Null Pointer",
+      "aliases": [
+        "NULL"
+      ],
+      "short_definition": "A special pointer value indicating the end of the list or an empty list.",
+      "prerequisites": [
+        "next_pointer"
+      ]
+    },
+    {
+      "concept_id": "singly_linked_list",
+      "name": "Singly Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "A linear data structure where each element (node) points to the next element.",
+      "prerequisites": [
+        "head_pointer",
+        "node",
+        "null_pointer"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Iterating"
+      ],
+      "short_definition": "The process of visiting each node in a linked list sequentially.",
+      "prerequisites": [
+        "head_pointer",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Adding"
+      ],
+      "short_definition": "The operation of adding a new node to the linked list.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "insertion_at_head",
+      "name": "Insertion at Head",
+      "aliases": [
+        "Prepend"
+      ],
+      "short_definition": "Adding a new node at the beginning of the linked list.",
+      "prerequisites": [
+        "head_pointer",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "insertion_at_tail",
+      "name": "Insertion at Tail",
+      "aliases": [
+        "Append"
+      ],
+      "short_definition": "Adding a new node at the end of the linked list.",
+      "prerequisites": [
+        "insertion",
+        "tail_pointer",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "insertion_in_middle",
+      "name": "Insertion in Middle",
+      "aliases": [
+        "Insert After"
+      ],
+      "short_definition": "Adding a new node at a specific position within the linked list.",
+      "prerequisites": [
+        "insertion",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Removing"
+      ],
+      "short_definition": "The operation of removing a node from the linked list.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "deletion_of_head",
+      "name": "Deletion of Head",
+      "aliases": [
+        "Remove First"
+      ],
+      "short_definition": "Removing the first node from the linked list.",
+      "prerequisites": [
+        "deletion",
+        "head_pointer"
+      ]
+    },
+    {
+      "concept_id": "deletion_of_tail",
+      "name": "Deletion of Tail",
+      "aliases": [
+        "Remove Last"
+      ],
+      "short_definition": "Removing the last node from the linked list.",
+      "prerequisites": [
+        "deletion",
+        "tail_pointer",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "deletion_in_middle",
+      "name": "Deletion in Middle",
+      "aliases": [
+        "Remove Specific"
+      ],
+      "short_definition": "Removing a node at a specific position or with a specific value.",
+      "prerequisites": [
+        "deletion",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "search",
+      "name": "Search",
+      "aliases": [
+        "Finding"
+      ],
+      "short_definition": "The operation of locating a node with a specific value in the linked list.",
+      "prerequisites": [
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "empty_list",
+      "name": "Empty List",
+      "aliases": [
+        "Null List"
+      ],
+      "short_definition": "A linked list that contains no nodes.",
+      "prerequisites": [
+        "head_pointer",
+        "null_pointer"
+      ]
+    },
+    {
+      "concept_id": "single_node_list",
+      "name": "Single Node List",
+      "aliases": [
+        "One Node List"
+      ],
+      "short_definition": "A linked list containing only one node.",
+      "prerequisites": [
+        "head_pointer",
+        "node",
+        "null_pointer",
+        "tail_pointer"
+      ]
+    },
+    {
+      "concept_id": "dynamic_size",
+      "name": "Dynamic Size",
+      "aliases": [
+        "Flexible Size"
+      ],
+      "short_definition": "The ability of a linked list to grow or shrink in size as needed.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "memory_allocation",
+      "name": "Memory Allocation",
+      "aliases": [
+        "Dynamic Memory"
+      ],
+      "short_definition": "Nodes are allocated memory dynamically during runtime.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "sequential_acces",
+      "name": "Sequential Access",
+      "aliases": [
+        "Linear Access"
+      ],
+      "short_definition": "Elements in a linked list can only be accessed by traversing from the beginning.",
+      "prerequisites": [
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "pointer_manipulation",
+      "name": "Pointer Manipulation",
+      "aliases": [
+        "Link Management"
+      ],
+      "short_definition": "The core operations involve updating and managing the 'next' pointers.",
+      "prerequisites": [
+        "next_pointer",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "reversing_a_list",
+      "name": "Reversing a List",
+      "aliases": [
+        "List Reversal"
+      ],
+      "short_definition": "Changing the order of nodes in a linked list so the last becomes the first.",
+      "prerequisites": [
+        "pointer_manipulation",
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [
+        "Loop Detection"
+      ],
+      "short_definition": "Identifying if a linked list contains a cycle (a node points back to a previous node).",
+      "prerequisites": [
+        "pointer_manipulation",
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "floyds_cyclefinding_algorithm",
+      "name": "Floyd's Cycle-Finding Algorithm",
+      "aliases": [
+        "Tortoise and Hare"
+      ],
+      "short_definition": "An algorithm to detect cycles in a linked list using two pointers moving at different speeds.",
+      "prerequisites": [
+        "cycle_detection",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "finding_middle_element",
+      "name": "Finding Middle Element",
+      "aliases": [
+        "Middle Node"
+      ],
+      "short_definition": "Locating the node at the middle position of a linked list.",
+      "prerequisites": [
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "two_pointer",
+      "name": "Two Pointers",
+      "aliases": [
+        "Dual Pointers"
+      ],
+      "short_definition": "Using two pointers to traverse the list simultaneously for specific operations.",
+      "prerequisites": [
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory Usage"
+      ],
+      "short_definition": "The amount of memory required by a linked list, typically O(n) for storage.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Operation Speed"
+      ],
+      "short_definition": "The time taken for operations like traversal, insertion, and deletion, often O(n).",
+      "prerequisites": [
+        "deletion",
+        "insertion",
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "advantages_of_linked_list",
+      "name": "Advantages of Linked Lists",
+      "aliases": [
+        "SLL Benefits"
+      ],
+      "short_definition": "Benefits of using linked lists, such as dynamic size and efficient insertions/deletions.",
+      "prerequisites": [
+        "deletion",
+        "dynamic_size",
+        "insertion",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "disadvantages_of_linked_list",
+      "name": "Disadvantages of Linked Lists",
+      "aliases": [
+        "SLL Drawbacks"
+      ],
+      "short_definition": "Drawbacks of using linked lists, such as no random access and overhead of pointers.",
+      "prerequisites": [
+        "sequential_acces",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "linked_list_implementation",
+      "name": "Linked List Implementation",
+      "aliases": [
+        "SLL Code"
+      ],
+      "short_definition": "How to implement a singly linked list using programming language constructs.",
+      "prerequisites": [
+        "head_pointer",
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "recursive_traversal",
+      "name": "Recursive Traversal",
+      "aliases": [
+        "Recursive Visit"
+      ],
+      "short_definition": "Traversing a linked list using recursive function calls.",
+      "prerequisites": [
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "iterative_traversal",
+      "name": "Iterative Traversal",
+      "aliases": [
+        "Iterative Visit"
+      ],
+      "short_definition": "Traversing a linked list using loops.",
+      "prerequisites": [
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "node_swapping",
+      "name": "Node Swapping",
+      "aliases": [
+        "Swap Nodes"
+      ],
+      "short_definition": "Exchanging the positions of two nodes within the linked list.",
+      "prerequisites": [
+        "pointer_manipulation",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "sorted_linked_list",
+      "name": "Sorted Linked List",
+      "aliases": [
+        "Ordered List"
+      ],
+      "short_definition": "A linked list where the nodes are arranged in a specific order.",
+      "prerequisites": [
+        "insertion",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "merging_linked_list",
+      "name": "Merging Linked Lists",
+      "aliases": [
+        "Combine Lists"
+      ],
+      "short_definition": "Combining two or more linked lists into a single list.",
+      "prerequisites": [
+        "insertion",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "linked_list_as_an_abstract_data_type",
+      "name": "Linked List as an Abstract Data Type",
+      "aliases": [
+        "SLL ADT"
+      ],
+      "short_definition": "Viewing a linked list as a conceptual data structure with defined operations.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    }
+  ]
+}

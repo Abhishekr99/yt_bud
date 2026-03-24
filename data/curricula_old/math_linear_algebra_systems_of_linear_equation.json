@@ -1,0 +1,411 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Systems of Linear Equations",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Systems of Linear Equations",
+  "created_at": "2026-03-21T11:14:36.209504",
+  "concepts": [
+    {
+      "concept_id": "linear_equation",
+      "name": "Linear Equation",
+      "aliases": [
+        "Equation"
+      ],
+      "short_definition": "An equation where variables are only raised to the power of one.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "system_of_equation",
+      "name": "System of Equations",
+      "aliases": [
+        "Linear System"
+      ],
+      "short_definition": "A collection of two or more linear equations.",
+      "prerequisites": [
+        "linear_equation"
+      ]
+    },
+    {
+      "concept_id": "solution_set",
+      "name": "Solution Set",
+      "aliases": [
+        "Solution"
+      ],
+      "short_definition": "The set of all values that satisfy all equations in a system.",
+      "prerequisites": [
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "consistent_system",
+      "name": "Consistent System",
+      "aliases": [],
+      "short_definition": "A system of equations with at least one solution.",
+      "prerequisites": [
+        "solution_set"
+      ]
+    },
+    {
+      "concept_id": "inconsistent_system",
+      "name": "Inconsistent System",
+      "aliases": [],
+      "short_definition": "A system of equations with no solution.",
+      "prerequisites": [
+        "solution_set"
+      ]
+    },
+    {
+      "concept_id": "unique_solution",
+      "name": "Unique Solution",
+      "aliases": [],
+      "short_definition": "A consistent system with exactly one solution.",
+      "prerequisites": [
+        "consistent_system"
+      ]
+    },
+    {
+      "concept_id": "infinite_solution",
+      "name": "Infinite Solutions",
+      "aliases": [
+        "Infinitely Many Solutions"
+      ],
+      "short_definition": "A consistent system with an unlimited number of solutions.",
+      "prerequisites": [
+        "consistent_system"
+      ]
+    },
+    {
+      "concept_id": "augmented_matrix",
+      "name": "Augmented Matrix",
+      "aliases": [
+        "Matrix"
+      ],
+      "short_definition": "A matrix representing the coefficients and constants of a system of equations.",
+      "prerequisites": [
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "coefficient_matrix",
+      "name": "Coefficient Matrix",
+      "aliases": [],
+      "short_definition": "The matrix formed by the coefficients of the variables in a system of equations.",
+      "prerequisites": [
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "row_echelon_form",
+      "name": "Row Echelon Form",
+      "aliases": [
+        "REF"
+      ],
+      "short_definition": "A form of a matrix where leading entries are to the right of entries in rows above.",
+      "prerequisites": [
+        "augmented_matrix"
+      ]
+    },
+    {
+      "concept_id": "reduced_row_echelon_form",
+      "name": "Reduced Row Echelon Form",
+      "aliases": [
+        "RREF"
+      ],
+      "short_definition": "A form of a matrix where leading entries are 1 and all other entries in their column are 0.",
+      "prerequisites": [
+        "row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "gaussian_elimination",
+      "name": "Gaussian Elimination",
+      "aliases": [
+        "Row Reduction"
+      ],
+      "short_definition": "A method to solve systems of equations by transforming the augmented matrix to row echelon form.",
+      "prerequisites": [
+        "augmented_matrix",
+        "row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "gaussjordan_elimination",
+      "name": "Gauss-Jordan Elimination",
+      "aliases": [],
+      "short_definition": "A method to solve systems of equations by transforming the augmented matrix to reduced row echelon form.",
+      "prerequisites": [
+        "augmented_matrix",
+        "reduced_row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "elementary_row_operation",
+      "name": "Elementary Row Operations",
+      "aliases": [
+        "Row Operations"
+      ],
+      "short_definition": "Operations that can be performed on the rows of a matrix without changing the solution set.",
+      "prerequisites": [
+        "augmented_matrix"
+      ]
+    },
+    {
+      "concept_id": "pivot",
+      "name": "Pivot",
+      "aliases": [
+        "Leading Entry"
+      ],
+      "short_definition": "The first non-zero entry in a row of a matrix in echelon form.",
+      "prerequisites": [
+        "row_echelon_form"
+      ]
+    },
+    {
+      "concept_id": "pivot_position",
+      "name": "Pivot Position",
+      "aliases": [],
+      "short_definition": "The position of a pivot in a matrix.",
+      "prerequisites": [
+        "pivot"
+      ]
+    },
+    {
+      "concept_id": "pivot_variable",
+      "name": "Pivot Variable",
+      "aliases": [
+        "Basic Variable"
+      ],
+      "short_definition": "A variable corresponding to a pivot column.",
+      "prerequisites": [
+        "pivot_position",
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "free_variable",
+      "name": "Free Variable",
+      "aliases": [],
+      "short_definition": "A variable not corresponding to a pivot column.",
+      "prerequisites": [
+        "pivot_position",
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "homogeneous_system",
+      "name": "Homogeneous System",
+      "aliases": [],
+      "short_definition": "A system of linear equations where all constant terms are zero.",
+      "prerequisites": [
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "trivial_solution",
+      "name": "Trivial Solution",
+      "aliases": [],
+      "short_definition": "The solution where all variables are zero, always a solution for homogeneous systems.",
+      "prerequisites": [
+        "homogeneous_system"
+      ]
+    },
+    {
+      "concept_id": "nontrivial_solution",
+      "name": "Non-trivial Solution",
+      "aliases": [],
+      "short_definition": "A solution to a homogeneous system where at least one variable is non-zero.",
+      "prerequisites": [
+        "homogeneous_system",
+        "trivial_solution"
+      ]
+    },
+    {
+      "concept_id": "vector_equation",
+      "name": "Vector Equation",
+      "aliases": [],
+      "short_definition": "An equation expressed in terms of vectors.",
+      "prerequisites": [
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [],
+      "short_definition": "A sum of vectors multiplied by scalars.",
+      "prerequisites": [
+        "vector_equation"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [],
+      "short_definition": "The set of all possible linear combinations of a set of vectors.",
+      "prerequisites": [
+        "linear_combination"
+      ]
+    },
+    {
+      "concept_id": "column_space",
+      "name": "Column Space",
+      "aliases": [],
+      "short_definition": "The span of the column vectors of a matrix.",
+      "prerequisites": [
+        "augmented_matrix",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "row_space",
+      "name": "Row Space",
+      "aliases": [],
+      "short_definition": "The span of the row vectors of a matrix.",
+      "prerequisites": [
+        "augmented_matrix",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "null_space",
+      "name": "Null Space",
+      "aliases": [
+        "Kernel"
+      ],
+      "short_definition": "The set of all solutions to the homogeneous system Ax = 0.",
+      "prerequisites": [
+        "homogeneous_system",
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "rank",
+      "name": "Rank",
+      "aliases": [],
+      "short_definition": "The dimension of the column space (or row space) of a matrix.",
+      "prerequisites": [
+        "augmented_matrix",
+        "column_space"
+      ]
+    },
+    {
+      "concept_id": "dimension",
+      "name": "Dimension",
+      "aliases": [],
+      "short_definition": "The number of vectors in a basis for a vector space.",
+      "prerequisites": [
+        "basi"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [],
+      "short_definition": "A linearly independent set of vectors that spans a vector space.",
+      "prerequisites": [
+        "linear_independence",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [],
+      "short_definition": "A set of vectors where the only linear combination that equals the zero vector is the trivial one.",
+      "prerequisites": [
+        "linear_combination"
+      ]
+    },
+    {
+      "concept_id": "linear_dependence",
+      "name": "Linear Dependence",
+      "aliases": [],
+      "short_definition": "A set of vectors where a non-trivial linear combination equals the zero vector.",
+      "prerequisites": [
+        "linear_independence"
+      ]
+    },
+    {
+      "concept_id": "matrixvector_multiplication",
+      "name": "Matrix-Vector Multiplication",
+      "aliases": [],
+      "short_definition": "The operation of multiplying a matrix by a vector.",
+      "prerequisites": [
+        "augmented_matrix",
+        "vector_equation"
+      ]
+    },
+    {
+      "concept_id": "determinant",
+      "name": "Determinant",
+      "aliases": [],
+      "short_definition": "A scalar value that can be computed from a square matrix.",
+      "prerequisites": [
+        "augmented_matrix"
+      ]
+    },
+    {
+      "concept_id": "cramers_rule",
+      "name": "Cramer's Rule",
+      "aliases": [],
+      "short_definition": "A method to solve systems of linear equations using determinants.",
+      "prerequisites": [
+        "determinant",
+        "system_of_equation"
+      ]
+    },
+    {
+      "concept_id": "inverse_matrix",
+      "name": "Inverse Matrix",
+      "aliases": [
+        "Matrix Inverse"
+      ],
+      "short_definition": "A matrix that, when multiplied by the original matrix, results in the identity matrix.",
+      "prerequisites": [
+        "augmented_matrix"
+      ]
+    },
+    {
+      "concept_id": "identity_matrix",
+      "name": "Identity Matrix",
+      "aliases": [
+        "I"
+      ],
+      "short_definition": "A square matrix with ones on the main diagonal and zeros elsewhere.",
+      "prerequisites": [
+        "augmented_matrix"
+      ]
+    },
+    {
+      "concept_id": "singular_matrix",
+      "name": "Singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a determinant of zero, meaning it has no inverse.",
+      "prerequisites": [
+        "determinant",
+        "inverse_matrix"
+      ]
+    },
+    {
+      "concept_id": "nonsingular_matrix",
+      "name": "Non-singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a non-zero determinant, meaning it has an inverse.",
+      "prerequisites": [
+        "determinant",
+        "inverse_matrix"
+      ]
+    },
+    {
+      "concept_id": "ranknullity_theorem",
+      "name": "Rank-Nullity Theorem",
+      "aliases": [],
+      "short_definition": "A theorem relating the rank and nullity of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "null_space",
+        "rank"
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ google-generativeai
 youtube-transcript-api==1.2.2
 langchain
 langchain-google-genai
+langchain-openai
 langchain-chroma
 python-dotenv
 google-genai
@@ -23,3 +24,4 @@ pandas
 neo4j
 scikit-learn
 pyyaml
+tqdm

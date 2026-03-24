@@ -1,0 +1,122 @@
+{
+  "curriculum_id": "dsa_linked_list_cycle_detection",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Cycle detection",
+  "created_at": "2026-03-23T10:52:33.120661",
+  "concepts": [
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [
+        "Singly Linked List"
+      ],
+      "short_definition": "A linear data structure where elements are not stored at contiguous memory locations. Each element points to the next element.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Element"
+      ],
+      "short_definition": "A fundamental unit of a linked list, containing data and a reference (pointer) to the next node.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "pointer",
+      "name": "Pointer",
+      "aliases": [
+        "Reference"
+      ],
+      "short_definition": "A variable that stores the memory address of another variable, used to link nodes in a linked list.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [
+        "Loop"
+      ],
+      "short_definition": "A condition in a linked list where a node's pointer points back to a previously visited node, creating an infinite loop.",
+      "prerequisites": [
+        "linked_list",
+        "node",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [
+        "Loop Detection"
+      ],
+      "short_definition": "The process of identifying whether a cycle exists within a linked list.",
+      "prerequisites": [
+        "cycle",
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "floyds_cyclefinding_algorithm",
+      "name": "Floyd's Cycle-Finding Algorithm",
+      "aliases": [
+        "Tortoise and Hare"
+      ],
+      "short_definition": "An algorithm that uses two pointers, one moving at a slow pace and the other at a fast pace, to detect cycles.",
+      "prerequisites": [
+        "cycle_detection",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "slow_pointer",
+      "name": "Slow Pointer",
+      "aliases": [
+        "Tortoise"
+      ],
+      "short_definition": "A pointer in Floyd's algorithm that moves one step at a time through the linked list.",
+      "prerequisites": [
+        "floyds_cyclefinding_algorithm"
+      ]
+    },
+    {
+      "concept_id": "fast_pointer",
+      "name": "Fast Pointer",
+      "aliases": [
+        "Hare"
+      ],
+      "short_definition": "A pointer in Floyd's algorithm that moves two steps at a time through the linked list.",
+      "prerequisites": [
+        "floyds_cyclefinding_algorithm"
+      ]
+    },
+    {
+      "concept_id": "meeting_point",
+      "name": "Meeting Point",
+      "aliases": [
+        "Collision Point"
+      ],
+      "short_definition": "The node where the slow and fast pointers meet if a cycle exists in the linked list.",
+      "prerequisites": [
+        "fast_pointer",
+        "floyds_cyclefinding_algorithm",
+        "slow_pointer"
+      ]
+    },
+    {
+      "concept_id": "cycle_start_node",
+      "name": "Cycle Start Node",
+      "aliases": [
+        "Entry Point of Cycle"
+      ],
+      "short_definition": "The first node in the linked list that is part of the cycle.",
+      "prerequisites": [
+        "floyds_cyclefinding_algorithm",
+        "meeting_point"
+      ]
+    }
+  ]
+}

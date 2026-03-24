@@ -1,0 +1,457 @@
+{
+  "curriculum_id": "DSA_Stack_Stack using array",
+  "domain": "DSA",
+  "module": "Stack",
+  "topic": "Stack using array",
+  "created_at": "2026-03-21T11:11:41.846768",
+  "concepts": [
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [
+        "List",
+        "Dynamic Array"
+      ],
+      "short_definition": "A contiguous block of memory used to store elements of the same data type.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A way of organizing and storing data in a computer so that it can be accessed and modified efficiently.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "abstract_data_type",
+      "name": "Abstract Data Type",
+      "aliases": [
+        "ADT"
+      ],
+      "short_definition": "A logical description of data and a set of operations that can be performed on that data, independent of its implementation.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [],
+      "short_definition": "A linear data structure that follows the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": [
+        "abstract_data_type",
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "lifo_principle",
+      "name": "LIFO Principle",
+      "aliases": [
+        "Last-In, First-Out"
+      ],
+      "short_definition": "The last element added to the structure is the first one to be removed.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "push_operation",
+      "name": "Push Operation",
+      "aliases": [
+        "Add Element",
+        "Insert"
+      ],
+      "short_definition": "Adds an element to the top of the stack.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "pop_operation",
+      "name": "Pop Operation",
+      "aliases": [
+        "Remove Element",
+        "Delete"
+      ],
+      "short_definition": "Removes and returns the element from the top of the stack.",
+      "prerequisites": [
+        "peek_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "peek_operation",
+      "name": "Peek Operation",
+      "aliases": [
+        "Top Element",
+        "View Top"
+      ],
+      "short_definition": "Returns the element at the top of the stack without removing it.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "isempty_operation",
+      "name": "IsEmpty Operation",
+      "aliases": [
+        "Check Empty"
+      ],
+      "short_definition": "Checks if the stack is empty.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "isfull_operation",
+      "name": "IsFull Operation",
+      "aliases": [
+        "Check Full"
+      ],
+      "short_definition": "Checks if the stack is full (relevant for fixed-size arrays).",
+      "prerequisites": [
+        "array",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "stack_overflow",
+      "name": "Stack Overflow",
+      "aliases": [],
+      "short_definition": "An error condition that occurs when a push operation is attempted on a full stack.",
+      "prerequisites": [
+        "isfull_operation",
+        "push_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "stack_underflow",
+      "name": "Stack Underflow",
+      "aliases": [],
+      "short_definition": "An error condition that occurs when a pop or peek operation is attempted on an empty stack.",
+      "prerequisites": [
+        "isempty_operation",
+        "peek_operation",
+        "pop_operation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "top_pointer",
+      "name": "Top Pointer",
+      "aliases": [
+        "Index of Top",
+        "Stack Pointer"
+      ],
+      "short_definition": "An index that points to the topmost element of the stack in an array implementation.",
+      "prerequisites": [
+        "array",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "fixedsize_array",
+      "name": "Fixed-Size Array",
+      "aliases": [
+        "Static Array"
+      ],
+      "short_definition": "An array whose size is determined at compile time and cannot be changed during runtime.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "dynamic_array",
+      "name": "Dynamic Array",
+      "aliases": [
+        "Resizable Array"
+      ],
+      "short_definition": "An array that can grow or shrink in size during runtime.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "array_implementation",
+      "name": "Array Implementation",
+      "aliases": [
+        "Stack using Array"
+      ],
+      "short_definition": "Implementing the stack ADT using an underlying array data structure.",
+      "prerequisites": [
+        "array",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "initialization",
+      "name": "Initialization",
+      "aliases": [
+        "Create Stack"
+      ],
+      "short_definition": "Setting up the initial state of the stack, including allocating memory and setting the top pointer.",
+      "prerequisites": [
+        "array_implementation",
+        "stack",
+        "top_pointer"
+      ]
+    },
+    {
+      "concept_id": "capacity",
+      "name": "Capacity",
+      "aliases": [
+        "Max Size"
+      ],
+      "short_definition": "The maximum number of elements an array-based stack can hold.",
+      "prerequisites": [
+        "array_implementation",
+        "fixedsize_array",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "element_type",
+      "name": "Element Type",
+      "aliases": [
+        "Data Type"
+      ],
+      "short_definition": "The type of data that can be stored in the stack (e.g., integers, strings, objects).",
+      "prerequisites": [
+        "array",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "A measure of the time required to execute an algorithm as a function of the input size.",
+      "prerequisites": [
+        "array_implementation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory Usage"
+      ],
+      "short_definition": "A measure of the amount of memory an algorithm uses as a function of the input size.",
+      "prerequisites": [
+        "array_implementation",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "constant_time",
+      "name": "Constant Time",
+      "aliases": [
+        "O(1)"
+      ],
+      "short_definition": "An operation whose execution time does not depend on the size of the input.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linear_time",
+      "name": "Linear Time",
+      "aliases": [
+        "O(n)"
+      ],
+      "short_definition": "An operation whose execution time grows linearly with the size of the input.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "push_time_complexity",
+      "name": "Push Time Complexity",
+      "aliases": [
+        "Add Time"
+      ],
+      "short_definition": "The time complexity of the push operation in an array-based stack.",
+      "prerequisites": [
+        "array_implementation",
+        "push_operation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "pop_time_complexity",
+      "name": "Pop Time Complexity",
+      "aliases": [
+        "Remove Time"
+      ],
+      "short_definition": "The time complexity of the pop operation in an array-based stack.",
+      "prerequisites": [
+        "array_implementation",
+        "pop_operation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "peek_time_complexity",
+      "name": "Peek Time Complexity",
+      "aliases": [
+        "Top Time"
+      ],
+      "short_definition": "The time complexity of the peek operation in an array-based stack.",
+      "prerequisites": [
+        "array_implementation",
+        "peek_operation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "isempty_time_complexity",
+      "name": "IsEmpty Time Complexity",
+      "aliases": [
+        "Check Empty Time"
+      ],
+      "short_definition": "The time complexity of the isEmpty operation in an array-based stack.",
+      "prerequisites": [
+        "array_implementation",
+        "isempty_operation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "isfull_time_complexity",
+      "name": "IsFull Time Complexity",
+      "aliases": [
+        "Check Full Time"
+      ],
+      "short_definition": "The time complexity of the isFull operation in an array-based stack.",
+      "prerequisites": [
+        "array_implementation",
+        "isfull_operation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "space_complexity_array_stack",
+      "name": "Space Complexity (Array Stack)",
+      "aliases": [
+        "Memory Usage (Array Stack)"
+      ],
+      "short_definition": "The space complexity of an array-based stack implementation.",
+      "prerequisites": [
+        "array_implementation",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "array_indexing",
+      "name": "Array Indexing",
+      "aliases": [
+        "Array Access"
+      ],
+      "short_definition": "Accessing elements in an array using their numerical index.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "index_out_of_bound",
+      "name": "Index Out of Bounds",
+      "aliases": [],
+      "short_definition": "An error that occurs when trying to access an array element at an invalid index.",
+      "prerequisites": [
+        "array",
+        "array_indexing"
+      ]
+    },
+    {
+      "concept_id": "zerobased_indexing",
+      "name": "Zero-Based Indexing",
+      "aliases": [],
+      "short_definition": "The first element of an array is at index 0.",
+      "prerequisites": [
+        "array",
+        "array_indexing"
+      ]
+    },
+    {
+      "concept_id": "stack_application",
+      "name": "Stack Applications",
+      "aliases": [
+        "Use Cases of Stack"
+      ],
+      "short_definition": "Real-world problems and algorithms where stacks are effectively used.",
+      "prerequisites": [
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "function_call_stack",
+      "name": "Function Call Stack",
+      "aliases": [
+        "Call Stack"
+      ],
+      "short_definition": "A mechanism used by programming languages to manage function calls and their local variables.",
+      "prerequisites": [
+        "stack",
+        "stack_application"
+      ]
+    },
+    {
+      "concept_id": "expression_evaluation",
+      "name": "Expression Evaluation",
+      "aliases": [
+        "Infix to Postfix",
+        "Postfix Evaluation"
+      ],
+      "short_definition": "Using stacks to convert and evaluate mathematical expressions.",
+      "prerequisites": [
+        "stack",
+        "stack_application"
+      ]
+    },
+    {
+      "concept_id": "backtracking_algorithm",
+      "name": "Backtracking Algorithms",
+      "aliases": [],
+      "short_definition": "Algorithms that explore possible solutions by trying to build a solution incrementally and abandoning paths that do not lead to a solution.",
+      "prerequisites": [
+        "stack",
+        "stack_application"
+      ]
+    },
+    {
+      "concept_id": "undoredo_functionality",
+      "name": "Undo/Redo Functionality",
+      "aliases": [],
+      "short_definition": "Implementing undo and redo features in applications using stacks.",
+      "prerequisites": [
+        "stack",
+        "stack_application"
+      ]
+    },
+    {
+      "concept_id": "memory_management",
+      "name": "Memory Management",
+      "aliases": [],
+      "short_definition": "How stacks are used in managing memory for program execution.",
+      "prerequisites": [
+        "function_call_stack",
+        "stack"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [],
+      "short_definition": "A programming technique where a function calls itself.",
+      "prerequisites": [
+        "function_call_stack"
+      ]
+    }
+  ]
+}

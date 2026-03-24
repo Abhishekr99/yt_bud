@@ -1,0 +1,124 @@
+{
+  "curriculum_id": "dsa_linked_list_doubly_linked_list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Doubly linked list",
+  "created_at": "2026-03-23T10:52:36.088482",
+  "concepts": [
+    {
+      "concept_id": "doubly_linked_list",
+      "name": "Doubly Linked List",
+      "aliases": [
+        "DLL"
+      ],
+      "short_definition": "A linear data structure where each node points to both the next and previous nodes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node_structure",
+      "name": "Node Structure",
+      "aliases": [
+        "DLL Node"
+      ],
+      "short_definition": "The fundamental building block of a doubly linked list, containing data and pointers to adjacent nodes.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "Start Pointer"
+      ],
+      "short_definition": "A reference to the first node in the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [
+        "End Pointer"
+      ],
+      "short_definition": "A reference to the last node in the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add Node"
+      ],
+      "short_definition": "The process of adding a new node into the doubly linked list at various positions.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Remove Node"
+      ],
+      "short_definition": "The process of removing an existing node from the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Iterate List"
+      ],
+      "short_definition": "Visiting each node in the doubly linked list, typically from head to tail or tail to head.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "forward_traversal",
+      "name": "Forward Traversal",
+      "aliases": [
+        "Head to Tail"
+      ],
+      "short_definition": "Traversing the list by following the 'next' pointers from the head.",
+      "prerequisites": [
+        "node_structure",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "backward_traversal",
+      "name": "Backward Traversal",
+      "aliases": [
+        "Tail to Head"
+      ],
+      "short_definition": "Traversing the list by following the 'previous' pointers from the tail.",
+      "prerequisites": [
+        "node_structure",
+        "tail_pointer",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "memory_management",
+      "name": "Memory Management",
+      "aliases": [
+        "Node Allocation"
+      ],
+      "short_definition": "Handling the creation and deallocation of nodes in the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node_structure"
+      ]
+    }
+  ]
+}

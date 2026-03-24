@@ -1,0 +1,122 @@
+{
+  "curriculum_id": "math_probability_probability_basic",
+  "domain": "MATH",
+  "module": "Probability",
+  "topic": "Probability basics",
+  "created_at": "2026-03-23T10:54:07.526428",
+  "concepts": [
+    {
+      "concept_id": "event",
+      "name": "Event",
+      "aliases": [
+        "Outcome",
+        "Experiment outcome"
+      ],
+      "short_definition": "A specific result or set of results from a random process.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "sample_space",
+      "name": "Sample Space",
+      "aliases": [
+        "All possible outcomes"
+      ],
+      "short_definition": "The set of all possible outcomes of a random experiment.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "probability",
+      "name": "Probability",
+      "aliases": [
+        "Likelihood",
+        "Chance"
+      ],
+      "short_definition": "A measure of how likely an event is to occur, expressed as a number between 0 and 1.",
+      "prerequisites": [
+        "event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "certain_event",
+      "name": "Certain Event",
+      "aliases": [
+        "Guaranteed outcome"
+      ],
+      "short_definition": "An event that is sure to happen, with a probability of 1.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "impossible_event",
+      "name": "Impossible Event",
+      "aliases": [
+        "Never happens"
+      ],
+      "short_definition": "An event that cannot happen, with a probability of 0.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "simple_event",
+      "name": "Simple Event",
+      "aliases": [
+        "Single outcome"
+      ],
+      "short_definition": "An event that consists of only one outcome from the sample space.",
+      "prerequisites": [
+        "event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "compound_event",
+      "name": "Compound Event",
+      "aliases": [
+        "Multiple outcomes"
+      ],
+      "short_definition": "An event that consists of two or more simple events.",
+      "prerequisites": [
+        "simple_event"
+      ]
+    },
+    {
+      "concept_id": "mutually_exclusive_event",
+      "name": "Mutually Exclusive Events",
+      "aliases": [
+        "Disjoint events"
+      ],
+      "short_definition": "Events that cannot occur at the same time.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "independent_event",
+      "name": "Independent Events",
+      "aliases": [
+        "Unrelated events"
+      ],
+      "short_definition": "Events where the outcome of one does not affect the outcome of the other.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "complementary_event",
+      "name": "Complementary Events",
+      "aliases": [
+        "Opposite events"
+      ],
+      "short_definition": "Two events that are mutually exclusive and whose probabilities add up to 1.",
+      "prerequisites": [
+        "mutually_exclusive_event",
+        "probability"
+      ]
+    }
+  ]
+}

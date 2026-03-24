@@ -1,0 +1,115 @@
+{
+  "curriculum_id": "dsa_graph_graph_definition",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Graph definition",
+  "created_at": "2026-03-23T10:52:14.275341",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "An individual element within a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges have no direction.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges have associated numerical values (weights).",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "A representation of a graph where each vertex has a list of its adjacent vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A representation of a graph using a matrix where entries indicate the presence or absence of edges.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of vertices connected by edges.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [],
+      "short_definition": "A path that starts and ends at the same vertex.",
+      "prerequisites": [
+        "path"
+      ]
+    }
+  ]
+}

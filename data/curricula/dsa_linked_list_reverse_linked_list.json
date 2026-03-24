@@ -1,0 +1,127 @@
+{
+  "curriculum_id": "dsa_linked_list_reverse_linked_list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Reverse linked list",
+  "created_at": "2026-03-23T10:52:41.208395",
+  "concepts": [
+    {
+      "concept_id": "singly_linked_list",
+      "name": "Singly Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "A linear data structure where each element points to the next element.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Element"
+      ],
+      "short_definition": "The basic building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": [
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "Start"
+      ],
+      "short_definition": "A reference to the first node in the linked list.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "A reference within a node that points to the subsequent node in the list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Iteration"
+      ],
+      "short_definition": "The process of visiting each node in a linked list sequentially.",
+      "prerequisites": [
+        "head_pointer",
+        "node",
+        "singly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "reversal",
+      "name": "Reversal",
+      "aliases": [
+        "Inversion"
+      ],
+      "short_definition": "The operation of changing the direction of pointers in a linked list.",
+      "prerequisites": [
+        "next_pointer",
+        "node",
+        "singly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "iterative_reversal",
+      "name": "Iterative Reversal",
+      "aliases": [
+        "Loop Reversal"
+      ],
+      "short_definition": "Reversing a linked list using a loop and temporary pointers.",
+      "prerequisites": [
+        "reversal",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "recursive_reversal",
+      "name": "Recursive Reversal",
+      "aliases": [
+        "Function Call Reversal"
+      ],
+      "short_definition": "Reversing a linked list by calling a function on subsequent nodes.",
+      "prerequisites": [
+        "reversal",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "three_pointer",
+      "name": "Three Pointers",
+      "aliases": [
+        "Prev, Curr, Next"
+      ],
+      "short_definition": "A common technique using three pointers to manage node connections during iterative reversal.",
+      "prerequisites": [
+        "iterative_reversal",
+        "next_pointer"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [
+        "End"
+      ],
+      "short_definition": "A reference to the last node in the linked list. Useful for some reversal strategies.",
+      "prerequisites": [
+        "node",
+        "singly_linked_list"
+      ]
+    }
+  ]
+}

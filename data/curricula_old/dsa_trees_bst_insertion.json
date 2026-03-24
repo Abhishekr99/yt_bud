@@ -1,0 +1,401 @@
+{
+  "curriculum_id": "DSA_Trees_BST insertion",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "BST insertion",
+  "created_at": "2026-03-21T11:12:12.338752",
+  "concepts": [
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in its left subtree are less than its value, and all values in its right subtree are greater.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Tree Node"
+      ],
+      "short_definition": "A fundamental unit in a tree data structure, typically containing data and pointers to child nodes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [
+        "Root"
+      ],
+      "short_definition": "The topmost node in a tree, from which all other nodes descend.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "Leaf"
+      ],
+      "short_definition": "A node with no children.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node that has one or more child nodes.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Child"
+      ],
+      "short_definition": "A node that is directly connected to another node (its parent) and descends from it.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "left_child",
+      "name": "Left Child",
+      "aliases": [],
+      "short_definition": "A child node that is located to the left of its parent.",
+      "prerequisites": [
+        "binary_search_tree",
+        "child_node"
+      ]
+    },
+    {
+      "concept_id": "right_child",
+      "name": "Right Child",
+      "aliases": [],
+      "short_definition": "A child node that is located to the right of its parent.",
+      "prerequisites": [
+        "binary_search_tree",
+        "child_node"
+      ]
+    },
+    {
+      "concept_id": "key",
+      "name": "Key",
+      "aliases": [
+        "Value",
+        "Data"
+      ],
+      "short_definition": "The information stored within a node of a tree, used for comparison and ordering.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add Node",
+        "Insert Element"
+      ],
+      "short_definition": "The process of adding a new node with a specific key into a data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "bst_insertion_algorithm",
+      "name": "BST Insertion Algorithm",
+      "aliases": [
+        "Insert into BST"
+      ],
+      "short_definition": "The step-by-step procedure for adding a new node into a Binary Search Tree while maintaining its properties.",
+      "prerequisites": [
+        "binary_search_tree",
+        "insertion",
+        "key"
+      ]
+    },
+    {
+      "concept_id": "comparison",
+      "name": "Comparison",
+      "aliases": [
+        "Key Comparison"
+      ],
+      "short_definition": "The act of comparing the key of a new node with the key of an existing node in the BST.",
+      "prerequisites": [
+        "bst_insertion_algorithm",
+        "key"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Tree Traversal"
+      ],
+      "short_definition": "The process of visiting each node in a tree in a systematic order.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "inorder_traversal",
+      "name": "In-order Traversal",
+      "aliases": [],
+      "short_definition": "A traversal method that visits nodes in ascending order of their keys in a BST.",
+      "prerequisites": [
+        "binary_search_tree",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "recursive_insertion",
+      "name": "Recursive Insertion",
+      "aliases": [
+        "Recursive BST Insert"
+      ],
+      "short_definition": "Implementing the BST insertion algorithm using recursive function calls.",
+      "prerequisites": [
+        "bst_insertion_algorithm",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "iterative_insertion",
+      "name": "Iterative Insertion",
+      "aliases": [
+        "Iterative BST Insert"
+      ],
+      "short_definition": "Implementing the BST insertion algorithm using loops and explicit state management.",
+      "prerequisites": [
+        "bst_insertion_algorithm",
+        "iteration"
+      ]
+    },
+    {
+      "concept_id": "empty_tree",
+      "name": "Empty Tree",
+      "aliases": [],
+      "short_definition": "A tree that contains no nodes.",
+      "prerequisites": [
+        "binary_search_tree"
+      ]
+    },
+    {
+      "concept_id": "tree_height",
+      "name": "Tree Height",
+      "aliases": [
+        "Height"
+      ],
+      "short_definition": "The number of edges on the longest path from the root to a leaf node.",
+      "prerequisites": [
+        "binary_search_tree",
+        "leaf_node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "tree_depth",
+      "name": "Tree Depth",
+      "aliases": [
+        "Depth"
+      ],
+      "short_definition": "The number of edges from the root to a specific node.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "balanced_bst",
+      "name": "Balanced BST",
+      "aliases": [],
+      "short_definition": "A BST where the heights of the left and right subtrees of any node differ by at most one.",
+      "prerequisites": [
+        "binary_search_tree",
+        "tree_height"
+      ]
+    },
+    {
+      "concept_id": "unbalanced_bst",
+      "name": "Unbalanced BST",
+      "aliases": [],
+      "short_definition": "A BST where the height difference between subtrees can be significant, potentially leading to performance degradation.",
+      "prerequisites": [
+        "binary_search_tree",
+        "tree_height"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "A measure of the computational resources (time) required by an algorithm as a function of the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the memory resources required by an algorithm as a function of the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "worstcase_insertion",
+      "name": "Worst-Case Insertion",
+      "aliases": [],
+      "short_definition": "The scenario where BST insertion takes the longest time, typically when the tree becomes skewed.",
+      "prerequisites": [
+        "bst_insertion_algorithm",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "averagecase_insertion",
+      "name": "Average-Case Insertion",
+      "aliases": [],
+      "short_definition": "The typical time complexity for BST insertion, assuming a reasonably balanced tree.",
+      "prerequisites": [
+        "bst_insertion_algorithm",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [],
+      "short_definition": "A programming technique where a function calls itself to solve smaller instances of the same problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "iteration",
+      "name": "Iteration",
+      "aliases": [],
+      "short_definition": "A programming technique that involves repeating a block of code multiple times, usually with loops.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "pointer",
+      "name": "Pointer",
+      "aliases": [
+        "Reference"
+      ],
+      "short_definition": "A variable that stores the memory address of another variable or object.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "null_pointer",
+      "name": "Null Pointer",
+      "aliases": [
+        "NULL"
+      ],
+      "short_definition": "A pointer that does not point to any valid memory location.",
+      "prerequisites": [
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "tree_structure",
+      "name": "Tree Structure",
+      "aliases": [],
+      "short_definition": "The hierarchical arrangement of nodes in a tree data structure.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "binary_tree_propertie",
+      "name": "Binary Tree Properties",
+      "aliases": [],
+      "short_definition": "The rules that define a binary tree, such as each node having at most two children.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "bst_property",
+      "name": "BST Property",
+      "aliases": [],
+      "short_definition": "The ordering rule for keys in a Binary Search Tree (left < parent < right).",
+      "prerequisites": [
+        "binary_search_tree",
+        "key"
+      ]
+    },
+    {
+      "concept_id": "duplicate_key",
+      "name": "Duplicate Keys",
+      "aliases": [],
+      "short_definition": "When the same key value appears more than once in a BST.",
+      "prerequisites": [
+        "binary_search_tree",
+        "key"
+      ]
+    },
+    {
+      "concept_id": "handling_duplicate",
+      "name": "Handling Duplicates",
+      "aliases": [],
+      "short_definition": "Strategies for inserting duplicate keys into a BST, such as placing them in the right subtree or disallowing them.",
+      "prerequisites": [
+        "bst_insertion_algorithm",
+        "duplicate_key"
+      ]
+    },
+    {
+      "concept_id": "algorithm_design",
+      "name": "Algorithm Design",
+      "aliases": [],
+      "short_definition": "The process of creating a step-by-step procedure to solve a computational problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure_operation",
+      "name": "Data Structure Operations",
+      "aliases": [],
+      "short_definition": "The fundamental actions that can be performed on a data structure, like insertion, deletion, and search.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "tree_visualization",
+      "name": "Tree Visualization",
+      "aliases": [],
+      "short_definition": "Representing a tree structure graphically to aid understanding.",
+      "prerequisites": [
+        "binary_search_tree"
+      ]
+    },
+    {
+      "concept_id": "memory_allocation",
+      "name": "Memory Allocation",
+      "aliases": [],
+      "short_definition": "The process of reserving a block of computer memory for a program's use.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "function_call_stack",
+      "name": "Function Call Stack",
+      "aliases": [],
+      "short_definition": "A data structure used by compilers to keep track of active function calls during program execution, relevant for recursion.",
+      "prerequisites": [
+        "recursion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "curriculum_id": "math_calculus_area_under_curve",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Area under curve",
+  "created_at": "2026-03-23T10:53:21.043609",
+  "concepts": [
+    {
+      "concept_id": "definite_integral",
+      "name": "Definite Integral",
+      "aliases": [
+        "Integral",
+        "Area"
+      ],
+      "short_definition": "A mathematical operation that represents the accumulation of quantities, often visualized as the area under a curve.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "antiderivative",
+      "name": "Antiderivative",
+      "aliases": [
+        "Indefinite Integral",
+        "Primitive"
+      ],
+      "short_definition": "A function whose derivative is the original function.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculu",
+      "name": "Fundamental Theorem of Calculus",
+      "aliases": [
+        "FTC"
+      ],
+      "short_definition": "Connects the concept of differentiation and integration, stating that integration is the inverse operation of differentiation.",
+      "prerequisites": [
+        "antiderivative",
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "riemann_sum",
+      "name": "Riemann Sums",
+      "aliases": [
+        "Approximation",
+        "Rectangles"
+      ],
+      "short_definition": "A method of approximating the area under a curve by dividing it into a series of rectangles.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "limit_of_riemann_sum",
+      "name": "Limit of Riemann Sums",
+      "aliases": [
+        "Exact Area"
+      ],
+      "short_definition": "The value that Riemann sums approach as the number of rectangles approaches infinity, yielding the exact area.",
+      "prerequisites": [
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "integration_technique",
+      "name": "Integration Techniques",
+      "aliases": [
+        "Integration Methods"
+      ],
+      "short_definition": "Various strategies and rules used to find antiderivatives of complex functions.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "area_between_curve",
+      "name": "Area Between Curves",
+      "aliases": [
+        "Area of Region"
+      ],
+      "short_definition": "Calculating the area of a region bounded by two or more functions.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "numerical_integration",
+      "name": "Numerical Integration",
+      "aliases": [
+        "Approximation Methods"
+      ],
+      "short_definition": "Techniques for approximating definite integrals when analytical solutions are difficult or impossible.",
+      "prerequisites": [
+        "definite_integral",
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "applications_of_integration",
+      "name": "Applications of Integration",
+      "aliases": [
+        "Integral Applications"
+      ],
+      "short_definition": "Using integration to solve problems in geometry, physics, economics, and other fields.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "improper_integral",
+      "name": "Improper Integrals",
+      "aliases": [
+        "Infinite Integrals"
+      ],
+      "short_definition": "Definite integrals where the interval of integration is infinite or the integrand has an infinite discontinuity.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    }
+  ]
+}

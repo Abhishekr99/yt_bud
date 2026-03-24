@@ -1,0 +1,484 @@
+{
+  "curriculum_id": "DSA_Graph_Kruskal’s algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Kruskal’s algorithm",
+  "created_at": "2026-03-21T10:40:36.835737",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Connection"
+      ],
+      "short_definition": "A link between two vertices in a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A point or element in a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [
+        "Graph with weights"
+      ],
+      "short_definition": "A graph where each edge has an associated numerical value (weight).",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [
+        "Non-directed graph"
+      ],
+      "short_definition": "A graph where edges have no direction.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "connected_graph",
+      "name": "Connected Graph",
+      "aliases": [
+        "Graph connectivity"
+      ],
+      "short_definition": "A graph where there is a path between any two vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "minimum_spanning_tree",
+      "name": "Minimum Spanning Tree",
+      "aliases": [
+        "MST"
+      ],
+      "short_definition": "A subset of edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.",
+      "prerequisites": [
+        "connected_graph",
+        "edge",
+        "undirected_graph",
+        "vertex",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "spanning_tree",
+      "name": "Spanning Tree",
+      "aliases": [
+        "ST"
+      ],
+      "short_definition": "A tree that includes all the vertices of a graph.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "tree",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [
+        "Tree data structure"
+      ],
+      "short_definition": "A connected graph with no cycles.",
+      "prerequisites": [
+        "cycle",
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [
+        "Graph cycle"
+      ],
+      "short_definition": "A path in a graph that starts and ends at the same vertex and visits other vertices in between.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "path",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [
+        "Graph path"
+      ],
+      "short_definition": "A sequence of vertices connected by edges.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "kruskals_algorithm",
+      "name": "Kruskal's Algorithm",
+      "aliases": [
+        "Kruskal's MST algorithm"
+      ],
+      "short_definition": "A greedy algorithm that finds a minimum spanning tree for a connected, edge-weighted undirected graph.",
+      "prerequisites": [
+        "greedy_algorithm",
+        "minimum_spanning_tree",
+        "undirected_graph",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "greedy_algorithm",
+      "name": "Greedy Algorithm",
+      "aliases": [
+        "Greedy approach"
+      ],
+      "short_definition": "An algorithm that makes the locally optimal choice at each stage with the hope of finding a global optimum.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge_sorting",
+      "name": "Edge Sorting",
+      "aliases": [
+        "Sort edges"
+      ],
+      "short_definition": "Arranging the edges of a graph in ascending order of their weights.",
+      "prerequisites": [
+        "edge",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "disjoint_set_union",
+      "name": "Disjoint Set Union",
+      "aliases": [
+        "Union-Find",
+        "DSU"
+      ],
+      "short_definition": "A data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets.",
+      "prerequisites": [
+        "set",
+        "subset"
+      ]
+    },
+    {
+      "concept_id": "union_operation",
+      "name": "Union Operation",
+      "aliases": [
+        "Union in DSU"
+      ],
+      "short_definition": "Merges two subsets into a single subset in a Disjoint Set Union data structure.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "subset"
+      ]
+    },
+    {
+      "concept_id": "find_operation",
+      "name": "Find Operation",
+      "aliases": [
+        "Find in DSU"
+      ],
+      "short_definition": "Determines which subset a particular element belongs to in a Disjoint Set Union data structure.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "subset"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [
+        "Detecting cycles"
+      ],
+      "short_definition": "The process of identifying if a graph contains any cycles.",
+      "prerequisites": [
+        "cycle",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adding_edge",
+      "name": "Adding Edges",
+      "aliases": [
+        "Edge inclusion"
+      ],
+      "short_definition": "The process of selecting and adding edges to form the MST.",
+      "prerequisites": [
+        "edge",
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "iterating_through_edge",
+      "name": "Iterating Through Edges",
+      "aliases": [
+        "Edge traversal"
+      ],
+      "short_definition": "Processing each edge of the graph in a specific order.",
+      "prerequisites": [
+        "edge",
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "weight_comparison",
+      "name": "Weight Comparison",
+      "aliases": [
+        "Comparing edge weights"
+      ],
+      "short_definition": "Comparing the numerical values associated with edges.",
+      "prerequisites": [
+        "edge",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "subset",
+      "name": "Subset",
+      "aliases": [
+        "Set partition"
+      ],
+      "short_definition": "A collection of elements that is part of a larger set.",
+      "prerequisites": [
+        "set"
+      ]
+    },
+    {
+      "concept_id": "set",
+      "name": "Set",
+      "aliases": [
+        "Collection of elements"
+      ],
+      "short_definition": "A collection of distinct objects.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "connectivity_check",
+      "name": "Connectivity Check",
+      "aliases": [
+        "Checking graph connectivity"
+      ],
+      "short_definition": "Verifying if adding an edge would create a cycle or connect previously disconnected components.",
+      "prerequisites": [
+        "cycle_detection",
+        "disjoint_set_union",
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "mst_construction",
+      "name": "MST Construction",
+      "aliases": [
+        "Building MST"
+      ],
+      "short_definition": "The step-by-step process of assembling the Minimum Spanning Tree.",
+      "prerequisites": [
+        "kruskals_algorithm",
+        "minimum_spanning_tree"
+      ]
+    },
+    {
+      "concept_id": "algorithm_correctnes",
+      "name": "Algorithm Correctness",
+      "aliases": [
+        "Algorithm validity"
+      ],
+      "short_definition": "Proof or reasoning that an algorithm produces the correct output.",
+      "prerequisites": [
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Algorithm efficiency"
+      ],
+      "short_definition": "A measure of the amount of time an algorithm takes to run as a function of the input size.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "edge",
+        "graph",
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory usage"
+      ],
+      "short_definition": "A measure of the amount of memory an algorithm uses as a function of the input size.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "graph",
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "prims_algorithm",
+      "name": "Prim's Algorithm",
+      "aliases": [
+        "Prim's MST algorithm"
+      ],
+      "short_definition": "Another greedy algorithm for finding a minimum spanning tree.",
+      "prerequisites": [
+        "greedy_algorithm",
+        "minimum_spanning_tree",
+        "undirected_graph",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "comparison_with_prim",
+      "name": "Comparison with Prim's",
+      "aliases": [
+        "Kruskal vs Prim"
+      ],
+      "short_definition": "Analyzing the differences and similarities between Kruskal's and Prim's algorithms.",
+      "prerequisites": [
+        "kruskals_algorithm",
+        "prims_algorithm"
+      ]
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Graph data structures"
+      ],
+      "short_definition": "Ways to store graph data, such as adjacency list or adjacency matrix.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "Adj list"
+      ],
+      "short_definition": "A representation of a graph where each vertex has a list of its adjacent vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [
+        "Adj matrix"
+      ],
+      "short_definition": "A representation of a graph where a matrix indicates the presence of edges between vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "edge_list",
+      "name": "Edge List",
+      "aliases": [
+        "List of edges"
+      ],
+      "short_definition": "A representation of a graph as a list of all its edges.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "forest",
+      "name": "Forest",
+      "aliases": [
+        "Collection of trees"
+      ],
+      "short_definition": "A collection of disjoint trees.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "component",
+      "name": "Component",
+      "aliases": [
+        "Connected component"
+      ],
+      "short_definition": "A subgraph in which any two vertices are connected to each other by paths, and which is connected to no additional vertices in the supergraph.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "path_compression",
+      "name": "Path Compression",
+      "aliases": [
+        "DSU optimization"
+      ],
+      "short_definition": "An optimization technique for the Find operation in Disjoint Set Union.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "find_operation"
+      ]
+    },
+    {
+      "concept_id": "union_by_rank",
+      "name": "Union by Rank",
+      "aliases": [
+        "DSU optimization"
+      ],
+      "short_definition": "An optimization technique for the Union operation in Disjoint Set Union.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "union_operation"
+      ]
+    },
+    {
+      "concept_id": "applications_of_mst",
+      "name": "Applications of MST",
+      "aliases": [
+        "MST uses"
+      ],
+      "short_definition": "Real-world problems that can be solved using Minimum Spanning Trees.",
+      "prerequisites": [
+        "minimum_spanning_tree"
+      ]
+    }
+  ]
+}

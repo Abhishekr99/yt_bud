@@ -1,0 +1,117 @@
+{
+  "curriculum_id": "math_calculus_applications_of_derivative",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Applications of derivatives",
+  "created_at": "2026-03-23T10:53:18.495986",
+  "concepts": [
+    {
+      "concept_id": "tangent_line",
+      "name": "Tangent Lines",
+      "aliases": [
+        "Slope of a curve"
+      ],
+      "short_definition": "The line that touches a curve at a single point and has the same slope as the curve at that point.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "extrema",
+      "name": "Extrema",
+      "aliases": [
+        "Maximum and minimum values",
+        "Local extrema",
+        "Absolute extrema"
+      ],
+      "short_definition": "The highest or lowest points on a function's graph within a given interval.",
+      "prerequisites": [
+        "tangent_line"
+      ]
+    },
+    {
+      "concept_id": "critical_point",
+      "name": "Critical Points",
+      "aliases": [
+        "Stationary points"
+      ],
+      "short_definition": "Points where the derivative of a function is either zero or undefined.",
+      "prerequisites": [
+        "extrema"
+      ]
+    },
+    {
+      "concept_id": "first_derivative_test",
+      "name": "First Derivative Test",
+      "aliases": [
+        "Monotonicity test"
+      ],
+      "short_definition": "A method to determine if a critical point is a local maximum, local minimum, or neither by examining the sign of the first derivative.",
+      "prerequisites": [
+        "critical_point"
+      ]
+    },
+    {
+      "concept_id": "concavity",
+      "name": "Concavity",
+      "aliases": [
+        "Shape of a curve"
+      ],
+      "short_definition": "Describes the curvature of a function's graph, whether it is bending upwards or downwards.",
+      "prerequisites": [
+        "tangent_line"
+      ]
+    },
+    {
+      "concept_id": "inflection_point",
+      "name": "Inflection Points",
+      "aliases": [
+        "Points of inflection"
+      ],
+      "short_definition": "Points on a curve where the concavity changes.",
+      "prerequisites": [
+        "concavity"
+      ]
+    },
+    {
+      "concept_id": "second_derivative_test",
+      "name": "Second Derivative Test",
+      "aliases": [],
+      "short_definition": "A method to determine if a critical point is a local maximum or local minimum by examining the sign of the second derivative.",
+      "prerequisites": [
+        "concavity",
+        "critical_point"
+      ]
+    },
+    {
+      "concept_id": "optimization_problem",
+      "name": "Optimization Problems",
+      "aliases": [
+        "Maximization and minimization"
+      ],
+      "short_definition": "Problems that involve finding the maximum or minimum value of a quantity subject to certain constraints.",
+      "prerequisites": [
+        "critical_point",
+        "extrema"
+      ]
+    },
+    {
+      "concept_id": "related_rate",
+      "name": "Related Rates",
+      "aliases": [],
+      "short_definition": "Problems involving the rates of change of multiple related quantities.",
+      "prerequisites": [
+        "tangent_line"
+      ]
+    },
+    {
+      "concept_id": "curve_sketching",
+      "name": "Curve Sketching",
+      "aliases": [],
+      "short_definition": "Using calculus tools to accurately draw the graph of a function.",
+      "prerequisites": [
+        "concavity",
+        "extrema",
+        "inflection_point"
+      ]
+    }
+  ]
+}

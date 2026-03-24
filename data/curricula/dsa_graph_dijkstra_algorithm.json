@@ -1,0 +1,118 @@
+{
+  "curriculum_id": "dsa_graph_dijkstra_algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Dijkstra algorithm",
+  "created_at": "2026-03-23T10:52:09.934031",
+  "concepts": [
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Adjacency List",
+        "Adjacency Matrix"
+      ],
+      "short_definition": "Ways to store graph data, typically using adjacency lists or matrices.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [
+        "Edge Weights"
+      ],
+      "short_definition": "A graph where edges have associated numerical values.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [
+        "Minimum Path"
+      ],
+      "short_definition": "The path between two vertices in a graph with the minimum total edge weight.",
+      "prerequisites": [
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "dijkstra_algorithm",
+      "name": "Dijkstra Algorithm",
+      "aliases": [
+        "Dijkstra's"
+      ],
+      "short_definition": "An algorithm to find the shortest paths from a single source vertex to all other vertices in a weighted graph with non-negative edge weights.",
+      "prerequisites": [
+        "shortest_path",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "priority_queue",
+      "name": "Priority Queue",
+      "aliases": [
+        "Min-Heap"
+      ],
+      "short_definition": "A data structure that stores elements with associated priorities and allows efficient retrieval of the element with the highest (or lowest) priority.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "distance_array",
+      "name": "Distance Array",
+      "aliases": [
+        "Distances"
+      ],
+      "short_definition": "An array storing the shortest distance found so far from the source vertex to each other vertex.",
+      "prerequisites": [
+        "dijkstra_algorithm"
+      ]
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Settled Vertices"
+      ],
+      "short_definition": "A collection of vertices for which the shortest path from the source has been finalized.",
+      "prerequisites": [
+        "dijkstra_algorithm"
+      ]
+    },
+    {
+      "concept_id": "relaxation",
+      "name": "Relaxation",
+      "aliases": [
+        "Edge Relaxation"
+      ],
+      "short_definition": "The process of updating the shortest distance to a vertex if a shorter path is found through an adjacent vertex.",
+      "prerequisites": [
+        "dijkstra_algorithm",
+        "distance_array"
+      ]
+    },
+    {
+      "concept_id": "greedy_approach",
+      "name": "Greedy Approach",
+      "aliases": [
+        "Greedy Strategy"
+      ],
+      "short_definition": "An algorithmic paradigm that makes the locally optimal choice at each stage with the hope of finding a global optimum.",
+      "prerequisites": [
+        "dijkstra_algorithm"
+      ]
+    },
+    {
+      "concept_id": "nonnegative_weight",
+      "name": "Non-negative Weights",
+      "aliases": [
+        "Positive Weights"
+      ],
+      "short_definition": "A condition for Dijkstra's algorithm where all edge weights must be zero or positive.",
+      "prerequisites": [
+        "dijkstra_algorithm"
+      ]
+    }
+  ]
+}

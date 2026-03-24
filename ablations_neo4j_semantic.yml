@@ -1,0 +1,53 @@
+# Neo4j-only ablation config (semantic chunking only)
+# Run with:
+# python -m eval.run_ablations --config ablations_neo4j_semantic.yml --out results
+
+base:
+  videos: data/videos/videos.jsonl
+  curricula_dir: data/curricula
+  labels: data/labels/concept_coverage_labels.jsonl
+  models: neo4j_graph
+  chunker: semantic
+  chunker_config:
+    similarity_threshold: 0.55
+  build_graph: true
+  # Keep true when changing semantic threshold so graph is rebuilt with new chunks.
+  graph_rebuild: true
+  log_level: INFO
+  no_progress: false
+
+grid:
+  - chunker_config:
+      similarity_threshold: 0.40
+    ablation_flags:
+      model_family: neo4j_only
+      chunker: semantic
+      similarity_threshold: 0.40
+
+  - chunker_config:
+      similarity_threshold: 0.50
+    ablation_flags:
+      model_family: neo4j_only
+      chunker: semantic
+      similarity_threshold: 0.50
+
+  - chunker_config:
+      similarity_threshold: 0.55
+    ablation_flags:
+      model_family: neo4j_only
+      chunker: semantic
+      similarity_threshold: 0.55
+
+  - chunker_config:
+      similarity_threshold: 0.60
+    ablation_flags:
+      model_family: neo4j_only
+      chunker: semantic
+      similarity_threshold: 0.60
+
+  - chunker_config:
+      similarity_threshold: 0.70
+    ablation_flags:
+      model_family: neo4j_only
+      chunker: semantic
+      similarity_threshold: 0.70

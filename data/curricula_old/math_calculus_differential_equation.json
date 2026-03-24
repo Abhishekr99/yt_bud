@@ -1,0 +1,445 @@
+{
+  "curriculum_id": "MATH_Calculus_Differential equations",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Differential equations",
+  "created_at": "2026-03-21T11:13:18.179934",
+  "concepts": [
+    {
+      "concept_id": "differential_equation",
+      "name": "Differential Equation",
+      "aliases": [
+        "DE"
+      ],
+      "short_definition": "An equation involving an unknown function and its derivatives.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "ordinary_differential_equation",
+      "name": "Ordinary Differential Equation",
+      "aliases": [
+        "ODE"
+      ],
+      "short_definition": "A differential equation involving only one independent variable.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "partial_differential_equation",
+      "name": "Partial Differential Equation",
+      "aliases": [
+        "PDE"
+      ],
+      "short_definition": "A differential equation involving multiple independent variables and their partial derivatives.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "order_of_de",
+      "name": "Order of DE",
+      "aliases": [
+        "DE Order"
+      ],
+      "short_definition": "The order of the highest derivative present in the differential equation.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "degree_of_de",
+      "name": "Degree of DE",
+      "aliases": [
+        "DE Degree"
+      ],
+      "short_definition": "The highest power of the highest order derivative after the equation is made polynomial in derivatives.",
+      "prerequisites": [
+        "order_of_de"
+      ]
+    },
+    {
+      "concept_id": "linear_de",
+      "name": "Linear DE",
+      "aliases": [
+        "Linear Differential Equation"
+      ],
+      "short_definition": "A differential equation where the unknown function and its derivatives appear linearly.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "nonlinear_de",
+      "name": "Nonlinear DE",
+      "aliases": [
+        "Nonlinear Differential Equation"
+      ],
+      "short_definition": "A differential equation that is not linear.",
+      "prerequisites": [
+        "linear_de"
+      ]
+    },
+    {
+      "concept_id": "solution_of_de",
+      "name": "Solution of DE",
+      "aliases": [
+        "DE Solution"
+      ],
+      "short_definition": "A function that satisfies the differential equation.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "general_solution",
+      "name": "General Solution",
+      "aliases": [
+        "DE General Solution"
+      ],
+      "short_definition": "A solution containing arbitrary constants, representing a family of solutions.",
+      "prerequisites": [
+        "solution_of_de"
+      ]
+    },
+    {
+      "concept_id": "particular_solution",
+      "name": "Particular Solution",
+      "aliases": [
+        "DE Particular Solution"
+      ],
+      "short_definition": "A specific solution obtained by assigning values to the arbitrary constants in the general solution.",
+      "prerequisites": [
+        "general_solution"
+      ]
+    },
+    {
+      "concept_id": "initial_condition",
+      "name": "Initial Condition",
+      "aliases": [
+        "IC"
+      ],
+      "short_definition": "A condition specifying the value of the unknown function or its derivatives at a particular point.",
+      "prerequisites": [
+        "solution_of_de"
+      ]
+    },
+    {
+      "concept_id": "initial_value_problem",
+      "name": "Initial Value Problem",
+      "aliases": [
+        "IVP"
+      ],
+      "short_definition": "A differential equation with one or more initial conditions.",
+      "prerequisites": [
+        "differential_equation",
+        "initial_condition"
+      ]
+    },
+    {
+      "concept_id": "boundary_condition",
+      "name": "Boundary Condition",
+      "aliases": [
+        "BC"
+      ],
+      "short_definition": "A condition specifying the value of the unknown function or its derivatives at different points.",
+      "prerequisites": [
+        "solution_of_de"
+      ]
+    },
+    {
+      "concept_id": "boundary_value_problem",
+      "name": "Boundary Value Problem",
+      "aliases": [
+        "BVP"
+      ],
+      "short_definition": "A differential equation with one or more boundary conditions.",
+      "prerequisites": [
+        "boundary_condition",
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "first_order_de",
+      "name": "First Order DE",
+      "aliases": [
+        "First Order ODE"
+      ],
+      "short_definition": "An ordinary differential equation of the first order.",
+      "prerequisites": [
+        "order_of_de",
+        "ordinary_differential_equation"
+      ]
+    },
+    {
+      "concept_id": "second_order_de",
+      "name": "Second Order DE",
+      "aliases": [
+        "Second Order ODE"
+      ],
+      "short_definition": "An ordinary differential equation of the second order.",
+      "prerequisites": [
+        "order_of_de",
+        "ordinary_differential_equation"
+      ]
+    },
+    {
+      "concept_id": "homogeneous_de",
+      "name": "Homogeneous DE",
+      "aliases": [
+        "Homogeneous Differential Equation"
+      ],
+      "short_definition": "A linear differential equation where the non-derivative terms are zero.",
+      "prerequisites": [
+        "linear_de"
+      ]
+    },
+    {
+      "concept_id": "nonhomogeneous_de",
+      "name": "Non-homogeneous DE",
+      "aliases": [
+        "Non-homogeneous Differential Equation"
+      ],
+      "short_definition": "A linear differential equation with a non-zero term not involving the unknown function or its derivatives.",
+      "prerequisites": [
+        "linear_de"
+      ]
+    },
+    {
+      "concept_id": "separable_de",
+      "name": "Separable DE",
+      "aliases": [
+        "Separable Differential Equation"
+      ],
+      "short_definition": "A first-order ODE that can be written in the form f(y)dy = g(x)dx.",
+      "prerequisites": [
+        "first_order_de"
+      ]
+    },
+    {
+      "concept_id": "exact_de",
+      "name": "Exact DE",
+      "aliases": [
+        "Exact Differential Equation"
+      ],
+      "short_definition": "A first-order ODE of the form M(x,y)dx + N(x,y)dy = 0 where ∂M/∂y = ∂N/∂x.",
+      "prerequisites": [
+        "first_order_de"
+      ]
+    },
+    {
+      "concept_id": "integrating_factor",
+      "name": "Integrating Factor",
+      "aliases": [
+        "IF"
+      ],
+      "short_definition": "A function that, when multiplied by a non-exact differential equation, makes it exact.",
+      "prerequisites": [
+        "exact_de"
+      ]
+    },
+    {
+      "concept_id": "linear_first_order_de",
+      "name": "Linear First Order DE",
+      "aliases": [
+        "Linear First Order ODE"
+      ],
+      "short_definition": "A first-order ODE of the form y' + p(x)y = q(x).",
+      "prerequisites": [
+        "first_order_de",
+        "integrating_factor",
+        "linear_de"
+      ]
+    },
+    {
+      "concept_id": "homogeneous_linear_de_with_constant_coefficient",
+      "name": "Homogeneous Linear DE with Constant Coefficients",
+      "aliases": [
+        "HLDECC"
+      ],
+      "short_definition": "A homogeneous linear ODE where coefficients are constants.",
+      "prerequisites": [
+        "homogeneous_de",
+        "linear_de"
+      ]
+    },
+    {
+      "concept_id": "characteristic_equation",
+      "name": "Characteristic Equation",
+      "aliases": [
+        "Auxiliary Equation"
+      ],
+      "short_definition": "A polynomial equation derived from a homogeneous linear DE with constant coefficients.",
+      "prerequisites": [
+        "homogeneous_linear_de_with_constant_coefficient"
+      ]
+    },
+    {
+      "concept_id": "roots_of_characteristic_equation",
+      "name": "Roots of Characteristic Equation",
+      "aliases": [
+        "Characteristic Roots"
+      ],
+      "short_definition": "The solutions to the characteristic equation.",
+      "prerequisites": [
+        "characteristic_equation"
+      ]
+    },
+    {
+      "concept_id": "complex_root",
+      "name": "Complex Roots",
+      "aliases": [
+        "Complex Characteristic Roots"
+      ],
+      "short_definition": "Roots of the characteristic equation that are complex numbers.",
+      "prerequisites": [
+        "roots_of_characteristic_equation"
+      ]
+    },
+    {
+      "concept_id": "repeated_root",
+      "name": "Repeated Roots",
+      "aliases": [
+        "Repeated Characteristic Roots"
+      ],
+      "short_definition": "Roots of the characteristic equation that appear more than once.",
+      "prerequisites": [
+        "roots_of_characteristic_equation"
+      ]
+    },
+    {
+      "concept_id": "method_of_undetermined_coefficient",
+      "name": "Method of Undetermined Coefficients",
+      "aliases": [
+        "UCM"
+      ],
+      "short_definition": "A method to find a particular solution for non-homogeneous linear DEs with specific forms of the non-homogeneous term.",
+      "prerequisites": [
+        "nonhomogeneous_de",
+        "particular_solution"
+      ]
+    },
+    {
+      "concept_id": "method_of_variation_of_parameter",
+      "name": "Method of Variation of Parameters",
+      "aliases": [
+        "VPM"
+      ],
+      "short_definition": "A method to find a particular solution for non-homogeneous linear DEs, applicable to a wider range of non-homogeneous terms.",
+      "prerequisites": [
+        "nonhomogeneous_de",
+        "particular_solution",
+        "wronskian"
+      ]
+    },
+    {
+      "concept_id": "wronskian",
+      "name": "Wronskian",
+      "aliases": [
+        "Wronskian Determinant"
+      ],
+      "short_definition": "A determinant used to check for linear independence of solutions to a homogeneous linear DE.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "cauchyeuler_equation",
+      "name": "Cauchy-Euler Equation",
+      "aliases": [
+        "Euler-Cauchy Equation"
+      ],
+      "short_definition": "A second-order linear ODE of the form ax^2y'' + bxy' + cy = 0.",
+      "prerequisites": [
+        "linear_de",
+        "second_order_de"
+      ]
+    },
+    {
+      "concept_id": "laplace_transform",
+      "name": "Laplace Transform",
+      "aliases": [
+        "LT"
+      ],
+      "short_definition": "An integral transform used to convert differential equations into algebraic equations.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "inverse_laplace_transform",
+      "name": "Inverse Laplace Transform",
+      "aliases": [
+        "ILT"
+      ],
+      "short_definition": "The operation that converts an algebraic equation back into the solution of the differential equation.",
+      "prerequisites": [
+        "laplace_transform"
+      ]
+    },
+    {
+      "concept_id": "series_solution",
+      "name": "Series Solution",
+      "aliases": [
+        "Power Series Solution"
+      ],
+      "short_definition": "Finding solutions to differential equations in the form of an infinite series.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "frobenius_method",
+      "name": "Frobenius Method",
+      "aliases": [
+        "Frobenius Series"
+      ],
+      "short_definition": "A method for finding series solutions of second-order linear ODEs around regular singular points.",
+      "prerequisites": [
+        "series_solution"
+      ]
+    },
+    {
+      "concept_id": "existence_and_uniqueness_theorem",
+      "name": "Existence and Uniqueness Theorem",
+      "aliases": [
+        "Picard-Lindelöf Theorem"
+      ],
+      "short_definition": "A theorem that guarantees the existence and uniqueness of a solution to an initial value problem under certain conditions.",
+      "prerequisites": [
+        "initial_value_problem"
+      ]
+    },
+    {
+      "concept_id": "numerical_methods_for_de",
+      "name": "Numerical Methods for DEs",
+      "aliases": [
+        "Numerical DE"
+      ],
+      "short_definition": "Approximation techniques for solving differential equations when analytical solutions are difficult or impossible.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "eulers_method",
+      "name": "Euler's Method",
+      "aliases": [
+        "Euler Method"
+      ],
+      "short_definition": "A simple first-order numerical method for approximating solutions to ODEs.",
+      "prerequisites": [
+        "first_order_de",
+        "numerical_methods_for_de"
+      ]
+    },
+    {
+      "concept_id": "rungekutta_method",
+      "name": "Runge-Kutta Methods",
+      "aliases": [
+        "RK Methods"
+      ],
+      "short_definition": "A family of iterative methods for approximating the solutions of ordinary differential equations.",
+      "prerequisites": [
+        "first_order_de",
+        "numerical_methods_for_de"
+      ]
+    }
+  ]
+}

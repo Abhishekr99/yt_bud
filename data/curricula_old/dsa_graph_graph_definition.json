@@ -1,0 +1,411 @@
+{
+  "curriculum_id": "DSA_Graph_Graph definition",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Graph definition",
+  "created_at": "2026-03-21T10:40:23.767180",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit in a graph, representing an entity.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link"
+      ],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction, from one vertex to another.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have a direction; connections are bidirectional.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where each edge has an associated numerical weight.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "unweighted_graph",
+      "name": "Unweighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have associated weights.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency",
+      "name": "Adjacency",
+      "aliases": [],
+      "short_definition": "The relationship between two vertices that are directly connected by an edge.",
+      "prerequisites": [
+        "edge",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacent_vertice",
+      "name": "Adjacent Vertices",
+      "aliases": [],
+      "short_definition": "Two vertices that share a common edge.",
+      "prerequisites": [
+        "edge",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "incident_edge",
+      "name": "Incident Edge",
+      "aliases": [],
+      "short_definition": "An edge that connects to a particular vertex.",
+      "prerequisites": [
+        "edge",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "degree_of_a_vertex",
+      "name": "Degree of a Vertex",
+      "aliases": [],
+      "short_definition": "The number of edges incident to a vertex.",
+      "prerequisites": [
+        "edge",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "indegree",
+      "name": "In-degree",
+      "aliases": [],
+      "short_definition": "The number of edges pointing into a vertex in a directed graph.",
+      "prerequisites": [
+        "directed_graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "outdegree",
+      "name": "Out-degree",
+      "aliases": [],
+      "short_definition": "The number of edges pointing out of a vertex in a directed graph.",
+      "prerequisites": [
+        "directed_graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of vertices connected by edges.",
+      "prerequisites": [
+        "edge",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "simple_path",
+      "name": "Simple Path",
+      "aliases": [],
+      "short_definition": "A path where no vertex is repeated.",
+      "prerequisites": [
+        "path"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [],
+      "short_definition": "A path that starts and ends at the same vertex, with at least one edge.",
+      "prerequisites": [
+        "path"
+      ]
+    },
+    {
+      "concept_id": "simple_cycle",
+      "name": "Simple Cycle",
+      "aliases": [],
+      "short_definition": "A cycle where no vertex is repeated, except for the start/end vertex.",
+      "prerequisites": [
+        "cycle",
+        "simple_path"
+      ]
+    },
+    {
+      "concept_id": "connected_graph",
+      "name": "Connected Graph",
+      "aliases": [],
+      "short_definition": "An undirected graph where there is a path between every pair of vertices.",
+      "prerequisites": [
+        "graph",
+        "path"
+      ]
+    },
+    {
+      "concept_id": "disconnected_graph",
+      "name": "Disconnected Graph",
+      "aliases": [],
+      "short_definition": "A graph that is not connected; it has multiple separate components.",
+      "prerequisites": [
+        "connected_graph",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Component",
+      "aliases": [],
+      "short_definition": "A maximal connected subgraph within a disconnected graph.",
+      "prerequisites": [
+        "connected_graph",
+        "graph",
+        "subgraph"
+      ]
+    },
+    {
+      "concept_id": "strongly_connected_graph",
+      "name": "Strongly Connected Graph",
+      "aliases": [],
+      "short_definition": "A directed graph where there is a path from every vertex to every other vertex.",
+      "prerequisites": [
+        "directed_graph",
+        "path"
+      ]
+    },
+    {
+      "concept_id": "weakly_connected_graph",
+      "name": "Weakly Connected Graph",
+      "aliases": [],
+      "short_definition": "A directed graph where the underlying undirected graph is connected.",
+      "prerequisites": [
+        "connected_graph",
+        "directed_graph"
+      ]
+    },
+    {
+      "concept_id": "subgraph",
+      "name": "Subgraph",
+      "aliases": [],
+      "short_definition": "A graph formed by a subset of vertices and edges from a larger graph.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "spanning_tree",
+      "name": "Spanning Tree",
+      "aliases": [],
+      "short_definition": "A subgraph that includes all vertices and is a tree.",
+      "prerequisites": [
+        "graph",
+        "subgraph",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [],
+      "short_definition": "A connected undirected graph with no cycles.",
+      "prerequisites": [
+        "connected_graph",
+        "cycle",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "rooted_tree",
+      "name": "Rooted Tree",
+      "aliases": [],
+      "short_definition": "A tree with a designated root vertex.",
+      "prerequisites": [
+        "tree",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "bipartite_graph",
+      "name": "Bipartite Graph",
+      "aliases": [],
+      "short_definition": "A graph whose vertices can be divided into two disjoint sets such that every edge connects a vertex in one set to a vertex in the other.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "complete_graph",
+      "name": "Complete Graph",
+      "aliases": [
+        "K_n"
+      ],
+      "short_definition": "A graph where every pair of distinct vertices is connected by a unique edge.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "dense_graph",
+      "name": "Dense Graph",
+      "aliases": [],
+      "short_definition": "A graph with a number of edges close to the maximum possible.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "sparse_graph",
+      "name": "Sparse Graph",
+      "aliases": [],
+      "short_definition": "A graph with significantly fewer edges than the maximum possible.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [],
+      "short_definition": "Methods for storing and organizing graph data.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix used to represent a finite graph.",
+      "prerequisites": [
+        "graph_representation",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "A collection of lists, where each list stores the neighbors of a vertex.",
+      "prerequisites": [
+        "graph_representation",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "edge_list",
+      "name": "Edge List",
+      "aliases": [],
+      "short_definition": "A list of all edges in the graph.",
+      "prerequisites": [
+        "edge",
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "The process of visiting each vertex in a graph systematically.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores neighbors level by level.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "depthfirst_search",
+      "name": "Depth-First Search",
+      "aliases": [
+        "DFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "graph_isomorphism",
+      "name": "Graph Isomorphism",
+      "aliases": [],
+      "short_definition": "The property of two graphs having the same structure, regardless of vertex labels.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "planar_graph",
+      "name": "Planar Graph",
+      "aliases": [],
+      "short_definition": "A graph that can be drawn on a plane such that no edges cross each other.",
+      "prerequisites": [
+        "graph"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "curriculum_id": "DSA_Graph_BFS traversal",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "BFS traversal",
+  "created_at": "2026-03-21T10:39:54.687706",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit in a graph, representing an entity.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "directed_graph",
+      "name": "Directed Graph",
+      "aliases": [
+        "Digraph"
+      ],
+      "short_definition": "A graph where edges have a direction.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have a direction.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "Adjacency representation"
+      ],
+      "short_definition": "A representation of a graph where each vertex has a list of its adjacent vertices.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A representation of a graph using a matrix where entries indicate the presence of an edge.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Graph traversal"
+      ],
+      "short_definition": "The process of visiting each vertex in a graph exactly once.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores neighbors level by level.",
+      "prerequisites": [
+        "graph",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [
+        "FIFO queue"
+      ],
+      "short_definition": "A data structure following the First-In, First-Out principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Visited nodes",
+        "Visited vertices"
+      ],
+      "short_definition": "A collection to keep track of vertices that have already been visited during traversal.",
+      "prerequisites": [
+        "traversal",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "starting_vertex",
+      "name": "Starting Vertex",
+      "aliases": [
+        "Source vertex",
+        "Root node"
+      ],
+      "short_definition": "The vertex from which the BFS traversal begins.",
+      "prerequisites": [
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "neighbor",
+      "name": "Neighbors",
+      "aliases": [
+        "Adjacent vertices"
+      ],
+      "short_definition": "Vertices directly connected to a given vertex by an edge.",
+      "prerequisites": [
+        "edge",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "level",
+      "name": "Level",
+      "aliases": [
+        "Distance from source"
+      ],
+      "short_definition": "The number of edges on the shortest path from the starting vertex to a given vertex.",
+      "prerequisites": [
+        "starting_vertex",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [
+        "Minimum path"
+      ],
+      "short_definition": "The path between two vertices with the fewest edges.",
+      "prerequisites": [
+        "level"
+      ]
+    },
+    {
+      "concept_id": "unweighted_graph",
+      "name": "Unweighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges do not have associated weights.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "bfs_algorithm_step",
+      "name": "BFS Algorithm Steps",
+      "aliases": [
+        "BFS procedure"
+      ],
+      "short_definition": "The sequential operations performed by the BFS algorithm.",
+      "prerequisites": [
+        "queue",
+        "starting_vertex",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "enqueue_operation",
+      "name": "Enqueue Operation",
+      "aliases": [
+        "Add to queue"
+      ],
+      "short_definition": "Adding an element to the rear of a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "dequeue_operation",
+      "name": "Dequeue Operation",
+      "aliases": [
+        "Remove from queue"
+      ],
+      "short_definition": "Removing and returning the element from the front of a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "marking_visited",
+      "name": "Marking Visited",
+      "aliases": [
+        "Visiting a node"
+      ],
+      "short_definition": "Indicating that a vertex has been processed by the traversal algorithm.",
+      "prerequisites": [
+        "vertex",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "iterative_bf",
+      "name": "Iterative BFS",
+      "aliases": [],
+      "short_definition": "Implementing BFS using loops and explicit data structures.",
+      "prerequisites": [
+        "bfs_algorithm_step",
+        "queue",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "bfs_application",
+      "name": "BFS Applications",
+      "aliases": [
+        "Uses of BFS"
+      ],
+      "short_definition": "Real-world problems and scenarios where BFS is applied.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [],
+      "short_definition": "Subgraphs where any two vertices are connected to each other by paths.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "finding_all_path",
+      "name": "Finding All Paths",
+      "aliases": [],
+      "short_definition": "Identifying all possible sequences of edges connecting two vertices.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "graph_representation_choice",
+      "name": "Graph Representation Choice",
+      "aliases": [
+        "Choosing graph data structure"
+      ],
+      "short_definition": "Deciding between adjacency list and adjacency matrix for a graph.",
+      "prerequisites": [
+        "adjacency_list",
+        "adjacency_matrix"
+      ]
+    },
+    {
+      "concept_id": "time_complexity_of_bf",
+      "name": "Time Complexity of BFS",
+      "aliases": [
+        "BFS performance"
+      ],
+      "short_definition": "The measure of how the execution time of BFS scales with input size.",
+      "prerequisites": [
+        "edge",
+        "graph_representation_choice",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "space_complexity_of_bf",
+      "name": "Space Complexity of BFS",
+      "aliases": [
+        "BFS memory usage"
+      ],
+      "short_definition": "The measure of how the memory usage of BFS scales with input size.",
+      "prerequisites": [
+        "graph_representation_choice",
+        "queue",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [],
+      "short_definition": "A connected acyclic graph.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "spanning_tree",
+      "name": "Spanning Tree",
+      "aliases": [],
+      "short_definition": "A subgraph that includes all the vertices of the original graph and is a tree.",
+      "prerequisites": [
+        "graph",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "minimum_spanning_tree",
+      "name": "Minimum Spanning Tree",
+      "aliases": [
+        "MST"
+      ],
+      "short_definition": "A spanning tree of a weighted, undirected graph that has the minimum possible total edge weight.",
+      "prerequisites": [
+        "spanning_tree",
+        "unweighted_graph"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [],
+      "short_definition": "Identifying if a graph contains any cycles.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "bipartite_graph",
+      "name": "Bipartite Graph",
+      "aliases": [],
+      "short_definition": "A graph whose vertices can be divided into two disjoint and independent sets.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "reachability",
+      "name": "Reachability",
+      "aliases": [],
+      "short_definition": "Determining if a path exists between two vertices.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "graph_coloring",
+      "name": "Graph Coloring",
+      "aliases": [],
+      "short_definition": "Assigning colors to vertices such that no two adjacent vertices share the same color.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "topological_sort",
+      "name": "Topological Sort",
+      "aliases": [],
+      "short_definition": "A linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering.",
+      "prerequisites": [
+        "directed_graph"
+      ]
+    },
+    {
+      "concept_id": "web_crawling",
+      "name": "Web Crawling",
+      "aliases": [],
+      "short_definition": "The process of systematically browsing the World Wide Web to create an index of documents.",
+      "prerequisites": [
+        "bfs_application",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "social_network_analysi",
+      "name": "Social Network Analysis",
+      "aliases": [
+        "SNA"
+      ],
+      "short_definition": "Studying social structures through the use of networks and graph theory.",
+      "prerequisites": [
+        "bfs_application",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "network_routing",
+      "name": "Network Routing",
+      "aliases": [],
+      "short_definition": "The process of selecting paths in a network along which to send network traffic.",
+      "prerequisites": [
+        "bfs_application",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "game_theory",
+      "name": "Game Theory",
+      "aliases": [],
+      "short_definition": "The study of strategic decision-making.",
+      "prerequisites": [
+        "bfs_application",
+        "graph"
+      ]
+    }
+  ]
+}

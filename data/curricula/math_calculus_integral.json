@@ -1,0 +1,102 @@
+{
+  "curriculum_id": "math_calculus_integral",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Integrals",
+  "created_at": "2026-03-23T10:53:35.995572",
+  "concepts": [
+    {
+      "concept_id": "antiderivative",
+      "name": "Antiderivatives",
+      "aliases": [
+        "Indefinite Integrals"
+      ],
+      "short_definition": "A function whose derivative is a given function.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "definite_integral",
+      "name": "Definite Integrals",
+      "aliases": [],
+      "short_definition": "The integral of a function over a specific interval, representing the net area under the curve.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculu",
+      "name": "Fundamental Theorem of Calculus",
+      "aliases": [
+        "FTC"
+      ],
+      "short_definition": "Connects differentiation and integration, stating that the definite integral of a function can be found by evaluating its antiderivative at the endpoints of the interval.",
+      "prerequisites": [
+        "antiderivative",
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "riemann_sum",
+      "name": "Riemann Sums",
+      "aliases": [],
+      "short_definition": "Approximating the area under a curve by dividing it into a series of rectangles.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "area_under_curve",
+      "name": "Area Under Curve",
+      "aliases": [],
+      "short_definition": "The region bounded by a function's graph, the x-axis, and the limits of integration.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "integration_technique",
+      "name": "Integration Techniques",
+      "aliases": [],
+      "short_definition": "Methods used to find antiderivatives of complex functions.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "substitution_rule",
+      "name": "Substitution Rule",
+      "aliases": [
+        "u-substitution"
+      ],
+      "short_definition": "A technique for integration that simplifies the integrand by changing the variable.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "integration_by_part",
+      "name": "Integration by Parts",
+      "aliases": [],
+      "short_definition": "A technique for integration derived from the product rule of differentiation.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "improper_integral",
+      "name": "Improper Integrals",
+      "aliases": [],
+      "short_definition": "Integrals with infinite limits of integration or discontinuities within the interval.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "applications_of_integral",
+      "name": "Applications of Integrals",
+      "aliases": [],
+      "short_definition": "Using integrals to solve problems in geometry, physics, economics, and other fields.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    }
+  ]
+}

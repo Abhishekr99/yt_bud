@@ -1,0 +1,395 @@
+{
+  "curriculum_id": "DSA_Graph_Topological sorting",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Topological sorting",
+  "created_at": "2026-03-21T10:41:03.815493",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Directed Graph",
+        "Digraph"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "directed_edge",
+      "name": "Directed Edge",
+      "aliases": [
+        "Arc"
+      ],
+      "short_definition": "A connection between two nodes with a specific direction.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit in a graph, representing an entity.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [
+        "Directed Cycle"
+      ],
+      "short_definition": "A path in a directed graph that starts and ends at the same vertex.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "acyclic_graph",
+      "name": "Acyclic Graph",
+      "aliases": [
+        "DAG"
+      ],
+      "short_definition": "A directed graph that contains no cycles.",
+      "prerequisites": [
+        "cycle",
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "topological_sort",
+      "name": "Topological Sort",
+      "aliases": [
+        "Toposort"
+      ],
+      "short_definition": "A linear ordering of vertices such that for every directed edge from vertex u to vertex v, u comes before v in the ordering.",
+      "prerequisites": [
+        "acyclic_graph",
+        "directed_edge"
+      ]
+    },
+    {
+      "concept_id": "source_vertex",
+      "name": "Source Vertex",
+      "aliases": [
+        "In-degree Zero"
+      ],
+      "short_definition": "A vertex with no incoming edges.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "sink_vertex",
+      "name": "Sink Vertex",
+      "aliases": [
+        "Out-degree Zero"
+      ],
+      "short_definition": "A vertex with no outgoing edges.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "indegree",
+      "name": "In-degree",
+      "aliases": [],
+      "short_definition": "The number of incoming edges to a vertex.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "outdegree",
+      "name": "Out-degree",
+      "aliases": [],
+      "short_definition": "The number of outgoing edges from a vertex.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "kahns_algorithm",
+      "name": "Kahn's Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm for topological sorting using in-degrees and a queue.",
+      "prerequisites": [
+        "indegree",
+        "queue",
+        "source_vertex",
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "depth_first_search",
+      "name": "Depth First Search",
+      "aliases": [
+        "DFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "directed_edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "dfsbased_topological_sort",
+      "name": "DFS-based Topological Sort",
+      "aliases": [],
+      "short_definition": "A topological sorting algorithm that uses Depth First Search.",
+      "prerequisites": [
+        "cycle",
+        "depth_first_search",
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A data structure following the First-In, First-Out (FIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [],
+      "short_definition": "A data structure following the Last-In, First-Out (LIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "A representation of a graph where each vertex has a list of its adjacent vertices.",
+      "prerequisites": [
+        "directed_edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A representation of a graph using a matrix where entries indicate the presence of an edge.",
+      "prerequisites": [
+        "directed_edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "linear_ordering",
+      "name": "Linear Ordering",
+      "aliases": [],
+      "short_definition": "An arrangement of elements in a sequence.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "dependency",
+      "name": "Dependency",
+      "aliases": [],
+      "short_definition": "A relationship where one task or item must be completed before another.",
+      "prerequisites": [
+        "directed_edge"
+      ]
+    },
+    {
+      "concept_id": "task_scheduling",
+      "name": "Task Scheduling",
+      "aliases": [],
+      "short_definition": "The process of ordering tasks to be performed.",
+      "prerequisites": [
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "course_prerequisite",
+      "name": "Course Prerequisites",
+      "aliases": [],
+      "short_definition": "The requirement to complete certain courses before enrolling in others.",
+      "prerequisites": [
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "build_order",
+      "name": "Build Order",
+      "aliases": [],
+      "short_definition": "The sequence in which components of a system should be built.",
+      "prerequisites": [
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [],
+      "short_definition": "The process of identifying if a graph contains any cycles.",
+      "prerequisites": [
+        "cycle",
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [],
+      "short_definition": "A collection of nodes that have already been processed during traversal.",
+      "prerequisites": [
+        "depth_first_search",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [],
+      "short_definition": "A programming technique where a function calls itself.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the execution time of an algorithm.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the memory used by an algorithm.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [],
+      "short_definition": "Methods for storing graph data, such as adjacency lists or matrices.",
+      "prerequisites": [
+        "directed_edge",
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [],
+      "short_definition": "A step-by-step procedure for solving a problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [],
+      "short_definition": "A particular way of organizing and storing data.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "directed_acyclic_graph_propertie",
+      "name": "Directed Acyclic Graph Properties",
+      "aliases": [],
+      "short_definition": "Characteristics specific to graphs without cycles.",
+      "prerequisites": [
+        "acyclic_graph"
+      ]
+    },
+    {
+      "concept_id": "topological_ordering_uniquenes",
+      "name": "Topological Ordering Uniqueness",
+      "aliases": [],
+      "short_definition": "Whether a topological sort for a given DAG is unique.",
+      "prerequisites": [
+        "acyclic_graph",
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "multiple_topological_sort",
+      "name": "Multiple Topological Sorts",
+      "aliases": [],
+      "short_definition": "The existence of more than one valid topological ordering for a DAG.",
+      "prerequisites": [
+        "acyclic_graph",
+        "topological_sort"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "Systematically visiting each vertex in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "backtracking",
+      "name": "Backtracking",
+      "aliases": [],
+      "short_definition": "A general algorithmic technique for finding solutions by incrementally building candidates.",
+      "prerequisites": [
+        "depth_first_search"
+      ]
+    },
+    {
+      "concept_id": "edge_relaxation",
+      "name": "Edge Relaxation",
+      "aliases": [],
+      "short_definition": "A step in graph algorithms where path costs are potentially updated.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [],
+      "short_definition": "The path between two vertices with the minimum possible weight.",
+      "prerequisites": [
+        "directed_edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "longest_path",
+      "name": "Longest Path",
+      "aliases": [],
+      "short_definition": "The path between two vertices with the maximum possible weight.",
+      "prerequisites": [
+        "acyclic_graph",
+        "directed_edge"
+      ]
+    },
+    {
+      "concept_id": "critical_path_method",
+      "name": "Critical Path Method",
+      "aliases": [
+        "CPM"
+      ],
+      "short_definition": "A project management technique for scheduling tasks.",
+      "prerequisites": [
+        "longest_path",
+        "topological_sort"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "curriculum_id": "math_calculus_derivative",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Derivatives",
+  "created_at": "2026-03-23T10:53:30.257558",
+  "concepts": [
+    {
+      "concept_id": "limit",
+      "name": "Limit",
+      "aliases": [
+        "Limits"
+      ],
+      "short_definition": "The value a function approaches as the input approaches some value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "continuity",
+      "name": "Continuity",
+      "aliases": [
+        "Continuous Functions"
+      ],
+      "short_definition": "A function is continuous if its graph can be drawn without lifting the pen.",
+      "prerequisites": [
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "instantaneous_rate_of_change",
+      "name": "Instantaneous Rate of Change",
+      "aliases": [
+        "Instantaneous Velocity",
+        "Slope at a Point"
+      ],
+      "short_definition": "The rate at which a quantity changes at a specific moment.",
+      "prerequisites": [
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "derivative_definition",
+      "name": "Derivative Definition",
+      "aliases": [
+        "Definition of Derivative",
+        "First Principles"
+      ],
+      "short_definition": "The formal definition of a derivative using limits.",
+      "prerequisites": [
+        "instantaneous_rate_of_change",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "derivative_rule",
+      "name": "Derivative Rules",
+      "aliases": [
+        "Differentiation Rules",
+        "Power Rule",
+        "Product Rule",
+        "Quotient Rule",
+        "Chain Rule"
+      ],
+      "short_definition": "Techniques for finding derivatives without using the limit definition.",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_polynomial",
+      "name": "Derivative of Polynomials",
+      "aliases": [
+        "Polynomial Derivatives"
+      ],
+      "short_definition": "Applying differentiation rules to polynomial functions.",
+      "prerequisites": [
+        "derivative_rule"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_trigonometric_function",
+      "name": "Derivative of Trigonometric Functions",
+      "aliases": [
+        "Trig Derivatives"
+      ],
+      "short_definition": "Finding the derivatives of sine, cosine, and other trigonometric functions.",
+      "prerequisites": [
+        "derivative_rule"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_exponential_function",
+      "name": "Derivative of Exponential Functions",
+      "aliases": [
+        "Exponential Derivatives"
+      ],
+      "short_definition": "Finding the derivatives of functions with a variable in the exponent.",
+      "prerequisites": [
+        "derivative_rule",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "higherorder_derivative",
+      "name": "Higher-Order Derivatives",
+      "aliases": [
+        "Second Derivative",
+        "Third Derivative"
+      ],
+      "short_definition": "The derivative of a derivative.",
+      "prerequisites": [
+        "derivative_rule"
+      ]
+    },
+    {
+      "concept_id": "applications_of_derivative",
+      "name": "Applications of Derivatives",
+      "aliases": [
+        "Optimization",
+        "Curve Sketching",
+        "Related Rates"
+      ],
+      "short_definition": "Using derivatives to solve real-world problems and analyze function behavior.",
+      "prerequisites": [
+        "derivative_rule",
+        "higherorder_derivative"
+      ]
+    }
+  ]
+}

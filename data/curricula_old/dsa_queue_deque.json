@@ -1,0 +1,414 @@
+{
+  "curriculum_id": "DSA_queue_Deque",
+  "domain": "DSA",
+  "module": "queue",
+  "topic": "Deque",
+  "created_at": "2026-03-21T11:11:21.550807",
+  "concepts": [
+    {
+      "concept_id": "deque",
+      "name": "Deque",
+      "aliases": [
+        "Double-ended queue"
+      ],
+      "short_definition": "A linear data structure that supports insertion and deletion at both ends.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "abstract_data_type",
+      "name": "Abstract Data Type",
+      "aliases": [
+        "ADT"
+      ],
+      "short_definition": "A mathematical model for data structures, defining operations without specifying implementation.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_data_structure",
+      "name": "Linear Data Structure",
+      "aliases": [],
+      "short_definition": "A data structure where elements are arranged in a sequential manner.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A linear data structure following FIFO principle for operations.",
+      "prerequisites": [
+        "linear_data_structure"
+      ]
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stack",
+      "aliases": [],
+      "short_definition": "A linear data structure following LIFO principle for operations.",
+      "prerequisites": [
+        "linear_data_structure"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add"
+      ],
+      "short_definition": "The operation of adding an element to a data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Remove"
+      ],
+      "short_definition": "The operation of removing an element from a data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "front",
+      "name": "Front",
+      "aliases": [
+        "Head"
+      ],
+      "short_definition": "The beginning of a linear data structure.",
+      "prerequisites": [
+        "linear_data_structure"
+      ]
+    },
+    {
+      "concept_id": "rear",
+      "name": "Rear",
+      "aliases": [
+        "Tail"
+      ],
+      "short_definition": "The end of a linear data structure.",
+      "prerequisites": [
+        "linear_data_structure"
+      ]
+    },
+    {
+      "concept_id": "add_front",
+      "name": "Add Front",
+      "aliases": [
+        "Insert Front",
+        "Push Front"
+      ],
+      "short_definition": "Adds an element to the front of the deque.",
+      "prerequisites": [
+        "deque",
+        "front",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "add_rear",
+      "name": "Add Rear",
+      "aliases": [
+        "Insert Rear",
+        "Push Rear"
+      ],
+      "short_definition": "Adds an element to the rear of the deque.",
+      "prerequisites": [
+        "deque",
+        "insertion",
+        "rear"
+      ]
+    },
+    {
+      "concept_id": "remove_front",
+      "name": "Remove Front",
+      "aliases": [
+        "Delete Front",
+        "Pop Front"
+      ],
+      "short_definition": "Removes and returns the element from the front of the deque.",
+      "prerequisites": [
+        "deletion",
+        "deque",
+        "front"
+      ]
+    },
+    {
+      "concept_id": "remove_rear",
+      "name": "Remove Rear",
+      "aliases": [
+        "Delete Rear",
+        "Pop Rear"
+      ],
+      "short_definition": "Removes and returns the element from the rear of the deque.",
+      "prerequisites": [
+        "deletion",
+        "deque",
+        "rear"
+      ]
+    },
+    {
+      "concept_id": "peek_front",
+      "name": "Peek Front",
+      "aliases": [
+        "Get Front",
+        "Front Element"
+      ],
+      "short_definition": "Returns the element at the front of the deque without removing it.",
+      "prerequisites": [
+        "deque",
+        "front"
+      ]
+    },
+    {
+      "concept_id": "peek_rear",
+      "name": "Peek Rear",
+      "aliases": [
+        "Get Rear",
+        "Rear Element"
+      ],
+      "short_definition": "Returns the element at the rear of the deque without removing it.",
+      "prerequisites": [
+        "deque",
+        "rear"
+      ]
+    },
+    {
+      "concept_id": "is_empty",
+      "name": "Is Empty",
+      "aliases": [
+        "Empty Check"
+      ],
+      "short_definition": "Checks if the deque contains any elements.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "size",
+      "name": "Size",
+      "aliases": [
+        "Length"
+      ],
+      "short_definition": "Returns the number of elements in the deque.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "array_implementation",
+      "name": "Array Implementation",
+      "aliases": [
+        "Array-based Deque"
+      ],
+      "short_definition": "Implementing a deque using an array.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "linked_list_implementation",
+      "name": "Linked List Implementation",
+      "aliases": [
+        "Linked List-based Deque"
+      ],
+      "short_definition": "Implementing a deque using a linked list.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list",
+      "name": "Doubly Linked List",
+      "aliases": [
+        "DLL"
+      ],
+      "short_definition": "A linked list where each node has pointers to both the next and previous nodes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "circular_array",
+      "name": "Circular Array",
+      "aliases": [
+        "Circular Buffer"
+      ],
+      "short_definition": "An array that uses a single, fixed-size buffer as if it were connected end-to-end.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "Measures the efficiency of an algorithm in terms of the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "Measures the amount of memory an algorithm uses.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "amortized_analysi",
+      "name": "Amortized Analysis",
+      "aliases": [],
+      "short_definition": "A way to analyze the average performance of an operation over a sequence of operations.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "arraybased_add_front_complexity",
+      "name": "Array-based Add Front Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of adding an element to the front of an array-based deque.",
+      "prerequisites": [
+        "add_front",
+        "array_implementation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "arraybased_add_rear_complexity",
+      "name": "Array-based Add Rear Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of adding an element to the rear of an array-based deque.",
+      "prerequisites": [
+        "add_rear",
+        "array_implementation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "arraybased_remove_front_complexity",
+      "name": "Array-based Remove Front Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of removing an element from the front of an array-based deque.",
+      "prerequisites": [
+        "array_implementation",
+        "remove_front",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "arraybased_remove_rear_complexity",
+      "name": "Array-based Remove Rear Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of removing an element from the rear of an array-based deque.",
+      "prerequisites": [
+        "array_implementation",
+        "remove_rear",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linked_listbased_add_front_complexity",
+      "name": "Linked List-based Add Front Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of adding an element to the front of a linked list-based deque.",
+      "prerequisites": [
+        "add_front",
+        "linked_list_implementation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linked_listbased_add_rear_complexity",
+      "name": "Linked List-based Add Rear Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of adding an element to the rear of a linked list-based deque.",
+      "prerequisites": [
+        "add_rear",
+        "linked_list_implementation",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linked_listbased_remove_front_complexity",
+      "name": "Linked List-based Remove Front Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of removing an element from the front of a linked list-based deque.",
+      "prerequisites": [
+        "linked_list_implementation",
+        "remove_front",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linked_listbased_remove_rear_complexity",
+      "name": "Linked List-based Remove Rear Complexity",
+      "aliases": [],
+      "short_definition": "Time complexity of removing an element from the rear of a linked list-based deque.",
+      "prerequisites": [
+        "linked_list_implementation",
+        "remove_rear",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "applications_of_deque",
+      "name": "Applications of Deque",
+      "aliases": [
+        "Deque Use Cases"
+      ],
+      "short_definition": "Real-world scenarios where deques are utilized.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "palindrome_check",
+      "name": "Palindrome Check",
+      "aliases": [],
+      "short_definition": "Using a deque to efficiently check if a string is a palindrome.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "sliding_window_problem",
+      "name": "Sliding Window Problems",
+      "aliases": [],
+      "short_definition": "Using deques to solve problems involving a window of elements that slides over a sequence.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "browser_history",
+      "name": "Browser History",
+      "aliases": [],
+      "short_definition": "Simulating back and forward navigation using deques.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "task_scheduling",
+      "name": "Task Scheduling",
+      "aliases": [],
+      "short_definition": "Managing tasks with priorities or deadlines using deques.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "doubleended_priority_queue",
+      "name": "Double-ended Priority Queue",
+      "aliases": [
+        "DEPQ"
+      ],
+      "short_definition": "A variation of a priority queue that allows efficient retrieval of both minimum and maximum elements.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "generic_programming",
+      "name": "Generic Programming",
+      "aliases": [],
+      "short_definition": "Writing code that can work with different data types without modification.",
+      "prerequisites": []
+    }
+  ]
+}

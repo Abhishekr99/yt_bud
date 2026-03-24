@@ -1,0 +1,127 @@
+{
+  "curriculum_id": "math_linear_algebra_vector_space",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Vector Space",
+  "created_at": "2026-03-23T10:53:59.645437",
+  "concepts": [
+    {
+      "concept_id": "vector",
+      "name": "Vector",
+      "aliases": [
+        "element",
+        "point"
+      ],
+      "short_definition": "An object with magnitude and direction, often represented as a list of numbers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "linear space"
+      ],
+      "short_definition": "A set of vectors where addition and scalar multiplication are defined and follow specific axioms.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "scalar",
+      "name": "Scalar",
+      "aliases": [
+        "number"
+      ],
+      "short_definition": "A quantity that has magnitude but no direction, used for scaling vectors.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vector_addition",
+      "name": "Vector Addition",
+      "aliases": [
+        "vector sum"
+      ],
+      "short_definition": "The operation of combining two vectors to produce a resultant vector.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "scalar_multiplication",
+      "name": "Scalar Multiplication",
+      "aliases": [
+        "scaling"
+      ],
+      "short_definition": "The operation of multiplying a vector by a scalar, changing its magnitude.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "axioms_of_vector_space",
+      "name": "Axioms of Vector Space",
+      "aliases": [
+        "vector space properties"
+      ],
+      "short_definition": "The fundamental rules that a set and operations must satisfy to be a vector space.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "subspace",
+      "name": "Subspace",
+      "aliases": [
+        "vector subspace"
+      ],
+      "short_definition": "A subset of a vector space that is itself a vector space under the same operations.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [
+        "vector combination"
+      ],
+      "short_definition": "A sum of vectors, each multiplied by a scalar.",
+      "prerequisites": [
+        "scalar",
+        "scalar_multiplication",
+        "vector",
+        "vector_addition"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [
+        "linear span"
+      ],
+      "short_definition": "The set of all possible linear combinations of a given set of vectors.",
+      "prerequisites": [
+        "linear_combination",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [
+        "vector basis"
+      ],
+      "short_definition": "A minimal set of vectors that spans a vector space and are linearly independent.",
+      "prerequisites": [
+        "span",
+        "vector"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "curriculum_id": "MATH_Probability_Bayes Theorem",
+  "domain": "MATH",
+  "module": "Probability",
+  "topic": "Bayes Theorem",
+  "created_at": "2026-03-21T11:14:48.302345",
+  "concepts": [
+    {
+      "concept_id": "probability",
+      "name": "Probability",
+      "aliases": [
+        "Chance",
+        "Likelihood"
+      ],
+      "short_definition": "The measure of the likelihood that an event will occur.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "event",
+      "name": "Event",
+      "aliases": [
+        "Outcome"
+      ],
+      "short_definition": "A specific result or occurrence in a probability experiment.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "sample_space",
+      "name": "Sample Space",
+      "aliases": [
+        "All Outcomes"
+      ],
+      "short_definition": "The set of all possible outcomes of a random experiment.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "conditional_probability",
+      "name": "Conditional Probability",
+      "aliases": [
+        "P(A|B)"
+      ],
+      "short_definition": "The probability of an event occurring given that another event has already occurred.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "joint_probability",
+      "name": "Joint Probability",
+      "aliases": [
+        "P(A and B)"
+      ],
+      "short_definition": "The probability of two events occurring simultaneously.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "marginal_probability",
+      "name": "Marginal Probability",
+      "aliases": [
+        "P(A)"
+      ],
+      "short_definition": "The probability of a single event occurring, irrespective of other events.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "independence",
+      "name": "Independence",
+      "aliases": [
+        "Independent Events"
+      ],
+      "short_definition": "When the occurrence of one event does not affect the probability of another.",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "dependence",
+      "name": "Dependence",
+      "aliases": [
+        "Dependent Events"
+      ],
+      "short_definition": "When the occurrence of one event influences the probability of another.",
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "law_of_total_probability",
+      "name": "Law of Total Probability",
+      "aliases": [
+        "Total Probability Rule"
+      ],
+      "short_definition": "The sum of probabilities of all mutually exclusive and exhaustive events equals 1.",
+      "prerequisites": [
+        "conditional_probability",
+        "joint_probability",
+        "marginal_probability"
+      ]
+    },
+    {
+      "concept_id": "bayes_theorem",
+      "name": "Bayes' Theorem",
+      "aliases": [
+        "Bayes' Rule"
+      ],
+      "short_definition": "A formula that describes the probability of an event based on prior knowledge of conditions that might be related to the event.",
+      "prerequisites": [
+        "conditional_probability",
+        "joint_probability",
+        "law_of_total_probability",
+        "marginal_probability"
+      ]
+    },
+    {
+      "concept_id": "prior_probability",
+      "name": "Prior Probability",
+      "aliases": [
+        "Prior Belief"
+      ],
+      "short_definition": "The initial probability of an event before considering new evidence.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "posterior_probability",
+      "name": "Posterior Probability",
+      "aliases": [
+        "Updated Belief"
+      ],
+      "short_definition": "The updated probability of an event after considering new evidence.",
+      "prerequisites": [
+        "bayes_theorem",
+        "prior_probability"
+      ]
+    },
+    {
+      "concept_id": "likelihood",
+      "name": "Likelihood",
+      "aliases": [
+        "Likelihood Function"
+      ],
+      "short_definition": "The probability of observing the data given a specific hypothesis or parameter value.",
+      "prerequisites": [
+        "bayes_theorem",
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "evidence",
+      "name": "Evidence",
+      "aliases": [
+        "Marginal Likelihood"
+      ],
+      "short_definition": "The probability of the observed data, averaged over all possible hypotheses.",
+      "prerequisites": [
+        "bayes_theorem",
+        "law_of_total_probability"
+      ]
+    },
+    {
+      "concept_id": "hypothesi",
+      "name": "Hypothesis",
+      "aliases": [
+        "Model"
+      ],
+      "short_definition": "A proposed explanation or statement that can be tested.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "data",
+      "name": "Data",
+      "aliases": [
+        "Observations"
+      ],
+      "short_definition": "Information collected from an experiment or observation.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "updating_probabilitie",
+      "name": "Updating Probabilities",
+      "aliases": [
+        "Bayesian Updating"
+      ],
+      "short_definition": "The process of revising probability estimates as new evidence becomes available.",
+      "prerequisites": [
+        "bayes_theorem",
+        "posterior_probability",
+        "prior_probability"
+      ]
+    },
+    {
+      "concept_id": "diagnostic_testing",
+      "name": "Diagnostic Testing",
+      "aliases": [
+        "Medical Testing"
+      ],
+      "short_definition": "Using tests to determine the presence or absence of a condition.",
+      "prerequisites": [
+        "bayes_theorem",
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "sensitivity",
+      "name": "Sensitivity",
+      "aliases": [
+        "True Positive Rate"
+      ],
+      "short_definition": "The probability that a test correctly identifies a positive case.",
+      "prerequisites": [
+        "conditional_probability",
+        "diagnostic_testing"
+      ]
+    },
+    {
+      "concept_id": "specificity",
+      "name": "Specificity",
+      "aliases": [
+        "True Negative Rate"
+      ],
+      "short_definition": "The probability that a test correctly identifies a negative case.",
+      "prerequisites": [
+        "conditional_probability",
+        "diagnostic_testing"
+      ]
+    },
+    {
+      "concept_id": "false_positive_rate",
+      "name": "False Positive Rate",
+      "aliases": [
+        "Type I Error Rate"
+      ],
+      "short_definition": "The probability that a test incorrectly identifies a negative case as positive.",
+      "prerequisites": [
+        "conditional_probability",
+        "diagnostic_testing"
+      ]
+    },
+    {
+      "concept_id": "false_negative_rate",
+      "name": "False Negative Rate",
+      "aliases": [
+        "Type II Error Rate"
+      ],
+      "short_definition": "The probability that a test incorrectly identifies a positive case as negative.",
+      "prerequisites": [
+        "conditional_probability",
+        "diagnostic_testing"
+      ]
+    },
+    {
+      "concept_id": "prevalence",
+      "name": "Prevalence",
+      "aliases": [
+        "Base Rate"
+      ],
+      "short_definition": "The proportion of a population that has a specific condition at a given time.",
+      "prerequisites": [
+        "diagnostic_testing",
+        "prior_probability"
+      ]
+    },
+    {
+      "concept_id": "positive_predictive_value",
+      "name": "Positive Predictive Value",
+      "aliases": [
+        "PPV"
+      ],
+      "short_definition": "The probability that a positive test result truly indicates the presence of the condition.",
+      "prerequisites": [
+        "bayes_theorem",
+        "diagnostic_testing",
+        "false_positive_rate",
+        "prevalence",
+        "sensitivity"
+      ]
+    },
+    {
+      "concept_id": "negative_predictive_value",
+      "name": "Negative Predictive Value",
+      "aliases": [
+        "NPV"
+      ],
+      "short_definition": "The probability that a negative test result truly indicates the absence of the condition.",
+      "prerequisites": [
+        "bayes_theorem",
+        "diagnostic_testing",
+        "false_negative_rate",
+        "prevalence",
+        "specificity"
+      ]
+    },
+    {
+      "concept_id": "bayesian_inference",
+      "name": "Bayesian Inference",
+      "aliases": [
+        "Bayesian Statistics"
+      ],
+      "short_definition": "A statistical method that uses Bayes' Theorem to update probabilities based on new data.",
+      "prerequisites": [
+        "bayes_theorem",
+        "posterior_probability",
+        "prior_probability"
+      ]
+    },
+    {
+      "concept_id": "statistical_model",
+      "name": "Statistical Model",
+      "aliases": [
+        "Model"
+      ],
+      "short_definition": "A mathematical representation of a real-world process or phenomenon.",
+      "prerequisites": [
+        "bayesian_inference"
+      ]
+    },
+    {
+      "concept_id": "parameter_estimation",
+      "name": "Parameter Estimation",
+      "aliases": [
+        "Parameter Learning"
+      ],
+      "short_definition": "The process of estimating the values of parameters in a statistical model.",
+      "prerequisites": [
+        "bayesian_inference",
+        "statistical_model"
+      ]
+    },
+    {
+      "concept_id": "machine_learning",
+      "name": "Machine Learning",
+      "aliases": [
+        "ML"
+      ],
+      "short_definition": "A field of artificial intelligence that enables systems to learn from data.",
+      "prerequisites": [
+        "bayesian_inference"
+      ]
+    },
+    {
+      "concept_id": "classification",
+      "name": "Classification",
+      "aliases": [
+        "Categorization"
+      ],
+      "short_definition": "Assigning data points to predefined categories or classes.",
+      "prerequisites": [
+        "bayes_theorem",
+        "machine_learning"
+      ]
+    },
+    {
+      "concept_id": "nave_bayes_classifier",
+      "name": "Naïve Bayes Classifier",
+      "aliases": [
+        "NBC"
+      ],
+      "short_definition": "A simple probabilistic classifier based on applying Bayes' Theorem with strong independence assumptions.",
+      "prerequisites": [
+        "bayes_theorem",
+        "classification",
+        "independence"
+      ]
+    },
+    {
+      "concept_id": "spam_filtering",
+      "name": "Spam Filtering",
+      "aliases": [
+        "Email Filtering"
+      ],
+      "short_definition": "Using algorithms to identify and separate unwanted email messages.",
+      "prerequisites": [
+        "nave_bayes_classifier"
+      ]
+    },
+    {
+      "concept_id": "text_classification",
+      "name": "Text Classification",
+      "aliases": [
+        "Document Classification"
+      ],
+      "short_definition": "Categorizing text documents into predefined groups.",
+      "prerequisites": [
+        "nave_bayes_classifier"
+      ]
+    },
+    {
+      "concept_id": "causal_inference",
+      "name": "Causal Inference",
+      "aliases": [
+        "Causality"
+      ],
+      "short_definition": "Determining cause-and-effect relationships between variables.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "ab_testing",
+      "name": "A/B Testing",
+      "aliases": [
+        "Split Testing"
+      ],
+      "short_definition": "Comparing two versions of something to see which performs better.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "decision_theory",
+      "name": "Decision Theory",
+      "aliases": [
+        "Decision Making"
+      ],
+      "short_definition": "A framework for making optimal decisions under uncertainty.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "risk_assessment",
+      "name": "Risk Assessment",
+      "aliases": [
+        "Risk Analysis"
+      ],
+      "short_definition": "Evaluating the likelihood and impact of potential negative events.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "bayesian_network",
+      "name": "Bayesian Networks",
+      "aliases": [
+        "Belief Networks"
+      ],
+      "short_definition": "Probabilistic graphical models that represent conditional dependencies between variables.",
+      "prerequisites": [
+        "bayes_theorem",
+        "conditional_probability"
+      ]
+    },
+    {
+      "concept_id": "probabilistic_reasoning",
+      "name": "Probabilistic Reasoning",
+      "aliases": [
+        "Uncertainty Reasoning"
+      ],
+      "short_definition": "Reasoning with uncertain information using probability theory.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    }
+  ]
+}

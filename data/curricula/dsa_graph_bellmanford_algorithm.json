@@ -1,0 +1,116 @@
+{
+  "curriculum_id": "dsa_graph_bellmanford_algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Bellman-Ford algorithm",
+  "created_at": "2026-03-23T10:51:58.505640",
+  "concepts": [
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Adjacency List",
+        "Adjacency Matrix"
+      ],
+      "short_definition": "Methods for storing graph data, such as lists of neighbors or a matrix of connections.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [
+        "Edge Weights"
+      ],
+      "short_definition": "A graph where each edge has an associated numerical value.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "negative_edge_weight",
+      "name": "Negative Edge Weights",
+      "aliases": [
+        "Negative Weights"
+      ],
+      "short_definition": "Edges in a weighted graph that have a negative numerical value.",
+      "prerequisites": [
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [
+        "Minimum Path"
+      ],
+      "short_definition": "The path between two vertices in a graph with the smallest total edge weight.",
+      "prerequisites": [
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "single_source_shortest_path",
+      "name": "Single Source Shortest Path",
+      "aliases": [
+        "SSSP"
+      ],
+      "short_definition": "Finding the shortest paths from a single starting vertex to all other vertices in the graph.",
+      "prerequisites": [
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "relaxation",
+      "name": "Relaxation",
+      "aliases": [
+        "Edge Relaxation"
+      ],
+      "short_definition": "The process of updating the estimated shortest distance to a vertex if a shorter path is found.",
+      "prerequisites": [
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "bellmanford_algorithm",
+      "name": "Bellman-Ford Algorithm",
+      "aliases": [
+        "Bellman-Ford"
+      ],
+      "short_definition": "An algorithm that finds the shortest paths from a single source vertex to all other vertices in a weighted graph, even with negative edge weights.",
+      "prerequisites": [
+        "negative_edge_weight",
+        "relaxation",
+        "single_source_shortest_path"
+      ]
+    },
+    {
+      "concept_id": "negative_cycle_detection",
+      "name": "Negative Cycle Detection",
+      "aliases": [
+        "Cycle Detection"
+      ],
+      "short_definition": "Identifying if a graph contains a cycle where the sum of edge weights is negative.",
+      "prerequisites": [
+        "bellmanford_algorithm"
+      ]
+    },
+    {
+      "concept_id": "dynamic_programming",
+      "name": "Dynamic Programming",
+      "aliases": [
+        "DP"
+      ],
+      "short_definition": "An algorithmic technique that solves problems by breaking them down into smaller overlapping subproblems.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "iterative_improvement",
+      "name": "Iterative Improvement",
+      "aliases": [
+        "Refinement"
+      ],
+      "short_definition": "A general approach where a solution is progressively improved through repeated steps.",
+      "prerequisites": []
+    }
+  ]
+}

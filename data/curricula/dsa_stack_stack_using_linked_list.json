@@ -1,0 +1,121 @@
+{
+  "curriculum_id": "dsa_stack_stack_using_linked_list",
+  "domain": "DSA",
+  "module": "Stack",
+  "topic": "Stack using linked list",
+  "created_at": "2026-03-23T10:53:00.663654",
+  "concepts": [
+    {
+      "concept_id": "linked_list_basic",
+      "name": "Linked List Basics",
+      "aliases": [
+        "LL Fundamentals"
+      ],
+      "short_definition": "Understanding nodes, data, and pointers in a linked list structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node_structure",
+      "name": "Node Structure",
+      "aliases": [
+        "LL Node"
+      ],
+      "short_definition": "The fundamental building block of a linked list, containing data and a reference to the next node.",
+      "prerequisites": [
+        "linked_list_basic"
+      ]
+    },
+    {
+      "concept_id": "stack_operation",
+      "name": "Stack Operations",
+      "aliases": [
+        "Stack ADT"
+      ],
+      "short_definition": "The core functions of a stack: push, pop, peek, and isEmpty.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "push_operation",
+      "name": "Push Operation",
+      "aliases": [
+        "Add to Stack"
+      ],
+      "short_definition": "Adding an element to the top of the stack.",
+      "prerequisites": [
+        "linked_list_basic",
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "pop_operation",
+      "name": "Pop Operation",
+      "aliases": [
+        "Remove from Stack"
+      ],
+      "short_definition": "Removing and returning the element from the top of the stack.",
+      "prerequisites": [
+        "linked_list_basic",
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "peek_operation",
+      "name": "Peek Operation",
+      "aliases": [
+        "Top of Stack"
+      ],
+      "short_definition": "Returning the element at the top of the stack without removing it.",
+      "prerequisites": [
+        "linked_list_basic",
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "isempty_operation",
+      "name": "isEmpty Operation",
+      "aliases": [
+        "Check Empty Stack"
+      ],
+      "short_definition": "Determining if the stack contains any elements.",
+      "prerequisites": [
+        "linked_list_basic",
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "Stack Top"
+      ],
+      "short_definition": "A pointer that always points to the first node (top) of the linked list representing the stack.",
+      "prerequisites": [
+        "linked_list_basic",
+        "stack_operation"
+      ]
+    },
+    {
+      "concept_id": "dynamic_memory",
+      "name": "Dynamic Memory",
+      "aliases": [
+        "Memory Allocation"
+      ],
+      "short_definition": "The ability of the linked list to grow or shrink as needed by allocating and deallocating memory.",
+      "prerequisites": [
+        "linked_list_basic"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Performance Analysis"
+      ],
+      "short_definition": "Analyzing the efficiency of stack operations when implemented using a linked list.",
+      "prerequisites": [
+        "linked_list_basic",
+        "stack_operation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "curriculum_id": "DSA_Graph_Disjoint Set Union (Union-Find)",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Disjoint Set Union (Union-Find)",
+  "created_at": "2026-03-21T10:40:17.933831",
+  "concepts": [
+    {
+      "concept_id": "disjoint_set",
+      "name": "Disjoint Sets",
+      "aliases": [
+        "Disjoint Set Data Structure"
+      ],
+      "short_definition": "A collection of sets where no element belongs to more than one set.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "unionfind_data_structure",
+      "name": "Union-Find Data Structure",
+      "aliases": [
+        "Disjoint Set Union",
+        "DSU",
+        "Union-Find"
+      ],
+      "short_definition": "A data structure that tracks a set of elements partitioned into a number of disjoint subsets.",
+      "prerequisites": [
+        "disjoint_set"
+      ]
+    },
+    {
+      "concept_id": "find_operation",
+      "name": "Find Operation",
+      "aliases": [
+        "Find",
+        "Representative"
+      ],
+      "short_definition": "Determines which subset a particular element is in. Returns a representative of that subset.",
+      "prerequisites": [
+        "disjoint_set",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "union_operation",
+      "name": "Union Operation",
+      "aliases": [
+        "Union",
+        "Merge"
+      ],
+      "short_definition": "Combines two subsets into a single subset.",
+      "prerequisites": [
+        "disjoint_set",
+        "find_operation",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "parent_array",
+      "name": "Parent Array",
+      "aliases": [
+        "Parent Pointer"
+      ],
+      "short_definition": "An array where each element stores the parent of that element in its set's tree representation.",
+      "prerequisites": [
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "root_element",
+      "name": "Root Element",
+      "aliases": [
+        "Representative Element"
+      ],
+      "short_definition": "The element in a set that is its own parent, serving as the identifier for the set.",
+      "prerequisites": [
+        "find_operation",
+        "parent_array"
+      ]
+    },
+    {
+      "concept_id": "tree_representation",
+      "name": "Tree Representation",
+      "aliases": [
+        "Forest"
+      ],
+      "short_definition": "Each disjoint set is represented as a tree, with the root being the representative.",
+      "prerequisites": [
+        "disjoint_set",
+        "parent_array"
+      ]
+    },
+    {
+      "concept_id": "path_compression",
+      "name": "Path Compression",
+      "aliases": [
+        "Path Halving"
+      ],
+      "short_definition": "An optimization for the Find operation that flattens the tree by making every node on the path point directly to the root.",
+      "prerequisites": [
+        "find_operation",
+        "tree_representation"
+      ]
+    },
+    {
+      "concept_id": "union_by_rank",
+      "name": "Union by Rank",
+      "aliases": [
+        "Union by Height"
+      ],
+      "short_definition": "An optimization for the Union operation that attaches the shorter tree to the root of the taller tree.",
+      "prerequisites": [
+        "tree_representation",
+        "union_operation"
+      ]
+    },
+    {
+      "concept_id": "union_by_size",
+      "name": "Union by Size",
+      "aliases": [],
+      "short_definition": "An optimization for the Union operation that attaches the smaller tree to the root of the larger tree.",
+      "prerequisites": [
+        "tree_representation",
+        "union_operation"
+      ]
+    },
+    {
+      "concept_id": "rank_array",
+      "name": "Rank Array",
+      "aliases": [
+        "Height Array"
+      ],
+      "short_definition": "An array used with Union by Rank to store the rank (or height) of each tree.",
+      "prerequisites": [
+        "tree_representation",
+        "union_by_rank"
+      ]
+    },
+    {
+      "concept_id": "size_array",
+      "name": "Size Array",
+      "aliases": [],
+      "short_definition": "An array used with Union by Size to store the size of each tree.",
+      "prerequisites": [
+        "tree_representation",
+        "union_by_size"
+      ]
+    },
+    {
+      "concept_id": "amortized_analysi",
+      "name": "Amortized Analysis",
+      "aliases": [],
+      "short_definition": "Analyzing the average performance of an operation over a sequence of operations.",
+      "prerequisites": [
+        "path_compression",
+        "union_by_rank",
+        "union_by_size",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "inverse_ackermann_function",
+      "name": "Inverse Ackermann Function",
+      "aliases": [
+        "Alpha Function"
+      ],
+      "short_definition": "A function that grows extremely slowly, used to describe the near-constant time complexity of DSU operations with optimizations.",
+      "prerequisites": [
+        "amortized_analysi",
+        "path_compression",
+        "union_by_rank",
+        "union_by_size"
+      ]
+    },
+    {
+      "concept_id": "kruskals_algorithm",
+      "name": "Kruskal's Algorithm",
+      "aliases": [],
+      "short_definition": "A greedy algorithm to find a Minimum Spanning Tree (MST) for a connected, undirected graph.",
+      "prerequisites": [
+        "edge",
+        "graph",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "minimum_spanning_tree",
+      "name": "Minimum Spanning Tree",
+      "aliases": [
+        "MST"
+      ],
+      "short_definition": "A subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.",
+      "prerequisites": [
+        "cycle",
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [],
+      "short_definition": "A subgraph in which any two vertices are connected to each other by paths, and which is connected to no additional vertices in the supergraph.",
+      "prerequisites": [
+        "graph",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [],
+      "short_definition": "Identifying if a graph contains any cycles.",
+      "prerequisites": [
+        "graph",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [],
+      "short_definition": "A data structure consisting of a set of vertices and a set of edges connecting pairs of vertices.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit of a graph, representing an entity or point.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [],
+      "short_definition": "A path in a graph that starts and ends at the same vertex, and visits other vertices in between.",
+      "prerequisites": [
+        "graph",
+        "path"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of vertices in a graph such that each adjacent pair of vertices is connected by an edge.",
+      "prerequisites": [
+        "graph",
+        "vertex"
+      ]
+    },
+    {
+      "concept_id": "disjoint_set_initialization",
+      "name": "Disjoint Set Initialization",
+      "aliases": [],
+      "short_definition": "The process of creating the initial state of the DSU, where each element is in its own set.",
+      "prerequisites": [
+        "parent_array",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "element",
+      "name": "Element",
+      "aliases": [
+        "Item"
+      ],
+      "short_definition": "A single entity that can be part of a disjoint set.",
+      "prerequisites": [
+        "disjoint_set"
+      ]
+    },
+    {
+      "concept_id": "set_representative",
+      "name": "Set Representative",
+      "aliases": [
+        "Set ID"
+      ],
+      "short_definition": "The unique identifier for a particular disjoint set, typically the root of its tree.",
+      "prerequisites": [
+        "find_operation",
+        "root_element"
+      ]
+    },
+    {
+      "concept_id": "forest",
+      "name": "Forest",
+      "aliases": [],
+      "short_definition": "A collection of disjoint trees, representing the state of the DSU.",
+      "prerequisites": [
+        "disjoint_set",
+        "tree_representation"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "The amount of time an algorithm takes to run as a function of the input size.",
+      "prerequisites": [
+        "amortized_analysi",
+        "inverse_ackermann_function"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "The amount of memory an algorithm uses as a function of the input size.",
+      "prerequisites": [
+        "parent_array",
+        "rank_array",
+        "size_array"
+      ]
+    },
+    {
+      "concept_id": "applications_of_dsu",
+      "name": "Applications of DSU",
+      "aliases": [],
+      "short_definition": "Real-world problems and algorithms where the Disjoint Set Union data structure is effectively used.",
+      "prerequisites": [
+        "connected_component",
+        "cycle_detection",
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "union_by_height_optimization",
+      "name": "Union by Height Optimization",
+      "aliases": [],
+      "short_definition": "Synonym for Union by Rank.",
+      "prerequisites": [
+        "union_by_rank"
+      ]
+    },
+    {
+      "concept_id": "union_by_size_optimization",
+      "name": "Union by Size Optimization",
+      "aliases": [],
+      "short_definition": "Synonym for Union by Size.",
+      "prerequisites": [
+        "union_by_size"
+      ]
+    },
+    {
+      "concept_id": "flattening_the_tree",
+      "name": "Flattening the Tree",
+      "aliases": [],
+      "short_definition": "The process achieved by path compression, making tree structures more shallow.",
+      "prerequisites": [
+        "path_compression",
+        "tree_representation"
+      ]
+    },
+    {
+      "concept_id": "graph_connectivity",
+      "name": "Graph Connectivity",
+      "aliases": [],
+      "short_definition": "The property of a graph that describes how well its vertices are connected.",
+      "prerequisites": [
+        "connected_component",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge_list",
+      "name": "Edge List",
+      "aliases": [],
+      "short_definition": "A representation of a graph where edges are stored in a list.",
+      "prerequisites": [
+        "edge",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "disjoint_set_operation",
+      "name": "Disjoint Set Operations",
+      "aliases": [],
+      "short_definition": "The fundamental actions performed on a Disjoint Set Union data structure: initialization, find, and union.",
+      "prerequisites": [
+        "disjoint_set_initialization",
+        "find_operation",
+        "union_operation",
+        "unionfind_data_structure"
+      ]
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [],
+      "short_definition": "A particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [],
+      "short_definition": "A step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations.",
+      "prerequisites": []
+    }
+  ]
+}

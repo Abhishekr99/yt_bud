@@ -1,0 +1,429 @@
+{
+  "curriculum_id": "MATH_Probability_Random Variables and Probability Distributions",
+  "domain": "MATH",
+  "module": "Probability",
+  "topic": "Random Variables and Probability Distributions",
+  "created_at": "2026-03-21T11:15:13.582375",
+  "concepts": [
+    {
+      "concept_id": "random_variable",
+      "name": "Random Variable",
+      "aliases": [
+        "RV"
+      ],
+      "short_definition": "A variable whose value is a numerical outcome of a random phenomenon.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "discrete_random_variable",
+      "name": "Discrete Random Variable",
+      "aliases": [
+        "Discrete RV"
+      ],
+      "short_definition": "A random variable that can only take a finite or countably infinite number of values.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "continuous_random_variable",
+      "name": "Continuous Random Variable",
+      "aliases": [
+        "Continuous RV"
+      ],
+      "short_definition": "A random variable that can take any value within a given range.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "probability_mass_function",
+      "name": "Probability Mass Function",
+      "aliases": [
+        "PMF"
+      ],
+      "short_definition": "The function that gives the probability that a discrete random variable is exactly equal to some value.",
+      "prerequisites": [
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "probability_density_function",
+      "name": "Probability Density Function",
+      "aliases": [
+        "PDF"
+      ],
+      "short_definition": "The function whose integral over a given range gives the probability that a continuous random variable falls within that range.",
+      "prerequisites": [
+        "continuous_random_variable"
+      ]
+    },
+    {
+      "concept_id": "cumulative_distribution_function",
+      "name": "Cumulative Distribution Function",
+      "aliases": [
+        "CDF"
+      ],
+      "short_definition": "The function that gives the probability that a random variable is less than or equal to a certain value.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "expected_value",
+      "name": "Expected Value",
+      "aliases": [
+        "Mean",
+        "E[X]"
+      ],
+      "short_definition": "The weighted average of all possible values of a random variable.",
+      "prerequisites": [
+        "probability_density_function",
+        "probability_mass_function",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "variance",
+      "name": "Variance",
+      "aliases": [
+        "Var(X)"
+      ],
+      "short_definition": "A measure of the spread or dispersion of a random variable's values around its expected value.",
+      "prerequisites": [
+        "expected_value",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "standard_deviation",
+      "name": "Standard Deviation",
+      "aliases": [
+        "SD",
+        "sigma"
+      ],
+      "short_definition": "The square root of the variance, providing a measure of spread in the same units as the random variable.",
+      "prerequisites": [
+        "variance"
+      ]
+    },
+    {
+      "concept_id": "bernoulli_distribution",
+      "name": "Bernoulli Distribution",
+      "aliases": [],
+      "short_definition": "A discrete distribution for a random variable with two possible outcomes (success/failure).",
+      "prerequisites": [
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "binomial_distribution",
+      "name": "Binomial Distribution",
+      "aliases": [],
+      "short_definition": "A discrete distribution for the number of successes in a fixed number of independent Bernoulli trials.",
+      "prerequisites": [
+        "bernoulli_distribution",
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "poisson_distribution",
+      "name": "Poisson Distribution",
+      "aliases": [],
+      "short_definition": "A discrete distribution for the number of events occurring in a fixed interval of time or space.",
+      "prerequisites": [
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "geometric_distribution",
+      "name": "Geometric Distribution",
+      "aliases": [],
+      "short_definition": "A discrete distribution for the number of Bernoulli trials needed to get the first success.",
+      "prerequisites": [
+        "bernoulli_distribution",
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "uniform_distribution_discrete",
+      "name": "Uniform Distribution (Discrete)",
+      "aliases": [
+        "Discrete Uniform"
+      ],
+      "short_definition": "A discrete distribution where all possible outcomes have equal probability.",
+      "prerequisites": [
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "uniform_distribution_continuou",
+      "name": "Uniform Distribution (Continuous)",
+      "aliases": [
+        "Continuous Uniform"
+      ],
+      "short_definition": "A continuous distribution where all values within a given interval have equal probability density.",
+      "prerequisites": [
+        "continuous_random_variable",
+        "probability_density_function"
+      ]
+    },
+    {
+      "concept_id": "exponential_distribution",
+      "name": "Exponential Distribution",
+      "aliases": [],
+      "short_definition": "A continuous distribution for the time until an event occurs in a Poisson process.",
+      "prerequisites": [
+        "continuous_random_variable",
+        "probability_density_function"
+      ]
+    },
+    {
+      "concept_id": "normal_distribution",
+      "name": "Normal Distribution",
+      "aliases": [
+        "Gaussian Distribution"
+      ],
+      "short_definition": "A symmetric, bell-shaped continuous distribution that is fundamental in statistics.",
+      "prerequisites": [
+        "continuous_random_variable",
+        "probability_density_function"
+      ]
+    },
+    {
+      "concept_id": "standard_normal_distribution",
+      "name": "Standard Normal Distribution",
+      "aliases": [
+        "Z-distribution"
+      ],
+      "short_definition": "A normal distribution with a mean of 0 and a standard deviation of 1.",
+      "prerequisites": [
+        "normal_distribution"
+      ]
+    },
+    {
+      "concept_id": "central_limit_theorem",
+      "name": "Central Limit Theorem",
+      "aliases": [
+        "CLT"
+      ],
+      "short_definition": "States that the distribution of sample means approaches a normal distribution as sample size increases.",
+      "prerequisites": [
+        "expected_value",
+        "normal_distribution",
+        "variance"
+      ]
+    },
+    {
+      "concept_id": "joint_probability_distribution",
+      "name": "Joint Probability Distribution",
+      "aliases": [
+        "Joint PMF",
+        "Joint PDF"
+      ],
+      "short_definition": "Describes the probabilities of two or more random variables taking on specific values or ranges.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "marginal_probability_distribution",
+      "name": "Marginal Probability Distribution",
+      "aliases": [
+        "Marginal PMF",
+        "Marginal PDF"
+      ],
+      "short_definition": "The probability distribution of a single random variable from a set of random variables.",
+      "prerequisites": [
+        "joint_probability_distribution"
+      ]
+    },
+    {
+      "concept_id": "conditional_probability_distribution",
+      "name": "Conditional Probability Distribution",
+      "aliases": [
+        "Conditional PMF",
+        "Conditional PDF"
+      ],
+      "short_definition": "The probability distribution of a random variable given that another random variable has taken a specific value.",
+      "prerequisites": [
+        "joint_probability_distribution"
+      ]
+    },
+    {
+      "concept_id": "covariance",
+      "name": "Covariance",
+      "aliases": [
+        "Cov(X,Y)"
+      ],
+      "short_definition": "A measure of how much two random variables change together.",
+      "prerequisites": [
+        "expected_value",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "correlation_coefficient",
+      "name": "Correlation Coefficient",
+      "aliases": [
+        "rho",
+        "r"
+      ],
+      "short_definition": "A standardized measure of the linear relationship between two random variables.",
+      "prerequisites": [
+        "covariance",
+        "variance"
+      ]
+    },
+    {
+      "concept_id": "independence_of_random_variable",
+      "name": "Independence of Random Variables",
+      "aliases": [
+        "Independent RVs"
+      ],
+      "short_definition": "Two random variables are independent if the outcome of one does not affect the outcome of the other.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "moment_generating_function",
+      "name": "Moment Generating Function",
+      "aliases": [
+        "MGF"
+      ],
+      "short_definition": "A function used to derive moments of a probability distribution.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "chebyshevs_inequality",
+      "name": "Chebyshev's Inequality",
+      "aliases": [],
+      "short_definition": "Provides a bound on the probability that a random variable deviates from its mean.",
+      "prerequisites": [
+        "expected_value",
+        "random_variable",
+        "variance"
+      ]
+    },
+    {
+      "concept_id": "law_of_large_number",
+      "name": "Law of Large Numbers",
+      "aliases": [
+        "LLN"
+      ],
+      "short_definition": "States that the average of the results obtained from a large number of trials should be close to the expected value.",
+      "prerequisites": [
+        "expected_value",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "multinomial_distribution",
+      "name": "Multinomial Distribution",
+      "aliases": [],
+      "short_definition": "A generalization of the binomial distribution for more than two possible outcomes.",
+      "prerequisites": [
+        "discrete_random_variable"
+      ]
+    },
+    {
+      "concept_id": "gamma_distribution",
+      "name": "Gamma Distribution",
+      "aliases": [],
+      "short_definition": "A continuous distribution often used to model waiting times or the sum of exponential random variables.",
+      "prerequisites": [
+        "continuous_random_variable",
+        "probability_density_function"
+      ]
+    },
+    {
+      "concept_id": "beta_distribution",
+      "name": "Beta Distribution",
+      "aliases": [],
+      "short_definition": "A continuous distribution defined on the interval [0, 1], often used to model probabilities or proportions.",
+      "prerequisites": [
+        "continuous_random_variable",
+        "probability_density_function"
+      ]
+    },
+    {
+      "concept_id": "chisquared_distribution",
+      "name": "Chi-Squared Distribution",
+      "aliases": [
+        "Chi-2 Distribution"
+      ],
+      "short_definition": "A continuous distribution that arises from the sum of squared standard normal random variables.",
+      "prerequisites": [
+        "normal_distribution",
+        "variance"
+      ]
+    },
+    {
+      "concept_id": "cauchy_distribution",
+      "name": "Cauchy Distribution",
+      "aliases": [],
+      "short_definition": "A continuous distribution with heavy tails and undefined expected value.",
+      "prerequisites": [
+        "continuous_random_variable",
+        "probability_density_function"
+      ]
+    },
+    {
+      "concept_id": "dirichlet_distribution",
+      "name": "Dirichlet Distribution",
+      "aliases": [],
+      "short_definition": "A multivariate continuous distribution that is a generalization of the Beta distribution.",
+      "prerequisites": [
+        "beta_distribution"
+      ]
+    },
+    {
+      "concept_id": "random_vector",
+      "name": "Random Vector",
+      "aliases": [],
+      "short_definition": "A vector whose components are random variables.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "stochastic_proces",
+      "name": "Stochastic Process",
+      "aliases": [],
+      "short_definition": "A collection of random variables indexed by time or another parameter.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "markov_property",
+      "name": "Markov Property",
+      "aliases": [],
+      "short_definition": "The future state of a process depends only on the present state, not on the past.",
+      "prerequisites": [
+        "stochastic_proces"
+      ]
+    },
+    {
+      "concept_id": "stationary_proces",
+      "name": "Stationary Process",
+      "aliases": [],
+      "short_definition": "A stochastic process whose statistical properties do not change over time.",
+      "prerequisites": [
+        "stochastic_proces"
+      ]
+    },
+    {
+      "concept_id": "ergodic_proces",
+      "name": "Ergodic Process",
+      "aliases": [],
+      "short_definition": "A stationary process where time averages converge to ensemble averages.",
+      "prerequisites": [
+        "stationary_proces"
+      ]
+    }
+  ]
+}

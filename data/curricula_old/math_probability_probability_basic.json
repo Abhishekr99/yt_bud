@@ -1,0 +1,424 @@
+{
+  "curriculum_id": "MATH_Probability_Probability basics",
+  "domain": "MATH",
+  "module": "Probability",
+  "topic": "Probability basics",
+  "created_at": "2026-03-21T11:15:05.493232",
+  "concepts": [
+    {
+      "concept_id": "experiment",
+      "name": "Experiment",
+      "aliases": [
+        "Random Experiment"
+      ],
+      "short_definition": "A process with uncertain outcomes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "outcome",
+      "name": "Outcome",
+      "aliases": [
+        "Sample Point"
+      ],
+      "short_definition": "A single possible result of an experiment.",
+      "prerequisites": [
+        "experiment"
+      ]
+    },
+    {
+      "concept_id": "sample_space",
+      "name": "Sample Space",
+      "aliases": [
+        "Event Space"
+      ],
+      "short_definition": "The set of all possible outcomes of an experiment.",
+      "prerequisites": [
+        "experiment",
+        "outcome"
+      ]
+    },
+    {
+      "concept_id": "event",
+      "name": "Event",
+      "aliases": [],
+      "short_definition": "A subset of the sample space, representing a specific outcome or set of outcomes.",
+      "prerequisites": [
+        "outcome",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "certain_event",
+      "name": "Certain Event",
+      "aliases": [
+        "Trivial Event"
+      ],
+      "short_definition": "An event that is guaranteed to occur.",
+      "prerequisites": [
+        "event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "impossible_event",
+      "name": "Impossible Event",
+      "aliases": [
+        "Null Event"
+      ],
+      "short_definition": "An event that cannot occur.",
+      "prerequisites": [
+        "event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "simple_event",
+      "name": "Simple Event",
+      "aliases": [],
+      "short_definition": "An event consisting of a single outcome.",
+      "prerequisites": [
+        "event",
+        "outcome"
+      ]
+    },
+    {
+      "concept_id": "compound_event",
+      "name": "Compound Event",
+      "aliases": [],
+      "short_definition": "An event consisting of more than one outcome.",
+      "prerequisites": [
+        "event",
+        "simple_event"
+      ]
+    },
+    {
+      "concept_id": "mutually_exclusive_event",
+      "name": "Mutually Exclusive Events",
+      "aliases": [
+        "Disjoint Events"
+      ],
+      "short_definition": "Events that cannot occur at the same time.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "independent_event",
+      "name": "Independent Events",
+      "aliases": [],
+      "short_definition": "Events where the occurrence of one does not affect the probability of the other.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "dependent_event",
+      "name": "Dependent Events",
+      "aliases": [],
+      "short_definition": "Events where the occurrence of one affects the probability of the other.",
+      "prerequisites": [
+        "event",
+        "independent_event"
+      ]
+    },
+    {
+      "concept_id": "probability",
+      "name": "Probability",
+      "aliases": [
+        "Likelihood"
+      ],
+      "short_definition": "A measure of how likely an event is to occur.",
+      "prerequisites": [
+        "event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "theoretical_probability",
+      "name": "Theoretical Probability",
+      "aliases": [
+        "Classical Probability"
+      ],
+      "short_definition": "Probability calculated based on equally likely outcomes.",
+      "prerequisites": [
+        "probability",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "empirical_probability",
+      "name": "Empirical Probability",
+      "aliases": [
+        "Experimental Probability",
+        "Relative Frequency"
+      ],
+      "short_definition": "Probability calculated based on observed frequencies from an experiment.",
+      "prerequisites": [
+        "experiment",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "subjective_probability",
+      "name": "Subjective Probability",
+      "aliases": [],
+      "short_definition": "Probability based on personal belief or judgment.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "probability_scale",
+      "name": "Probability Scale",
+      "aliases": [],
+      "short_definition": "A scale from 0 to 1 representing the likelihood of an event.",
+      "prerequisites": [
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "probability_of_zero",
+      "name": "Probability of Zero",
+      "aliases": [],
+      "short_definition": "Represents an impossible event.",
+      "prerequisites": [
+        "impossible_event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "probability_of_one",
+      "name": "Probability of One",
+      "aliases": [],
+      "short_definition": "Represents a certain event.",
+      "prerequisites": [
+        "certain_event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "complementary_event",
+      "name": "Complementary Events",
+      "aliases": [
+        "Complement"
+      ],
+      "short_definition": "Two events where one occurs if and only if the other does not.",
+      "prerequisites": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "union_of_event",
+      "name": "Union of Events",
+      "aliases": [
+        "OR Event"
+      ],
+      "short_definition": "The event that at least one of two events occurs.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "intersection_of_event",
+      "name": "Intersection of Events",
+      "aliases": [
+        "AND Event"
+      ],
+      "short_definition": "The event that both of two events occur.",
+      "prerequisites": [
+        "event"
+      ]
+    },
+    {
+      "concept_id": "addition_rule",
+      "name": "Addition Rule",
+      "aliases": [],
+      "short_definition": "Formula for calculating the probability of the union of two events.",
+      "prerequisites": [
+        "intersection_of_event",
+        "probability",
+        "union_of_event"
+      ]
+    },
+    {
+      "concept_id": "multiplication_rule",
+      "name": "Multiplication Rule",
+      "aliases": [],
+      "short_definition": "Formula for calculating the probability of the intersection of two events.",
+      "prerequisites": [
+        "dependent_event",
+        "independent_event",
+        "intersection_of_event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "conditional_probability",
+      "name": "Conditional Probability",
+      "aliases": [],
+      "short_definition": "The probability of an event occurring given that another event has already occurred.",
+      "prerequisites": [
+        "dependent_event",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "law_of_total_probability",
+      "name": "Law of Total Probability",
+      "aliases": [],
+      "short_definition": "A rule for calculating the probability of an event by summing probabilities over a partition of the sample space.",
+      "prerequisites": [
+        "conditional_probability",
+        "mutually_exclusive_event",
+        "sample_space"
+      ]
+    },
+    {
+      "concept_id": "bayes_theorem",
+      "name": "Bayes' Theorem",
+      "aliases": [],
+      "short_definition": "A theorem relating conditional probabilities of events.",
+      "prerequisites": [
+        "conditional_probability",
+        "law_of_total_probability"
+      ]
+    },
+    {
+      "concept_id": "frequency_table",
+      "name": "Frequency Table",
+      "aliases": [],
+      "short_definition": "A table that displays the frequency of different outcomes.",
+      "prerequisites": [
+        "experiment",
+        "outcome"
+      ]
+    },
+    {
+      "concept_id": "relative_frequency_table",
+      "name": "Relative Frequency Table",
+      "aliases": [],
+      "short_definition": "A table showing the proportion of times each outcome occurs.",
+      "prerequisites": [
+        "frequency_table",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "tree_diagram",
+      "name": "Tree Diagram",
+      "aliases": [],
+      "short_definition": "A visual tool to represent sequential events and their probabilities.",
+      "prerequisites": [
+        "conditional_probability",
+        "event",
+        "experiment"
+      ]
+    },
+    {
+      "concept_id": "venn_diagram",
+      "name": "Venn Diagram",
+      "aliases": [],
+      "short_definition": "A diagram used to show relationships between sets, often used for events.",
+      "prerequisites": [
+        "event",
+        "intersection_of_event",
+        "sample_space",
+        "union_of_event"
+      ]
+    },
+    {
+      "concept_id": "fair_coin",
+      "name": "Fair Coin",
+      "aliases": [],
+      "short_definition": "A coin with an equal probability of landing on heads or tails.",
+      "prerequisites": [
+        "experiment",
+        "outcome",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "fair_die",
+      "name": "Fair Die",
+      "aliases": [],
+      "short_definition": "A die with an equal probability of landing on any of its faces.",
+      "prerequisites": [
+        "experiment",
+        "outcome",
+        "probability"
+      ]
+    },
+    {
+      "concept_id": "random_variable",
+      "name": "Random Variable",
+      "aliases": [],
+      "short_definition": "A variable whose value is a numerical outcome of a random phenomenon.",
+      "prerequisites": [
+        "experiment",
+        "outcome"
+      ]
+    },
+    {
+      "concept_id": "discrete_random_variable",
+      "name": "Discrete Random Variable",
+      "aliases": [],
+      "short_definition": "A random variable that can only take a finite number of values or a countably infinite number of values.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "continuous_random_variable",
+      "name": "Continuous Random Variable",
+      "aliases": [],
+      "short_definition": "A random variable that can take any value within a given range.",
+      "prerequisites": [
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "probability_distribution",
+      "name": "Probability Distribution",
+      "aliases": [],
+      "short_definition": "A function that describes the likelihood of obtaining the possible values that a random variable can assume.",
+      "prerequisites": [
+        "probability",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "expected_value",
+      "name": "Expected Value",
+      "aliases": [
+        "Mean of a Random Variable"
+      ],
+      "short_definition": "The weighted average of all possible values of a random variable.",
+      "prerequisites": [
+        "probability_distribution",
+        "random_variable"
+      ]
+    },
+    {
+      "concept_id": "law_of_large_number",
+      "name": "Law of Large Numbers",
+      "aliases": [],
+      "short_definition": "As the number of trials increases, the empirical probability approaches the theoretical probability.",
+      "prerequisites": [
+        "empirical_probability",
+        "experiment",
+        "theoretical_probability"
+      ]
+    },
+    {
+      "concept_id": "bernoulli_trial",
+      "name": "Bernoulli Trial",
+      "aliases": [],
+      "short_definition": "An experiment with only two possible outcomes, success or failure.",
+      "prerequisites": [
+        "experiment",
+        "outcome"
+      ]
+    }
+  ]
+}

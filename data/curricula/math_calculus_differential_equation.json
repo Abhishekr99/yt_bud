@@ -1,0 +1,107 @@
+{
+  "curriculum_id": "math_calculus_differential_equation",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Differential equations",
+  "created_at": "2026-03-23T10:53:33.330946",
+  "concepts": [
+    {
+      "concept_id": "differential_equation",
+      "name": "Differential Equation",
+      "aliases": [
+        "DE"
+      ],
+      "short_definition": "An equation involving an unknown function and its derivatives.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "order_of_de",
+      "name": "Order of DE",
+      "aliases": [],
+      "short_definition": "The highest order of derivative present in the differential equation.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "linearity",
+      "name": "Linearity",
+      "aliases": [],
+      "short_definition": "Whether the differential equation is linear in the unknown function and its derivatives.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "solution_to_de",
+      "name": "Solution to DE",
+      "aliases": [
+        "DE Solution"
+      ],
+      "short_definition": "A function that satisfies the differential equation.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "general_solution",
+      "name": "General Solution",
+      "aliases": [],
+      "short_definition": "A solution containing arbitrary constants, representing a family of solutions.",
+      "prerequisites": [
+        "solution_to_de"
+      ]
+    },
+    {
+      "concept_id": "particular_solution",
+      "name": "Particular Solution",
+      "aliases": [],
+      "short_definition": "A specific solution obtained by assigning values to the arbitrary constants.",
+      "prerequisites": [
+        "general_solution"
+      ]
+    },
+    {
+      "concept_id": "initial_condition",
+      "name": "Initial Conditions",
+      "aliases": [
+        "IC"
+      ],
+      "short_definition": "Values of the unknown function and/or its derivatives at a specific point.",
+      "prerequisites": [
+        "solution_to_de"
+      ]
+    },
+    {
+      "concept_id": "separable_de",
+      "name": "Separable DE",
+      "aliases": [],
+      "short_definition": "A first-order DE that can be written in the form dy/dx = f(x)g(y).",
+      "prerequisites": [
+        "differential_equation",
+        "order_of_de"
+      ]
+    },
+    {
+      "concept_id": "firstorder_linear_de",
+      "name": "First-Order Linear DE",
+      "aliases": [],
+      "short_definition": "A first-order DE of the form dy/dx + p(x)y = q(x).",
+      "prerequisites": [
+        "differential_equation",
+        "linearity",
+        "order_of_de"
+      ]
+    },
+    {
+      "concept_id": "homogeneous_de",
+      "name": "Homogeneous DE",
+      "aliases": [],
+      "short_definition": "A DE where the constant term is zero (for linear DEs) or can be reduced to a homogeneous form.",
+      "prerequisites": [
+        "differential_equation",
+        "linearity"
+      ]
+    }
+  ]
+}

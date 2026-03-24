@@ -1,0 +1,146 @@
+in this video we're going to continue 
+ speaking about matrix transformations 
+ and talk a little more specifically 
+ about linear transformations notice this 
+ is just an introduction to linear 
+ transformations so later in this course 
+ we will get much more in depth with this 
+ but this will give us a great 
+ introduction so what is a linear 
+ transformation it's a transformation 
+ that preserves the operations of vector 
+ addition and scalar multiplications so 
+ going off of that we can say that T 
+ which is a transformation is the linear 
+ transformation if the transformation of 
+ the sum of vectors U and B is equal to 
+ the transformation of vector u plus the 
+ transformation of vector B and the 
+ transformation of some scalar times 
+ vector u is equal to that scalar 
+ multiplied by the transformation of 
+ vector u we know that every matrix 
+ transformation is a linear 
+ transformation and we can prove that I'm 
+ not going to go through any of the proof 
+ so that you can find them in your text 
+ but it's pretty straightforward we know 
+ that if T U is just telling me to take a 
+ times u we already know that if I had a 
+ u plus V that that's the same as a u 
+ plus AV we've talked about that in 
+ previous videos so it would make sense 
+ then that T u plus B would be equal to 
+ tu plus T of V from the first two from I 
+ and I double I we can also say that T of 
+ 0 is 0 and again that one's pretty 
+ straightforward because it's like T of 0 
+ times U and we can pop it out using this 
+ guy and therefore say then of course 
+ that's going to be equal to 0 
+ and then of course this one the 
+ transformation of some scalar times a 
+ vector plus some scalar times a vector 
+ is equal to that scalar to 
+ the church first transformation plus the 
+ scalar times the second transformation 
+ and again that's just combining both of 
+ those so why are we learning about this 
+ what kinds of questions are going to be 
+ related to linear transformations well 
+ quite often we're going to look at the 
+ geometric description of these 
+ transformations because we're talking 
+ about linear transformations we can 
+ actually see what this is going to look 
+ like so let's start by just drawing in a 
+ coordinate plane here's my X 1 axis and 
+ my X 2 axis and I'm just going to stick 
+ with very simple values in r2 just so 
+ that we can see what they look like so 
+ let's do an example and notice they 
+ haven't given me any points to look at 
+ but that's okay 
+ all I want to do is see what a is going 
+ to do to some vector so I'm going to 
+ make up vector U to be 2 negative 1 so 
+ I've just made it up you could make up 
+ whatever vector you want so 2 negative 1 
+ looks just like that that's vector U 
+ what would happen if I take a times u so 
+ let's find out 1 0 0 negative 1 to 
+ negative 1 if I do my multiplication I 
+ get to positive 1 so 2 positive 1 is 
+ right here so this is what au looks like 
+ so what appeared to happen well it looks 
+ like I took vector U and I flipped it 
+ across the X 1 axis so it appears to be 
+ a reflection across X 1 but let's test 
+ that theory by trying another one let's 
+ do vector V I'll have that be negative 3 
+ 2 so if I take a times negative 3 2 and 
+ they should probably go ahead and plot 
+ that vector 
+ this is vector V so what I think is 
+ going to happen is it's going to come 
+ down here but let's check it and see 
+ what happens I'm going to get negative 
+ three and negative two so negative three 
+ negative two right there and it did in 
+ fact reflect across the X 1 axis so what 
+ is the geometric description that 
+ geometric let me try again at the 
+ geometric description is that this that 
+ a is a reflection across x1 here's a 
+ similar question for you to try notice 
+ it's written just a little bit 
+ differently it says describe the linear 
+ transformation T that maps from r2 to r2 
+ by T of X is equal to and they've shown 
+ me that the a matrix is 0 negative 1 1 0 
+ they've already done this multiplication 
+ for me and so really what they've done 
+ here is say if you apply T it's going to 
+ swap your X 1 and X 2 values and also 
+ negate X 2 so I can when I'm finding the 
+ images of T under images under T of U so 
+ if I wanted to find T u I would be 
+ taking 0 negative 1 1 0 times 4 1 and 
+ that would give me negative 1/4 which 
+ I've done by multiplication the standard 
+ way that we've been doing this so U is 4 
+ 1 
+ and tu is negative one for now I did 
+ that one by normal multiplication but 
+ really I can take a look at what they've 
+ done here and say if I want to find T V 
+ all I have to do 
+ let's take V which is 2 3 flip them 3 to 
+ change the sign so V which is 2 3 
+ becomes negative 3 2 so this is TV and I 
+ can do the same for you plus B which is 
+ 6 4 so T W plus V which is 6 4 becomes 4 
+ 6 and change the sign so 6 4 which if 
+ you'll notice this is just that 
+ parallelogram rule becomes negative 4 1 
+ 2 3 4 positive 6 
+ whoops they don't even have 6 faces 
+ we'll just put it up here and so again 
+ still parallelogram rule so what 
+ happened to my original parallelogram 
+ which is all over here this was u plus V 
+ which makes sense because that's what 
+ the parallelogram rule says so what how 
+ would I describe this linear 
+ transformation 
+ well it appears that what happened 
+ is that I took this figure and I have 
+ rotated it so it wasn't flipped it was 
+ rotated about 90 degrees 
+ counterclockwise about the origin so 
+ this point stayed exactly where it was 
+ this point rotated 90 degrees this point 
+ rotated 90 degrees and this point 
+ rotated 90 degrees so that's how we 
+ would describe that linear 
+ transformation

@@ -1,4 +1,5 @@
 import math
+import os
 import re
 import time
 from pathlib import Path
@@ -57,6 +58,98 @@ GENERIC_CONCEPTS = {
 }
 
 
+def _resolve_provider(name: str, fallback: str) -> str:
+    raw = os.getenv(name, "").strip().lower()
+    if raw and raw != "auto":
+        return raw
+    return fallback
+
+
+def _openrouter_headers() -> dict:
+    headers = {}
+    site_url = os.getenv("OPENROUTER_SITE_URL", "").strip()
+    app_name = os.getenv("OPENROUTER_APP_NAME", "yt-buddy").strip()
+    if site_url:
+        headers["HTTP-Referer"] = site_url
+    if app_name:
+        headers["X-Title"] = app_name
+    return headers
+
+
+def _llm_provider() -> str:
+    default = "openrouter" if os.getenv("OPENROUTER_API_KEY", "").strip() else "google"
+    return _resolve_provider("LLM_PROVIDER", default)
+
+
+def _embedding_provider() -> str:
+    # Keep embeddings aligned with the active LLM provider unless explicitly overridden.
+    return _resolve_provider("EMBEDDING_PROVIDER", _llm_provider())
+
+
+def _build_llm():
+    provider = _llm_provider()
+    temperature = float(os.getenv("LLM_TEMPERATURE", "0.2"))
+
+    if provider == "google":
+        model = os.getenv("GOOGLE_MODEL", "gemini-2.5-flash-lite")
+        return ChatGoogleGenerativeAI(model=model, temperature=temperature)
+
+    if provider == "openrouter":
+        api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+        if not api_key:
+            raise ValueError("OPENROUTER_API_KEY is required when LLM_PROVIDER=openrouter.")
+        model = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini").strip()
+        base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").strip()
+        from langchain_openai import ChatOpenAI
+
+        return ChatOpenAI(
+            model=model,
+            temperature=temperature,
+            api_key=api_key,
+            base_url=base_url,
+            default_headers=_openrouter_headers(),
+        )
+
+    raise ValueError(f"Unsupported LLM_PROVIDER: {provider}")
+
+
+def _build_embedding_model():
+    provider = _embedding_provider()
+
+    if provider == "google":
+        model = os.getenv("GOOGLE_EMBEDDING_MODEL", "models/gemini-embedding-001")
+        return GoogleGenerativeAIEmbeddings(model=model)
+
+    if provider == "openrouter":
+        api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+        if not api_key:
+            raise ValueError(
+                "OPENROUTER_API_KEY is required when EMBEDDING_PROVIDER=openrouter."
+            )
+        model = os.getenv(
+            "OPENROUTER_EMBEDDING_MODEL", "openai/text-embedding-3-small"
+        ).strip()
+        base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").strip()
+        from langchain_openai import OpenAIEmbeddings
+
+        return OpenAIEmbeddings(
+            model=model,
+            api_key=api_key,
+            base_url=base_url,
+            default_headers=_openrouter_headers(),
+        )
+
+    if provider == "local":
+        model = os.getenv(
+            "LOCAL_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
+        ).strip()
+        from langchain_community.embeddings import HuggingFaceEmbeddings
+
+        return HuggingFaceEmbeddings(model_name=model)
+
+    raise ValueError(f"Unsupported EMBEDDING_PROVIDER: {provider}")
+
+
 # Function to extract video ID from a YouTube URL (Helper Function)
 def extract_video_id(url):
     """
@@ -82,8 +175,8 @@ def get_transcript(video_id, language):
         return ""
 
 
-# initialize the gemini model
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.2)
+# Initialize LLM once and share across modules that import `llm` from utility.
+llm = _build_llm()
 
 
 def get_vector_store_dir(video_id: str) -> Path:
@@ -115,7 +208,7 @@ def is_generic(concept_key: str) -> bool:
 
 @st.cache_resource(show_spinner=False)
 def _get_embedding_model():
-    return GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+    return _build_embedding_model()
 
 
 def _average_vector(vectors: List[List[float]]) -> List[float]:
@@ -182,7 +275,7 @@ def vector_store_exists(video_id: str) -> bool:
 
 
 def load_vector_store(video_id: str) -> Chroma:
-    embedding = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+    embedding = _get_embedding_model()
     kwargs = {
         "persist_directory": str(get_vector_store_dir(video_id)),
         "embedding_function": embedding,
@@ -442,7 +535,7 @@ def create_vector_store(
     persist_directory: Optional[str] = None,
     collection_name: Optional[str] = None,
 ) -> Chroma:
-    embedding = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+    embedding = _get_embedding_model()
     try:
         vector_store = Chroma.from_documents(
             docs,

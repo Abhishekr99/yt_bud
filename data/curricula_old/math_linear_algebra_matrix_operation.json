@@ -1,0 +1,463 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Matrix Operations",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Matrix Operations",
+  "created_at": "2026-03-21T11:14:09.687649",
+  "concepts": [
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [
+        "Matrices"
+      ],
+      "short_definition": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "element",
+      "name": "Element",
+      "aliases": [
+        "Entry"
+      ],
+      "short_definition": "An individual number or symbol within a matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "row",
+      "name": "Row",
+      "aliases": [],
+      "short_definition": "A horizontal line of elements in a matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "column",
+      "name": "Column",
+      "aliases": [],
+      "short_definition": "A vertical line of elements in a matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "dimension",
+      "name": "Dimension",
+      "aliases": [
+        "Size",
+        "Order"
+      ],
+      "short_definition": "The number of rows and columns in a matrix, expressed as m x n.",
+      "prerequisites": [
+        "column",
+        "matrix",
+        "row"
+      ]
+    },
+    {
+      "concept_id": "square_matrix",
+      "name": "Square Matrix",
+      "aliases": [],
+      "short_definition": "A matrix with an equal number of rows and columns.",
+      "prerequisites": [
+        "dimension",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "identity_matrix",
+      "name": "Identity Matrix",
+      "aliases": [
+        "I"
+      ],
+      "short_definition": "A square matrix with ones on the main diagonal and zeros elsewhere.",
+      "prerequisites": [
+        "element",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "zero_matrix",
+      "name": "Zero Matrix",
+      "aliases": [
+        "Null Matrix"
+      ],
+      "short_definition": "A matrix where all elements are zero.",
+      "prerequisites": [
+        "element",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "scalar",
+      "name": "Scalar",
+      "aliases": [],
+      "short_definition": "A single number used in scalar multiplication.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "scalar_multiplication",
+      "name": "Scalar Multiplication",
+      "aliases": [],
+      "short_definition": "Multiplying each element of a matrix by a scalar.",
+      "prerequisites": [
+        "element",
+        "matrix",
+        "scalar"
+      ]
+    },
+    {
+      "concept_id": "matrix_addition",
+      "name": "Matrix Addition",
+      "aliases": [],
+      "short_definition": "Adding two matrices element by element.",
+      "prerequisites": [
+        "dimension",
+        "element",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "matrix_subtraction",
+      "name": "Matrix Subtraction",
+      "aliases": [],
+      "short_definition": "Subtracting two matrices element by element.",
+      "prerequisites": [
+        "dimension",
+        "element",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "aliases": [],
+      "short_definition": "Multiplying two matrices according to specific rules.",
+      "prerequisites": [
+        "dimension",
+        "element",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "dot_product",
+      "name": "Dot Product",
+      "aliases": [
+        "Inner Product"
+      ],
+      "short_definition": "The sum of the products of corresponding elements of two vectors.",
+      "prerequisites": [
+        "element",
+        "scalar"
+      ]
+    },
+    {
+      "concept_id": "transpose",
+      "name": "Transpose",
+      "aliases": [
+        "Matrix Transpose"
+      ],
+      "short_definition": "A matrix obtained by interchanging rows and columns of the original matrix.",
+      "prerequisites": [
+        "column",
+        "matrix",
+        "row"
+      ]
+    },
+    {
+      "concept_id": "symmetric_matrix",
+      "name": "Symmetric Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix that is equal to its transpose.",
+      "prerequisites": [
+        "square_matrix",
+        "transpose"
+      ]
+    },
+    {
+      "concept_id": "diagonal_matrix",
+      "name": "Diagonal Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix where all off-diagonal elements are zero.",
+      "prerequisites": [
+        "element",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "upper_triangular_matrix",
+      "name": "Upper Triangular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix where all elements below the main diagonal are zero.",
+      "prerequisites": [
+        "element",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "lower_triangular_matrix",
+      "name": "Lower Triangular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix where all elements above the main diagonal are zero.",
+      "prerequisites": [
+        "element",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "trace",
+      "name": "Trace",
+      "aliases": [
+        "Trace of a Matrix"
+      ],
+      "short_definition": "The sum of the elements on the main diagonal of a square matrix.",
+      "prerequisites": [
+        "diagonal_matrix",
+        "element",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant",
+      "name": "Determinant",
+      "aliases": [
+        "Det(A)"
+      ],
+      "short_definition": "A scalar value that can be computed from the elements of a square matrix.",
+      "prerequisites": [
+        "matrix_multiplication",
+        "scalar",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "minor",
+      "name": "Minor",
+      "aliases": [],
+      "short_definition": "The determinant of a submatrix formed by deleting a row and a column.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "cofactor",
+      "name": "Cofactor",
+      "aliases": [],
+      "short_definition": "A signed minor of a matrix.",
+      "prerequisites": [
+        "minor",
+        "scalar"
+      ]
+    },
+    {
+      "concept_id": "adjoint_matrix",
+      "name": "Adjoint Matrix",
+      "aliases": [
+        "Adjugate Matrix"
+      ],
+      "short_definition": "The transpose of the cofactor matrix.",
+      "prerequisites": [
+        "cofactor",
+        "transpose"
+      ]
+    },
+    {
+      "concept_id": "inverse_matrix",
+      "name": "Inverse Matrix",
+      "aliases": [
+        "Matrix Inverse"
+      ],
+      "short_definition": "A matrix that, when multiplied by the original matrix, yields the identity matrix.",
+      "prerequisites": [
+        "adjoint_matrix",
+        "determinant",
+        "identity_matrix",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "singular_matrix",
+      "name": "Singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a determinant of zero, meaning it has no inverse.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "nonsingular_matrix",
+      "name": "Non-singular Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix with a non-zero determinant, meaning it has an inverse.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "augmented_matrix",
+      "name": "Augmented Matrix",
+      "aliases": [],
+      "short_definition": "A matrix formed by appending the columns of two given matrices.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "block_matrix",
+      "name": "Block Matrix",
+      "aliases": [],
+      "short_definition": "A matrix that is partitioned into smaller matrices called blocks.",
+      "prerequisites": [
+        "dimension",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "matrix_equation",
+      "name": "Matrix Equation",
+      "aliases": [],
+      "short_definition": "An equation involving matrices.",
+      "prerequisites": [
+        "matrix",
+        "matrix_addition",
+        "matrix_multiplication",
+        "scalar_multiplication"
+      ]
+    },
+    {
+      "concept_id": "vector",
+      "name": "Vector",
+      "aliases": [
+        "Row Vector",
+        "Column Vector"
+      ],
+      "short_definition": "A matrix with only one row or one column.",
+      "prerequisites": [
+        "column",
+        "matrix",
+        "row"
+      ]
+    },
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [],
+      "short_definition": "A set of vectors that can be added together and multiplied by scalars.",
+      "prerequisites": [
+        "matrix_addition",
+        "scalar",
+        "scalar_multiplication",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [],
+      "short_definition": "A sum of vectors multiplied by scalars.",
+      "prerequisites": [
+        "matrix_addition",
+        "scalar",
+        "scalar_multiplication",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [],
+      "short_definition": "The set of all possible linear combinations of a set of vectors.",
+      "prerequisites": [
+        "linear_combination",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [],
+      "short_definition": "A set of vectors where no vector can be written as a linear combination of the others.",
+      "prerequisites": [
+        "linear_combination",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [],
+      "short_definition": "A set of linearly independent vectors that span a vector space.",
+      "prerequisites": [
+        "linear_independence",
+        "span",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "dimension_of_vector_space",
+      "name": "Dimension of Vector Space",
+      "aliases": [],
+      "short_definition": "The number of vectors in a basis for the vector space.",
+      "prerequisites": [
+        "basi",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "rank",
+      "name": "Rank",
+      "aliases": [
+        "Rank of a Matrix"
+      ],
+      "short_definition": "The dimension of the column space (or row space) of a matrix.",
+      "prerequisites": [
+        "dimension_of_vector_space",
+        "matrix",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "null_space",
+      "name": "Null Space",
+      "aliases": [
+        "Kernel"
+      ],
+      "short_definition": "The set of all vectors that, when multiplied by a matrix, result in the zero vector.",
+      "prerequisites": [
+        "matrix",
+        "vector",
+        "zero_matrix"
+      ]
+    },
+    {
+      "concept_id": "column_space",
+      "name": "Column Space",
+      "aliases": [
+        "Image"
+      ],
+      "short_definition": "The span of the column vectors of a matrix.",
+      "prerequisites": [
+        "matrix",
+        "span",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "row_space",
+      "name": "Row Space",
+      "aliases": [],
+      "short_definition": "The span of the row vectors of a matrix.",
+      "prerequisites": [
+        "matrix",
+        "span",
+        "vector"
+      ]
+    }
+  ]
+}

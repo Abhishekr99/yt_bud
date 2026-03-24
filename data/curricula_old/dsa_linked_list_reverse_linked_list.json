@@ -1,0 +1,403 @@
+{
+  "curriculum_id": "DSA_Linked list_Reverse linked list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Reverse linked list",
+  "created_at": "2026-03-21T10:41:28.619736",
+  "concepts": [
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [
+        "LL"
+      ],
+      "short_definition": "A linear data structure where elements are not stored at contiguous memory locations.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [],
+      "short_definition": "The basic building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "head",
+      "name": "Head",
+      "aliases": [],
+      "short_definition": "A pointer to the first node in a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tail",
+      "name": "Tail",
+      "aliases": [],
+      "short_definition": "A pointer to the last node in a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [
+        "Next"
+      ],
+      "short_definition": "A reference within a node that points to the subsequent node in the list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [],
+      "short_definition": "The process of visiting each node in a linked list.",
+      "prerequisites": [
+        "head",
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "iteration",
+      "name": "Iteration",
+      "aliases": [],
+      "short_definition": "A method of traversal using loops.",
+      "prerequisites": [
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [],
+      "short_definition": "A method of traversal where a function calls itself.",
+      "prerequisites": [
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "reversal",
+      "name": "Reversal",
+      "aliases": [
+        "Reverse Linked List"
+      ],
+      "short_definition": "The operation of changing the direction of pointers in a linked list.",
+      "prerequisites": [
+        "head",
+        "linked_list",
+        "next_pointer",
+        "node",
+        "tail"
+      ]
+    },
+    {
+      "concept_id": "iterative_reversal",
+      "name": "Iterative Reversal",
+      "aliases": [],
+      "short_definition": "Reversing a linked list using a loop.",
+      "prerequisites": [
+        "iteration",
+        "reversal"
+      ]
+    },
+    {
+      "concept_id": "previous_pointer",
+      "name": "Previous Pointer",
+      "aliases": [
+        "Prev"
+      ],
+      "short_definition": "A pointer in a node that points to the preceding node (used in doubly linked lists).",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list",
+      "name": "Doubly Linked List",
+      "aliases": [
+        "DLL"
+      ],
+      "short_definition": "A linked list where each node has pointers to both the next and previous nodes.",
+      "prerequisites": [
+        "linked_list",
+        "node",
+        "previous_pointer"
+      ]
+    },
+    {
+      "concept_id": "recursive_reversal",
+      "name": "Recursive Reversal",
+      "aliases": [],
+      "short_definition": "Reversing a linked list using recursion.",
+      "prerequisites": [
+        "recursion",
+        "reversal"
+      ]
+    },
+    {
+      "concept_id": "inplace_reversal",
+      "name": "In-place Reversal",
+      "aliases": [],
+      "short_definition": "Reversing a linked list without using extra space proportional to the list size.",
+      "prerequisites": [
+        "reversal"
+      ]
+    },
+    {
+      "concept_id": "temporary_variable",
+      "name": "Temporary Variable",
+      "aliases": [
+        "Temp"
+      ],
+      "short_definition": "A variable used to store a value temporarily during an operation.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "current_node",
+      "name": "Current Node",
+      "aliases": [
+        "Current"
+      ],
+      "short_definition": "The node currently being processed during traversal or reversal.",
+      "prerequisites": [
+        "node",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "previous_node",
+      "name": "Previous Node",
+      "aliases": [
+        "Prev Node"
+      ],
+      "short_definition": "The node that was processed before the current node.",
+      "prerequisites": [
+        "node",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "next_node",
+      "name": "Next Node",
+      "aliases": [
+        "Next Node"
+      ],
+      "short_definition": "The node that follows the current node.",
+      "prerequisites": [
+        "node",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "pointer_manipulation",
+      "name": "Pointer Manipulation",
+      "aliases": [],
+      "short_definition": "The act of changing the values of pointers to alter the structure of a linked list.",
+      "prerequisites": [
+        "next_pointer",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "base_case_recursion",
+      "name": "Base Case (Recursion)",
+      "aliases": [],
+      "short_definition": "The condition that stops the recursive calls.",
+      "prerequisites": [
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "recursive_step",
+      "name": "Recursive Step",
+      "aliases": [],
+      "short_definition": "The part of a recursive function that calls itself with a modified input.",
+      "prerequisites": [
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "null_pointer",
+      "name": "Null Pointer",
+      "aliases": [
+        "NULL"
+      ],
+      "short_definition": "A pointer that does not point to any valid memory location.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "empty_list",
+      "name": "Empty List",
+      "aliases": [],
+      "short_definition": "A linked list with no nodes.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "single_node_list",
+      "name": "Single Node List",
+      "aliases": [],
+      "short_definition": "A linked list containing only one node.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O"
+      ],
+      "short_definition": "A measure of the time required to execute an algorithm as a function of input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the memory required to execute an algorithm as a function of input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [],
+      "short_definition": "A step-by-step procedure for solving a problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A particular way of organizing and storing data in a computer.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "singular_linked_list",
+      "name": "Singular Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "Another term for a singly linked list.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "reversed_head",
+      "name": "Reversed Head",
+      "aliases": [],
+      "short_definition": "The new head of the linked list after reversal.",
+      "prerequisites": [
+        "head",
+        "reversal"
+      ]
+    },
+    {
+      "concept_id": "reversed_tail",
+      "name": "Reversed Tail",
+      "aliases": [],
+      "short_definition": "The new tail of the linked list after reversal.",
+      "prerequisites": [
+        "reversal",
+        "tail"
+      ]
+    },
+    {
+      "concept_id": "stack_implicit",
+      "name": "Stack (Implicit)",
+      "aliases": [],
+      "short_definition": "The call stack used by recursive functions.",
+      "prerequisites": [
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "threepointer_approach",
+      "name": "Three-Pointer Approach",
+      "aliases": [],
+      "short_definition": "An iterative reversal technique using current, previous, and next pointers.",
+      "prerequisites": [
+        "current_node",
+        "iterative_reversal",
+        "next_node",
+        "previous_node"
+      ]
+    },
+    {
+      "concept_id": "twopointer_approach",
+      "name": "Two-Pointer Approach",
+      "aliases": [],
+      "short_definition": "A reversal technique that might involve fewer explicit pointer variables.",
+      "prerequisites": [
+        "reversal"
+      ]
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Cases",
+      "aliases": [],
+      "short_definition": "Unusual or extreme conditions that an algorithm must handle.",
+      "prerequisites": [
+        "algorithm"
+      ]
+    },
+    {
+      "concept_id": "empty_list_reversal",
+      "name": "Empty List Reversal",
+      "aliases": [],
+      "short_definition": "The result of reversing an empty linked list.",
+      "prerequisites": [
+        "empty_list",
+        "reversal"
+      ]
+    },
+    {
+      "concept_id": "single_node_reversal",
+      "name": "Single Node Reversal",
+      "aliases": [],
+      "short_definition": "The result of reversing a linked list with one node.",
+      "prerequisites": [
+        "reversal",
+        "single_node_list"
+      ]
+    },
+    {
+      "concept_id": "memory_allocation",
+      "name": "Memory Allocation",
+      "aliases": [],
+      "short_definition": "The process of reserving memory for data.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "memory_deallocation",
+      "name": "Memory Deallocation",
+      "aliases": [],
+      "short_definition": "The process of releasing reserved memory.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "pointer_swapping",
+      "name": "Pointer Swapping",
+      "aliases": [],
+      "short_definition": "Exchanging the values of two pointers.",
+      "prerequisites": [
+        "pointer_manipulation"
+      ]
+    }
+  ]
+}

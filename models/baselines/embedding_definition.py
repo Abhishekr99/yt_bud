@@ -1,4 +1,5 @@
 import math
+import os
 from typing import List
 
 from models.base import BaseGapModel, PredictionResult
@@ -25,6 +26,28 @@ class EmbeddingDefinitionBaseline(BaseGapModel):
         self.threshold = threshold
         self._model = _get_embedding_model()
 
+    def _embed_documents_resilient(self, texts: List[str]) -> List[List[float]]:
+        try:
+            vectors = self._model.embed_documents(texts)
+            if not vectors:
+                raise ValueError("No embedding vectors returned.")
+            return vectors
+        except ValueError as exc:
+            # OpenRouter/OpenAI-compatible clients can occasionally return empty
+            # batch embedding payloads. Fall back to one-by-one query embeddings.
+            if "No embedding data received" in str(exc):
+                vectors = [self._model.embed_query(text) for text in texts]
+                if vectors:
+                    return vectors
+            provider = os.getenv("EMBEDDING_PROVIDER", "auto")
+            model = os.getenv("OPENROUTER_EMBEDDING_MODEL", "")
+            raise RuntimeError(
+                f"Embedding request failed for provider={provider}, "
+                f"openrouter_embedding_model={model or '<unset>'}. "
+                "Try EMBEDDING_PROVIDER=local or set OPENROUTER_EMBEDDING_MODEL="
+                "openai/text-embedding-3-small."
+            ) from exc
+
     def predict(self, video_id, transcript, chunks, curriculum) -> PredictionResult:
         explained = {}
         missing = {}
@@ -36,12 +59,12 @@ class EmbeddingDefinitionBaseline(BaseGapModel):
                 missing[concept.concept_id] = 1.0
             return PredictionResult(explained=explained, missing=missing, evidence=evidence)
 
-        chunk_embeddings = self._model.embed_documents(texts)
+        chunk_embeddings = self._embed_documents_resilient(texts)
         for concept in curriculum:
             query = concept.name
             if concept.short_definition:
                 query = f"{concept.name}: {concept.short_definition}"
-            query_vec = self._model.embed_documents([query])[0]
+            query_vec = self._model.embed_query(query)
             scores = [
                 _cosine_similarity(query_vec, vec) for vec in chunk_embeddings
             ]

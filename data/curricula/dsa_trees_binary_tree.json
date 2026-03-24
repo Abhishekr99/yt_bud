@@ -1,0 +1,127 @@
+{
+  "curriculum_id": "dsa_trees_binary_tree",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Binary tree",
+  "created_at": "2026-03-23T10:53:04.964190",
+  "concepts": [
+    {
+      "concept_id": "binary_tree",
+      "name": "Binary Tree",
+      "aliases": [
+        "BT"
+      ],
+      "short_definition": "A tree data structure where each node has at most two children, referred to as the left child and the right child.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Tree Node"
+      ],
+      "short_definition": "The fundamental building block of a tree, containing data and references to its children.",
+      "prerequisites": [
+        "binary_tree"
+      ]
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [
+        "Root"
+      ],
+      "short_definition": "The topmost node in a binary tree, from which all other nodes descend.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "Terminal Node"
+      ],
+      "short_definition": "A node in a binary tree that has no children.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node that has one or more children.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Child"
+      ],
+      "short_definition": "A node that is directly connected to another node (its parent) and descends from it.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "height",
+      "name": "Height",
+      "aliases": [
+        "Tree Height"
+      ],
+      "short_definition": "The number of edges on the longest path from the root node to a leaf node.",
+      "prerequisites": [
+        "binary_tree",
+        "leaf_node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "depth",
+      "name": "Depth",
+      "aliases": [
+        "Node Depth"
+      ],
+      "short_definition": "The number of edges from the root node to a specific node.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Tree Traversal"
+      ],
+      "short_definition": "The process of visiting each node in a binary tree in a systematic order.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in its left subtree are less than the node's value, and all values in its right subtree are greater.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    }
+  ]
+}

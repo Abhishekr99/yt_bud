@@ -1,0 +1,458 @@
+{
+  "curriculum_id": "MATH_Calculus_Applications of derivatives",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Applications of derivatives",
+  "created_at": "2026-03-21T11:12:41.732323",
+  "concepts": [
+    {
+      "concept_id": "derivative",
+      "name": "Derivative",
+      "aliases": [
+        "rate of change",
+        "slope"
+      ],
+      "short_definition": "The instantaneous rate of change of a function.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "tangent_line",
+      "name": "Tangent Line",
+      "aliases": [
+        "slope of tangent"
+      ],
+      "short_definition": "A line that touches a curve at a single point and has the same slope as the curve at that point.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "local_extrema",
+      "name": "Local Extrema",
+      "aliases": [
+        "local max",
+        "local min"
+      ],
+      "short_definition": "The highest or lowest points in a specific interval of a function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "critical_point",
+      "name": "Critical Point",
+      "aliases": [
+        "critical number"
+      ],
+      "short_definition": "A point where the derivative of a function is zero or undefined.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "first_derivative_test",
+      "name": "First Derivative Test",
+      "aliases": [
+        "FDT"
+      ],
+      "short_definition": "Uses the sign of the first derivative to determine if a critical point is a local maximum or minimum.",
+      "prerequisites": [
+        "critical_point",
+        "derivative",
+        "local_extrema"
+      ]
+    },
+    {
+      "concept_id": "absolute_extrema",
+      "name": "Absolute Extrema",
+      "aliases": [
+        "global max",
+        "global min"
+      ],
+      "short_definition": "The highest or lowest points of a function over its entire domain or a specified closed interval.",
+      "prerequisites": [
+        "local_extrema"
+      ]
+    },
+    {
+      "concept_id": "closed_interval_method",
+      "name": "Closed Interval Method",
+      "aliases": [
+        "EVT"
+      ],
+      "short_definition": "Finds absolute extrema by evaluating the function at critical points and endpoints of a closed interval.",
+      "prerequisites": [
+        "absolute_extrema",
+        "critical_point"
+      ]
+    },
+    {
+      "concept_id": "increasing_function",
+      "name": "Increasing Function",
+      "aliases": [
+        "rising function"
+      ],
+      "short_definition": "A function whose y-values increase as x-values increase.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "decreasing_function",
+      "name": "Decreasing Function",
+      "aliases": [
+        "falling function"
+      ],
+      "short_definition": "A function whose y-values decrease as x-values increase.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "concavity",
+      "name": "Concavity",
+      "aliases": [
+        "curve shape"
+      ],
+      "short_definition": "The curvature of a function's graph, indicating whether it is bending upwards or downwards.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "inflection_point",
+      "name": "Inflection Point",
+      "aliases": [
+        "IP"
+      ],
+      "short_definition": "A point on a curve where the concavity changes.",
+      "prerequisites": [
+        "concavity",
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "second_derivative",
+      "name": "Second Derivative",
+      "aliases": [
+        "f''"
+      ],
+      "short_definition": "The derivative of the first derivative of a function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "second_derivative_test",
+      "name": "Second Derivative Test",
+      "aliases": [
+        "SDT"
+      ],
+      "short_definition": "Uses the sign of the second derivative at a critical point to determine if it's a local maximum or minimum.",
+      "prerequisites": [
+        "critical_point",
+        "local_extrema",
+        "second_derivative"
+      ]
+    },
+    {
+      "concept_id": "curve_sketching",
+      "name": "Curve Sketching",
+      "aliases": [
+        "graphing functions"
+      ],
+      "short_definition": "Using calculus tools to accurately draw the graph of a function.",
+      "prerequisites": [
+        "concavity",
+        "decreasing_function",
+        "first_derivative_test",
+        "increasing_function",
+        "inflection_point",
+        "second_derivative_test"
+      ]
+    },
+    {
+      "concept_id": "optimization",
+      "name": "Optimization",
+      "aliases": [
+        "finding best value"
+      ],
+      "short_definition": "Finding the maximum or minimum value of a quantity.",
+      "prerequisites": [
+        "absolute_extrema"
+      ]
+    },
+    {
+      "concept_id": "related_rate",
+      "name": "Related Rates",
+      "aliases": [
+        "rates of change of related variables"
+      ],
+      "short_definition": "Problems where the rates of change of multiple variables are related by an equation.",
+      "prerequisites": [
+        "derivative",
+        "implicit_differentiation"
+      ]
+    },
+    {
+      "concept_id": "implicit_differentiation",
+      "name": "Implicit Differentiation",
+      "aliases": [
+        "implicit derivatives"
+      ],
+      "short_definition": "A technique for finding derivatives of implicitly defined functions.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "lhpitals_rule",
+      "name": "L'Hôpital's Rule",
+      "aliases": [
+        "LH"
+      ],
+      "short_definition": "A method for evaluating limits of indeterminate forms.",
+      "prerequisites": [
+        "derivative",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "limit",
+      "name": "Limits",
+      "aliases": [
+        "limit of a function"
+      ],
+      "short_definition": "The value that a function approaches as the input approaches some value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "indeterminate_form",
+      "name": "Indeterminate Form",
+      "aliases": [
+        "0/0",
+        "inf/inf"
+      ],
+      "short_definition": "A limit expression that cannot be evaluated directly.",
+      "prerequisites": [
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "differential",
+      "name": "Differential",
+      "aliases": [
+        "small change"
+      ],
+      "short_definition": "An infinitesimal change in a variable.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "differentials_for_approximation",
+      "name": "Differentials for Approximation",
+      "aliases": [
+        "linear approximation"
+      ],
+      "short_definition": "Using differentials to estimate function values.",
+      "prerequisites": [
+        "differential",
+        "tangent_line"
+      ]
+    },
+    {
+      "concept_id": "newtons_method",
+      "name": "Newton's Method",
+      "aliases": [
+        "root finding"
+      ],
+      "short_definition": "An iterative method for finding approximations to the roots of a real-valued function.",
+      "prerequisites": [
+        "derivative",
+        "tangent_line"
+      ]
+    },
+    {
+      "concept_id": "antiderivative",
+      "name": "Antiderivative",
+      "aliases": [
+        "indefinite integral"
+      ],
+      "short_definition": "A function whose derivative is a given function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "integral",
+      "name": "Integral",
+      "aliases": [
+        "definite integral"
+      ],
+      "short_definition": "The area under the curve of a function between two points.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculu",
+      "name": "Fundamental Theorem of Calculus",
+      "aliases": [
+        "FTC"
+      ],
+      "short_definition": "Connects differentiation and integration.",
+      "prerequisites": [
+        "antiderivative",
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "area_between_curve",
+      "name": "Area Between Curves",
+      "aliases": [
+        "area of region"
+      ],
+      "short_definition": "Calculating the area enclosed by two or more functions.",
+      "prerequisites": [
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "volume_of_revolution",
+      "name": "Volume of Revolution",
+      "aliases": [
+        "solid of revolution"
+      ],
+      "short_definition": "Calculating the volume of a solid generated by rotating a 2D shape around an axis.",
+      "prerequisites": [
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "arc_length",
+      "name": "Arc Length",
+      "aliases": [
+        "length of curve"
+      ],
+      "short_definition": "Calculating the length of a curve between two points.",
+      "prerequisites": [
+        "derivative",
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "surface_area_of_revolution",
+      "name": "Surface Area of Revolution",
+      "aliases": [
+        "surface area of solid"
+      ],
+      "short_definition": "Calculating the surface area of a solid generated by rotating a curve around an axis.",
+      "prerequisites": [
+        "derivative",
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "work",
+      "name": "Work",
+      "aliases": [
+        "physics work"
+      ],
+      "short_definition": "Calculating the work done by a force.",
+      "prerequisites": [
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "center_of_mas",
+      "name": "Center of Mass",
+      "aliases": [
+        "centroid"
+      ],
+      "short_definition": "The average position of all the parts of the object.",
+      "prerequisites": [
+        "integral"
+      ]
+    },
+    {
+      "concept_id": "population_growth",
+      "name": "Population Growth",
+      "aliases": [
+        "exponential growth"
+      ],
+      "short_definition": "Modeling population changes over time.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "exponential_decay",
+      "name": "Exponential Decay",
+      "aliases": [
+        "radioactive decay"
+      ],
+      "short_definition": "Modeling quantities that decrease at a rate proportional to their current value.",
+      "prerequisites": [
+        "differential_equation"
+      ]
+    },
+    {
+      "concept_id": "differential_equation",
+      "name": "Differential Equations",
+      "aliases": [
+        "DEs"
+      ],
+      "short_definition": "Equations involving derivatives of a function.",
+      "prerequisites": [
+        "derivative"
+      ]
+    },
+    {
+      "concept_id": "mean_value_theorem",
+      "name": "Mean Value Theorem",
+      "aliases": [
+        "MVT"
+      ],
+      "short_definition": "Guarantees the existence of a point where the instantaneous rate of change equals the average rate of change.",
+      "prerequisites": [
+        "derivative",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "rolles_theorem",
+      "name": "Rolle's Theorem",
+      "aliases": [
+        "Rolle"
+      ],
+      "short_definition": "A special case of the Mean Value Theorem where the function values at the endpoints are equal.",
+      "prerequisites": [
+        "mean_value_theorem"
+      ]
+    },
+    {
+      "concept_id": "optimization_problem",
+      "name": "Optimization Problems",
+      "aliases": [
+        "word problems optimization"
+      ],
+      "short_definition": "Applying calculus to solve real-world problems involving finding maximum or minimum values.",
+      "prerequisites": [
+        "curve_sketching",
+        "optimization"
+      ]
+    },
+    {
+      "concept_id": "applied_optimization",
+      "name": "Applied Optimization",
+      "aliases": [
+        "practical optimization"
+      ],
+      "short_definition": "Solving optimization problems in various fields like engineering, economics, and business.",
+      "prerequisites": [
+        "optimization_problem"
+      ]
+    }
+  ]
+}

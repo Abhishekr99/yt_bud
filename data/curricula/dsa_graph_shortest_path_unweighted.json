@@ -1,0 +1,113 @@
+{
+  "curriculum_id": "dsa_graph_shortest_path_unweighted",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Shortest path (unweighted)",
+  "created_at": "2026-03-23T10:52:27.997980",
+  "concepts": [
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Adjacency List",
+        "Adjacency Matrix"
+      ],
+      "short_definition": "Ways to store graph data, typically using adjacency lists or matrices.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores neighbors level by level.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A First-In, First-Out (FIFO) data structure used in BFS.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "distance",
+      "name": "Distance",
+      "aliases": [
+        "Path Length"
+      ],
+      "short_definition": "The number of edges in a path between two nodes.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [
+        "Minimum Path"
+      ],
+      "short_definition": "The path with the fewest edges between a source and a target node.",
+      "prerequisites": [
+        "distance",
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "unweighted_graph",
+      "name": "Unweighted Graph",
+      "aliases": [],
+      "short_definition": "A graph where all edges have the same implicit weight (usually 1).",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "source_node",
+      "name": "Source Node",
+      "aliases": [
+        "Start Node"
+      ],
+      "short_definition": "The node from which the shortest path is calculated.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "target_node",
+      "name": "Target Node",
+      "aliases": [
+        "End Node",
+        "Destination"
+      ],
+      "short_definition": "The node to which the shortest path is being sought.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Visited Nodes"
+      ],
+      "short_definition": "A collection to keep track of nodes already processed during traversal.",
+      "prerequisites": [
+        "breadthfirst_search"
+      ]
+    },
+    {
+      "concept_id": "level_order_traversal",
+      "name": "Level Order Traversal",
+      "aliases": [],
+      "short_definition": "Visiting nodes in a graph layer by layer, characteristic of BFS.",
+      "prerequisites": [
+        "breadthfirst_search",
+        "queue"
+      ]
+    }
+  ]
+}

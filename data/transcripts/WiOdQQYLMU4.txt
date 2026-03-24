@@ -1,0 +1,247 @@
+in this video I'm going to go over some 
+ formulas you need to know if you're 
+ studying the application of 
+ derivatives so the first thing you need 
+ to be able to do is calculate the 
+ average rate of change the average rate 
+ of change is basically the slope of the 
+ secant 
+ line a secant line is a line that 
+ touches the curve at two 
+ points so this is the average rate of 
+ change form 
+ it's F of B minus F of A over B minus 
+ a so let's say if you have a 
+ curve that looks like 
+ this this line will be a secant line 
+ because it touches the curve at two 
+ points the first point at which it 
+ touches the 
+ curve that is point a the second point 
+ is point 
+ B so this is the average rate of change 
+ formula now sometimes you need to 
+ calculate the instantaneous rate of 
+ change the instantaneous rate of change 
+ is 
+ basically evaluating the derivative at 
+ some point this could be Point 
+ C the instantaneous rate of change is 
+ equal to the slope of the tangent 
+ line so at this 
+ point at some point 
+ C the slope of the tangent line will 
+ equal the slope of the secant line and 
+ that's the basic idea behind the mean 
+ value 
+ theorem so here's the basic definition 
+ for the mean value theorem if f ofx is 
+ continuous on the closed interval ab and 
+ if it's differentiable on the open 
+ interval 
+ AB then there is some number 
+ c in the interval AB or between a which 
+ we could see C is between a b such that 
+ fime of C is equal to F of B minus F of 
+ A over B minus 
+ a so that's the basic idea behind the 
+ mean value theorem which I'm going to 
+ abbreviate mvt 
+ so for the main value 
+ theorem as you could see the slope of 
+ the secant line and the slope of the 
+ tangent line they're the same at this 
+ point the average rate of change formula 
+ gives you the slope of the secant line 
+ and the instantaneous rate of change 
+ will give you the slope of the tangent 
+ line but when dealing with the mean 
+ value theorem those two will equal each 
+ other 
+ now the next theorem we need to be 
+ familiar with is rolls 
+ theorem if f ofx is 
+ continuous on the closed interval ab and 
+ differentiable on the open interval ab 
+ and if F of a is equal to F of B if 
+ these three conditions are met then 
+ there's going to be some number c in the 
+ open interval a 
+ where frime of C is equal to 
+ Z so here's a good example of 
+ this let's say we have a graph that 
+ looks like 
+ this and let's say here this is a and 
+ this is 
+ B notice that these A and B have the 
+ same y value so this is f of B and and 
+ this is f of a because they have the 
+ same yvalue they are equal to each 
+ other so if the end points of an 
+ interval are equal at some 
+ point between A and B there's going to 
+ be a horizontal 
+ tangent and at that horizontal 
+ tangent frime of C will be 
+ zero so C is 
+ basically the intercept of the curve and 
+ the horizontal 
+ tangent and the derivative at that point 
+ will be zero so that's the basic idea 
+ behind rolles theor by the way for those 
+ of you who want all of these formulas uh 
+ you could find it in the formula sheet 
+ in the description section 
+ below now if you need to calculate 
+ average velocity you can use the average 
+ rate of change 
+ formula so it's s of B minus s of A over 
+ B minus a so if you want to find the 
+ average velocity for the closed interval 
+ a you could use that 
+ formula so s represents position A and B 
+ will be specific time values on a 
+ position time 
+ graph because velocity 
+ is average 
+ velocity well velocity is displacement 
+ over time 
+ and displacement is the change in 
+ position so SB minus sa that's the 
+ displacement now the average 
+ acceleration it's going to be the change 
+ in 
+ velocity divided by the change in time 
+ so you can also use the average rate of 
+ change formula but instead of having the 
+ position function on the top you're 
+ going to have the Velocity function on 
+ the top so that's how you can calculate 
+ average velocity and average 
+ acceleration on the closed interval 
+ AB now if you wish to calculate the 
+ instantaneous velocity it's the 
+ derivative of the position function and 
+ if you wish to calculate instantaneous 
+ acceleration it's the derivative of the 
+ Velocity 
+ function so those are some additional 
+ formulas that you need to 
+ know if you ever need to find critical 
+ points you need to find the first 
+ derivative set it equal to zero and 
+ solve for x x is going to be your C 
+ value if you need to find critical 
+ points a critical point can also occur 
+ if frpr of C doesn't exists that's also 
+ that can also be a critical 
+ point so in that case you would look for 
+ a vertical tangent 
+ now here's some other things you want to 
+ know f ofx is 
+ increasing whenever the first derivative 
+ is greater than zero or basically when 
+ it's 
+ positive f ofx is 
+ decreasing whenever the first derivative 
+ is less than zero or 
+ when it's 
+ negative and F ofx the function is going 
+ to be constant if the first derivative 
+ is equal to zero which is basically 
+ where you have a horizontal 
+ tangent now the function is concave 
+ up that is f is cave 
+ up when the second derivative is greater 
+ than zero or 
+ positive f is concave 
+ down when the second 
+ derivative is less than zero or 
+ negative so anytime the second 
+ derivative is positive f is concave up 
+ if the second derivative is negative if 
+ or less than zero f is concave 
+ down so if we had a shape that looks 
+ like this we could see this one has the 
+ up upward u shape this part is concave 
+ up this one has the downward U shape so 
+ uh that 
+ is concave 
+ down at some point the concavity changes 
+ from up to down and that's going to be 
+ the midpoint between uh the local 
+ minimum and the local maximum so at this 
+ point when the concavity changes that is 
+ the inflection 
+ point so notice that the second 
+ derivative changes at that point so here 
+ the second derivative 
+ is 
+ positive because it's concave up so I'm 
+ just going to highlight that part in red 
+ where it's concave up and then here it's 
+ concave 
+ down so that's when the second 
+ derivative is 
+ negative so when the second derivative 
+ changes from positive to negative it has 
+ to cross zero so at the inflection point 
+ the second derivative is equal to Z 
+ Z so that's how you could find the 
+ inflection point if you if you want to 
+ find a critical point you would set the 
+ first derivative equal to zero and solve 
+ for x and your x value will be your C 
+ value if you want to find the inflection 
+ point you would find a second derivative 
+ set it equal to zero solve for 
+ x however you just need to make sure the 
+ concavity changes so you may need to use 
+ a number line to check if it changes 
+ sign so let me give you an example of 
+ that 
+ so let's say the second derivative is 
+ zero when X is 2 and 
+ five and let's say this is positive this 
+ is negative this is 
+ negative so since we're dealing with the 
+ second derivative here it's concave up 
+ concave down concave down this would be 
+ an inflection point because the 
+ concavity changes even though the second 
+ derivative is zero 
+ here now the second derivative is zero 
+ at five as well however the concavity 
+ does not change so this is not an 
+ inflection 
+ point so you got to check the sign to 
+ make sure that it changes when F Prime 
+ is zero if it doesn't change then you're 
+ not dealing with a an inflection point 
+ so to give you an example of that here 
+ it's so here it's concave up then it's 
+ concave down 
+ let's see and then it could be like 
+ this so I'm going to highlight this part 
+ in red is concave 
+ up and then concave down but notice this 
+ part is also concave 
+ down so here where it's green the second 
+ derivative can be 
+ zero but here it's concave down second 
+ derivative is zero and then it's concave 
+ down again 
+ so this will typically be considered a 
+ saddle point as opposed to an inflection 
+ point now there are some other formulas 
+ associated with the application of 
+ derivatives I'm going to post those 
+ other formulas in the formula sheet so 
+ if you want the rest of the notes that's 
+ associated with this video feel free to 
+ check out that formula sheet down in the 
+ links below so that's going to be the 
+ end of this video thanks again for 
+ watching and feel free to check out my 
+ other 
+ videos and my playlists at

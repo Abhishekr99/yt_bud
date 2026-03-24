@@ -1,0 +1,223 @@
+in this video we're going to discuss 
+ inner product vector length and distance 
+ the inner product of two vectors which 
+ is sometimes called a dot product is 
+ simply multiplying the transpose of the 
+ first matrix by the second Matrix so a 
+ couple of things to point out first of 
+ all I want you to note the notation we 
+ just have the dot in between that's to 
+ denote that we're finding the inner 
+ product or dot product and again all 
+ we're doing is we're taking if we're 
+ finding U times V or the dot product or 
+ inner product of U V then I'm going to 
+ be thinking about this as for 2 negative 
+ 1 0 times 3 0 1 negative 1 and if you'll 
+ notice this is a 1 by 4 and this is a 4 
+ by 1 and that means yes they can be 
+ multiplied and the result is a 1 by 1 
+ matrix so what's going to happen is I'm 
+ going to take 4 times 3 plus 2 times 0 
+ plus negative 1 times 1 plus 0 times 
+ negative 1 and it's just going to end up 
+ as one value so that's 12 plus 0 plus 
+ negative 1 plus 0 and so my results is 
+ 11 
+ I also want to point out something that 
+ hopefully was pretty obvious as we 
+ started here yes technically what I'm 
+ doing is I'm taking you and finding the 
+ transpose but really I don't need to 
+ write it out like that because what am I 
+ going to do I'm going to take 4 times 3 
+ plus 2 times 0 plus negative 1 times 1 
+ plus 0 times negative 1 so if it were me 
+ and I'm lazy and I don't feel like 
+ writing out the transpose really we're 
+ just multiplying component wise so we're 
+ matching them up and that's why they 
+ both have to be the same dimension n by 
+ 1 because if they're not obviously we 
+ wouldn't be able to multiply them here's 
+ a practice for you to try I want you to 
+ compute the inner product of u times V 
+ and B times u for the two vectors given 
+ when you are down the press play to see 
+ how you did so again if I'm computing u 
+ times V then I'm taking technically I'm 
+ taking you and turning it into 0 1 2 and 
+ I'm keeping V exactly as it is but 
+ remember we just talked about the fact 
+ that it's not necessary to write them in 
+ that way because all I'm going to be 
+ doing is multiplying component wise so 
+ this result is going to be 0 times 
+ negative 3 plus 1 times 3 plus 2 times 2 
+ and again I am writing it in a vector it 
+ is a solution a 1 by 1 vector and that 
+ gives me 0 plus 3 plus 4 so my solution 
+ is 7 
+ now I also asked you to compute V times 
+ U and again what's going to happen is 
+ I'm going to get negative 3 times 0 plus 
+ 3 times 1 plus 2 times 2 and obviously 
+ this is exactly what I just did so I'm 
+ going to get 7 again so this is not a 
+ proof however it's a great example to 
+ show you that the inner product of two 
+ vectors is in fact commutative in 
+ addition to the commutative property 
+ that we just talked about we also have a 
+ few other properties so the first says 
+ that if you have the sum of two vectors 
+ and then multiplied or the dot product 
+ of the sum times some other vector I can 
+ go ahead and distribute just as I 
+ normally would so I can take the dot 
+ product of U and W and add the dot 
+ product of V and W and I will get the 
+ same result the third property tells us 
+ that if we have some scalar C and I have 
+ this scalar multiplied by say vector U 
+ and that I'm taking the dot product it's 
+ the same as me taking the dot product of 
+ U and V and then multiplying by the 
+ scalar or the same as multiplying that 
+ scalar by V and then taking the dot 
+ product all of those things are the same 
+ the last one is the sort of craziest one 
+ I guess and the only one that really 
+ requires us to think about it in a 
+ little more depth it says that the dot 
+ product of u by u is greater than or 
+ equal to 0 and also says that the dot 
+ product of U with itself is equal to 0 
+ if and only if that vector U is the zero 
+ vector so let's look at this one because 
+ that might not be immediately obvious 
+ and maybe it is and if so that's great 
+ this is saying that I'm taking you by U 
+ which essentially means I'm taking all 
+ of those values or entries inside the 
+ vector so this is just going to be 
+ say u1 squared plus u2 squared plus u3 
+ squared plus it's not a UN squared and 
+ obviously that is going to be a positive 
+ product because we have everything 
+ squared so whether or not those entries 
+ are positive or negative when I square 
+ them they will become positive so that's 
+ where the greater than or equal to zero 
+ comes in and then obviously we can see 
+ that it would only be zero without much 
+ thought if and only if the vector itself 
+ is the zero vector the length or norm of 
+ a vector is the non-negative scalar and 
+ it's defined by essentially taking the 
+ square root of the inner product of a 
+ vector by itself so we can look at this 
+ two dimensionally and it can make 
+ perfect sense because two dimensional is 
+ obviously an easy way to visualize if I 
+ have vector V is a B then this is vector 
+ V and I'm trying to find this length 
+ well if I'm trying to find that length 
+ then I know that I can take a squared 
+ plus B squared and that's going to give 
+ me B squared or the length of V squared 
+ so I want to just know V so I'm going to 
+ take the square root of a squared plus B 
+ squared to give me the length of V and 
+ that's all this is telling us so 
+ obviously I've shown you in a 
+ two-dimensional example this says it 
+ works for however many dimensions that 
+ you want and it's still going to give us 
+ the length of that vector so now let's 
+ take a look at distance because that's 
+ what we're really interested in if I 
+ want to find the distance between two 
+ vectors U and V and again if I'm talking 
+ about distance 
+ here's U and V this white line that I've 
+ drawn in that's the distance I want to 
+ find what's the length of that segment 
+ which is the distance between U and V so 
+ I want you to think of this as u plus 
+ negative V so this guy right here 
+ negative V and we know using the 
+ parallelogram rule that if I want to 
+ find the distance or if I want to find 
+ just u minus V then it's going to be 
+ that guy right in the middle in the 
+ parallelogram and so if you'll notice 
+ something very interesting is happening 
+ that this u minus V distance is the same 
+ as the distance between U and V so it 
+ makes another parallelogram and so 
+ that's essentially what we're saying is 
+ all we're going to do is find u minus V 
+ and find that length and that's going to 
+ be the distance between U and V so let's 
+ do an example we're trying to compute 
+ the distance between vector U and V for 
+ u is 3/2 so this guy is oops I need to 
+ choose a color other than white this guy 
+ is U and V is negative 1/4 so this guy 
+ is V and if you'll notice I've also 
+ labeled u minus V so essentially what 
+ I'm going to do is I'm trying to find 
+ this distance in black that's what we're 
+ asked to find is the distance between U 
+ and V but that corresponds to this 
+ distance in green it's the same distance 
+ and so all I'm going to do using my 
+ formula and if you'll recall we just 
+ wrote that distance UV is equal to the 
+ length of U minus V 
+ and so all I'm going to do is then find 
+ you - V which would be very easy to 
+ compute so 3 to minus negative 1/4 and 
+ that gives me 4 negative 2 and again 
+ that's where this guy came from is 4 
+ negative 2 so that's really just u minus 
+ V which we can see visually on our graph 
+ but we can also compute very easily 
+ without graphing it what I'm now trying 
+ to do is find the length of U minus V 
+ and again the length of U minus V is 
+ just going to be the square root in this 
+ case of 4 squared plus negative 2 
+ squared because that's the formula we 
+ talked about for length so it's just 
+ kind of like the Pythagorean theorem so 
+ that gives me 16 plus 4 and so the 
+ answer is radical 20 and that is both 
+ the distance from 0 to U minus V and 
+ also the distance between vectors U and 
+ V here's a question for you to try on 
+ your own so press pause try this 
+ question then press play to see how you 
+ did so here I'm just asking you to find 
+ the distance between U and V and 
+ obviously we're working in r3 now all 
+ I'm going to do first is to find u minus 
+ V and that's going to help me to 
+ determine the length of U V which is the 
+ distance between U and V so u minus V 
+ would be 7 6 4 minus negative 2 3 
+ negative 1 and again we're subtracting 
+ so 7 minus negative 2 is 7 plus 2 6 
+ minus 3 is 3 and 4 minus negative 1 is 4 
+ plus 1 so 9 3 5 to find the length of U 
+ minus V which is equal to the distance 
+ I'm just going to find the square root 
+ of 9 squared plus 3 squared plus 5 
+ squared I had a little overzealous with 
+ my square root so 9 squared is 81 3 
+ squared is 9 5 squared is 25 I add those 
+ values together I get the square root of 
+ 115 and that is in fact therefore the 
+ distance between U and V which is the 
+ same as the length of U minus V

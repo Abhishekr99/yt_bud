@@ -1,0 +1,502 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Inner Product",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Inner Product",
+  "created_at": "2026-03-21T11:13:54.844105",
+  "concepts": [
+    {
+      "concept_id": "vector",
+      "name": "Vector",
+      "aliases": [
+        "Vectors"
+      ],
+      "short_definition": "A quantity having direction as well as magnitude, often represented as an array of numbers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "scalar",
+      "name": "Scalar",
+      "aliases": [
+        "Scalars"
+      ],
+      "short_definition": "A quantity that has magnitude but no direction, often represented by a single number.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "real_number",
+      "name": "Real Numbers",
+      "aliases": [
+        "Real Number",
+        "R"
+      ],
+      "short_definition": "Numbers that can be represented by a point on a number line.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "complex_number",
+      "name": "Complex Numbers",
+      "aliases": [
+        "Complex Number",
+        "C"
+      ],
+      "short_definition": "Numbers of the form a + bi, where a and b are real numbers and i is the imaginary unit.",
+      "prerequisites": [
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Vector Spaces"
+      ],
+      "short_definition": "A set of vectors that can be added together and multiplied by scalars, satisfying certain axioms.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "field",
+      "name": "Field",
+      "aliases": [
+        "Fields"
+      ],
+      "short_definition": "A set with two operations (addition and multiplication) that satisfy certain axioms, like real or complex numbers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "inner_product",
+      "name": "Inner Product",
+      "aliases": [
+        "Dot Product",
+        "Scalar Product"
+      ],
+      "short_definition": "A function that takes two vectors and returns a scalar, generalizing the dot product.",
+      "prerequisites": [
+        "field",
+        "scalar",
+        "vector",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "euclidean_inner_product",
+      "name": "Euclidean Inner Product",
+      "aliases": [
+        "Euclidean Dot Product"
+      ],
+      "short_definition": "The standard inner product for vectors in Euclidean space.",
+      "prerequisites": [
+        "inner_product",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "inner_product_axiom",
+      "name": "Inner Product Axioms",
+      "aliases": [
+        "Inner Product Properties"
+      ],
+      "short_definition": "The defining properties of an inner product: linearity, symmetry/conjugate symmetry, and positive-definiteness.",
+      "prerequisites": [
+        "field",
+        "inner_product",
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linearity",
+      "name": "Linearity",
+      "aliases": [
+        "Linear"
+      ],
+      "short_definition": "The property that an operation distributes over addition and scalar multiplication.",
+      "prerequisites": [
+        "inner_product_axiom",
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "conjugate_symmetry",
+      "name": "Conjugate Symmetry",
+      "aliases": [
+        "Hermitian Symmetry"
+      ],
+      "short_definition": "The property that the inner product of two vectors is the complex conjugate of the inner product of the vectors in reverse order.",
+      "prerequisites": [
+        "complex_number",
+        "inner_product_axiom",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "positivedefinitenes",
+      "name": "Positive-Definiteness",
+      "aliases": [
+        "Positive Definite"
+      ],
+      "short_definition": "The property that the inner product of a vector with itself is non-negative and zero only if the vector is the zero vector.",
+      "prerequisites": [
+        "inner_product_axiom",
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonality",
+      "name": "Orthogonality",
+      "aliases": [
+        "Orthogonal Vectors"
+      ],
+      "short_definition": "Two vectors are orthogonal if their inner product is zero.",
+      "prerequisites": [
+        "inner_product",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_vector",
+      "name": "Orthonormal Vectors",
+      "aliases": [
+        "Orthonormal Set"
+      ],
+      "short_definition": "A set of orthogonal vectors where each vector has a magnitude of one.",
+      "prerequisites": [
+        "orthogonality",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "vector_magnitude",
+      "name": "Vector Magnitude",
+      "aliases": [
+        "Norm",
+        "Length of Vector"
+      ],
+      "short_definition": "The length of a vector, often derived from the inner product.",
+      "prerequisites": [
+        "inner_product",
+        "positivedefinitenes",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "cauchyschwarz_inequality",
+      "name": "Cauchy-Schwarz Inequality",
+      "aliases": [
+        "Cauchy-Schwarz"
+      ],
+      "short_definition": "An inequality relating the inner product of two vectors to their magnitudes.",
+      "prerequisites": [
+        "inner_product",
+        "vector",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "triangle_inequality",
+      "name": "Triangle Inequality",
+      "aliases": [
+        "Triangle Inequality for Vectors"
+      ],
+      "short_definition": "The sum of the lengths of any two sides of a triangle is greater than or equal to the length of the third side.",
+      "prerequisites": [
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "metric_space",
+      "name": "Metric Space",
+      "aliases": [
+        "Metric Spaces"
+      ],
+      "short_definition": "A set where a distance function (metric) is defined, often derived from a norm.",
+      "prerequisites": [
+        "triangle_inequality",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "inner_product_space",
+      "name": "Inner Product Space",
+      "aliases": [
+        "Inner Product Spaces"
+      ],
+      "short_definition": "A vector space equipped with an inner product.",
+      "prerequisites": [
+        "inner_product",
+        "inner_product_axiom",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "hilbert_space",
+      "name": "Hilbert Space",
+      "aliases": [
+        "Hilbert Spaces"
+      ],
+      "short_definition": "A complete inner product space.",
+      "prerequisites": [
+        "completenes",
+        "inner_product_space"
+      ]
+    },
+    {
+      "concept_id": "completenes",
+      "name": "Completeness",
+      "aliases": [
+        "Complete Space"
+      ],
+      "short_definition": "A property of a metric space where every Cauchy sequence converges to a point within the space.",
+      "prerequisites": [
+        "cauchy_sequence",
+        "metric_space"
+      ]
+    },
+    {
+      "concept_id": "cauchy_sequence",
+      "name": "Cauchy Sequence",
+      "aliases": [
+        "Cauchy Sequences"
+      ],
+      "short_definition": "A sequence of points in a metric space such that the distance between any two terms becomes arbitrarily small as the terms get further into the sequence.",
+      "prerequisites": [
+        "metric_space"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_complement",
+      "name": "Orthogonal Complement",
+      "aliases": [
+        "Orthogonal Complements"
+      ],
+      "short_definition": "The set of all vectors orthogonal to every vector in a given subspace.",
+      "prerequisites": [
+        "orthogonality",
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "subspace",
+      "name": "Subspace",
+      "aliases": [
+        "Subspaces"
+      ],
+      "short_definition": "A subset of a vector space that is itself a vector space under the same operations.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "projection",
+      "name": "Projection",
+      "aliases": [
+        "Vector Projection"
+      ],
+      "short_definition": "The component of one vector that lies in the direction of another vector.",
+      "prerequisites": [
+        "inner_product",
+        "orthogonality",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_projection",
+      "name": "Orthogonal Projection",
+      "aliases": [
+        "Orthogonal Projections"
+      ],
+      "short_definition": "A projection onto a subspace that is orthogonal to the remaining part of the vector.",
+      "prerequisites": [
+        "orthogonality",
+        "projection",
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "gramschmidt_proces",
+      "name": "Gram-Schmidt Process",
+      "aliases": [
+        "Gram-Schmidt Orthonormalization"
+      ],
+      "short_definition": "An algorithm for constructing an orthonormal basis from a set of linearly independent vectors.",
+      "prerequisites": [
+        "linear_independence",
+        "orthonormal_vector"
+      ]
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [
+        "Linearly Independent"
+      ],
+      "short_definition": "A set of vectors where no vector can be written as a linear combination of the others.",
+      "prerequisites": [
+        "linear_combination",
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [
+        "Linear Combinations"
+      ],
+      "short_definition": "A sum of scalar multiples of vectors.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [
+        "Bases"
+      ],
+      "short_definition": "A set of linearly independent vectors that span a vector space.",
+      "prerequisites": [
+        "linear_independence",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [
+        "Spanning Set"
+      ],
+      "short_definition": "The set of all possible linear combinations of a given set of vectors.",
+      "prerequisites": [
+        "linear_combination",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_basi",
+      "name": "Orthonormal Basis",
+      "aliases": [
+        "Orthonormal Bases"
+      ],
+      "short_definition": "A basis consisting of orthonormal vectors.",
+      "prerequisites": [
+        "basi",
+        "orthonormal_vector"
+      ]
+    },
+    {
+      "concept_id": "coordinate_vector",
+      "name": "Coordinate Vector",
+      "aliases": [
+        "Coordinates"
+      ],
+      "short_definition": "The representation of a vector in terms of a specific basis.",
+      "prerequisites": [
+        "basi",
+        "linear_combination"
+      ]
+    },
+    {
+      "concept_id": "adjoint_operator",
+      "name": "Adjoint Operator",
+      "aliases": [
+        "Adjoints"
+      ],
+      "short_definition": "An operator related to a linear operator in an inner product space, generalizing the concept of transpose.",
+      "prerequisites": [
+        "inner_product_space",
+        "linear_operator"
+      ]
+    },
+    {
+      "concept_id": "linear_operator",
+      "name": "Linear Operator",
+      "aliases": [
+        "Linear Operators",
+        "Linear Transformation"
+      ],
+      "short_definition": "A function between vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "selfadjoint_operator",
+      "name": "Self-Adjoint Operator",
+      "aliases": [
+        "Self-Adjoint"
+      ],
+      "short_definition": "A linear operator that is equal to its adjoint.",
+      "prerequisites": [
+        "adjoint_operator",
+        "linear_operator"
+      ]
+    },
+    {
+      "concept_id": "unitary_operator",
+      "name": "Unitary Operator",
+      "aliases": [
+        "Unitary"
+      ],
+      "short_definition": "A linear operator in a complex inner product space that preserves the inner product.",
+      "prerequisites": [
+        "complex_number",
+        "inner_product_space",
+        "linear_operator"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_operator",
+      "name": "Orthogonal Operator",
+      "aliases": [
+        "Orthogonal"
+      ],
+      "short_definition": "A linear operator in a real inner product space that preserves the inner product.",
+      "prerequisites": [
+        "inner_product_space",
+        "linear_operator",
+        "real_number"
+      ]
+    },
+    {
+      "concept_id": "function_space",
+      "name": "Function Space",
+      "aliases": [
+        "Function Spaces"
+      ],
+      "short_definition": "A vector space where the elements are functions, often equipped with an inner product.",
+      "prerequisites": [
+        "integral",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "integral",
+      "name": "Integral",
+      "aliases": [
+        "Integrals"
+      ],
+      "short_definition": "A mathematical object that generalizes the notion of summation, often used to define inner products for functions.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "inner_product_of_function",
+      "name": "Inner Product of Functions",
+      "aliases": [
+        "Function Inner Product"
+      ],
+      "short_definition": "An inner product defined on a space of functions, typically involving integration.",
+      "prerequisites": [
+        "function_space",
+        "inner_product",
+        "integral"
+      ]
+    }
+  ]
+}

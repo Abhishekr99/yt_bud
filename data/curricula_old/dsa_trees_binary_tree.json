@@ -1,0 +1,489 @@
+{
+  "curriculum_id": "DSA_Trees_Binary tree",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Binary tree",
+  "created_at": "2026-03-21T11:12:04.148721",
+  "concepts": [
+    {
+      "concept_id": "binary_tree",
+      "name": "Binary Tree",
+      "aliases": [
+        "BT"
+      ],
+      "short_definition": "A tree data structure where each node has at most two children, referred to as the left child and the right child.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Vertex"
+      ],
+      "short_definition": "A fundamental unit of a tree, containing data and references to its children.",
+      "prerequisites": [
+        "binary_tree"
+      ]
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [
+        "Root"
+      ],
+      "short_definition": "The topmost node in a binary tree, from which all other nodes descend.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Children"
+      ],
+      "short_definition": "A node directly connected to another node (the parent) and below it in the tree hierarchy.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node that has one or more child nodes directly below it in the tree hierarchy.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "External Node"
+      ],
+      "short_definition": "A node with no children.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "internal_node",
+      "name": "Internal Node",
+      "aliases": [
+        "Inner Node"
+      ],
+      "short_definition": "A node that has at least one child.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "left_child",
+      "name": "Left Child",
+      "aliases": [
+        "Left Subtree"
+      ],
+      "short_definition": "The child node located to the left of its parent.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "parent_node"
+      ]
+    },
+    {
+      "concept_id": "right_child",
+      "name": "Right Child",
+      "aliases": [
+        "Right Subtree"
+      ],
+      "short_definition": "The child node located to the right of its parent.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "parent_node"
+      ]
+    },
+    {
+      "concept_id": "height",
+      "name": "Height",
+      "aliases": [
+        "Depth"
+      ],
+      "short_definition": "The number of edges on the longest path from the root to a leaf node.",
+      "prerequisites": [
+        "binary_tree",
+        "leaf_node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "depth_of_node",
+      "name": "Depth of Node",
+      "aliases": [
+        "Node Depth"
+      ],
+      "short_definition": "The number of edges from the root to that node.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "level",
+      "name": "Level",
+      "aliases": [
+        "Tree Level"
+      ],
+      "short_definition": "The distance of a node from the root. The root is at level 0.",
+      "prerequisites": [
+        "binary_tree",
+        "depth_of_node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "full_binary_tree",
+      "name": "Full Binary Tree",
+      "aliases": [
+        "Proper Binary Tree"
+      ],
+      "short_definition": "A binary tree in which every node has either 0 or 2 children.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "complete_binary_tree",
+      "name": "Complete Binary Tree",
+      "aliases": [
+        "CBT"
+      ],
+      "short_definition": "A binary tree in which all levels are completely filled except possibly the last level, which is filled from left to right.",
+      "prerequisites": [
+        "binary_tree",
+        "level",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "perfect_binary_tree",
+      "name": "Perfect Binary Tree",
+      "aliases": [
+        "PBT"
+      ],
+      "short_definition": "A binary tree in which all internal nodes have two children and all leaves are at the same level.",
+      "prerequisites": [
+        "binary_tree",
+        "internal_node",
+        "leaf_node",
+        "level"
+      ]
+    },
+    {
+      "concept_id": "balanced_binary_tree",
+      "name": "Balanced Binary Tree",
+      "aliases": [
+        "AVL Tree"
+      ],
+      "short_definition": "A binary tree where the height difference between the left and right subtrees of any node is at most 1.",
+      "prerequisites": [
+        "binary_tree",
+        "height",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "skewed_binary_tree",
+      "name": "Skewed Binary Tree",
+      "aliases": [
+        "Degenerate Tree"
+      ],
+      "short_definition": "A binary tree where each node has only one child, resembling a linked list.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in the left subtree are less than the node's value, and all values in the right subtree are greater.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_traversal",
+      "name": "Tree Traversal",
+      "aliases": [
+        "Tree Walk"
+      ],
+      "short_definition": "The process of visiting each node in a tree exactly once.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "inorder_traversal",
+      "name": "In-order Traversal",
+      "aliases": [
+        "LNR"
+      ],
+      "short_definition": "Traverses the left subtree, then the root, then the right subtree.",
+      "prerequisites": [
+        "binary_tree",
+        "left_child",
+        "right_child",
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "preorder_traversal",
+      "name": "Pre-order Traversal",
+      "aliases": [
+        "NLR"
+      ],
+      "short_definition": "Traverses the root, then the left subtree, then the right subtree.",
+      "prerequisites": [
+        "binary_tree",
+        "left_child",
+        "right_child",
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "postorder_traversal",
+      "name": "Post-order Traversal",
+      "aliases": [
+        "LRN"
+      ],
+      "short_definition": "Traverses the left subtree, then the right subtree, then the root.",
+      "prerequisites": [
+        "binary_tree",
+        "left_child",
+        "right_child",
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "levelorder_traversal",
+      "name": "Level-order Traversal",
+      "aliases": [
+        "Breadth-First Traversal",
+        "BFS"
+      ],
+      "short_definition": "Traverses the tree level by level, from left to right.",
+      "prerequisites": [
+        "binary_tree",
+        "level",
+        "tree_traversal"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add Node"
+      ],
+      "short_definition": "The process of adding a new node to a binary tree.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Remove Node"
+      ],
+      "short_definition": "The process of removing a node from a binary tree.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "search",
+      "name": "Search",
+      "aliases": [
+        "Find Node"
+      ],
+      "short_definition": "The process of locating a specific node within a binary tree.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_representation",
+      "name": "Tree Representation",
+      "aliases": [
+        "Tree Implementation"
+      ],
+      "short_definition": "Methods for storing a binary tree in memory, such as using arrays or linked structures.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "array_representation",
+      "name": "Array Representation",
+      "aliases": [
+        "Array Based Tree"
+      ],
+      "short_definition": "Representing a binary tree using an array, often for complete binary trees.",
+      "prerequisites": [
+        "binary_tree",
+        "complete_binary_tree"
+      ]
+    },
+    {
+      "concept_id": "linked_representation",
+      "name": "Linked Representation",
+      "aliases": [
+        "Node Based Tree"
+      ],
+      "short_definition": "Representing a binary tree using nodes with pointers to their children.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tree_size",
+      "name": "Tree Size",
+      "aliases": [
+        "Node Count"
+      ],
+      "short_definition": "The total number of nodes in a binary tree.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "empty_tree",
+      "name": "Empty Tree",
+      "aliases": [
+        "Null Tree"
+      ],
+      "short_definition": "A binary tree with no nodes.",
+      "prerequisites": [
+        "binary_tree"
+      ]
+    },
+    {
+      "concept_id": "subtree",
+      "name": "Subtree",
+      "aliases": [
+        "Tree Branch"
+      ],
+      "short_definition": "A tree formed by a node and all of its descendants.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "ancestor",
+      "name": "Ancestor",
+      "aliases": [
+        "Tree Ancestor"
+      ],
+      "short_definition": "A node that is on the path from the root to another node.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "root_node"
+      ]
+    },
+    {
+      "concept_id": "descendant",
+      "name": "Descendant",
+      "aliases": [
+        "Tree Descendant"
+      ],
+      "short_definition": "A node that is in the subtree of another node.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "subtree"
+      ]
+    },
+    {
+      "concept_id": "sibling",
+      "name": "Sibling",
+      "aliases": [
+        "Tree Sibling"
+      ],
+      "short_definition": "Nodes that share the same parent.",
+      "prerequisites": [
+        "binary_tree",
+        "child_node",
+        "parent_node"
+      ]
+    },
+    {
+      "concept_id": "threaded_binary_tree",
+      "name": "Threaded Binary Tree",
+      "aliases": [
+        "TBT"
+      ],
+      "short_definition": "A binary tree where null pointers are replaced with pointers to inorder successor or predecessor nodes.",
+      "prerequisites": [
+        "binary_tree",
+        "inorder_traversal",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "expression_tree",
+      "name": "Expression Tree",
+      "aliases": [
+        "ET"
+      ],
+      "short_definition": "A binary tree used to represent mathematical expressions.",
+      "prerequisites": [
+        "binary_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "huffman_tree",
+      "name": "Huffman Tree",
+      "aliases": [
+        "HT"
+      ],
+      "short_definition": "A binary tree used for lossless data compression.",
+      "prerequisites": [
+        "binary_tree",
+        "leaf_node"
+      ]
+    },
+    {
+      "concept_id": "heap",
+      "name": "Heap",
+      "aliases": [
+        "Binary Heap"
+      ],
+      "short_definition": "A specialized tree-based data structure that satisfies the heap property (min-heap or max-heap).",
+      "prerequisites": [
+        "binary_tree",
+        "complete_binary_tree"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "curriculum_id": "DSA_queue_Circular queue",
+  "domain": "DSA",
+  "module": "queue",
+  "topic": "Circular queue",
+  "created_at": "2026-03-21T11:11:13.913522",
+  "concepts": [
+    {
+      "concept_id": "circular_queue",
+      "name": "Circular Queue",
+      "aliases": [
+        "Ring Buffer Queue"
+      ],
+      "short_definition": "A queue implementation that uses a fixed-size array and wraps around to reuse space.",
+      "prerequisites": [
+        "array",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [
+        "FIFO"
+      ],
+      "short_definition": "A linear data structure that follows the First-In, First-Out principle.",
+      "prerequisites": [
+        "array",
+        "data_structure",
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [
+        "List"
+      ],
+      "short_definition": "A contiguous block of memory storing elements of the same data type.",
+      "prerequisites": [
+        "data_structure",
+        "memory_management"
+      ]
+    },
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [],
+      "short_definition": "A linear data structure where elements are linked using pointers.",
+      "prerequisites": [
+        "data_structure",
+        "node",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [],
+      "short_definition": "A basic building block of linked data structures, containing data and a reference.",
+      "prerequisites": [
+        "data_structure",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "pointer",
+      "name": "Pointer",
+      "aliases": [
+        "Reference"
+      ],
+      "short_definition": "A variable that stores the memory address of another variable.",
+      "prerequisites": [
+        "memory_management"
+      ]
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DSA"
+      ],
+      "short_definition": "A way of organizing and storing data for efficient access and modification.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "memory_management",
+      "name": "Memory Management",
+      "aliases": [],
+      "short_definition": "The process of allocating and deallocating memory for programs.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "enqueue",
+      "name": "Enqueue",
+      "aliases": [
+        "Add",
+        "Insert"
+      ],
+      "short_definition": "The operation of adding an element to the rear of a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "dequeue",
+      "name": "Dequeue",
+      "aliases": [
+        "Remove",
+        "Delete"
+      ],
+      "short_definition": "The operation of removing an element from the front of a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "front_pointer",
+      "name": "Front Pointer",
+      "aliases": [
+        "Head Pointer"
+      ],
+      "short_definition": "An index or pointer to the first element in a queue.",
+      "prerequisites": [
+        "pointer",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "rear_pointer",
+      "name": "Rear Pointer",
+      "aliases": [
+        "Tail Pointer"
+      ],
+      "short_definition": "An index or pointer to the last element in a queue.",
+      "prerequisites": [
+        "pointer",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "fixed_size",
+      "name": "Fixed Size",
+      "aliases": [
+        "Bounded"
+      ],
+      "short_definition": "A data structure with a predetermined maximum capacity.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "wrap_around",
+      "name": "Wrap Around",
+      "aliases": [
+        "Modulo Arithmetic"
+      ],
+      "short_definition": "The behavior of indices returning to the beginning of an array after reaching the end.",
+      "prerequisites": [
+        "array",
+        "circular_queue",
+        "modulo_operator"
+      ]
+    },
+    {
+      "concept_id": "modulo_operator",
+      "name": "Modulo Operator",
+      "aliases": [
+        "%"
+      ],
+      "short_definition": "An arithmetic operator that returns the remainder of a division.",
+      "prerequisites": [
+        "arithmetic_operation"
+      ]
+    },
+    {
+      "concept_id": "arithmetic_operation",
+      "name": "Arithmetic Operations",
+      "aliases": [],
+      "short_definition": "Basic mathematical operations like addition, subtraction, multiplication, and division.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "full_queue",
+      "name": "Full Queue",
+      "aliases": [
+        "Queue Overflow"
+      ],
+      "short_definition": "The state where a queue cannot accept new elements due to reaching its capacity.",
+      "prerequisites": [
+        "circular_queue",
+        "enqueue"
+      ]
+    },
+    {
+      "concept_id": "empty_queue",
+      "name": "Empty Queue",
+      "aliases": [
+        "Queue Underflow"
+      ],
+      "short_definition": "The state where a queue contains no elements.",
+      "prerequisites": [
+        "circular_queue",
+        "dequeue"
+      ]
+    },
+    {
+      "concept_id": "capacity",
+      "name": "Capacity",
+      "aliases": [
+        "Size"
+      ],
+      "short_definition": "The maximum number of elements a data structure can hold.",
+      "prerequisites": [
+        "array",
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "index",
+      "name": "Index",
+      "aliases": [
+        "Position"
+      ],
+      "short_definition": "A numerical identifier for the location of an element within an array.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "overwriting",
+      "name": "Overwriting",
+      "aliases": [],
+      "short_definition": "Replacing existing data with new data at the same location.",
+      "prerequisites": [
+        "circular_queue",
+        "wrap_around"
+      ]
+    },
+    {
+      "concept_id": "space_efficiency",
+      "name": "Space Efficiency",
+      "aliases": [
+        "Memory Usage"
+      ],
+      "short_definition": "How effectively a data structure utilizes memory.",
+      "prerequisites": [
+        "array",
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "A measure of the time required to execute an algorithm as a function of input size.",
+      "prerequisites": [
+        "algorithm_analysi"
+      ]
+    },
+    {
+      "concept_id": "algorithm_analysi",
+      "name": "Algorithm Analysis",
+      "aliases": [],
+      "short_definition": "The process of evaluating the efficiency of algorithms.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "constant_time",
+      "name": "Constant Time",
+      "aliases": [
+        "O(1)"
+      ],
+      "short_definition": "An operation that takes the same amount of time regardless of input size.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "linear_time",
+      "name": "Linear Time",
+      "aliases": [
+        "O(n)"
+      ],
+      "short_definition": "An operation whose execution time grows linearly with the input size.",
+      "prerequisites": [
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "arraybased_implementation",
+      "name": "Array-based Implementation",
+      "aliases": [],
+      "short_definition": "A data structure implemented using an array.",
+      "prerequisites": [
+        "array",
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "front_index",
+      "name": "Front Index",
+      "aliases": [],
+      "short_definition": "The index pointing to the front element of the circular queue.",
+      "prerequisites": [
+        "circular_queue",
+        "index"
+      ]
+    },
+    {
+      "concept_id": "rear_index",
+      "name": "Rear Index",
+      "aliases": [],
+      "short_definition": "The index pointing to the position where the next element will be added.",
+      "prerequisites": [
+        "circular_queue",
+        "index"
+      ]
+    },
+    {
+      "concept_id": "initialization",
+      "name": "Initialization",
+      "aliases": [
+        "Setup"
+      ],
+      "short_definition": "The process of setting up a data structure to its initial state.",
+      "prerequisites": [
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "element",
+      "name": "Element",
+      "aliases": [
+        "Item"
+      ],
+      "short_definition": "A single piece of data stored within a data structure.",
+      "prerequisites": [
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "queue_operation",
+      "name": "Queue Operations",
+      "aliases": [],
+      "short_definition": "The standard set of actions that can be performed on a queue.",
+      "prerequisites": [
+        "dequeue",
+        "enqueue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "circular_buffer",
+      "name": "Circular Buffer",
+      "aliases": [
+        "Ring Buffer"
+      ],
+      "short_definition": "A data structure that uses a fixed-size buffer as if it were connected end-to-end.",
+      "prerequisites": [
+        "array",
+        "wrap_around"
+      ]
+    },
+    {
+      "concept_id": "data_integrity",
+      "name": "Data Integrity",
+      "aliases": [],
+      "short_definition": "Ensuring that data is accurate, consistent, and reliable.",
+      "prerequisites": [
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Cases",
+      "aliases": [],
+      "short_definition": "Unusual or extreme situations that a program must handle correctly.",
+      "prerequisites": [
+        "circular_queue",
+        "empty_queue",
+        "full_queue"
+      ]
+    },
+    {
+      "concept_id": "implementation_detail",
+      "name": "Implementation Details",
+      "aliases": [],
+      "short_definition": "Specific choices made when building a data structure.",
+      "prerequisites": [
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "performance",
+      "name": "Performance",
+      "aliases": [],
+      "short_definition": "The speed and efficiency of a data structure's operations.",
+      "prerequisites": [
+        "circular_queue",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "underlying_data_structure",
+      "name": "Underlying Data Structure",
+      "aliases": [],
+      "short_definition": "The primary data structure on which another is built.",
+      "prerequisites": [
+        "array",
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "dynamic_resizing",
+      "name": "Dynamic Resizing",
+      "aliases": [],
+      "short_definition": "The ability of a data structure to automatically adjust its size.",
+      "prerequisites": [
+        "array",
+        "circular_queue"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "curriculum_id": "dsa_queue_deque",
+  "domain": "DSA",
+  "module": "queue",
+  "topic": "Deque",
+  "created_at": "2026-03-23T10:52:50.013349",
+  "concepts": [
+    {
+      "concept_id": "deque",
+      "name": "Deque",
+      "aliases": [
+        "Double-ended queue"
+      ],
+      "short_definition": "A linear data structure that allows insertion and deletion from both ends.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add",
+        "Enqueue"
+      ],
+      "short_definition": "Adding an element to the deque.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Remove",
+        "Dequeue"
+      ],
+      "short_definition": "Removing an element from the deque.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "front_insertion",
+      "name": "Front Insertion",
+      "aliases": [
+        "Add front",
+        "Push front"
+      ],
+      "short_definition": "Adding an element to the front of the deque.",
+      "prerequisites": [
+        "deque",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "rear_insertion",
+      "name": "Rear Insertion",
+      "aliases": [
+        "Add rear",
+        "Push rear"
+      ],
+      "short_definition": "Adding an element to the rear of the deque.",
+      "prerequisites": [
+        "deque",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "front_deletion",
+      "name": "Front Deletion",
+      "aliases": [
+        "Remove front",
+        "Pop front"
+      ],
+      "short_definition": "Removing an element from the front of the deque.",
+      "prerequisites": [
+        "deletion",
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "rear_deletion",
+      "name": "Rear Deletion",
+      "aliases": [
+        "Remove rear",
+        "Pop rear"
+      ],
+      "short_definition": "Removing an element from the rear of the deque.",
+      "prerequisites": [
+        "deletion",
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "peek_front",
+      "name": "Peek Front",
+      "aliases": [
+        "Get front",
+        "Front element"
+      ],
+      "short_definition": "Accessing the element at the front of the deque without removing it.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "peek_rear",
+      "name": "Peek Rear",
+      "aliases": [
+        "Get rear",
+        "Rear element"
+      ],
+      "short_definition": "Accessing the element at the rear of the deque without removing it.",
+      "prerequisites": [
+        "deque"
+      ]
+    },
+    {
+      "concept_id": "empty_check",
+      "name": "Empty Check",
+      "aliases": [
+        "Is empty",
+        "Size"
+      ],
+      "short_definition": "Determining if the deque contains any elements.",
+      "prerequisites": [
+        "deque"
+      ]
+    }
+  ]
+}

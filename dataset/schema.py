@@ -34,6 +34,7 @@ class CurriculumConcept:
 class VideoItem:
     video_id: str
     domain: str
+    module: str
     topic: str
     youtube_url: str
     language: str
@@ -45,6 +46,7 @@ class VideoItem:
         return cls(
             video_id=payload["video_id"],
             domain=payload.get("domain", ""),
+            module=payload.get("module", ""),
             topic=payload.get("topic", ""),
             youtube_url=payload.get("youtube_url", ""),
             language=payload.get("language", "en"),
@@ -56,6 +58,7 @@ class VideoItem:
         return {
             "video_id": self.video_id,
             "domain": self.domain,
+            "module": self.module,
             "topic": self.topic,
             "youtube_url": self.youtube_url,
             "language": self.language,

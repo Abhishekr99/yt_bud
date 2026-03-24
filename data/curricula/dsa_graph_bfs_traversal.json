@@ -1,0 +1,119 @@
+{
+  "curriculum_id": "dsa_graph_bfs_traversal",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "BFS traversal",
+  "created_at": "2026-03-23T10:52:01.477065",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Graph data structure"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [
+        "Adjacency representation"
+      ],
+      "short_definition": "A way to represent a graph where each vertex has a list of its adjacent vertices.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [
+        "Matrix representation"
+      ],
+      "short_definition": "A way to represent a graph using a 2D array where entries indicate the presence of an edge.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [
+        "FIFO queue"
+      ],
+      "short_definition": "A data structure that follows the First-In, First-Out principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Visited nodes",
+        "Seen nodes"
+      ],
+      "short_definition": "A collection to keep track of nodes that have already been processed during traversal.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "bfs_traversal",
+      "name": "BFS Traversal",
+      "aliases": [
+        "Breadth-First Search"
+      ],
+      "short_definition": "A graph traversal algorithm that explores neighbors layer by layer.",
+      "prerequisites": [
+        "adjacency_list",
+        "graph",
+        "queue",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "level_order_traversal",
+      "name": "Level Order Traversal",
+      "aliases": [
+        "Layer by layer traversal"
+      ],
+      "short_definition": "Visiting nodes of a graph in order of their distance from the source node.",
+      "prerequisites": [
+        "bfs_traversal"
+      ]
+    },
+    {
+      "concept_id": "shortest_path_unweighted",
+      "name": "Shortest Path (Unweighted)",
+      "aliases": [
+        "Minimum edges path"
+      ],
+      "short_definition": "Finding the path with the fewest edges between two nodes in an unweighted graph.",
+      "prerequisites": [
+        "bfs_traversal"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [
+        "Graph components"
+      ],
+      "short_definition": "Subgraphs where any two vertices are connected to each other by paths.",
+      "prerequisites": [
+        "bfs_traversal"
+      ]
+    },
+    {
+      "concept_id": "tree_traversal",
+      "name": "Tree Traversal",
+      "aliases": [
+        "Tree exploration"
+      ],
+      "short_definition": "Visiting nodes in a tree structure, often a special case of graph traversal.",
+      "prerequisites": [
+        "bfs_traversal"
+      ]
+    }
+  ]
+}

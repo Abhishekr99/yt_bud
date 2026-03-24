@@ -1,0 +1,390 @@
+{
+  "curriculum_id": "DSA_queue_Queue definition",
+  "domain": "DSA",
+  "module": "queue",
+  "topic": "Queue definition",
+  "created_at": "2026-03-21T11:11:29.642026",
+  "concepts": [
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [
+        "FIFO"
+      ],
+      "short_definition": "A linear data structure that follows the First-In, First-Out (FIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "fifo",
+      "name": "FIFO",
+      "aliases": [
+        "First-In, First-Out"
+      ],
+      "short_definition": "The principle where the first element added to a structure is the first one to be removed.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "enqueue",
+      "name": "Enqueue",
+      "aliases": [
+        "Add",
+        "Insert"
+      ],
+      "short_definition": "The operation of adding an element to the rear of the queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "dequeue",
+      "name": "Dequeue",
+      "aliases": [
+        "Remove",
+        "Delete"
+      ],
+      "short_definition": "The operation of removing an element from the front of the queue.",
+      "prerequisites": [
+        "enqueue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "front",
+      "name": "Front",
+      "aliases": [
+        "Peek",
+        "Head"
+      ],
+      "short_definition": "The operation of viewing the element at the front of the queue without removing it.",
+      "prerequisites": [
+        "dequeue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "rear",
+      "name": "Rear",
+      "aliases": [
+        "Tail"
+      ],
+      "short_definition": "The position in the queue where new elements are added.",
+      "prerequisites": [
+        "enqueue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "empty_queue",
+      "name": "Empty Queue",
+      "aliases": [
+        "Is Empty"
+      ],
+      "short_definition": "A queue that contains no elements.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "full_queue",
+      "name": "Full Queue",
+      "aliases": [
+        "Is Full"
+      ],
+      "short_definition": "A queue that has reached its maximum capacity (relevant for array-based implementations).",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue_operation",
+      "name": "Queue Operations",
+      "aliases": [],
+      "short_definition": "The set of standard actions that can be performed on a queue.",
+      "prerequisites": [
+        "dequeue",
+        "empty_queue",
+        "enqueue",
+        "front",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "abstract_data_type",
+      "name": "Abstract Data Type",
+      "aliases": [
+        "ADT"
+      ],
+      "short_definition": "A logical description of a data structure, defining its operations and behavior.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "linear_data_structure",
+      "name": "Linear Data Structure",
+      "aliases": [],
+      "short_definition": "A data structure where elements are arranged in a sequential manner.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "array_implementation",
+      "name": "Array Implementation",
+      "aliases": [],
+      "short_definition": "Implementing a queue using an array.",
+      "prerequisites": [
+        "array",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "linked_list_implementation",
+      "name": "Linked List Implementation",
+      "aliases": [],
+      "short_definition": "Implementing a queue using a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "circular_queue",
+      "name": "Circular Queue",
+      "aliases": [],
+      "short_definition": "A queue implementation that uses a fixed-size array and wraps around.",
+      "prerequisites": [
+        "array_implementation",
+        "full_queue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "The measure of the time required to execute an algorithm as a function of the input size.",
+      "prerequisites": [
+        "queue_operation"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "The measure of the memory required to execute an algorithm as a function of the input size.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "applications_of_queue",
+      "name": "Applications of Queues",
+      "aliases": [],
+      "short_definition": "Real-world scenarios and algorithms where queues are used.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that uses a queue to explore nodes level by level.",
+      "prerequisites": [
+        "graph",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "operating_system_scheduling",
+      "name": "Operating System Scheduling",
+      "aliases": [],
+      "short_definition": "Using queues to manage processes waiting for CPU time.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "printer_spooling",
+      "name": "Printer Spooling",
+      "aliases": [],
+      "short_definition": "Managing print jobs in the order they are submitted.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "call_center_system",
+      "name": "Call Center Systems",
+      "aliases": [],
+      "short_definition": "Handling incoming calls in a first-come, first-served manner.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "data_buffering",
+      "name": "Data Buffering",
+      "aliases": [],
+      "short_definition": "Temporarily storing data between processes with different speeds.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [],
+      "short_definition": "A contiguous block of memory storing elements of the same data type.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [],
+      "short_definition": "A linear data structure where elements are linked using pointers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [],
+      "short_definition": "A fundamental unit in a linked list, containing data and a pointer to the next node.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "pointer",
+      "name": "Pointer",
+      "aliases": [],
+      "short_definition": "A variable that stores the memory address of another variable.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "capacity",
+      "name": "Capacity",
+      "aliases": [],
+      "short_definition": "The maximum number of elements a queue can hold.",
+      "prerequisites": [
+        "full_queue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "size",
+      "name": "Size",
+      "aliases": [],
+      "short_definition": "The current number of elements in a queue.",
+      "prerequisites": [
+        "empty_queue",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "dynamic_array",
+      "name": "Dynamic Array",
+      "aliases": [],
+      "short_definition": "An array that can resize itself automatically.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "static_array",
+      "name": "Static Array",
+      "aliases": [],
+      "short_definition": "An array with a fixed size determined at compile time.",
+      "prerequisites": [
+        "array"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [],
+      "short_definition": "A pointer that points to the front of the queue.",
+      "prerequisites": [
+        "front",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [],
+      "short_definition": "A pointer that points to the rear of the queue.",
+      "prerequisites": [
+        "queue",
+        "rear"
+      ]
+    },
+    {
+      "concept_id": "data_element",
+      "name": "Data Element",
+      "aliases": [],
+      "short_definition": "The individual item stored within a queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "sequential_acces",
+      "name": "Sequential Access",
+      "aliases": [],
+      "short_definition": "Accessing elements in a data structure one after another in order.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue_interface",
+      "name": "Queue Interface",
+      "aliases": [],
+      "short_definition": "A contract defining the methods a queue must support.",
+      "prerequisites": [
+        "queue",
+        "queue_operation"
+      ]
+    },
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [],
+      "short_definition": "A data structure representing a set of objects and the connections between them.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "process_management",
+      "name": "Process Management",
+      "aliases": [],
+      "short_definition": "Managing the execution of computer programs.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "task_scheduling",
+      "name": "Task Scheduling",
+      "aliases": [],
+      "short_definition": "Determining the order in which tasks are executed.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "message_queue",
+      "name": "Message Queues",
+      "aliases": [],
+      "short_definition": "A form of asynchronous communication between software components.",
+      "prerequisites": [
+        "queue"
+      ]
+    }
+  ]
+}

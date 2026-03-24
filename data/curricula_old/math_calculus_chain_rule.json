@@ -1,0 +1,379 @@
+{
+  "curriculum_id": "MATH_Calculus_Chain rule",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Chain rule",
+  "created_at": "2026-03-21T11:12:54.967254",
+  "concepts": [
+    {
+      "concept_id": "function_composition",
+      "name": "Function Composition",
+      "aliases": [
+        "Composite Functions"
+      ],
+      "short_definition": "Combining two or more functions where the output of one function becomes the input of another.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "outer_function",
+      "name": "Outer Function",
+      "aliases": [
+        "Outside Function"
+      ],
+      "short_definition": "In a composite function, the function that is applied last.",
+      "prerequisites": [
+        "function_composition"
+      ]
+    },
+    {
+      "concept_id": "inner_function",
+      "name": "Inner Function",
+      "aliases": [
+        "Inside Function"
+      ],
+      "short_definition": "In a composite function, the function that is applied first.",
+      "prerequisites": [
+        "function_composition"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_a_function",
+      "name": "Derivative of a Function",
+      "aliases": [
+        "Function Derivative"
+      ],
+      "short_definition": "The rate at which a function's output changes with respect to its input.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "power_rule",
+      "name": "Power Rule",
+      "aliases": [],
+      "short_definition": "A rule for finding the derivative of a power function (x^n).",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "constant_multiple_rule",
+      "name": "Constant Multiple Rule",
+      "aliases": [],
+      "short_definition": "A rule for finding the derivative of a constant multiplied by a function.",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "sum_and_difference_rule",
+      "name": "Sum and Difference Rules",
+      "aliases": [],
+      "short_definition": "Rules for finding the derivative of a sum or difference of functions.",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_sine",
+      "name": "Derivative of Sine",
+      "aliases": [],
+      "short_definition": "The derivative of the trigonometric function sin(x).",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_cosine",
+      "name": "Derivative of Cosine",
+      "aliases": [],
+      "short_definition": "The derivative of the trigonometric function cos(x).",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_exponential",
+      "name": "Derivative of Exponential",
+      "aliases": [],
+      "short_definition": "The derivative of the exponential function e^x.",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_natural_log",
+      "name": "Derivative of Natural Log",
+      "aliases": [],
+      "short_definition": "The derivative of the natural logarithm function ln(x).",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_statement",
+      "name": "Chain Rule Statement",
+      "aliases": [
+        "Chain Rule Formula"
+      ],
+      "short_definition": "The rule for differentiating composite functions.",
+      "prerequisites": [
+        "derivative_of_a_function",
+        "function_composition",
+        "inner_function",
+        "outer_function"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_outer_function",
+      "name": "Derivative of Outer Function",
+      "aliases": [],
+      "short_definition": "The derivative of the outer function in a composite function.",
+      "prerequisites": [
+        "derivative_of_a_function",
+        "outer_function"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_inner_function",
+      "name": "Derivative of Inner Function",
+      "aliases": [],
+      "short_definition": "The derivative of the inner function in a composite function.",
+      "prerequisites": [
+        "derivative_of_a_function",
+        "inner_function"
+      ]
+    },
+    {
+      "concept_id": "applying_chain_rule",
+      "name": "Applying Chain Rule",
+      "aliases": [
+        "Using Chain Rule"
+      ],
+      "short_definition": "The process of calculating the derivative of a composite function using the chain rule.",
+      "prerequisites": [
+        "chain_rule_statement",
+        "derivative_of_inner_function",
+        "derivative_of_outer_function"
+      ]
+    },
+    {
+      "concept_id": "nested_function",
+      "name": "Nested Functions",
+      "aliases": [],
+      "short_definition": "Functions composed of multiple layers of functions within functions.",
+      "prerequisites": [
+        "function_composition"
+      ]
+    },
+    {
+      "concept_id": "multiple_chain_rule_application",
+      "name": "Multiple Chain Rule Applications",
+      "aliases": [],
+      "short_definition": "Applying the chain rule multiple times for functions with more than two layers.",
+      "prerequisites": [
+        "applying_chain_rule",
+        "nested_function"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_with_trigonometric_function",
+      "name": "Chain Rule with Trigonometric Functions",
+      "aliases": [],
+      "short_definition": "Using the chain rule when the outer or inner function is trigonometric.",
+      "prerequisites": [
+        "applying_chain_rule",
+        "derivative_of_cosine",
+        "derivative_of_sine"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_with_exponential_function",
+      "name": "Chain Rule with Exponential Functions",
+      "aliases": [],
+      "short_definition": "Using the chain rule when the outer or inner function is exponential.",
+      "prerequisites": [
+        "applying_chain_rule",
+        "derivative_of_exponential"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_with_logarithmic_function",
+      "name": "Chain Rule with Logarithmic Functions",
+      "aliases": [],
+      "short_definition": "Using the chain rule when the outer or inner function is logarithmic.",
+      "prerequisites": [
+        "applying_chain_rule",
+        "derivative_of_natural_log"
+      ]
+    },
+    {
+      "concept_id": "implicit_differentiation",
+      "name": "Implicit Differentiation",
+      "aliases": [],
+      "short_definition": "A method for finding derivatives of implicitly defined functions, often using the chain rule.",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "related_rate",
+      "name": "Related Rates",
+      "aliases": [],
+      "short_definition": "Problems involving rates of change of multiple variables that are related by an equation, often solved with implicit differentiation and the chain rule.",
+      "prerequisites": [
+        "implicit_differentiation"
+      ]
+    },
+    {
+      "concept_id": "leibniz_notation_for_chain_rule",
+      "name": "Leibniz Notation for Chain Rule",
+      "aliases": [],
+      "short_definition": "Expressing the chain rule using Leibniz's notation for derivatives (dy/dx).",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "lagrange_notation_for_chain_rule",
+      "name": "Lagrange Notation for Chain Rule",
+      "aliases": [],
+      "short_definition": "Expressing the chain rule using Lagrange's notation for derivatives (f'(x)).",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_inverse_function",
+      "name": "Derivative of Inverse Functions",
+      "aliases": [],
+      "short_definition": "Finding the derivative of an inverse function, which can involve the chain rule.",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "parametric_differentiation",
+      "name": "Parametric Differentiation",
+      "aliases": [],
+      "short_definition": "Finding derivatives of functions defined parametrically, often utilizing the chain rule.",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_for_vector_function",
+      "name": "Chain Rule for Vector Functions",
+      "aliases": [],
+      "short_definition": "Extending the chain rule to differentiate vector-valued functions.",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "higherorder_derivative",
+      "name": "Higher-Order Derivatives",
+      "aliases": [],
+      "short_definition": "Derivatives of derivatives (second derivative, third derivative, etc.), which can involve repeated application of the chain rule.",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_in_multivariable_calculu",
+      "name": "Chain Rule in Multivariable Calculus",
+      "aliases": [],
+      "short_definition": "The generalization of the chain rule for functions of multiple variables.",
+      "prerequisites": [
+        "chain_rule_statement"
+      ]
+    },
+    {
+      "concept_id": "partial_derivative",
+      "name": "Partial Derivatives",
+      "aliases": [],
+      "short_definition": "The rate of change of a multivariable function with respect to one of its variables, holding others constant.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "gradient",
+      "name": "Gradient",
+      "aliases": [],
+      "short_definition": "A vector of partial derivatives of a scalar-valued function, used in multivariable chain rule.",
+      "prerequisites": [
+        "partial_derivative"
+      ]
+    },
+    {
+      "concept_id": "jacobian_matrix",
+      "name": "Jacobian Matrix",
+      "aliases": [],
+      "short_definition": "A matrix of all first-order partial derivatives of a vector-valued function, central to multivariable chain rule.",
+      "prerequisites": [
+        "partial_derivative"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_for_scalar_field",
+      "name": "Chain Rule for Scalar Fields",
+      "aliases": [],
+      "short_definition": "Applying the chain rule to scalar-valued functions of multiple variables.",
+      "prerequisites": [
+        "chain_rule_in_multivariable_calculu"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_for_vector_field",
+      "name": "Chain Rule for Vector Fields",
+      "aliases": [],
+      "short_definition": "Applying the chain rule to vector-valued functions of multiple variables.",
+      "prerequisites": [
+        "chain_rule_in_multivariable_calculu"
+      ]
+    },
+    {
+      "concept_id": "differentiability",
+      "name": "Differentiability",
+      "aliases": [],
+      "short_definition": "A property of a function that allows its derivative to be calculated.",
+      "prerequisites": [
+        "derivative_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "continuity",
+      "name": "Continuity",
+      "aliases": [],
+      "short_definition": "A property of a function where its graph can be drawn without lifting the pen.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "differentiable_implies_continuou",
+      "name": "Differentiable Implies Continuous",
+      "aliases": [],
+      "short_definition": "A theorem stating that if a function is differentiable at a point, it must also be continuous at that point.",
+      "prerequisites": [
+        "continuity",
+        "differentiability"
+      ]
+    },
+    {
+      "concept_id": "chain_rule_proof",
+      "name": "Chain Rule Proof",
+      "aliases": [],
+      "short_definition": "The mathematical derivation and justification for the chain rule.",
+      "prerequisites": [
+        "chain_rule_statement",
+        "continuity",
+        "differentiability"
+      ]
+    },
+    {
+      "concept_id": "applications_of_chain_rule",
+      "name": "Applications of Chain Rule",
+      "aliases": [],
+      "short_definition": "Real-world scenarios and mathematical problems where the chain rule is applied.",
+      "prerequisites": [
+        "applying_chain_rule"
+      ]
+    }
+  ]
+}

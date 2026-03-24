@@ -1,0 +1,112 @@
+{
+  "curriculum_id": "dsa_graph_prims_algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Prim’s algorithm",
+  "created_at": "2026-03-23T10:52:25.232431",
+  "concepts": [
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Adjacency List",
+        "Adjacency Matrix"
+      ],
+      "short_definition": "Methods for storing graph data, such as adjacency lists or matrices.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [
+        "Edge Weights"
+      ],
+      "short_definition": "A graph where edges have associated numerical values.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "spanning_tree",
+      "name": "Spanning Tree",
+      "aliases": [
+        "ST"
+      ],
+      "short_definition": "A subgraph that connects all vertices without forming cycles.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "minimum_spanning_tree",
+      "name": "Minimum Spanning Tree",
+      "aliases": [
+        "MST"
+      ],
+      "short_definition": "A spanning tree with the minimum possible total edge weight.",
+      "prerequisites": [
+        "spanning_tree",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "greedy_algorithm",
+      "name": "Greedy Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm that makes the locally optimal choice at each stage with the hope of finding a global optimum.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "priority_queue",
+      "name": "Priority Queue",
+      "aliases": [
+        "Min-Heap"
+      ],
+      "short_definition": "A data structure that stores elements with associated priorities and allows efficient retrieval of the element with the highest (or lowest) priority.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "prims_algorithm",
+      "name": "Prim's Algorithm",
+      "aliases": [],
+      "short_definition": "A greedy algorithm for finding a minimum spanning tree for a weighted undirected graph.",
+      "prerequisites": [
+        "graph_representation",
+        "greedy_algorithm",
+        "minimum_spanning_tree",
+        "priority_queue",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "edge_relaxation",
+      "name": "Edge Relaxation",
+      "aliases": [],
+      "short_definition": "The process of updating the estimated cost to reach a vertex if a shorter path is found.",
+      "prerequisites": [
+        "prims_algorithm"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [],
+      "short_definition": "Subgraphs where any two vertices are connected to each other by paths, and which are connected to no additional vertices in the supergraph.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [
+        "BFS",
+        "DFS"
+      ],
+      "short_definition": "Systematic way of visiting all vertices in a graph.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    }
+  ]
+}

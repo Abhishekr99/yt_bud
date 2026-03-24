@@ -1,0 +1,127 @@
+{
+  "curriculum_id": "dsa_queue_queue_definition",
+  "domain": "DSA",
+  "module": "queue",
+  "topic": "Queue definition",
+  "created_at": "2026-03-23T10:52:52.956750",
+  "concepts": [
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [
+        "FIFO"
+      ],
+      "short_definition": "A linear data structure that follows the First-In, First-Out (FIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "fifo_principle",
+      "name": "FIFO Principle",
+      "aliases": [
+        "First-In, First-Out"
+      ],
+      "short_definition": "The first element added to the queue is the first one to be removed.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "enqueue_operation",
+      "name": "Enqueue Operation",
+      "aliases": [
+        "Add to Queue",
+        "Insert"
+      ],
+      "short_definition": "The process of adding an element to the rear of the queue.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "dequeue_operation",
+      "name": "Dequeue Operation",
+      "aliases": [
+        "Remove from Queue",
+        "Delete"
+      ],
+      "short_definition": "The process of removing an element from the front of the queue.",
+      "prerequisites": [
+        "enqueue_operation",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "front_element",
+      "name": "Front Element",
+      "aliases": [
+        "Peek",
+        "Head"
+      ],
+      "short_definition": "The element at the front of the queue, which is the next to be dequeued.",
+      "prerequisites": [
+        "dequeue_operation",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "rear_element",
+      "name": "Rear Element",
+      "aliases": [
+        "Tail"
+      ],
+      "short_definition": "The element at the rear of the queue, where new elements are enqueued.",
+      "prerequisites": [
+        "enqueue_operation",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "empty_queue",
+      "name": "Empty Queue",
+      "aliases": [
+        "Queue Underflow"
+      ],
+      "short_definition": "A queue that contains no elements.",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "full_queue",
+      "name": "Full Queue",
+      "aliases": [
+        "Queue Overflow"
+      ],
+      "short_definition": "A queue that has reached its maximum capacity (relevant for fixed-size implementations).",
+      "prerequisites": [
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue_implementation",
+      "name": "Queue Implementation",
+      "aliases": [
+        "Array Queue",
+        "Linked List Queue"
+      ],
+      "short_definition": "Different methods for realizing a queue data structure, such as using arrays or linked lists.",
+      "prerequisites": [
+        "dequeue_operation",
+        "enqueue_operation",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue_application",
+      "name": "Queue Applications",
+      "aliases": [
+        "Use Cases"
+      ],
+      "short_definition": "Real-world scenarios and algorithms where queues are effectively utilized.",
+      "prerequisites": [
+        "fifo_principle",
+        "queue"
+      ]
+    }
+  ]
+}

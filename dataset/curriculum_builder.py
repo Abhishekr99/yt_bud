@@ -10,7 +10,11 @@ from utility import llm
 
 
 def build_curriculum(
-    domain: str, topic: str, curriculum_id: str, max_concepts: int = 40
+    domain: str,
+    module: str,
+    topic: str,
+    curriculum_id: str,
+    max_concepts: int = 40,
 ) -> dict:
     prompt = ChatPromptTemplate.from_template(
         """
@@ -32,11 +36,17 @@ def build_curriculum(
         - Keep names concise (1-4 words).
         - Prerequisites should refer to other concept names in the list.
         Domain: {domain}
+        Module: {module}
         Topic: {topic}
         """
     )
     response = (prompt | llm).invoke(
-        {"domain": domain, "topic": topic, "max_concepts": max_concepts}
+        {
+            "domain": domain,
+            "module": module,
+            "topic": topic,
+            "max_concepts": max_concepts,
+        }
     )
     cleaned = clean_json_text(response.content)
     payload = json.loads(cleaned)
@@ -76,6 +86,7 @@ def build_curriculum(
     return {
         "curriculum_id": curriculum_id,
         "domain": domain,
+        "module": module,
         "topic": topic,
         "created_at": datetime.utcnow().isoformat(),
         "concepts": [concept.to_dict() for concept in concepts],

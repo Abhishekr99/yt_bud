@@ -1,0 +1,431 @@
+{
+  "curriculum_id": "DSA_Graph_Bellman-Ford algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Bellman-Ford algorithm",
+  "created_at": "2026-03-21T10:39:48.439785",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Directed Graph",
+        "Weighted Graph"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge_weight",
+      "name": "Edge Weight",
+      "aliases": [
+        "Weight"
+      ],
+      "short_definition": "A numerical value assigned to an edge, representing cost or distance.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of connected edges from one vertex to another.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "path_length",
+      "name": "Path Length",
+      "aliases": [
+        "Path Cost"
+      ],
+      "short_definition": "The sum of weights of edges in a path.",
+      "prerequisites": [
+        "edge_weight",
+        "path"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [
+        "Minimum Path"
+      ],
+      "short_definition": "A path between two vertices with the minimum possible path length.",
+      "prerequisites": [
+        "path",
+        "path_length"
+      ]
+    },
+    {
+      "concept_id": "source_vertex",
+      "name": "Source Vertex",
+      "aliases": [
+        "Start Node"
+      ],
+      "short_definition": "The vertex from which paths originate.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "destination_vertex",
+      "name": "Destination Vertex",
+      "aliases": [
+        "End Node"
+      ],
+      "short_definition": "The vertex to which paths lead.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "distance",
+      "name": "Distance",
+      "aliases": [
+        "Shortest Distance"
+      ],
+      "short_definition": "The length of the shortest path from a source vertex to another vertex.",
+      "prerequisites": [
+        "shortest_path",
+        "source_vertex"
+      ]
+    },
+    {
+      "concept_id": "initialization",
+      "name": "Initialization",
+      "aliases": [
+        "Setup"
+      ],
+      "short_definition": "Setting initial values for distances and predecessors.",
+      "prerequisites": [
+        "distance",
+        "source_vertex"
+      ]
+    },
+    {
+      "concept_id": "relaxation",
+      "name": "Relaxation",
+      "aliases": [
+        "Edge Relaxation"
+      ],
+      "short_definition": "Updating the distance to a vertex if a shorter path is found.",
+      "prerequisites": [
+        "distance",
+        "path_length"
+      ]
+    },
+    {
+      "concept_id": "iteration",
+      "name": "Iteration",
+      "aliases": [
+        "Pass"
+      ],
+      "short_definition": "A complete cycle of processing all edges in the graph.",
+      "prerequisites": [
+        "relaxation"
+      ]
+    },
+    {
+      "concept_id": "v1_iteration",
+      "name": "V-1 Iterations",
+      "aliases": [
+        "Number of Passes"
+      ],
+      "short_definition": "Performing the relaxation process for each vertex in the graph.",
+      "prerequisites": [
+        "graph",
+        "iteration"
+      ]
+    },
+    {
+      "concept_id": "negative_edge_weight",
+      "name": "Negative Edge Weight",
+      "aliases": [
+        "Negative Weight"
+      ],
+      "short_definition": "An edge with a weight less than zero.",
+      "prerequisites": [
+        "edge_weight"
+      ]
+    },
+    {
+      "concept_id": "negative_cycle",
+      "name": "Negative Cycle",
+      "aliases": [
+        "Negative Weight Cycle"
+      ],
+      "short_definition": "A cycle in a graph where the sum of edge weights is negative.",
+      "prerequisites": [
+        "cycle",
+        "negative_edge_weight"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [
+        "Circuit"
+      ],
+      "short_definition": "A path that starts and ends at the same vertex.",
+      "prerequisites": [
+        "path"
+      ]
+    },
+    {
+      "concept_id": "bellmanford_algorithm",
+      "name": "Bellman-Ford Algorithm",
+      "aliases": [
+        "BF Algorithm"
+      ],
+      "short_definition": "An algorithm to find the shortest paths from a single source vertex to all other vertices in a weighted graph, even with negative edge weights.",
+      "prerequisites": [
+        "edge_weight",
+        "graph",
+        "relaxation",
+        "source_vertex",
+        "v1_iteration"
+      ]
+    },
+    {
+      "concept_id": "predecessor",
+      "name": "Predecessor",
+      "aliases": [
+        "Parent Vertex"
+      ],
+      "short_definition": "The vertex that comes immediately before a given vertex on a shortest path.",
+      "prerequisites": [
+        "shortest_path"
+      ]
+    },
+    {
+      "concept_id": "path_reconstruction",
+      "name": "Path Reconstruction",
+      "aliases": [
+        "Path Recovery"
+      ],
+      "short_definition": "Using predecessors to trace back and find the actual shortest path.",
+      "prerequisites": [
+        "destination_vertex",
+        "predecessor"
+      ]
+    },
+    {
+      "concept_id": "detecting_negative_cycle",
+      "name": "Detecting Negative Cycles",
+      "aliases": [
+        "Negative Cycle Detection"
+      ],
+      "short_definition": "Identifying if a graph contains a negative cycle reachable from the source.",
+      "prerequisites": [
+        "bellmanford_algorithm",
+        "negative_cycle"
+      ]
+    },
+    {
+      "concept_id": "vth_iteration",
+      "name": "Vth Iteration",
+      "aliases": [
+        "Extra Pass"
+      ],
+      "short_definition": "An additional iteration after V-1 iterations to detect negative cycles.",
+      "prerequisites": [
+        "detecting_negative_cycle",
+        "v1_iteration"
+      ]
+    },
+    {
+      "concept_id": "unreachable_vertice",
+      "name": "Unreachable Vertices",
+      "aliases": [],
+      "short_definition": "Vertices that cannot be reached from the source vertex.",
+      "prerequisites": [
+        "graph",
+        "source_vertex"
+      ]
+    },
+    {
+      "concept_id": "infinite_distance",
+      "name": "Infinite Distance",
+      "aliases": [
+        "Infinity"
+      ],
+      "short_definition": "A representation of unreachable vertices or initial distance values.",
+      "prerequisites": [
+        "distance",
+        "unreachable_vertice"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O"
+      ],
+      "short_definition": "A measure of the algorithm's execution time as a function of input size.",
+      "prerequisites": [
+        "bellmanford_algorithm",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the algorithm's memory usage as a function of input size.",
+      "prerequisites": [
+        "bellmanford_algorithm"
+      ]
+    },
+    {
+      "concept_id": "dynamic_programming",
+      "name": "Dynamic Programming",
+      "aliases": [
+        "DP"
+      ],
+      "short_definition": "An algorithmic technique that solves problems by breaking them down into subproblems.",
+      "prerequisites": [
+        "bellmanford_algorithm"
+      ]
+    },
+    {
+      "concept_id": "subproblem",
+      "name": "Subproblem",
+      "aliases": [],
+      "short_definition": "A smaller, simpler version of the original problem.",
+      "prerequisites": [
+        "dynamic_programming"
+      ]
+    },
+    {
+      "concept_id": "optimal_substructure",
+      "name": "Optimal Substructure",
+      "aliases": [],
+      "short_definition": "The optimal solution to a problem contains optimal solutions to its subproblems.",
+      "prerequisites": [
+        "dynamic_programming"
+      ]
+    },
+    {
+      "concept_id": "overlapping_subproblem",
+      "name": "Overlapping Subproblems",
+      "aliases": [],
+      "short_definition": "Subproblems that are encountered multiple times during the computation.",
+      "prerequisites": [
+        "dynamic_programming"
+      ]
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Adjacency List",
+        "Adjacency Matrix"
+      ],
+      "short_definition": "How a graph is stored in computer memory.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "Representing a graph using lists of adjacent vertices for each vertex.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "Representing a graph using a matrix where entries indicate edge presence.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "single_source_shortest_path",
+      "name": "Single Source Shortest Path",
+      "aliases": [
+        "SSSP"
+      ],
+      "short_definition": "Finding shortest paths from one source to all other vertices.",
+      "prerequisites": [
+        "bellmanford_algorithm"
+      ]
+    },
+    {
+      "concept_id": "all_pairs_shortest_path",
+      "name": "All Pairs Shortest Path",
+      "aliases": [
+        "APSP"
+      ],
+      "short_definition": "Finding shortest paths between all pairs of vertices in a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "dijkstras_algorithm",
+      "name": "Dijkstra's Algorithm",
+      "aliases": [
+        "Dijkstra"
+      ],
+      "short_definition": "An algorithm for finding shortest paths in graphs with non-negative edge weights.",
+      "prerequisites": [
+        "edge_weight",
+        "graph",
+        "source_vertex"
+      ]
+    },
+    {
+      "concept_id": "comparison_with_dijkstra",
+      "name": "Comparison with Dijkstra",
+      "aliases": [
+        "Bellman-Ford vs Dijkstra"
+      ],
+      "short_definition": "Understanding the differences and use cases between Bellman-Ford and Dijkstra's algorithm.",
+      "prerequisites": [
+        "bellmanford_algorithm",
+        "dijkstras_algorithm"
+      ]
+    },
+    {
+      "concept_id": "applications_of_bellmanford",
+      "name": "Applications of Bellman-Ford",
+      "aliases": [
+        "Use Cases"
+      ],
+      "short_definition": "Real-world problems where the Bellman-Ford algorithm is applied.",
+      "prerequisites": [
+        "bellmanford_algorithm"
+      ]
+    },
+    {
+      "concept_id": "routing_protocol",
+      "name": "Routing Protocols",
+      "aliases": [
+        "Network Routing"
+      ],
+      "short_definition": "Algorithms used in computer networks to determine paths for data packets.",
+      "prerequisites": [
+        "applications_of_bellmanford"
+      ]
+    },
+    {
+      "concept_id": "shortest_path_faster_algorithm",
+      "name": "Shortest Path Faster Algorithm",
+      "aliases": [
+        "SPFA"
+      ],
+      "short_definition": "An optimization of the Bellman-Ford algorithm.",
+      "prerequisites": [
+        "bellmanford_algorithm"
+      ]
+    }
+  ]
+}

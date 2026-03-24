@@ -1,0 +1,391 @@
+{
+  "curriculum_id": "DSA_Linked list_Cycle detection",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Cycle detection",
+  "created_at": "2026-03-21T10:41:10.476502",
+  "concepts": [
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [
+        "LL"
+      ],
+      "short_definition": "A linear data structure where elements are not stored at contiguous memory locations.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [],
+      "short_definition": "The basic building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "pointer",
+      "name": "Pointer",
+      "aliases": [
+        "Reference"
+      ],
+      "short_definition": "A variable that stores the memory address of another variable.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "head",
+      "name": "Head",
+      "aliases": [],
+      "short_definition": "The first node in a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tail",
+      "name": "Tail",
+      "aliases": [],
+      "short_definition": "The last node in a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [
+        "Next"
+      ],
+      "short_definition": "The pointer within a node that refers to the subsequent node in the list.",
+      "prerequisites": [
+        "node",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "null_pointer",
+      "name": "Null Pointer",
+      "aliases": [
+        "NULL"
+      ],
+      "short_definition": "A pointer that does not point to any valid memory location, often indicating the end of a list.",
+      "prerequisites": [
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [
+        "Loop"
+      ],
+      "short_definition": "A condition in a linked list where a node's next pointer points back to a previously visited node.",
+      "prerequisites": [
+        "linked_list",
+        "node",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [
+        "Loop Detection"
+      ],
+      "short_definition": "The process of identifying whether a cycle exists within a linked list.",
+      "prerequisites": [
+        "cycle",
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "tortoise_and_hare",
+      "name": "Tortoise and Hare",
+      "aliases": [
+        "Floyd's Cycle-Finding Algorithm"
+      ],
+      "short_definition": "An algorithm that uses two pointers moving at different speeds to detect cycles.",
+      "prerequisites": [
+        "cycle_detection",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "slow_pointer",
+      "name": "Slow Pointer",
+      "aliases": [
+        "Tortoise"
+      ],
+      "short_definition": "A pointer that moves one step at a time in a linked list.",
+      "prerequisites": [
+        "pointer",
+        "tortoise_and_hare"
+      ]
+    },
+    {
+      "concept_id": "fast_pointer",
+      "name": "Fast Pointer",
+      "aliases": [
+        "Hare"
+      ],
+      "short_definition": "A pointer that moves two steps at a time in a linked list.",
+      "prerequisites": [
+        "pointer",
+        "tortoise_and_hare"
+      ]
+    },
+    {
+      "concept_id": "meeting_point",
+      "name": "Meeting Point",
+      "aliases": [],
+      "short_definition": "The node where the slow and fast pointers meet if a cycle exists.",
+      "prerequisites": [
+        "fast_pointer",
+        "slow_pointer",
+        "tortoise_and_hare"
+      ]
+    },
+    {
+      "concept_id": "cycle_start_node",
+      "name": "Cycle Start Node",
+      "aliases": [],
+      "short_definition": "The first node in the linked list that is part of the cycle.",
+      "prerequisites": [
+        "meeting_point",
+        "tortoise_and_hare"
+      ]
+    },
+    {
+      "concept_id": "finding_cycle_start",
+      "name": "Finding Cycle Start",
+      "aliases": [],
+      "short_definition": "The process of determining the entry point of a cycle in a linked list.",
+      "prerequisites": [
+        "cycle_detection",
+        "cycle_start_node"
+      ]
+    },
+    {
+      "concept_id": "hash_table",
+      "name": "Hash Table",
+      "aliases": [
+        "Hash Map"
+      ],
+      "short_definition": "A data structure that uses a hash function to map keys to values.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "visited_node",
+      "name": "Visited Nodes",
+      "aliases": [],
+      "short_definition": "Nodes that have been traversed during a linked list traversal.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "hash_set",
+      "name": "Hash Set",
+      "aliases": [],
+      "short_definition": "A data structure that stores unique elements and allows for efficient checking of membership.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "The amount of memory an algorithm uses.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "The amount of time an algorithm takes to run.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_traversal",
+      "name": "Linear Traversal",
+      "aliases": [],
+      "short_definition": "Visiting each node in a linked list sequentially from head to tail.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "infinite_loop",
+      "name": "Infinite Loop",
+      "aliases": [],
+      "short_definition": "A loop that continues indefinitely, often caused by a cycle in a linked list.",
+      "prerequisites": [
+        "cycle"
+      ]
+    },
+    {
+      "concept_id": "single_linked_list",
+      "name": "Single Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "A linked list where each node points only to the next node.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list",
+      "name": "Doubly Linked List",
+      "aliases": [
+        "DLL"
+      ],
+      "short_definition": "A linked list where each node points to both the next and previous nodes.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "circular_linked_list",
+      "name": "Circular Linked List",
+      "aliases": [
+        "CLL"
+      ],
+      "short_definition": "A linked list where the last node points back to the first node, forming a cycle.",
+      "prerequisites": [
+        "cycle",
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [],
+      "short_definition": "A set of rules or instructions to be followed in calculations or other problem-solving operations.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structure",
+      "aliases": [
+        "DS"
+      ],
+      "short_definition": "A particular way of organizing and storing data in a computer.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Case",
+      "aliases": [],
+      "short_definition": "A specific scenario or input that might cause an algorithm to fail or behave unexpectedly.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "empty_list",
+      "name": "Empty List",
+      "aliases": [],
+      "short_definition": "A linked list with no nodes.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "single_node_list",
+      "name": "Single Node List",
+      "aliases": [],
+      "short_definition": "A linked list containing only one node.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "cycle_length",
+      "name": "Cycle Length",
+      "aliases": [],
+      "short_definition": "The number of nodes in a cycle.",
+      "prerequisites": [
+        "cycle",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "cycle_detection_method",
+      "name": "Cycle Detection Methods",
+      "aliases": [],
+      "short_definition": "Various techniques used to identify cycles in linked lists.",
+      "prerequisites": [
+        "cycle_detection"
+      ]
+    },
+    {
+      "concept_id": "two_pointer",
+      "name": "Two Pointers",
+      "aliases": [],
+      "short_definition": "Using multiple pointers to traverse a data structure simultaneously.",
+      "prerequisites": [
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "memory_usage",
+      "name": "Memory Usage",
+      "aliases": [],
+      "short_definition": "The amount of computer memory required by a program or data structure.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "efficiency",
+      "name": "Efficiency",
+      "aliases": [],
+      "short_definition": "How well an algorithm or data structure performs in terms of time and space.",
+      "prerequisites": [
+        "space_complexity",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "node_manipulation",
+      "name": "Node Manipulation",
+      "aliases": [],
+      "short_definition": "Operations performed on nodes within a linked list, such as traversal or modification.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "pointer_movement",
+      "name": "Pointer Movement",
+      "aliases": [],
+      "short_definition": "The act of advancing pointers through a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "pointer"
+      ]
+    },
+    {
+      "concept_id": "algorithm_analysi",
+      "name": "Algorithm Analysis",
+      "aliases": [],
+      "short_definition": "The process of evaluating the performance of an algorithm.",
+      "prerequisites": [
+        "space_complexity",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "problem_solving",
+      "name": "Problem Solving",
+      "aliases": [],
+      "short_definition": "The process of finding solutions to complex issues.",
+      "prerequisites": []
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+in this lesson we're going to be 
+ introduced to orthogonal vectors we're 
+ not going to go into a lot of detail 
+ because the next several sections 
+ through the rest of this course will 
+ deal with orthogonal sets and orthogonal 
+ vectors since we're going to be spending 
+ quite a bit of time with orthogonal 
+ vectors it's important to understand a 
+ little bit more about them than we know 
+ right now which is essentially nothing 
+ but orthogonal vectors are vectors that 
+ are perpendicular to one another so as 
+ you can see in my picture I have vector 
+ U and vector V I've also drawn in vector 
+ negative V just for a later example in 
+ just a moment but just looking at U and 
+ V it does appear that they are 
+ perpendicular to one another in order 
+ for us to know for sure we can use the 
+ fact that two vectors are orthogonal if 
+ the dot product or inner product of U 
+ and V is 0 so I'm going to show you 
+ using U which is 7 7 and V which is 2 
+ negative 2 that if I did in fact find 
+ their inner product that I would get 0 
+ but where did that come from 
+ how do I know that the inner product 
+ must be equal to 0 well if I look at my 
+ picture it's clear that the distance 
+ from u to V should be the same as the 
+ distance from u to negative B so 
+ essentially what I'm going to do is I'm 
+ going to find this length and square it 
+ and this length in square and those two 
+ things should be equal to one another 
+ so let's find out let's see what we can 
+ find out the distance between U and V 
+ says u minus negative a sorry the 
+ distance between U and negative B says 
+ let's take the distance u minus negative 
+ V which of course means I'm adding so 
+ essentially I have find the distance of 
+ U plus V 
+ square it so the distance of U plus V 
+ would be u plus V and the inner product 
+ with itself u plus V oops not squared 
+ anymore 
+ and using some of the properties that we 
+ know I have that you with the product of 
+ u plus V so the inner product of U with 
+ u plus V Plus V times u plus V inner 
+ product and again doing a little bit of 
+ more of our properties we've got you and 
+ you here so I can say u inner product of 
+ u and u plus the inner product of u and 
+ v plus the inner product of V and u plus 
+ the inner product of V and V which is 
+ essentially the length of U squared plus 
+ the length of V squared plus 2 u inner 
+ product B 
+ if I do the exact same thing on the 
+ other side so I'm going to be doing 
+ similar calculations over here this is 
+ going to be u minus V because that's how 
+ we compute the distance and then that 
+ means and then again u u minus V I 
+ didn't do anything on that step so this 
+ is u minus V product u minus V sorry my 
+ V's and use are starting to look a 
+ little bit alike and then again doing 
+ that same using those same theorems 
+ using those same properties I can say u 
+ times u minus V I'm sorry u inner 
+ product of u minus V plus I'm sorry 
+ minus V and then inner product of u 
+ minus V and we can see that this is very 
+ very similar so this is U with the inner 
+ product of U minus Cu with the inner 
+ product of V minus V inner product u - 
+ or sorry plus V inner product V and so 
+ as we can see what's happening is I have 
+ the length of U squared plus the length 
+ of V squared and this time I have minus 
+ 2-u inner product V and so essentially 
+ what we're saying is for these distances 
+ to be the same these obviously are the 
+ same these obviously are the same we 
+ need to u inner product V to be equal to 
+ negative 2 u inner product V and the 
+ only way that that's going to happen is 
+ if u v 
+ is zero because two times something is 
+ not going to equal negative two times 
+ something unless that something is equal 
+ to zero so that's where this comes from 
+ so hopefully that helps you to 
+ understand just a little bit in a little 
+ bit more detail let's try this question 
+ we're looking for which pairs of vectors 
+ are orthogonal and again when we're 
+ doing this all we're doing is finding 
+ the inner product so I'm going to take a 
+ b and determine the inner product so in 
+ this case that would be four times two 
+ plus three times zero plus negative two 
+ times four because again that inner 
+ product just says multiply corresponding 
+ parts you can certainly turn it into the 
+ transpose if you want but i'm not ever 
+ going to do that 
+ four times two is eight three times zero 
+ is zero negative 2 times 4 is negative 8 
+ and therefore my inner product is zero 
+ and a B are orthogonal vectors which 
+ means if I were to graph these which 
+ would be more difficult in three 
+ dimensions but if I were to graph them 
+ they weren't they would in fact be 
+ perpendicular now let's try AC so again 
+ a C would be 4 times two plus three 
+ times zero plus negative two times one 
+ which gives me 8 plus zero plus negative 
+ two which is six clearly not zero 
+ therefore not orthogonal and the last 
+ but not least BC BC would be two times 
+ two plus zero times zero 
+ Plus 4 times 1 which gives me 4 plus 0 
+ plus 4 
+ whoops and that obviously is 8 and that 
+ is not 0 so A or B C are not orthogonal

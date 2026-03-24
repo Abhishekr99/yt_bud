@@ -1,0 +1,360 @@
+welcome to linear algebra we are going 
+ to start with a review of systems of 
+ linear equations so hopefully everything 
+ in this first video is review for 
+ you so we are familiar with solving 
+ systems and you've solved a system like 
+ this before but it probably looked just 
+ a little bit different because it might 
+ have looked like x + y = 5 and 3x - 2 y 
+ = 10 so this is a linear algebra class 
+ and so we're going to have quite a few 
+ variables and so instead of XYZ and then 
+ now do I start over at a we're just 
+ going to use x with a subscript because 
+ then we can have just as many variables 
+ as we want so that will be the only real 
+ difference or the two differences I 
+ guess is instead of X and Y we're using 
+ only x's and we're going to have a bunch 
+ more variables than we're used to now 
+ we're going to be using matrices quite a 
+ bit and maybe this is the first time 
+ you've dealt with matrices and hopefully 
+ not um but there are two matrices you 
+ need to be familiar with the first is 
+ the coefficient Matrix so if I'm looking 
+ at the coefficient of X1 and the 
+ coefficient of X2 notice those are both 
+ ones and those are my entries here in 
+ The Matrix and then of course three and 
+ don't forget the sign 
+ -2 and those are the four values in my 
+ co efficient Matrix so notice in the 
+ coefficient Matrix I use only the 
+ coefficients and I don't use the 
+ solutions of five and 10 an augmented 
+ Matrix has the coefficient Matrix on the 
+ left side has some kind of divider here 
+ dotted or solid line though I will tell 
+ you in the textbook that we're using for 
+ this course they often don't have a 
+ divider I want you to use a 
+ divider and then on the right side of 
+ course of course this is 
+ the um solution set of 5 and 
+ 10 now we hopefully are very familiar 
+ with being able to solve the existing 
+ system because I made it a nice and easy 
+ one 
+ and I only have two variables so I feel 
+ like I was being pretty easy so let's 
+ take a look at how we would solve this 
+ not using a matrix and then we'll talk 
+ about what that looks like with 
+ Matrix so if I were solving this 
+ remember that I'm going to solve by 
+ elimination and what that means is I 
+ want to be able to add these two 
+ equations together and for one of my 
+ variables to eliminate which means I 
+ need the same coefficient but the 
+ opposite sign so I'm going to choose to 
+ take this entire equation time 
+ 2 because that's going to give me in 
+ this column a positive 2x2 and a - 
+ 2x2 so if I add these together I get 
+ 5x1 + 0 X2 = 20 and of course you don't 
+ even have to write the 0 X2 and then I 
+ by division I would know that X1 is 
+ equal to 
+ 4 now before I solve for X2 let's take a 
+ look at this augmented Matrix of 1 1 5 5 
+ 3 -2 
+ 10 and I want to think about what we 
+ just did what we just did is we 
+ multiplied that first equation by two 
+ and then we combined the two equations 
+ so that's what I'm going to do here and 
+ I'm going to use some notation that I'm 
+ not really going to explain yet so in a 
+ future video um I think the very next 
+ video we're going to talk about this 
+ notation but for now just know that I 
+ took 2 * Row one and I added row two to 
+ it and I'm going to make this my new row 
+ one and again don't get too caught up in 
+ the 
+ notation I'm going to go through that in 
+ very great detail in the next video but 
+ essentially what I'm doing is I'm doing 
+ exactly what I did over here but I'm 
+ doing this in a matrix so I'm taking two 
+ time this row I'm adding it to the 
+ second row and then I'm going to put 
+ that in row 
+ one so what is that going to look like 
+ Row one is taking 2 * 1 + 3 which is 
+ 5 and then 2 * 1 + -2 which is 
+ 0 and 2 * 5 which is 10 + 10 which is 
+ 20 and this nothing happened 
+ to so I want you to notice I have 5x1 
+ and 20 and I have 5x1 and 20 so this is 
+ kind of how it's going to relate now 
+ what would I do next well what did I do 
+ here I divided by five and divided by 
+ five well that's what I'm going to do 
+ now again we're going to spend some time 
+ talking about what an okay row operation 
+ is but essentially what I'm going to do 
+ is I'm going to take a 
+ fifth of Row one to make that my new row 
+ one so it's like dividing by five but 
+ multiplying by 1/5 so I get 1 and 0 and 
+ of course 20 ID 5 is 
+ four and nothing has happened here 
+ yet so now what's going to happen is I 
+ want to solve for X2 now if I'm doing a 
+ system of equations I would probably 
+ take the X1 + X2 = 5 replace X1 with 4 
+ and find that X2 is equal to 1 so how am 
+ I going to do that in a matrix well 
+ let's take a 
+ look I want to before I do that I want 
+ to just note that what does this 
+ transfer back into this 
+ means X1 X1 + 
+ 0x2 whoops forgot my 
+ X Plus 0 X2 is equal to 4 
+ that's exactly what that translates back 
+ into and so really what I want is I want 
+ this guy to be a one and this guy to be 
+ a zero so how am I going to make that a 
+ zero so let's focus on the zero 
+ first and again if you're like what is 
+ she doing we're going to spend a lot of 
+ time developing an 
+ algorithm for how best to go about doing 
+ something like this but just stick with 
+ me for now 
+ I'm going to 
+ take -3 * Row 1 I'm going to add row 
+ two and that's going to be my new row 
+ two so notice Row one is staying exactly 
+ the 
+ same and row two is now -3 * 1 which is 
+ -3 + 3 which is 
+ 0 and then -3 3 * 0 which is 0 + -2 is 
+ -2 and then -3 * 4 which is -12 + 10 
+ which is 
+ -2 now what well now I need to get this 
+ guy to be a one so how would I do that I 
+ would take netive 1/2 of row two to be 
+ my new row 
+ two so basically just saying divide it 
+ in half and change the sign so my first 
+ row remains unchanged my second row is 
+ half of 0 is 0 1/2 of -2 is -1 and then 
+ of course I change the sign and then 
+ again half of -2 is-1 and I changed the 
+ sign and so this is my final Matrix so 
+ what does that tell me again this guy 
+ translates into 1 
+ X1 Plus + 0 X2 is = to 
+ 4 and 0 X1 + 1 X2 is equal to 1 and of 
+ course we know that we don't need these 
+ so this is just X1 is 4 and X2 is 1 
+ which is exactly what I found over 
+ here probably a little bit easier um but 
+ again we're not going to be solving 
+ these nice easy systems where I just 
+ have two variables I'm I'm going to be 
+ solving for you know 5 6 7 12 15 
+ variables and believe me using the 
+ Matrix way is much much 
+ easier let's talk about some terminology 
+ together just so that when we are 
+ talking about something we're all 
+ talking about the same thing first is a 
+ linear equation a linear equation is 
+ simply an equation that can be written 
+ as A1 X1 plus A2 X2 plus A3 X3 Etc um 
+ where obviously A1 A2 all of those 
+ values and B which is the solution are 
+ real or complex numbers and so that's 
+ just a fancy way of saying hey you've 
+ got a linear equation like we used to 
+ have with you know y = mx plus b just a 
+ different form so it's basically a 
+ standard form equation where we have 
+ variables um and coefficients equal to 
+ some value a system of linear equations 
+ would be to or more linear equations 
+ that use the same 
+ variables a solution is a list of 
+ numbers that makes each equation in the 
+ system true so that's important it's not 
+ just making one of the equations true or 
+ two of the equations however many 
+ equations we have we should be able to 
+ substitute those values back in for X1 
+ X2 X3 Etc and make the equation 
+ true and the solution set is the set of 
+ all possible solutions to a system so it 
+ could be that you have 
+ one solution or it could be that you 
+ have many solutions or it could be that 
+ you have no solution so let's take a 
+ look at what that might look 
+ like there are three types of systems or 
+ two if you're talking about just 
+ consistent versus inconsistent so if you 
+ have a system that is 
+ inconsistent essentially what that means 
+ is that you have no solution so I've 
+ tried to make this very easy this is 
+ obviously just using two equations 
+ and that's not what we're normally going 
+ to do but it is it does help to have a 
+ visual essentially I'm saying hey look 
+ I've got two equations and they are 
+ never going to touch each other and 
+ therefore we have no 
+ solution if I have a consistent system 
+ then I'm going to have at least one 
+ solution so it might be that I have 
+ exactly one solution and that's going to 
+ be some ordered pair or ordered triple 
+ or however ever many values I have so if 
+ I had five variables then I'm going to 
+ have some value for X1 some value for X2 
+ some value for X3 some value for X4 and 
+ some value for X5 that when I replace 
+ those values into those five equations 
+ it makes each of those equations 
+ true or I could have infinitely many 
+ solutions and that happens quite often 
+ now again with two equations ESS 
+ essentially what that means is we've got 
+ two lines and you can only see one of 
+ them because I'm not a magician but 
+ basically I've got two lines the other 
+ one is stacked directly on top of this 
+ one which means everywhere that line is 
+ is a solution to both 
+ equations so I generally like to put a 
+ practice question somewhere in each 
+ video or each couple of videos and 
+ typically I'll write them in blue and 
+ that just means to you that I'd like you 
+ to solve this your on your own so I'm 
+ asking you to use elimination now if you 
+ are comfortable with matrices you can 
+ certainly use matrices to solve but I'm 
+ going to just use straight up 
+ elimination so what I would like you to 
+ do and notice I've cheated down here 
+ I've already provided you with the 
+ solution and that's just so when you get 
+ to the end if you get something other 
+ than 29 163 you know you've made an 
+ error somewhere don't you wish we always 
+ had a key like that um but I'd like you 
+ to press pause and work through this 
+ entire equation using 
+ elimination because now this is 
+ obviously a little bit trickier if you 
+ don't feel ready for that because you 
+ haven't done this in a while it's okay 
+ to just pretend that you pressed pause 
+ um but I'm going to go through it in 
+ just a moment but I would like you to 
+ press pause try the equation solve and 
+ hopefully get 29163 
+ all right so let's take a look what I 
+ like to do when I'm solving with 
+ elimination is choose the variable that 
+ I want to eliminate now this decision 
+ was sort of made easy for me I'm going 
+ to use this 
+ equation because I already have only two 
+ variables 2x2 oops not x^2 
+ 2x2 - 8 X3 = 
+ 8 and what I'm going to do is I want to 
+ combine these two to also get rid of the 
+ X1 variable 
+ so I'm going to take 4 * this equation 
+ and I'm going to combine it with this 
+ equation so I'm going to do this 
+ mentally just so that I don't take up 
+ all of the room here so if you're not so 
+ good at Mental Math go ahead and write 
+ out the 4x1 - 8 X2 + 4 X3 = 0 and 
+ 4x1 + 5 X2 + 9 X3 = -9 so it's totally 
+ fine to do that again we're not going to 
+ be using this method very often this is 
+ just to get us ready for all of the 
+ matrices that we will be 
+ using but essentially what I'm going to 
+ do is add these together and note that 
+ the X1 is going to eliminate and then 
+ I'm going to end up with 8 + 5 which is 
+ -3 X2 and then 4 + 9 which is 
+ 13 X3 and 0 + 9 which is 
+ -9 so again write those if you need to 
+ otherwise just do the mental 
+ math now what I want to do is eliminate 
+ again so I've eliminated X1 now I need 
+ to eliminate either X2 or X3 I'm going 
+ to choose X2 so I'm going to take this 
+ equation oh I don't like purple that's 
+ not bright enough I'm going to take this 
+ equation and multiply it by 3 and I 
+ chose 3 because 3 * 2 is going to give 
+ me 
+ 6 and that gives me 6 X2 
+ minus 24 
+ X3 = 
+ 24 and I'm going to take this whole 
+ equation and multiply it by 2 because 2 
+ * -3 is -6 
+ X2 and then 2 * 13 is 20 6 X3 and 2 * -9 
+ is -8 and I'm going to combine those 
+ together to end up with 
+ 2x3 = 
+ 6 IDE 2 to get X3 = 3 and I'm feeling 
+ pretty good about myself because so far 
+ I'm 
+ right now what do I do with the X3 well 
+ I have to plug it back into an equation 
+ to solve for another variable now I 
+ don't want to go all the way back here 
+ usually because usually I've got three 
+ equations with three variables so I'm 
+ going to choose one of these equations 
+ and it doesn't matter which 
+ one so I'll go ahead and choose the 
+ 2x2 - 8 X3 = 
+ 8 and now I'm going to 
+ replace 
+ X3 with 3 
+ and so I get 2x2 - 24 = 8 I'm going to 
+ add 24 so 2x2 = 32 IDE by 2 I get x2 is 
+ 16 and now I feel like a genius cuz 
+ again two correct and then I'm going to 
+ finish it out 
+ with taking both three and 16 and 
+ plugging it back in somewhere so I'm 
+ going to choose that first equation X1 - 
+ 2 X2 + X3 = 0 I'm going to 
+ replace X2 with 
+ 16 X3 with 
+ 3 I get X1 - 32 + 3 = 
+ 0 - 32 + 
+ 3 is - 
+ 29 add 29 to each side I get X1 is 
+ 29 and yay so again we're always going 
+ to write our final 
+ solution as an ordered pair or ordered 
+ triple in this case so 29 comma 16 comma 
+ 3 is my final solution

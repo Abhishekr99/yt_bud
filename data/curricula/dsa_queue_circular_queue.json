@@ -1,0 +1,118 @@
+{
+  "curriculum_id": "dsa_queue_circular_queue",
+  "domain": "DSA",
+  "module": "queue",
+  "topic": "Circular queue",
+  "created_at": "2026-03-23T10:52:48.067029",
+  "concepts": [
+    {
+      "concept_id": "circular_queue",
+      "name": "Circular Queue",
+      "aliases": [
+        "Ring Buffer"
+      ],
+      "short_definition": "A queue implementation that uses a fixed-size array and wraps around to reuse space.",
+      "prerequisites": [
+        "array",
+        "queue"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queue",
+      "aliases": [],
+      "short_definition": "A linear data structure that follows the First-In, First-Out (FIFO) principle.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "array",
+      "name": "Array",
+      "aliases": [
+        "List"
+      ],
+      "short_definition": "A contiguous block of memory used to store elements of the same data type.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "front_pointer",
+      "name": "Front Pointer",
+      "aliases": [
+        "Head Pointer"
+      ],
+      "short_definition": "An index pointing to the first element in the queue.",
+      "prerequisites": [
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "rear_pointer",
+      "name": "Rear Pointer",
+      "aliases": [
+        "Tail Pointer"
+      ],
+      "short_definition": "An index pointing to the position where the next element will be inserted.",
+      "prerequisites": [
+        "circular_queue"
+      ]
+    },
+    {
+      "concept_id": "modulo_operator",
+      "name": "Modulo Operator",
+      "aliases": [
+        "%"
+      ],
+      "short_definition": "An arithmetic operator that returns the remainder of a division.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "wrap_around",
+      "name": "Wrap Around",
+      "aliases": [
+        "Circular Behavior"
+      ],
+      "short_definition": "The mechanism by which the rear pointer moves back to the beginning of the array when it reaches the end.",
+      "prerequisites": [
+        "circular_queue",
+        "modulo_operator"
+      ]
+    },
+    {
+      "concept_id": "full_condition",
+      "name": "Full Condition",
+      "aliases": [
+        "Queue Full"
+      ],
+      "short_definition": "The state where the circular queue cannot accept any more elements.",
+      "prerequisites": [
+        "circular_queue",
+        "front_pointer",
+        "rear_pointer"
+      ]
+    },
+    {
+      "concept_id": "empty_condition",
+      "name": "Empty Condition",
+      "aliases": [
+        "Queue Empty"
+      ],
+      "short_definition": "The state where the circular queue contains no elements.",
+      "prerequisites": [
+        "circular_queue",
+        "front_pointer",
+        "rear_pointer"
+      ]
+    },
+    {
+      "concept_id": "fixed_size",
+      "name": "Fixed Size",
+      "aliases": [
+        "Bounded Queue"
+      ],
+      "short_definition": "The characteristic of a circular queue having a predetermined maximum capacity.",
+      "prerequisites": [
+        "array",
+        "circular_queue"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "curriculum_id": "MATH_Calculus_Limits",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Limits",
+  "created_at": "2026-03-21T11:13:30.685107",
+  "concepts": [
+    {
+      "concept_id": "limit_of_a_function",
+      "name": "Limit of a Function",
+      "aliases": [
+        "Function Limit"
+      ],
+      "short_definition": "The value a function approaches as its input approaches a certain value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "limit_notation",
+      "name": "Limit Notation",
+      "aliases": [
+        "Limit Symbol"
+      ],
+      "short_definition": "The standard mathematical notation used to express limits.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "approaching_a_value",
+      "name": "Approaching a Value",
+      "aliases": [
+        "Limit Approach"
+      ],
+      "short_definition": "Understanding how input values get arbitrarily close to a specific number.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "lefthand_limit",
+      "name": "Left-Hand Limit",
+      "aliases": [
+        "Limit from the Left"
+      ],
+      "short_definition": "The value a function approaches as the input approaches from values less than the target.",
+      "prerequisites": [
+        "approaching_a_value",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "righthand_limit",
+      "name": "Right-Hand Limit",
+      "aliases": [
+        "Limit from the Right"
+      ],
+      "short_definition": "The value a function approaches as the input approaches from values greater than the target.",
+      "prerequisites": [
+        "approaching_a_value",
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "existence_of_a_limit",
+      "name": "Existence of a Limit",
+      "aliases": [
+        "Limit Exists"
+      ],
+      "short_definition": "A limit exists if and only if the left-hand and right-hand limits are equal.",
+      "prerequisites": [
+        "lefthand_limit",
+        "righthand_limit"
+      ]
+    },
+    {
+      "concept_id": "limit_law",
+      "name": "Limit Laws",
+      "aliases": [
+        "Limit Properties"
+      ],
+      "short_definition": "Rules for calculating limits of sums, differences, products, quotients, and powers of functions.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "sum_rule",
+      "name": "Sum Rule",
+      "aliases": [
+        "Limit Sum"
+      ],
+      "short_definition": "The limit of a sum is the sum of the limits.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "difference_rule",
+      "name": "Difference Rule",
+      "aliases": [
+        "Limit Difference"
+      ],
+      "short_definition": "The limit of a difference is the difference of the limits.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "constant_multiple_rule",
+      "name": "Constant Multiple Rule",
+      "aliases": [
+        "Limit Constant Multiple"
+      ],
+      "short_definition": "The limit of a constant times a function is the constant times the limit of the function.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "product_rule",
+      "name": "Product Rule",
+      "aliases": [
+        "Limit Product"
+      ],
+      "short_definition": "The limit of a product is the product of the limits.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "quotient_rule",
+      "name": "Quotient Rule",
+      "aliases": [
+        "Limit Quotient"
+      ],
+      "short_definition": "The limit of a quotient is the quotient of the limits, provided the denominator's limit is not zero.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "power_rule",
+      "name": "Power Rule",
+      "aliases": [
+        "Limit Power"
+      ],
+      "short_definition": "The limit of a function raised to a power is the limit of the function raised to that power.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "limit_of_a_polynomial",
+      "name": "Limit of a Polynomial",
+      "aliases": [
+        "Polynomial Limit"
+      ],
+      "short_definition": "Calculating the limit of a polynomial function by direct substitution.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "limit_of_a_rational_function",
+      "name": "Limit of a Rational Function",
+      "aliases": [
+        "Rational Function Limit"
+      ],
+      "short_definition": "Calculating limits of functions that are ratios of polynomials.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "direct_substitution",
+      "name": "Direct Substitution",
+      "aliases": [
+        "Substitution Method"
+      ],
+      "short_definition": "Evaluating a limit by plugging the input value directly into the function.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "indeterminate_form",
+      "name": "Indeterminate Form",
+      "aliases": [
+        "Undefined Limit"
+      ],
+      "short_definition": "An expression that arises when evaluating a limit, such as 0/0 or infinity/infinity, which requires further analysis.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "00_indeterminate_form",
+      "name": "0/0 Indeterminate Form",
+      "aliases": [
+        "Zero Over Zero"
+      ],
+      "short_definition": "An indeterminate form that often requires algebraic manipulation or L'Hôpital's Rule.",
+      "prerequisites": [
+        "indeterminate_form"
+      ]
+    },
+    {
+      "concept_id": "infinityinfinity_indeterminate_form",
+      "name": "Infinity/Infinity Indeterminate Form",
+      "aliases": [
+        "Infinity Over Infinity"
+      ],
+      "short_definition": "An indeterminate form often encountered with rational functions at infinity.",
+      "prerequisites": [
+        "indeterminate_form"
+      ]
+    },
+    {
+      "concept_id": "algebraic_manipulation",
+      "name": "Algebraic Manipulation",
+      "aliases": [
+        "Simplification Techniques"
+      ],
+      "short_definition": "Using techniques like factoring or rationalizing to simplify expressions before evaluating limits.",
+      "prerequisites": [
+        "indeterminate_form"
+      ]
+    },
+    {
+      "concept_id": "factoring",
+      "name": "Factoring",
+      "aliases": [
+        "Factorization"
+      ],
+      "short_definition": "Breaking down polynomials into their multiplicative factors to simplify expressions.",
+      "prerequisites": [
+        "algebraic_manipulation"
+      ]
+    },
+    {
+      "concept_id": "rationalizing",
+      "name": "Rationalizing",
+      "aliases": [
+        "Conjugate Multiplication"
+      ],
+      "short_definition": "Multiplying by the conjugate to eliminate radicals in the numerator or denominator.",
+      "prerequisites": [
+        "algebraic_manipulation"
+      ]
+    },
+    {
+      "concept_id": "limit_at_infinity",
+      "name": "Limit at Infinity",
+      "aliases": [
+        "Infinite Limit"
+      ],
+      "short_definition": "The behavior of a function as the input grows without bound in the positive or negative direction.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "horizontal_asymptote",
+      "name": "Horizontal Asymptote",
+      "aliases": [
+        "HA"
+      ],
+      "short_definition": "A horizontal line that the graph of a function approaches as x approaches positive or negative infinity.",
+      "prerequisites": [
+        "limit_at_infinity"
+      ]
+    },
+    {
+      "concept_id": "limit_of_a_trigonometric_function",
+      "name": "Limit of a Trigonometric Function",
+      "aliases": [
+        "Trig Limit"
+      ],
+      "short_definition": "Evaluating limits involving trigonometric functions, often using known identities or special limits.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "special_trigonometric_limit",
+      "name": "Special Trigonometric Limits",
+      "aliases": [
+        "Key Trig Limits"
+      ],
+      "short_definition": "Fundamental limits involving trigonometric functions, such as lim(sin x)/x as x->0.",
+      "prerequisites": [
+        "limit_of_a_trigonometric_function"
+      ]
+    },
+    {
+      "concept_id": "limit_of_an_exponential_function",
+      "name": "Limit of an Exponential Function",
+      "aliases": [
+        "Exponential Limit"
+      ],
+      "short_definition": "Evaluating limits of functions with exponents.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "limit_of_a_logarithmic_function",
+      "name": "Limit of a Logarithmic Function",
+      "aliases": [
+        "Logarithmic Limit"
+      ],
+      "short_definition": "Evaluating limits of functions involving logarithms.",
+      "prerequisites": [
+        "limit_law"
+      ]
+    },
+    {
+      "concept_id": "squeeze_theorem",
+      "name": "Squeeze Theorem",
+      "aliases": [
+        "Sandwich Theorem",
+        "Pinch Theorem"
+      ],
+      "short_definition": "A theorem used to find the limit of a function by bounding it between two other functions whose limits are known.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "continuity",
+      "name": "Continuity",
+      "aliases": [
+        "Continuous Function"
+      ],
+      "short_definition": "A function is continuous at a point if its limit exists, the function is defined at that point, and the limit equals the function's value.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "discontinuity",
+      "name": "Discontinuity",
+      "aliases": [
+        "Discontinuous Function"
+      ],
+      "short_definition": "A point where a function is not continuous.",
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "concept_id": "removable_discontinuity",
+      "name": "Removable Discontinuity",
+      "aliases": [
+        "Hole in Graph"
+      ],
+      "short_definition": "A discontinuity that can be 'removed' by redefining the function at a single point.",
+      "prerequisites": [
+        "discontinuity",
+        "indeterminate_form"
+      ]
+    },
+    {
+      "concept_id": "jump_discontinuity",
+      "name": "Jump Discontinuity",
+      "aliases": [
+        "Step Discontinuity"
+      ],
+      "short_definition": "A discontinuity where the left-hand and right-hand limits exist but are not equal.",
+      "prerequisites": [
+        "discontinuity",
+        "lefthand_limit",
+        "righthand_limit"
+      ]
+    },
+    {
+      "concept_id": "infinite_discontinuity",
+      "name": "Infinite Discontinuity",
+      "aliases": [
+        "Vertical Asymptote"
+      ],
+      "short_definition": "A discontinuity where at least one of the one-sided limits is infinite.",
+      "prerequisites": [
+        "discontinuity",
+        "lefthand_limit",
+        "righthand_limit"
+      ]
+    },
+    {
+      "concept_id": "limit_definition_epsilondelta",
+      "name": "Limit Definition (Epsilon-Delta)",
+      "aliases": [
+        "Formal Limit Definition"
+      ],
+      "short_definition": "The rigorous mathematical definition of a limit using epsilon and delta.",
+      "prerequisites": [
+        "limit_of_a_function"
+      ]
+    },
+    {
+      "concept_id": "epsilon_",
+      "name": "Epsilon (ε)",
+      "aliases": [],
+      "short_definition": "A small positive number representing the desired closeness of the function's output to the limit.",
+      "prerequisites": [
+        "limit_definition_epsilondelta"
+      ]
+    },
+    {
+      "concept_id": "delta_",
+      "name": "Delta (δ)",
+      "aliases": [],
+      "short_definition": "A small positive number representing the allowed closeness of the input to the target value.",
+      "prerequisites": [
+        "limit_definition_epsilondelta"
+      ]
+    },
+    {
+      "concept_id": "limit_of_a_sequence",
+      "name": "Limit of a Sequence",
+      "aliases": [
+        "Sequence Limit"
+      ],
+      "short_definition": "The value a sequence approaches as the index tends towards infinity.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "convergence",
+      "name": "Convergence",
+      "aliases": [
+        "Convergent Sequence/Function"
+      ],
+      "short_definition": "A sequence or function whose limit exists and is a finite number.",
+      "prerequisites": [
+        "limit_of_a_function",
+        "limit_of_a_sequence"
+      ]
+    },
+    {
+      "concept_id": "divergence",
+      "name": "Divergence",
+      "aliases": [
+        "Divergent Sequence/Function"
+      ],
+      "short_definition": "A sequence or function whose limit does not exist or is infinite.",
+      "prerequisites": [
+        "limit_of_a_function",
+        "limit_of_a_sequence"
+      ]
+    }
+  ]
+}

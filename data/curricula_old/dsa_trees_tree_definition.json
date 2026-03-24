@@ -1,0 +1,456 @@
+{
+  "curriculum_id": "DSA_Trees_Tree definition",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Tree definition",
+  "created_at": "2026-03-21T11:12:27.722823",
+  "concepts": [
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [
+        "Abstract Tree"
+      ],
+      "short_definition": "A hierarchical data structure consisting of nodes connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Vertex"
+      ],
+      "short_definition": "A fundamental unit of a tree, containing data and references to other nodes.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [
+        "Link",
+        "Connection"
+      ],
+      "short_definition": "A connection between two nodes in a tree.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "root",
+      "name": "Root",
+      "aliases": [],
+      "short_definition": "The topmost node in a tree, with no parent.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node that has one or more child nodes.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Child"
+      ],
+      "short_definition": "A node that is directly connected to a parent node.",
+      "prerequisites": [
+        "node",
+        "parent_node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "Terminal Node"
+      ],
+      "short_definition": "A node with no child nodes.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "internal_node",
+      "name": "Internal Node",
+      "aliases": [
+        "Non-leaf Node"
+      ],
+      "short_definition": "A node that has at least one child node.",
+      "prerequisites": [
+        "child_node",
+        "leaf_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "sibling",
+      "name": "Siblings",
+      "aliases": [],
+      "short_definition": "Nodes that share the same parent node.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "parent_node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "depth",
+      "name": "Depth",
+      "aliases": [],
+      "short_definition": "The number of edges from the root to a node.",
+      "prerequisites": [
+        "edge",
+        "node",
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "height",
+      "name": "Height",
+      "aliases": [],
+      "short_definition": "The maximum depth of any node in the tree.",
+      "prerequisites": [
+        "depth",
+        "leaf_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "level",
+      "name": "Level",
+      "aliases": [],
+      "short_definition": "The depth of a node, often starting from 0 at the root.",
+      "prerequisites": [
+        "depth",
+        "node",
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of nodes connected by edges from one node to another.",
+      "prerequisites": [
+        "edge",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "subtree",
+      "name": "Subtree",
+      "aliases": [],
+      "short_definition": "A tree formed by a node and all its descendants.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "degree_of_a_node",
+      "name": "Degree of a Node",
+      "aliases": [
+        "Node Degree"
+      ],
+      "short_definition": "The number of edges connected to a node.",
+      "prerequisites": [
+        "edge",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_traversal",
+      "name": "Tree Traversal",
+      "aliases": [],
+      "short_definition": "The process of visiting each node in a tree in a systematic way.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "binary_tree",
+      "name": "Binary Tree",
+      "aliases": [],
+      "short_definition": "A tree where each node has at most two children, referred to as left and right children.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "full_binary_tree",
+      "name": "Full Binary Tree",
+      "aliases": [],
+      "short_definition": "A binary tree where every node has either 0 or 2 children.",
+      "prerequisites": [
+        "binary_tree",
+        "child_node",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "complete_binary_tree",
+      "name": "Complete Binary Tree",
+      "aliases": [],
+      "short_definition": "A binary tree in which all levels are completely filled except possibly the last level, which is filled from left to right.",
+      "prerequisites": [
+        "binary_tree",
+        "level",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "perfect_binary_tree",
+      "name": "Perfect Binary Tree",
+      "aliases": [],
+      "short_definition": "A binary tree in which all interior nodes have two children and all leaves are at the same depth.",
+      "prerequisites": [
+        "binary_tree",
+        "depth",
+        "leaf_node",
+        "level",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "balanced_binary_tree",
+      "name": "Balanced Binary Tree",
+      "aliases": [],
+      "short_definition": "A binary tree where the height difference between the left and right subtrees of any node is not more than one.",
+      "prerequisites": [
+        "binary_tree",
+        "height",
+        "node",
+        "subtree"
+      ]
+    },
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in its left subtree are less than the node's value, and all values in its right subtree are greater.",
+      "prerequisites": [
+        "binary_tree",
+        "node",
+        "subtree"
+      ]
+    },
+    {
+      "concept_id": "nary_tree",
+      "name": "N-ary Tree",
+      "aliases": [
+        "General Tree"
+      ],
+      "short_definition": "A tree where each node can have any number of children.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "forest",
+      "name": "Forest",
+      "aliases": [],
+      "short_definition": "A collection of disjoint trees.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "directed_tree",
+      "name": "Directed Tree",
+      "aliases": [],
+      "short_definition": "A tree where edges have a direction, typically from parent to child.",
+      "prerequisites": [
+        "edge",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "undirected_tree",
+      "name": "Undirected Tree",
+      "aliases": [],
+      "short_definition": "A tree where edges do not have a direction.",
+      "prerequisites": [
+        "edge",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "rooted_tree",
+      "name": "Rooted Tree",
+      "aliases": [],
+      "short_definition": "A tree with a designated root node.",
+      "prerequisites": [
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "ordered_tree",
+      "name": "Ordered Tree",
+      "aliases": [],
+      "short_definition": "A rooted tree where the order of children for each node matters.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "unordered_tree",
+      "name": "Unordered Tree",
+      "aliases": [],
+      "short_definition": "A rooted tree where the order of children for each node does not matter.",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "ancestor",
+      "name": "Ancestor",
+      "aliases": [],
+      "short_definition": "A node that is on the path from the root to a given node (excluding the node itself).",
+      "prerequisites": [
+        "node",
+        "path",
+        "root",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "descendant",
+      "name": "Descendant",
+      "aliases": [],
+      "short_definition": "A node that is on a path starting from a given node (excluding the node itself).",
+      "prerequisites": [
+        "child_node",
+        "node",
+        "path",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "degree_of_a_tree",
+      "name": "Degree of a Tree",
+      "aliases": [
+        "Tree Degree"
+      ],
+      "short_definition": "The maximum degree of any node in the tree.",
+      "prerequisites": [
+        "degree_of_a_node",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_propertie",
+      "name": "Tree Properties",
+      "aliases": [],
+      "short_definition": "Fundamental characteristics that define a tree structure.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "graph_theory",
+      "name": "Graph Theory",
+      "aliases": [],
+      "short_definition": "The mathematical study of graphs, of which trees are a specific type.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "acyclic_graph",
+      "name": "Acyclic Graph",
+      "aliases": [],
+      "short_definition": "A graph that contains no cycles.",
+      "prerequisites": [
+        "graph_theory"
+      ]
+    },
+    {
+      "concept_id": "connected_graph",
+      "name": "Connected Graph",
+      "aliases": [],
+      "short_definition": "A graph where there is a path between any two nodes.",
+      "prerequisites": [
+        "graph_theory"
+      ]
+    },
+    {
+      "concept_id": "tree_isomorphism",
+      "name": "Tree Isomorphism",
+      "aliases": [],
+      "short_definition": "The concept of two trees having the same structure.",
+      "prerequisites": [
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "tree_representation",
+      "name": "Tree Representation",
+      "aliases": [],
+      "short_definition": "Ways to store and implement tree data structures in memory.",
+      "prerequisites": [
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "A common way to represent graphs and trees, where each node has a list of its adjacent nodes.",
+      "prerequisites": [
+        "edge",
+        "node",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "Another method to represent graphs and trees using a matrix.",
+      "prerequisites": [
+        "edge",
+        "node",
+        "tree"
+      ]
+    }
+  ]
+}

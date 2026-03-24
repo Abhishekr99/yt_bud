@@ -1,0 +1,340 @@
+this is chapter 4 section 1 vector 
+ spaces and sub spaces and in this video 
+ we're just going to look at vector 
+ spaces but I just want to caution you 
+ that's starting with this chapter things 
+ are going to shift a bit to the more 
+ abstract which means it's going to be a 
+ little harder to wrap your mind around 
+ things you might have to put in some 
+ extra time into studying into trying to 
+ understand the examples I'll do my best 
+ to give you all of the material in the 
+ videos but you may find yourself 
+ referring to the textbook more often or 
+ finding other videos to supplement and 
+ if you do certainly let me know I can 
+ embellish these videos a bit more but I 
+ try to keep these short enough to give 
+ you the main idea without you know 
+ making a 45 minute video so consider 
+ yourself warned it's going to be a bit 
+ more difficult moving forward but I know 
+ you can do it so what is a vector space 
+ it is a non-empty set of vectors and two 
+ operators which is which are addition 
+ and multiplication such that the 
+ following axioms hold for all vectors u 
+ V and W that belong to the set of 
+ vectors and again we're just saying they 
+ belong to the set and for C D which are 
+ scalars that belong to the set of real 
+ numbers so before we talk about each of 
+ these axioms I want to point out to you 
+ that we've actually kind of already done 
+ this so as we go through the axioms 
+ you'll say okay I know that one yes 
+ we've done this one yes we've done this 
+ one but what we've done up to this point 
+ is simply use them for the set of RN so 
+ RN is a vector space and all of these 
+ axioms hold true which is why all of 
+ these will look familiar to you is 
+ because we've been here we've been 
+ typically in r2 or r3 some times in our 
+ four or five etc but what we want to do 
+ now is 
+ look at different spaces and we need to 
+ verify these axioms to see if those 
+ other spaces may in fact be vector 
+ spaces or not so let's take a look at 
+ the axioms and try to make some sense of 
+ them the first one simply says that if 
+ you have two vectors then the sum of 
+ those vectors should also be in the set 
+ V so of course this holds true for r2 
+ and r3 and again we're going to look at 
+ some examples where that might not hold 
+ true it also shows that the associative 
+ and commutative property so commutative 
+ here associative property here that 
+ doesn't look like an a associative 
+ property here hold true for addition it 
+ also says that the zero vector so I'm 
+ going to put a box around this one and 
+ you'll see why in a little bit it also 
+ says that the zero vector needs to be in 
+ our vector set our vector space where 
+ zero the zero vector plus any vector is 
+ equal to that vector so this is 
+ essentially the identity and this is the 
+ inverse the inverse saying I can add 
+ something and again each inverse is 
+ unique that I can add some inverse to an 
+ existing vector both are in the vector 
+ space and the sum of those two vectors 
+ is zero so those are all of the addition 
+ ones now let's take a look at 
+ multiplication we again now have that a 
+ scalar times a vector is in the vector 
+ space so I can take the scalar times 
+ something whoops I'm gonna put a box 
+ around that one and then we have the 
+ distributive property that I can 
+ distribute a scalar that and this is 
+ similar to the distributive property 
+ again just on the right side instead of 
+ the left side but it's 
+ distributive property this one is the 
+ associative property and again it's 
+ associative with the scalars so it's not 
+ associative we know that matrix or 
+ vector multiplication is not associative 
+ or commutative but of course if we're 
+ dealing with scalars those are and then 
+ back here again we're down to the 
+ identity so as you can see I've put a 
+ box around a few of these and I put the 
+ box around them because those are the 
+ ones that we will most often find issues 
+ with so those are the ones that you're 
+ probably going to want to check first so 
+ let's take a look at a few examples of 
+ where we might not have a vector space 
+ let's take a look at an example which 
+ may or may not be a vector space and I 
+ have purposely started with some 
+ examples that we could visualize as I 
+ said we're going to get more and more 
+ abstract so the examples that we'll be 
+ able to visualize will be fewer and 
+ further between but here's a great 
+ example we can visualize I have set V of 
+ all of the vectors X Y such that X is 
+ greater than or equal to 0 and Y is less 
+ than or equal to 0 
+ so I know because I've been graphing for 
+ quite some time that if X is greater 
+ than or equal to 0 and Y is less than or 
+ equal to 0 
+ that's this space down here that's the 
+ fourth quadrant so my question is if I 
+ have a vector in the fourth quadrant 
+ will it meet all ten axioms and in fact 
+ be a vector space so let's take a look 
+ at an example let's say vector U is 3 
+ oops I almost wrote that as an ordered 
+ pair 3 negative 1 so 1 2 3 negative 1 
+ here's vector u 
+ thinking about those ten axioms and 
+ there were three that I said we're kind 
+ of the most important to check or the 
+ ones that you would check most often 
+ where things wouldn't necessarily work 
+ out in your favor let's start by looking 
+ at axiom 1 which says the sum of U and V 
+ is in V so I only have you but let's 
+ take V and obviously U is in V already 
+ but let's give myself a vector V to just 
+ C so vector V let's say is 1 negative 4 
+ and again this is also in V and I can 
+ see that because X is greater than or 
+ equal to 0 and Y is less than or equal 
+ to 0 so I wouldn't have to have the 
+ picture to show that they are in V but 
+ my question is is the sum of those also 
+ in V so let's just see well we know the 
+ parallelogram rule says so visually I 
+ can just look at this and say yes that 
+ was a really bad parallelogram but you 
+ get the idea but I can also add u plus V 
+ which would give me 3 plus 1 or 4 and 
+ negative 1 plus negative 4 which is 
+ negative 5 and 4 negative 5 is in fact 
+ in V because X is greater than or equal 
+ to 0 and Y is less than or equal to 0 so 
+ this one's okay what's the next one I 
+ said to check number 6 
+ just kidding number 4 number 4 that says 
+ that the 0 vector is in V so looking 
+ here this is or equal to 0 or equal to 0 
+ so that means the 0 vector is in fact in 
+ V 
+ and the last one which is six which says 
+ see you or CV I don't remember which 
+ letter I use hey quit changing colors on 
+ me CV is also in V and keep in mind that 
+ C is just some real number any real 
+ number that I want and this one 
+ hopefully you can see is going to be a 
+ problem because what if C was negative 
+ three then C V would be negative 3 times 
+ 3 negative 1 which gives me negative 9 3 
+ which is somewhere over here which is 
+ clearly not in my region of X is greater 
+ than or equal to 0 and Y is less than or 
+ equal to 0 so negative 3 V does not 
+ belong to V and therefore this is not a 
+ vector space so notice I didn't say it 
+ doesn't meet axiom 6 because remember 
+ your professor doesn't have all the 
+ axiom numbers memorized I have the 
+ concepts down that's what you should do 
+ too is don't rely on those numbers but 
+ rely on logic so my logic says that I 
+ can't take all C V and have it belong to 
+ V this one is not met and therefore it's 
+ not a vector space 
+ here's another practice for us that 
+ looks very similar and if you'll notice 
+ the only thing I changed as I said that 
+ both are greater than 0 so you might be 
+ thinking well duh 
+ brain we get it that this in fact will 
+ still be the case that I cannot take 
+ some vector that's in the space that I 
+ want where both are greater than 0 I 
+ can't take it times anything that I want 
+ and still end up in that same region and 
+ that is true but I 
+ why don't you give you this example 
+ specifically because this one also is 
+ that zero is not the zero vector which 
+ is 0 0 is not envy because this is 
+ greater than zero and greater than zero 
+ so zero is not included so again 
+ obviously we already knew based on this 
+ that it was not going to be a vector 
+ space but the fact that the zero vector 
+ is not included also tells us that V is 
+ not a vector space here's a practice for 
+ you to try on your own so give this one 
+ a try when you're ready press play to 
+ see how you did so again this is one 
+ that we can visualize and we are saying 
+ that X Y is less than or equal to zero 
+ which means X Y is negative or equal to 
+ zero and that would mean that either X 
+ is positive Y is negative or X is 
+ negative Y is positive so here's what 
+ we're dealing with so let's check a 
+ couple of those axioms that have a 
+ tendency to give us a hard time for 
+ instance is the zero vector in V well 
+ because it's or equal to zero yes in 
+ fact that is true 
+ I could have V as zero zero which is the 
+ zero vector what about C V is that in V 
+ as well so quite often this is one that 
+ gives us a hard time for instance let's 
+ say this is 2 negative 3 we'll say V is 
+ 2 negative 3 this certainly is in V 
+ because 2 times negative 3 is negative 6 
+ and that is less than or equal to 0 and 
+ what if I took that times a positive 
+ value well that would give me 6 negative 
+ 9 which is still in that same region ok 
+ it's just going to make this guy longer 
+ what if I took it times negative 3 well 
+ that would give me negative 6 positive 9 
+ would that still work well if I multiply 
+ - that is still less than or equal to 
+ zero and in fact it would just be over 
+ here and so yes we are just fine this 
+ still holds true 
+ so check check I've got two checks now 
+ let's go back to that very very first 
+ one that says u plus V must be in V well 
+ let's say I'm gonna get rid of these 
+ green guys here let's say that's my 
+ first one and we're going to make I'm 
+ gonna get rid of this running out of 
+ room here so let's say that U is 
+ negative 1/5 so negative 1/5 up here and 
+ again what is then u plus V I would end 
+ up with 2 plus negative 1 which is 1 and 
+ negative 3 plus 5 which is 2 and 1/2 
+ which again parallelogram rule we could 
+ see clearly this guy is not in V and 
+ therefore no because this guy is not 
+ true therefore this is not a vector 
+ space let's take a look at polynomials 
+ polynomials in fact is a vector space 
+ which seems a little counterintuitive 
+ but we can see in the way that this is 
+ written that it's written very much like 
+ a linear combination of scalars and 
+ vectors same idea and remember that the 
+ degree of a polynomial is the greatest 
+ power with a nonzero coefficient so in 
+ this example n would be the degree of my 
+ polynomial assuming that a n is not 0 
+ and the degree of a constant is 0 so for 
+ instance if my polynomial oops I went 
+ ahead and wrote it down here so if my 
+ polynomial 
+ was just equals a sub zero meaning I 
+ don't have a tea or a tea squared or a 
+ tea to the n then that is the zero 
+ degree and if all terms have degrees 
+ zero then obviously the highest degree 
+ would be zero and that's called the zero 
+ polynomial so let's verify the axioms to 
+ ensure that this is in fact a vector 
+ space so I've listed the axioms here so 
+ that you don't have to have them 
+ memorized but let's take a look at the 
+ first one that you plus V would in fact 
+ be in the vector space so we know the 
+ vector space essentially are terms that 
+ look like this they're going to be a 
+ polynomial written in this form so if I 
+ added say P and Q together so I've 
+ written these in terms of vectors but if 
+ I added P and Q together would it in 
+ fact be in that space so if I take P of 
+ T plus Q of T what would I get I would 
+ get a0 plus b0 and then I would get a1 
+ plus b1 T because I'm adding like terms 
+ plus etc etc and that pattern would 
+ continue and would that in fact be a 
+ polynomial yes I would just be combining 
+ those like terms so this one does in 
+ fact hold now what I know about real 
+ numbers is that addition of real numbers 
+ is commutative and also associative so 
+ I'm not going to check those because I 
+ know that if these guys were in the 
+ opposite order that would still be okay 
+ then if I were grouping things 
+ differently I'm still combining like 
+ terms and that's okay so those have been 
+ checked and verified is the zero vector 
+ well that means oops P of T what if P of 
+ T were zero would that fit this yes that 
+ would just be the a of zero was zero is 
+ that in the space yes it is 
+ and if I added this to any other 
+ polynomial what I end up with a 
+ polynomial yes 
+ I would what else can I check let's 
+ check the inverse so P plus negative P 
+ well it would certainly make sense if I 
+ had a zero and let's say Q of T were 
+ negative a 0 and then this was a 1 T 
+ then this was negative a 1 T and we can 
+ see if I added those together I would in 
+ fact get 0 so cheked cheked 
+ let's also check if I multiply by 
+ something well same as our example here 
+ and again I keep erasing I apologize so 
+ there's only so much room let's say I 
+ take 3 PT well then it's just 3 a 0 plus 
+ 3 a 1 T 1 etc would that fit a 
+ polynomial 
+ you betcha and again these all follow 
+ once I know this one is true these are 
+ just properties of real numbers that can 
+ be checked very easily so hopefully I've 
+ given you enough to go on there that 
+ polynomials are in fact a vector space

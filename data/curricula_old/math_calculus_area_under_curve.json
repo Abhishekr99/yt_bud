@@ -1,0 +1,431 @@
+{
+  "curriculum_id": "MATH_Calculus_Area under curve",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Area under curve",
+  "created_at": "2026-03-21T11:12:48.383646",
+  "concepts": [
+    {
+      "concept_id": "function",
+      "name": "Function",
+      "aliases": [
+        "Mathematical function"
+      ],
+      "short_definition": "A relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "graph_of_a_function",
+      "name": "Graph of a function",
+      "aliases": [
+        "Function graph"
+      ],
+      "short_definition": "A visual representation of a function, plotting input values against their corresponding output values.",
+      "prerequisites": [
+        "function"
+      ]
+    },
+    {
+      "concept_id": "coordinate_plane",
+      "name": "Coordinate plane",
+      "aliases": [
+        "Cartesian plane",
+        "XY plane"
+      ],
+      "short_definition": "A two-dimensional plane defined by two perpendicular axes (x-axis and y-axis) used to locate points.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "interval",
+      "name": "Interval",
+      "aliases": [
+        "Range of values"
+      ],
+      "short_definition": "A continuous set of numbers between two given numbers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "area",
+      "name": "Area",
+      "aliases": [],
+      "short_definition": "The measure of the extent of a two-dimensional surface.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "geometric_shape",
+      "name": "Geometric shapes",
+      "aliases": [
+        "Basic shapes"
+      ],
+      "short_definition": "Standard two-dimensional figures with defined properties, like rectangles and triangles.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "rectangle_area",
+      "name": "Rectangle area",
+      "aliases": [
+        "Area of a rectangle"
+      ],
+      "short_definition": "The calculation of the space enclosed by a rectangle, typically length times width.",
+      "prerequisites": [
+        "area",
+        "geometric_shape"
+      ]
+    },
+    {
+      "concept_id": "approximation",
+      "name": "Approximation",
+      "aliases": [
+        "Estimation"
+      ],
+      "short_definition": "Finding a value that is close to the true value.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "summation",
+      "name": "Summation",
+      "aliases": [
+        "Sigma notation"
+      ],
+      "short_definition": "The addition of a sequence of numbers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "limit",
+      "name": "Limit",
+      "aliases": [
+        "Limiting value"
+      ],
+      "short_definition": "The value that a function or sequence 'approaches' as the input or index approaches some value.",
+      "prerequisites": [
+        "approximation",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "riemann_sum",
+      "name": "Riemann sum",
+      "aliases": [
+        "Sum of rectangles"
+      ],
+      "short_definition": "An approximation of the area under a curve by dividing the area into a series of rectangles.",
+      "prerequisites": [
+        "approximation",
+        "coordinate_plane",
+        "function",
+        "interval",
+        "rectangle_area",
+        "summation"
+      ]
+    },
+    {
+      "concept_id": "left_riemann_sum",
+      "name": "Left Riemann sum",
+      "aliases": [],
+      "short_definition": "A Riemann sum where the height of each rectangle is determined by the function's value at the left endpoint of its subinterval.",
+      "prerequisites": [
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "right_riemann_sum",
+      "name": "Right Riemann sum",
+      "aliases": [],
+      "short_definition": "A Riemann sum where the height of each rectangle is determined by the function's value at the right endpoint of its subinterval.",
+      "prerequisites": [
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "midpoint_riemann_sum",
+      "name": "Midpoint Riemann sum",
+      "aliases": [],
+      "short_definition": "A Riemann sum where the height of each rectangle is determined by the function's value at the midpoint of its subinterval.",
+      "prerequisites": [
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "subinterval",
+      "name": "Subinterval",
+      "aliases": [
+        "Partition"
+      ],
+      "short_definition": "A smaller interval within a larger interval, used to divide the area under a curve.",
+      "prerequisites": [
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "width_of_subinterval",
+      "name": "Width of subinterval",
+      "aliases": [
+        "Delta x"
+      ],
+      "short_definition": "The length of each subinterval in a Riemann sum.",
+      "prerequisites": [
+        "interval",
+        "subinterval"
+      ]
+    },
+    {
+      "concept_id": "number_of_rectangle",
+      "name": "Number of rectangles",
+      "aliases": [
+        "Number of partitions",
+        "n"
+      ],
+      "short_definition": "The quantity of rectangles used in a Riemann sum approximation.",
+      "prerequisites": [
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "definite_integral",
+      "name": "Definite integral",
+      "aliases": [
+        "Integral"
+      ],
+      "short_definition": "The exact area under a curve between two specified points on the x-axis.",
+      "prerequisites": [
+        "limit",
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "integral_symbol",
+      "name": "Integral symbol",
+      "aliases": [
+        "Integral sign"
+      ],
+      "short_definition": "The elongated 'S' symbol used to denote integration.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "integrand",
+      "name": "Integrand",
+      "aliases": [],
+      "short_definition": "The function that is being integrated.",
+      "prerequisites": [
+        "definite_integral",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "limits_of_integration",
+      "name": "Limits of integration",
+      "aliases": [
+        "Bounds of integration"
+      ],
+      "short_definition": "The upper and lower values of the interval over which integration is performed.",
+      "prerequisites": [
+        "definite_integral",
+        "interval"
+      ]
+    },
+    {
+      "concept_id": "antiderivative",
+      "name": "Antiderivative",
+      "aliases": [
+        "Indefinite integral",
+        "Primitive function"
+      ],
+      "short_definition": "A function whose derivative is the given function.",
+      "prerequisites": [
+        "derivative",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculu",
+      "name": "Fundamental Theorem of Calculus",
+      "aliases": [
+        "FTC"
+      ],
+      "short_definition": "A theorem that links differentiation and integration, stating that the definite integral of a function can be found by evaluating its antiderivative at the limits of integration.",
+      "prerequisites": [
+        "antiderivative",
+        "definite_integral",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "ftc_part_1",
+      "name": "FTC Part 1",
+      "aliases": [
+        "First Fundamental Theorem of Calculus"
+      ],
+      "short_definition": "Relates differentiation and integration by showing that the derivative of an integral is the original function.",
+      "prerequisites": [
+        "derivative",
+        "fundamental_theorem_of_calculu"
+      ]
+    },
+    {
+      "concept_id": "ftc_part_2",
+      "name": "FTC Part 2",
+      "aliases": [
+        "Second Fundamental Theorem of Calculus"
+      ],
+      "short_definition": "Provides a method for evaluating definite integrals using antiderivatives.",
+      "prerequisites": [
+        "antiderivative",
+        "fundamental_theorem_of_calculu"
+      ]
+    },
+    {
+      "concept_id": "area_between_curve",
+      "name": "Area between curves",
+      "aliases": [],
+      "short_definition": "The region bounded by two or more functions.",
+      "prerequisites": [
+        "definite_integral",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "integration_technique",
+      "name": "Integration techniques",
+      "aliases": [
+        "Methods of integration"
+      ],
+      "short_definition": "Various strategies used to find antiderivatives of complex functions.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "substitution_rule",
+      "name": "Substitution rule",
+      "aliases": [
+        "u-substitution"
+      ],
+      "short_definition": "A technique for integration that involves changing the variable of integration.",
+      "prerequisites": [
+        "derivative",
+        "integration_technique"
+      ]
+    },
+    {
+      "concept_id": "integration_by_part",
+      "name": "Integration by parts",
+      "aliases": [],
+      "short_definition": "A technique for integration that is derived from the product rule for differentiation.",
+      "prerequisites": [
+        "derivative",
+        "integration_technique"
+      ]
+    },
+    {
+      "concept_id": "improper_integral",
+      "name": "Improper integral",
+      "aliases": [],
+      "short_definition": "A definite integral where one or both limits of integration are infinite, or where the integrand has an infinite discontinuity within the interval of integration.",
+      "prerequisites": [
+        "definite_integral",
+        "function",
+        "limit"
+      ]
+    },
+    {
+      "concept_id": "area_of_revolution",
+      "name": "Area of revolution",
+      "aliases": [
+        "Surface area of revolution"
+      ],
+      "short_definition": "The surface area generated by revolving a curve around an axis.",
+      "prerequisites": [
+        "definite_integral",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "volume_of_revolution",
+      "name": "Volume of revolution",
+      "aliases": [
+        "Solid of revolution"
+      ],
+      "short_definition": "The volume of a solid generated by revolving a two-dimensional shape around an axis.",
+      "prerequisites": [
+        "definite_integral",
+        "function"
+      ]
+    },
+    {
+      "concept_id": "disk_method",
+      "name": "Disk method",
+      "aliases": [],
+      "short_definition": "A method for calculating the volume of a solid of revolution by integrating the areas of infinitesimally thin disks.",
+      "prerequisites": [
+        "definite_integral",
+        "volume_of_revolution"
+      ]
+    },
+    {
+      "concept_id": "washer_method",
+      "name": "Washer method",
+      "aliases": [],
+      "short_definition": "A method for calculating the volume of a solid of revolution with a hole in the center, by integrating the areas of infinitesimally thin washers.",
+      "prerequisites": [
+        "definite_integral",
+        "volume_of_revolution"
+      ]
+    },
+    {
+      "concept_id": "shell_method",
+      "name": "Shell method",
+      "aliases": [],
+      "short_definition": "A method for calculating the volume of a solid of revolution by integrating the surface areas of infinitesimally thin cylindrical shells.",
+      "prerequisites": [
+        "definite_integral",
+        "volume_of_revolution"
+      ]
+    },
+    {
+      "concept_id": "numerical_integration",
+      "name": "Numerical integration",
+      "aliases": [
+        "Numerical quadrature"
+      ],
+      "short_definition": "Methods for approximating the value of a definite integral when an analytical solution is difficult or impossible to find.",
+      "prerequisites": [
+        "approximation",
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "trapezoidal_rule",
+      "name": "Trapezoidal rule",
+      "aliases": [],
+      "short_definition": "A numerical integration technique that approximates the area under a curve by dividing it into trapezoids.",
+      "prerequisites": [
+        "definite_integral",
+        "numerical_integration"
+      ]
+    },
+    {
+      "concept_id": "simpsons_rule",
+      "name": "Simpson's rule",
+      "aliases": [],
+      "short_definition": "A numerical integration technique that approximates the area under a curve using parabolic segments.",
+      "prerequisites": [
+        "definite_integral",
+        "numerical_integration"
+      ]
+    },
+    {
+      "concept_id": "derivative",
+      "name": "Derivative",
+      "aliases": [
+        "Rate of change"
+      ],
+      "short_definition": "The instantaneous rate at which a function's value changes with respect to its input.",
+      "prerequisites": [
+        "function",
+        "limit"
+      ]
+    }
+  ]
+}

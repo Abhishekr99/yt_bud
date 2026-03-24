@@ -1,0 +1,117 @@
+{
+  "curriculum_id": "dsa_graph_cycle detection_undirected",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Cycle detection (undirected)",
+  "created_at": "2026-03-23T10:52:03.648946",
+  "concepts": [
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [
+        "Adjacency List",
+        "Adjacency Matrix"
+      ],
+      "short_definition": "Ways to store graph data, such as adjacency lists or matrices.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [
+        "DFS",
+        "BFS"
+      ],
+      "short_definition": "Algorithms for visiting all nodes in a graph, like Depth-First Search or Breadth-First Search.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [],
+      "short_definition": "A graph where edges have no direction, meaning connections are bidirectional.",
+      "prerequisites": [
+        "graph_representation"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [
+        "Circuit"
+      ],
+      "short_definition": "A path in a graph that starts and ends at the same vertex, visiting other vertices along the way.",
+      "prerequisites": [
+        "undirected_graph"
+      ]
+    },
+    {
+      "concept_id": "visited_set",
+      "name": "Visited Set",
+      "aliases": [
+        "Visited Nodes"
+      ],
+      "short_definition": "A collection of nodes that have already been explored during a graph traversal.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "parent_tracking",
+      "name": "Parent Tracking",
+      "aliases": [
+        "Parent Pointer"
+      ],
+      "short_definition": "Keeping track of the node from which the current node was visited during traversal.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "dfs_cycle_detection",
+      "name": "DFS Cycle Detection",
+      "aliases": [
+        "Depth-First Search Cycle"
+      ],
+      "short_definition": "Using DFS to identify cycles by checking for back edges to already visited nodes that are not the immediate parent.",
+      "prerequisites": [
+        "cycle",
+        "graph_traversal",
+        "parent_tracking",
+        "visited_set"
+      ]
+    },
+    {
+      "concept_id": "back_edge",
+      "name": "Back Edge",
+      "aliases": [],
+      "short_definition": "An edge in a DFS traversal that connects a node to an ancestor in the DFS tree (excluding the immediate parent).",
+      "prerequisites": [
+        "dfs_cycle_detection"
+      ]
+    },
+    {
+      "concept_id": "disjoint_set_union_dsu",
+      "name": "Disjoint Set Union (DSU)",
+      "aliases": [
+        "Union-Find"
+      ],
+      "short_definition": "A data structure that tracks a set of elements partitioned into a number of disjoint subsets, useful for cycle detection.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "dsu_cycle_detection",
+      "name": "DSU Cycle Detection",
+      "aliases": [
+        "Union-Find Cycle"
+      ],
+      "short_definition": "Detecting cycles by iterating through edges and checking if the two endpoints of an edge already belong to the same set.",
+      "prerequisites": [
+        "disjoint_set_union_dsu",
+        "undirected_graph"
+      ]
+    }
+  ]
+}

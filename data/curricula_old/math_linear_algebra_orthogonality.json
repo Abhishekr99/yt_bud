@@ -1,0 +1,469 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Orthogonality",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Orthogonality",
+  "created_at": "2026-03-21T11:14:18.697014",
+  "concepts": [
+    {
+      "concept_id": "vector",
+      "name": "Vector",
+      "aliases": [
+        "Vectors"
+      ],
+      "short_definition": "A quantity having direction as well as magnitude, especially as determining the position of one point in space relative to another.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "dot_product",
+      "name": "Dot Product",
+      "aliases": [
+        "Inner Product",
+        "Scalar Product"
+      ],
+      "short_definition": "A product of two vectors that results in a scalar quantity.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_vector",
+      "name": "Orthogonal Vectors",
+      "aliases": [
+        "Perpendicular Vectors"
+      ],
+      "short_definition": "Two vectors whose dot product is zero.",
+      "prerequisites": [
+        "dot_product",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_set",
+      "name": "Orthogonal Set",
+      "aliases": [
+        "Orthogonal Vectors Set"
+      ],
+      "short_definition": "A set of vectors where every pair of distinct vectors is orthogonal.",
+      "prerequisites": [
+        "orthogonal_vector"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_set",
+      "name": "Orthonormal Set",
+      "aliases": [
+        "Orthogonal and Normalized Set"
+      ],
+      "short_definition": "An orthogonal set of vectors where each vector has a magnitude of one.",
+      "prerequisites": [
+        "orthogonal_set",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "vector_magnitude",
+      "name": "Vector Magnitude",
+      "aliases": [
+        "Vector Length",
+        "Norm"
+      ],
+      "short_definition": "The length of a vector.",
+      "prerequisites": [
+        "dot_product",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "unit_vector",
+      "name": "Unit Vector",
+      "aliases": [
+        "Normalized Vector"
+      ],
+      "short_definition": "A vector with a magnitude of one.",
+      "prerequisites": [
+        "vector",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_complement",
+      "name": "Orthogonal Complement",
+      "aliases": [
+        "Orthogonal Subspace"
+      ],
+      "short_definition": "The set of all vectors orthogonal to every vector in a given subspace.",
+      "prerequisites": [
+        "dot_product",
+        "subspace",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "subspace",
+      "name": "Subspace",
+      "aliases": [
+        "Vector Subspace"
+      ],
+      "short_definition": "A subset of a vector space that is itself a vector space.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "projection",
+      "name": "Projection",
+      "aliases": [
+        "Vector Projection"
+      ],
+      "short_definition": "The component of one vector that lies in the direction of another vector.",
+      "prerequisites": [
+        "dot_product",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_projection",
+      "name": "Orthogonal Projection",
+      "aliases": [
+        "Projection onto Subspace"
+      ],
+      "short_definition": "The projection of a vector onto a subspace, such that the difference between the vector and its projection is orthogonal to the subspace.",
+      "prerequisites": [
+        "orthogonal_complement",
+        "projection",
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "gramschmidt_proces",
+      "name": "Gram-Schmidt Process",
+      "aliases": [
+        "Orthogonalization Process"
+      ],
+      "short_definition": "An algorithm for orthogonalizing a set of vectors in an inner product space.",
+      "prerequisites": [
+        "dot_product",
+        "linear_independence",
+        "orthogonal_set",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linear_independence",
+      "name": "Linear Independence",
+      "aliases": [
+        "Linearly Independent Vectors"
+      ],
+      "short_definition": "A set of vectors where none can be written as a linear combination of the others.",
+      "prerequisites": [
+        "linear_combination",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [
+        "Vector Combination"
+      ],
+      "short_definition": "A sum of vectors, each multiplied by a scalar.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [
+        "Vector Basis"
+      ],
+      "short_definition": "A set of linearly independent vectors that span a vector space.",
+      "prerequisites": [
+        "linear_independence",
+        "span"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [
+        "Span of Vectors"
+      ],
+      "short_definition": "The set of all possible linear combinations of a set of vectors.",
+      "prerequisites": [
+        "linear_combination",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_basi",
+      "name": "Orthogonal Basis",
+      "aliases": [
+        "Orthogonal Vector Basis"
+      ],
+      "short_definition": "A basis for a vector space where all vectors in the basis are mutually orthogonal.",
+      "prerequisites": [
+        "basi",
+        "orthogonal_set"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_basi",
+      "name": "Orthonormal Basis",
+      "aliases": [
+        "Orthonormal Vector Basis"
+      ],
+      "short_definition": "A basis for a vector space where all vectors are orthonormal.",
+      "prerequisites": [
+        "basi",
+        "orthonormal_set"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_matrix",
+      "name": "Orthogonal Matrix",
+      "aliases": [
+        "Orthonormal Matrix"
+      ],
+      "short_definition": "A square matrix whose columns (and rows) form an orthonormal set.",
+      "prerequisites": [
+        "matrix",
+        "orthonormal_set"
+      ]
+    },
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [
+        "Matrices"
+      ],
+      "short_definition": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "transpose",
+      "name": "Transpose",
+      "aliases": [
+        "Matrix Transpose"
+      ],
+      "short_definition": "A matrix obtained by interchanging the rows and columns of a given matrix.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "identity_matrix",
+      "name": "Identity Matrix",
+      "aliases": [
+        "I"
+      ],
+      "short_definition": "A square matrix with ones on the main diagonal and zeros elsewhere.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "inverse_matrix",
+      "name": "Inverse Matrix",
+      "aliases": [
+        "Matrix Inverse"
+      ],
+      "short_definition": "A matrix that, when multiplied by another matrix, yields the identity matrix.",
+      "prerequisites": [
+        "identity_matrix",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "symmetric_matrix",
+      "name": "Symmetric Matrix",
+      "aliases": [
+        "Symmetric"
+      ],
+      "short_definition": "A square matrix that is equal to its transpose.",
+      "prerequisites": [
+        "matrix",
+        "transpose"
+      ]
+    },
+    {
+      "concept_id": "positive_definite_matrix",
+      "name": "Positive Definite Matrix",
+      "aliases": [
+        "Positive Definite"
+      ],
+      "short_definition": "A symmetric matrix where all its eigenvalues are positive.",
+      "prerequisites": [
+        "eigenvalue",
+        "symmetric_matrix"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue",
+      "name": "Eigenvalue",
+      "aliases": [
+        "Eigenvalues"
+      ],
+      "short_definition": "A scalar associated with a linear transformation that describes how a corresponding eigenvector is scaled.",
+      "prerequisites": [
+        "eigenvector",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "eigenvector",
+      "name": "Eigenvector",
+      "aliases": [
+        "Eigenvectors"
+      ],
+      "short_definition": "A non-zero vector that, when a linear transformation is applied to it, changes only by a scalar factor.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map"
+      ],
+      "short_definition": "A function between two vector spaces that preserves the operations of vector addition and scalar multiplication.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "scalar_multiplication",
+      "name": "Scalar Multiplication",
+      "aliases": [
+        "Scalar Times Vector"
+      ],
+      "short_definition": "Multiplying a vector by a scalar, which scales the vector's magnitude.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "cauchyschwarz_inequality",
+      "name": "Cauchy-Schwarz Inequality",
+      "aliases": [
+        "Schwarz Inequality"
+      ],
+      "short_definition": "An inequality relating the dot product of two vectors to their magnitudes.",
+      "prerequisites": [
+        "dot_product",
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "triangle_inequality",
+      "name": "Triangle Inequality",
+      "aliases": [
+        "Triangle Rule"
+      ],
+      "short_definition": "An inequality stating that the sum of the lengths of any two sides of a triangle is greater than or equal to the length of the third side.",
+      "prerequisites": [
+        "vector_magnitude"
+      ]
+    },
+    {
+      "concept_id": "inner_product_space",
+      "name": "Inner Product Space",
+      "aliases": [
+        "Vector Space with Inner Product"
+      ],
+      "short_definition": "A vector space equipped with an inner product.",
+      "prerequisites": [
+        "dot_product",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_decomposition",
+      "name": "Orthogonal Decomposition",
+      "aliases": [
+        "Orthogonal Partition"
+      ],
+      "short_definition": "Expressing a vector as a sum of orthogonal components, often with respect to a subspace.",
+      "prerequisites": [
+        "orthogonal_projection",
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "least_squares_approximation",
+      "name": "Least Squares Approximation",
+      "aliases": [
+        "Best Fit Line"
+      ],
+      "short_definition": "Finding the vector in a subspace that is closest to a given vector, minimizing the squared error.",
+      "prerequisites": [
+        "orthogonal_projection",
+        "subspace"
+      ]
+    },
+    {
+      "concept_id": "normal_equation",
+      "name": "Normal Equations",
+      "aliases": [
+        "Least Squares Equations"
+      ],
+      "short_definition": "A system of linear equations used to find the least squares solution.",
+      "prerequisites": [
+        "least_squares_approximation",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "qr_decomposition",
+      "name": "QR Decomposition",
+      "aliases": [
+        "QR Factorization"
+      ],
+      "short_definition": "Decomposing a matrix into the product of an orthogonal matrix and an upper triangular matrix.",
+      "prerequisites": [
+        "matrix",
+        "orthogonal_matrix",
+        "upper_triangular_matrix"
+      ]
+    },
+    {
+      "concept_id": "upper_triangular_matrix",
+      "name": "Upper Triangular Matrix",
+      "aliases": [
+        "U"
+      ],
+      "short_definition": "A square matrix where all the entries below the main diagonal are zero.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "singular_value_decomposition",
+      "name": "Singular Value Decomposition",
+      "aliases": [
+        "SVD"
+      ],
+      "short_definition": "A factorization of a real or complex matrix into three other matrices, which have special properties.",
+      "prerequisites": [
+        "diagonal_matrix",
+        "matrix",
+        "orthogonal_matrix"
+      ]
+    },
+    {
+      "concept_id": "diagonal_matrix",
+      "name": "Diagonal Matrix",
+      "aliases": [
+        "Diagonal"
+      ],
+      "short_definition": "A square matrix where all the entries outside the main diagonal are zero.",
+      "prerequisites": [
+        "matrix"
+      ]
+    }
+  ]
+}

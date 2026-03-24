@@ -1,0 +1,466 @@
+{
+  "curriculum_id": "DSA_Trees_Binary Search Tree (BST)",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Binary Search Tree (BST)",
+  "created_at": "2026-03-21T11:11:55.198065",
+  "concepts": [
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in its left subtree are less than the node's value, and all values in its right subtree are greater.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Tree Node"
+      ],
+      "short_definition": "A fundamental unit in a tree structure, typically containing data and pointers to child nodes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "root_node",
+      "name": "Root Node",
+      "aliases": [
+        "Root"
+      ],
+      "short_definition": "The topmost node in a tree, from which all other nodes descend.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "leaf_node",
+      "name": "Leaf Node",
+      "aliases": [
+        "Leaf"
+      ],
+      "short_definition": "A node with no children.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "parent_node",
+      "name": "Parent Node",
+      "aliases": [
+        "Parent"
+      ],
+      "short_definition": "A node that has one or more child nodes.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "child_node",
+      "name": "Child Node",
+      "aliases": [
+        "Child"
+      ],
+      "short_definition": "A node that is directly connected to another node (its parent).",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "left_child",
+      "name": "Left Child",
+      "aliases": [
+        "Left Subtree"
+      ],
+      "short_definition": "The child node of a parent node that is located to its left.",
+      "prerequisites": [
+        "node",
+        "parent_node"
+      ]
+    },
+    {
+      "concept_id": "right_child",
+      "name": "Right Child",
+      "aliases": [
+        "Right Subtree"
+      ],
+      "short_definition": "The child node of a parent node that is located to its right.",
+      "prerequisites": [
+        "node",
+        "parent_node"
+      ]
+    },
+    {
+      "concept_id": "key",
+      "name": "Key",
+      "aliases": [
+        "Value",
+        "Data"
+      ],
+      "short_definition": "The information stored within a node of the BST.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "bst_property",
+      "name": "BST Property",
+      "aliases": [
+        "BST Ordering"
+      ],
+      "short_definition": "The rule that dictates the arrangement of keys in a BST: left subtree keys < node key < right subtree keys.",
+      "prerequisites": [
+        "binary_search_tree",
+        "key",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Insert Node"
+      ],
+      "short_definition": "The process of adding a new key into a BST while maintaining the BST property.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "search",
+      "name": "Search",
+      "aliases": [
+        "Find Key"
+      ],
+      "short_definition": "The process of locating a specific key within a BST.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Delete Node"
+      ],
+      "short_definition": "The process of removing a key from a BST while maintaining the BST property.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "minimum_value",
+      "name": "Minimum Value",
+      "aliases": [
+        "Smallest Key"
+      ],
+      "short_definition": "The smallest key present in a BST, found by traversing left as far as possible from the root.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property"
+      ]
+    },
+    {
+      "concept_id": "maximum_value",
+      "name": "Maximum Value",
+      "aliases": [
+        "Largest Key"
+      ],
+      "short_definition": "The largest key present in a BST, found by traversing right as far as possible from the root.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property"
+      ]
+    },
+    {
+      "concept_id": "inorder_traversal",
+      "name": "In-order Traversal",
+      "aliases": [
+        "In-order"
+      ],
+      "short_definition": "A tree traversal method that visits nodes in ascending order of their keys.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "preorder_traversal",
+      "name": "Pre-order Traversal",
+      "aliases": [
+        "Pre-order"
+      ],
+      "short_definition": "A tree traversal method that visits the root node first, then its left subtree, then its right subtree.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "postorder_traversal",
+      "name": "Post-order Traversal",
+      "aliases": [
+        "Post-order"
+      ],
+      "short_definition": "A tree traversal method that visits the left subtree, then the right subtree, then the root node.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "height",
+      "name": "Height",
+      "aliases": [
+        "Tree Height"
+      ],
+      "short_definition": "The number of edges on the longest path from the root to a leaf node.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "depth",
+      "name": "Depth",
+      "aliases": [
+        "Node Depth"
+      ],
+      "short_definition": "The number of edges from the root to a specific node.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "balance",
+      "name": "Balance",
+      "aliases": [
+        "Tree Balance"
+      ],
+      "short_definition": "A measure of how evenly distributed the nodes are in a tree, affecting performance.",
+      "prerequisites": [
+        "binary_search_tree",
+        "height"
+      ]
+    },
+    {
+      "concept_id": "unbalanced_bst",
+      "name": "Unbalanced BST",
+      "aliases": [
+        "Skewed Tree"
+      ],
+      "short_definition": "A BST where the height difference between left and right subtrees is significant, leading to poor performance.",
+      "prerequisites": [
+        "balance",
+        "binary_search_tree"
+      ]
+    },
+    {
+      "concept_id": "balanced_bst",
+      "name": "Balanced BST",
+      "aliases": [
+        "AVL Tree",
+        "Red-Black Tree"
+      ],
+      "short_definition": "A BST that maintains a certain level of balance to ensure efficient operations.",
+      "prerequisites": [
+        "balance",
+        "binary_search_tree"
+      ]
+    },
+    {
+      "concept_id": "successor",
+      "name": "Successor",
+      "aliases": [
+        "In-order Successor"
+      ],
+      "short_definition": "The node with the smallest key that is greater than a given node's key.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "predecessor",
+      "name": "Predecessor",
+      "aliases": [
+        "In-order Predecessor"
+      ],
+      "short_definition": "The node with the largest key that is smaller than a given node's key.",
+      "prerequisites": [
+        "binary_search_tree",
+        "bst_property",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "recursive_insertion",
+      "name": "Recursive Insertion",
+      "aliases": [
+        "Recursive Insert"
+      ],
+      "short_definition": "Inserting a node into a BST using a recursive approach.",
+      "prerequisites": [
+        "binary_search_tree",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "iterative_insertion",
+      "name": "Iterative Insertion",
+      "aliases": [
+        "Iterative Insert"
+      ],
+      "short_definition": "Inserting a node into a BST using an iterative approach.",
+      "prerequisites": [
+        "binary_search_tree",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "recursive_search",
+      "name": "Recursive Search",
+      "aliases": [
+        "Recursive Find"
+      ],
+      "short_definition": "Searching for a key in a BST using a recursive approach.",
+      "prerequisites": [
+        "binary_search_tree",
+        "search"
+      ]
+    },
+    {
+      "concept_id": "iterative_search",
+      "name": "Iterative Search",
+      "aliases": [
+        "Iterative Find"
+      ],
+      "short_definition": "Searching for a key in a BST using an iterative approach.",
+      "prerequisites": [
+        "binary_search_tree",
+        "search"
+      ]
+    },
+    {
+      "concept_id": "deletion_case_1",
+      "name": "Deletion Case 1",
+      "aliases": [
+        "Delete Leaf"
+      ],
+      "short_definition": "Deleting a node with no children.",
+      "prerequisites": [
+        "deletion",
+        "leaf_node"
+      ]
+    },
+    {
+      "concept_id": "deletion_case_2",
+      "name": "Deletion Case 2",
+      "aliases": [
+        "Delete One Child"
+      ],
+      "short_definition": "Deleting a node with exactly one child.",
+      "prerequisites": [
+        "deletion",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "deletion_case_3",
+      "name": "Deletion Case 3",
+      "aliases": [
+        "Delete Two Children"
+      ],
+      "short_definition": "Deleting a node with two children.",
+      "prerequisites": [
+        "deletion",
+        "node",
+        "predecessor",
+        "successor"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "A measure of the efficiency of BST operations in terms of input size.",
+      "prerequisites": [
+        "binary_search_tree",
+        "deletion",
+        "insertion",
+        "search"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory Usage"
+      ],
+      "short_definition": "A measure of the memory required by a BST.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "average_case",
+      "name": "Average Case",
+      "aliases": [
+        "Typical Performance"
+      ],
+      "short_definition": "The expected performance of BST operations on a randomly built tree.",
+      "prerequisites": [
+        "binary_search_tree",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "worst_case",
+      "name": "Worst Case",
+      "aliases": [
+        "Degenerate Case"
+      ],
+      "short_definition": "The performance of BST operations on a highly unbalanced tree.",
+      "prerequisites": [
+        "time_complexity",
+        "unbalanced_bst"
+      ]
+    },
+    {
+      "concept_id": "tree_visualization",
+      "name": "Tree Visualization",
+      "aliases": [
+        "Diagramming Trees"
+      ],
+      "short_definition": "Representing a BST graphically to understand its structure.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "applications_of_bst",
+      "name": "Applications of BST",
+      "aliases": [
+        "BST Uses"
+      ],
+      "short_definition": "Real-world scenarios and problems where BSTs are effectively used.",
+      "prerequisites": [
+        "binary_search_tree"
+      ]
+    }
+  ]
+}

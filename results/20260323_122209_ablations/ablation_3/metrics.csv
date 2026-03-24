@@ -1,0 +1,7 @@
+model,missing_precision,missing_recall,missing_f1,missing_precision_macro_nonempty,missing_recall_macro_nonempty,missing_f1_macro_nonempty,missing_precision_micro,missing_recall_micro,missing_f1_micro,explained_precision,explained_recall,explained_f1,explained_accuracy,explained_precision_macro_nonempty,explained_recall_macro_nonempty,explained_f1_macro_nonempty,explained_accuracy_macro_nonempty,explained_precision_micro,explained_recall_micro,explained_f1_micro,explained_accuracy_micro
+mention_only,0.188,0.597,0.263,0.249,0.792,0.348,0.172,0.779,0.281,0.836,0.973,0.88,0.932,0.852,0.991,0.897,0.931,0.846,0.989,0.912,0.932
+explanation_heuristic,0.141,0.673,0.225,0.187,0.892,0.298,0.142,0.882,0.244,0.43,0.438,0.425,0.787,0.439,0.447,0.433,0.783,0.858,0.481,0.617,0.787
+tfidf_definition,0.133,0.138,0.115,0.176,0.183,0.153,0.131,0.206,0.16,0.391,0.849,0.5,0.46,0.398,0.865,0.509,0.465,0.385,0.862,0.533,0.46
+embedding_definition,0.077,0.214,0.098,0.102,0.283,0.13,0.108,0.25,0.151,0.432,0.765,0.491,0.483,0.44,0.779,0.5,0.492,0.386,0.762,0.512,0.483
+llm_reasoning,0.144,0.525,0.202,0.19,0.696,0.268,0.135,0.632,0.222,0.339,0.442,0.319,0.517,0.346,0.451,0.325,0.523,0.341,0.381,0.36,0.517
+neo4j_graph,0.139,0.667,0.221,0.185,0.883,0.292,0.136,0.868,0.236,0.66,0.504,0.531,0.762,0.673,0.514,0.541,0.762,0.76,0.487,0.594,0.762

@@ -1,0 +1,417 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_eigen value, eigen vector",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "eigen value, eigen vector",
+  "created_at": "2026-03-21T11:13:45.680114",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors with addition and scalar multiplication operations.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map"
+      ],
+      "short_definition": "A function between vector spaces preserving vector addition and scalar multiplication.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "matrix",
+      "name": "Matrix",
+      "aliases": [],
+      "short_definition": "A rectangular array of numbers or symbols.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "aliases": [],
+      "short_definition": "The operation of multiplying two matrices.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "square_matrix",
+      "name": "Square Matrix",
+      "aliases": [],
+      "short_definition": "A matrix with the same number of rows and columns.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "identity_matrix",
+      "name": "Identity Matrix",
+      "aliases": [
+        "I"
+      ],
+      "short_definition": "A square matrix with ones on the main diagonal and zeros elsewhere.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "determinant",
+      "name": "Determinant",
+      "aliases": [
+        "det(A)"
+      ],
+      "short_definition": "A scalar value computed from a square matrix.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "characteristic_polynomial",
+      "name": "Characteristic Polynomial",
+      "aliases": [
+        "p(lambda)"
+      ],
+      "short_definition": "A polynomial associated with a square matrix, used to find eigenvalues.",
+      "prerequisites": [
+        "determinant",
+        "identity_matrix",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue",
+      "name": "Eigenvalue",
+      "aliases": [
+        "lambda"
+      ],
+      "short_definition": "A scalar that describes how an eigenvector is scaled by a linear transformation.",
+      "prerequisites": [
+        "characteristic_polynomial"
+      ]
+    },
+    {
+      "concept_id": "eigenvector",
+      "name": "Eigenvector",
+      "aliases": [
+        "v"
+      ],
+      "short_definition": "A non-zero vector that does not change direction when a linear transformation is applied.",
+      "prerequisites": [
+        "eigenvalue",
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "eigen_decomposition",
+      "name": "Eigen Decomposition",
+      "aliases": [
+        "Spectral Decomposition"
+      ],
+      "short_definition": "Factoring a matrix into a product of its eigenvectors and eigenvalues.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "eigenspace",
+      "name": "Eigenspace",
+      "aliases": [
+        "Eigen-subspace"
+      ],
+      "short_definition": "The set of all eigenvectors corresponding to a particular eigenvalue, plus the zero vector.",
+      "prerequisites": [
+        "eigenvector",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "diagonalization",
+      "name": "Diagonalization",
+      "aliases": [],
+      "short_definition": "Transforming a matrix into a diagonal matrix using similarity transformations.",
+      "prerequisites": [
+        "eigen_decomposition",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "similarity_transformation",
+      "name": "Similarity Transformation",
+      "aliases": [],
+      "short_definition": "Multiplying a matrix by an invertible matrix and its inverse.",
+      "prerequisites": [
+        "matrix",
+        "matrix_multiplication"
+      ]
+    },
+    {
+      "concept_id": "invertible_matrix",
+      "name": "Invertible Matrix",
+      "aliases": [
+        "Non-singular Matrix"
+      ],
+      "short_definition": "A square matrix that has a multiplicative inverse.",
+      "prerequisites": [
+        "determinant",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "null_space",
+      "name": "Null Space",
+      "aliases": [
+        "Kernel"
+      ],
+      "short_definition": "The set of all vectors that a linear transformation maps to the zero vector.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue_equation",
+      "name": "Eigenvalue Equation",
+      "aliases": [
+        "Av = lambda v"
+      ],
+      "short_definition": "The fundamental equation defining eigenvalues and eigenvectors.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "scalar_matrix",
+      "name": "Scalar Matrix",
+      "aliases": [],
+      "short_definition": "A diagonal matrix where all diagonal entries are the same scalar.",
+      "prerequisites": [
+        "identity_matrix"
+      ]
+    },
+    {
+      "concept_id": "geometric_multiplicity",
+      "name": "Geometric Multiplicity",
+      "aliases": [],
+      "short_definition": "The dimension of the eigenspace for a given eigenvalue.",
+      "prerequisites": [
+        "eigenspace"
+      ]
+    },
+    {
+      "concept_id": "algebraic_multiplicity",
+      "name": "Algebraic Multiplicity",
+      "aliases": [],
+      "short_definition": "The multiplicity of an eigenvalue as a root of the characteristic polynomial.",
+      "prerequisites": [
+        "characteristic_polynomial",
+        "eigenvalue"
+      ]
+    },
+    {
+      "concept_id": "trace",
+      "name": "Trace",
+      "aliases": [
+        "tr(A)"
+      ],
+      "short_definition": "The sum of the diagonal elements of a square matrix.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue_propertie",
+      "name": "Eigenvalue Properties",
+      "aliases": [],
+      "short_definition": "Relationships between eigenvalues and matrix properties like trace and determinant.",
+      "prerequisites": [
+        "determinant",
+        "eigenvalue",
+        "trace"
+      ]
+    },
+    {
+      "concept_id": "symmetric_matrix",
+      "name": "Symmetric Matrix",
+      "aliases": [],
+      "short_definition": "A square matrix that is equal to its transpose.",
+      "prerequisites": [
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "real_eigenvalue",
+      "name": "Real Eigenvalues",
+      "aliases": [],
+      "short_definition": "Eigenvalues that are real numbers.",
+      "prerequisites": [
+        "eigenvalue"
+      ]
+    },
+    {
+      "concept_id": "orthogonal_eigenvector",
+      "name": "Orthogonal Eigenvectors",
+      "aliases": [],
+      "short_definition": "Eigenvectors corresponding to distinct eigenvalues of a symmetric matrix.",
+      "prerequisites": [
+        "eigenvector",
+        "symmetric_matrix"
+      ]
+    },
+    {
+      "concept_id": "change_of_basi",
+      "name": "Change of Basis",
+      "aliases": [],
+      "short_definition": "Representing vectors and transformations in a different set of basis vectors.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "matrix_representation",
+      "name": "Matrix Representation",
+      "aliases": [],
+      "short_definition": "Expressing a linear transformation as a matrix with respect to a chosen basis.",
+      "prerequisites": [
+        "change_of_basi",
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "eigenvalue_problem",
+      "name": "Eigenvalue Problem",
+      "aliases": [],
+      "short_definition": "The task of finding the eigenvalues and eigenvectors of a matrix.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector"
+      ]
+    },
+    {
+      "concept_id": "singular_value_decomposition",
+      "name": "Singular Value Decomposition",
+      "aliases": [
+        "SVD"
+      ],
+      "short_definition": "A factorization of a matrix into three other matrices.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "principal_component_analysi",
+      "name": "Principal Component Analysis",
+      "aliases": [
+        "PCA"
+      ],
+      "short_definition": "A dimensionality reduction technique using eigenvalues of the covariance matrix.",
+      "prerequisites": [
+        "covariance_matrix",
+        "eigenvalue"
+      ]
+    },
+    {
+      "concept_id": "covariance_matrix",
+      "name": "Covariance Matrix",
+      "aliases": [],
+      "short_definition": "A matrix showing the covariance between pairs of variables.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "spectral_theorem",
+      "name": "Spectral Theorem",
+      "aliases": [],
+      "short_definition": "A theorem relating eigenvalues and eigenvectors to matrix properties, especially for symmetric matrices.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector",
+        "symmetric_matrix"
+      ]
+    },
+    {
+      "concept_id": "generalized_eigenvalue_problem",
+      "name": "Generalized Eigenvalue Problem",
+      "aliases": [],
+      "short_definition": "An extension of the standard eigenvalue problem involving two matrices.",
+      "prerequisites": [
+        "eigenvalue",
+        "eigenvector",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "jordan_normal_form",
+      "name": "Jordan Normal Form",
+      "aliases": [
+        "Jordan Canonical Form"
+      ],
+      "short_definition": "A matrix representation for linear transformations that are not diagonalizable.",
+      "prerequisites": [
+        "linear_transformation",
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "cayleyhamilton_theorem",
+      "name": "Cayley-Hamilton Theorem",
+      "aliases": [],
+      "short_definition": "States that every square matrix satisfies its own characteristic equation.",
+      "prerequisites": [
+        "characteristic_polynomial",
+        "square_matrix"
+      ]
+    },
+    {
+      "concept_id": "matrix_exponential",
+      "name": "Matrix Exponential",
+      "aliases": [
+        "exp(A)"
+      ],
+      "short_definition": "The matrix analogue of the exponential function.",
+      "prerequisites": [
+        "matrix",
+        "matrix_multiplication"
+      ]
+    },
+    {
+      "concept_id": "differential_equation",
+      "name": "Differential Equations",
+      "aliases": [],
+      "short_definition": "Equations involving derivatives of functions.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "system_of_linear_equation",
+      "name": "System of Linear Equations",
+      "aliases": [],
+      "short_definition": "A collection of linear equations.",
+      "prerequisites": [
+        "matrix"
+      ]
+    },
+    {
+      "concept_id": "rank",
+      "name": "Rank",
+      "aliases": [],
+      "short_definition": "The dimension of the vector space spanned by the columns or rows of a matrix.",
+      "prerequisites": [
+        "matrix",
+        "vector_space"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Ablation config for eval/run_ablations.py
+# Uses multi-curriculum mode and runs a chunker ablation sweep.
+
+base:
+  videos: data/videos/videos.jsonl
+  curricula_dir: data/curricula
+  labels: data/labels/concept_coverage_labels.jsonl
+  models: mention_only,explanation_heuristic,tfidf_definition,embedding_definition,llm_reasoning,neo4j_graph
+  chunker: char
+  chunker_config: {}
+  build_graph: true
+  # Keep this true when ablating chunker settings with neo4j_graph,
+  # otherwise existing graphs may be reused.
+  graph_rebuild: true
+  log_level: INFO
+  no_progress: false
+
+grid:
+  - chunker: char
+    chunker_config: {}
+    ablation_flags:
+      chunker: char
+      semantic_threshold: na
+
+  - chunker: semantic
+    chunker_config:
+      similarity_threshold: 0.45
+    ablation_flags:
+      chunker: semantic
+      semantic_threshold: 0.45
+
+  - chunker: semantic
+    chunker_config:
+      similarity_threshold: 0.55
+    ablation_flags:
+      chunker: semantic
+      semantic_threshold: 0.55
+
+  - chunker: semantic
+    chunker_config:
+      similarity_threshold: 0.65
+    ablation_flags:
+      chunker: semantic
+      semantic_threshold: 0.65

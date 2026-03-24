@@ -1,0 +1,123 @@
+{
+  "curriculum_id": "math_linear_algebra_inner_product",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Inner Product",
+  "created_at": "2026-03-23T10:53:45.208304",
+  "concepts": [
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors that can be added together and multiplied by scalars, satisfying certain axioms.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "inner_product",
+      "name": "Inner Product",
+      "aliases": [
+        "Dot Product",
+        "Scalar Product"
+      ],
+      "short_definition": "A function that takes two vectors and returns a scalar, generalizing the dot product.",
+      "prerequisites": [
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "norm",
+      "name": "Norm",
+      "aliases": [
+        "Magnitude",
+        "Length"
+      ],
+      "short_definition": "A function that assigns a non-negative length or size to each vector, derived from the inner product.",
+      "prerequisites": [
+        "inner_product"
+      ]
+    },
+    {
+      "concept_id": "orthogonality",
+      "name": "Orthogonality",
+      "aliases": [
+        "Perpendicularity"
+      ],
+      "short_definition": "The property of two vectors being perpendicular, indicated by their inner product being zero.",
+      "prerequisites": [
+        "inner_product"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_basi",
+      "name": "Orthonormal Basis",
+      "aliases": [
+        "Orthogonal Basis",
+        "Normal Basis"
+      ],
+      "short_definition": "A basis for a vector space where all basis vectors are mutually orthogonal and have a norm of one.",
+      "prerequisites": [
+        "norm",
+        "orthogonality"
+      ]
+    },
+    {
+      "concept_id": "cauchyschwarz_inequality",
+      "name": "Cauchy-Schwarz Inequality",
+      "aliases": [
+        "Cauchy's Inequality"
+      ],
+      "short_definition": "An inequality relating the inner product of two vectors to their norms.",
+      "prerequisites": [
+        "inner_product",
+        "norm"
+      ]
+    },
+    {
+      "concept_id": "gramschmidt_proces",
+      "name": "Gram-Schmidt Process",
+      "aliases": [
+        "Gram-Schmidt Orthogonalization"
+      ],
+      "short_definition": "An algorithm for constructing an orthonormal basis from a set of linearly independent vectors.",
+      "prerequisites": [
+        "orthonormal_basi"
+      ]
+    },
+    {
+      "concept_id": "projection",
+      "name": "Projection",
+      "aliases": [
+        "Vector Projection"
+      ],
+      "short_definition": "The component of one vector that lies in the direction of another vector.",
+      "prerequisites": [
+        "inner_product",
+        "norm"
+      ]
+    },
+    {
+      "concept_id": "adjoint_operator",
+      "name": "Adjoint Operator",
+      "aliases": [
+        "Conjugate Transpose"
+      ],
+      "short_definition": "An operator related to a linear transformation in an inner product space.",
+      "prerequisites": [
+        "inner_product"
+      ]
+    },
+    {
+      "concept_id": "unitary_matrix",
+      "name": "Unitary Matrix",
+      "aliases": [
+        "Orthogonal Matrix"
+      ],
+      "short_definition": "A square matrix whose columns and rows are orthonormal vectors.",
+      "prerequisites": [
+        "orthonormal_basi"
+      ]
+    }
+  ]
+}

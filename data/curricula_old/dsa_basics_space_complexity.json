@@ -1,0 +1,449 @@
+{
+  "curriculum_id": "DSA_basics_Space complexity",
+  "domain": "DSA",
+  "module": "basics",
+  "topic": "Space complexity",
+  "created_at": "2026-03-21T10:39:31.997036",
+  "concepts": [
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Space Usage",
+        "Memory Complexity"
+      ],
+      "short_definition": "Measures the amount of memory an algorithm uses relative to the size of its input.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "auxiliary_space",
+      "name": "Auxiliary Space",
+      "aliases": [
+        "Extra Space"
+      ],
+      "short_definition": "The amount of memory used by an algorithm beyond the input storage.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "input_space",
+      "name": "Input Space",
+      "aliases": [
+        "Input Memory"
+      ],
+      "short_definition": "The amount of memory required to store the input to an algorithm.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "total_space",
+      "name": "Total Space",
+      "aliases": [
+        "Overall Space"
+      ],
+      "short_definition": "The sum of input space and auxiliary space used by an algorithm.",
+      "prerequisites": [
+        "auxiliary_space",
+        "input_space"
+      ]
+    },
+    {
+      "concept_id": "constant_space",
+      "name": "Constant Space",
+      "aliases": [
+        "O(1) Space"
+      ],
+      "short_definition": "An algorithm that uses a fixed amount of memory, regardless of input size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "linear_space",
+      "name": "Linear Space",
+      "aliases": [
+        "O(n) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows linearly with the input size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "logarithmic_space",
+      "name": "Logarithmic Space",
+      "aliases": [
+        "O(log n) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows logarithmically with the input size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "quadratic_space",
+      "name": "Quadratic Space",
+      "aliases": [
+        "O(n^2) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows quadratically with the input size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "exponential_space",
+      "name": "Exponential Space",
+      "aliases": [
+        "O(2^n) Space"
+      ],
+      "short_definition": "An algorithm whose memory usage grows exponentially with the input size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "big_o_notation",
+      "name": "Big O Notation",
+      "aliases": [
+        "O()"
+      ],
+      "short_definition": "A mathematical notation used to describe the limiting behavior of a function when the argument tends towards a particular value or infinity.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "variable",
+      "name": "Variables",
+      "aliases": [
+        "Data Storage"
+      ],
+      "short_definition": "Named storage locations that hold values, contributing to memory usage.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structures",
+      "aliases": [
+        "Collections"
+      ],
+      "short_definition": "Ways of organizing and storing data, each with its own memory footprint.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "array",
+      "name": "Arrays",
+      "aliases": [
+        "Lists"
+      ],
+      "short_definition": "Contiguous blocks of memory storing elements of the same type.",
+      "prerequisites": [
+        "constant_space",
+        "data_structure"
+      ]
+    },
+    {
+      "concept_id": "linked_list",
+      "name": "Linked Lists",
+      "aliases": [
+        "LL"
+      ],
+      "short_definition": "Data structures where elements are linked by pointers, requiring memory for nodes and pointers.",
+      "prerequisites": [
+        "data_structure",
+        "linear_space"
+      ]
+    },
+    {
+      "concept_id": "stack",
+      "name": "Stacks",
+      "aliases": [
+        "LIFO"
+      ],
+      "short_definition": "Data structures following a Last-In, First-Out principle, often implemented with arrays or linked lists.",
+      "prerequisites": [
+        "data_structure",
+        "linear_space"
+      ]
+    },
+    {
+      "concept_id": "queue",
+      "name": "Queues",
+      "aliases": [
+        "FIFO"
+      ],
+      "short_definition": "Data structures following a First-In, First-Out principle, often implemented with arrays or linked lists.",
+      "prerequisites": [
+        "data_structure",
+        "linear_space"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Trees",
+      "aliases": [
+        "Hierarchical Data"
+      ],
+      "short_definition": "Non-linear data structures with a root node and child nodes, requiring memory for nodes and pointers.",
+      "prerequisites": [
+        "data_structure",
+        "linear_space"
+      ]
+    },
+    {
+      "concept_id": "graph",
+      "name": "Graphs",
+      "aliases": [
+        "Network Data"
+      ],
+      "short_definition": "Data structures representing relationships between objects, often using adjacency lists or matrices.",
+      "prerequisites": [
+        "data_structure",
+        "linear_space"
+      ]
+    },
+    {
+      "concept_id": "hash_table",
+      "name": "Hash Tables",
+      "aliases": [
+        "Hash Maps",
+        "Dictionaries"
+      ],
+      "short_definition": "Data structures that map keys to values, often using arrays and hash functions.",
+      "prerequisites": [
+        "data_structure",
+        "linear_space"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [
+        "Recursive Calls"
+      ],
+      "short_definition": "A programming technique where a function calls itself, contributing to call stack space.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "call_stack",
+      "name": "Call Stack",
+      "aliases": [
+        "Execution Stack"
+      ],
+      "short_definition": "A data structure that stores information about active subroutines (function calls).",
+      "prerequisites": [
+        "linear_space",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "iteration",
+      "name": "Iteration",
+      "aliases": [
+        "Loops"
+      ],
+      "short_definition": "A programming technique that repeats a block of code, generally with lower space overhead than recursion.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "memory_allocation",
+      "name": "Memory Allocation",
+      "aliases": [
+        "Dynamic Memory"
+      ],
+      "short_definition": "The process of reserving memory for data during program execution.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "static_allocation",
+      "name": "Static Allocation",
+      "aliases": [
+        "Compile-time Allocation"
+      ],
+      "short_definition": "Memory allocated at compile time, with a fixed size.",
+      "prerequisites": [
+        "constant_space",
+        "memory_allocation"
+      ]
+    },
+    {
+      "concept_id": "dynamic_allocation",
+      "name": "Dynamic Allocation",
+      "aliases": [
+        "Runtime Allocation"
+      ],
+      "short_definition": "Memory allocated during program execution, which can vary in size.",
+      "prerequisites": [
+        "linear_space",
+        "memory_allocation"
+      ]
+    },
+    {
+      "concept_id": "input_size",
+      "name": "Input Size",
+      "aliases": [
+        "n"
+      ],
+      "short_definition": "The measure of the input data that an algorithm processes, often used as a variable in complexity analysis.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "worstcase_space",
+      "name": "Worst-Case Space",
+      "aliases": [
+        "Max Space"
+      ],
+      "short_definition": "The maximum amount of memory an algorithm might use for any input of a given size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "averagecase_space",
+      "name": "Average-Case Space",
+      "aliases": [
+        "Typical Space"
+      ],
+      "short_definition": "The expected amount of memory an algorithm uses for a typical input of a given size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "bestcase_space",
+      "name": "Best-Case Space",
+      "aliases": [
+        "Min Space"
+      ],
+      "short_definition": "The minimum amount of memory an algorithm might use for any input of a given size.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "spacetime_tradeoff",
+      "name": "Space-Time Tradeoff",
+      "aliases": [
+        "Memory vs. Speed"
+      ],
+      "short_definition": "The concept that an algorithm can sometimes reduce its execution time by using more memory, or vice versa.",
+      "prerequisites": [
+        "space_complexity",
+        "time_complexity"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Execution Time"
+      ],
+      "short_definition": "Measures the amount of time an algorithm takes to run relative to the size of its input.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "primitive_data_type",
+      "name": "Primitive Data Types",
+      "aliases": [
+        "Basic Types"
+      ],
+      "short_definition": "Fundamental data types like integers, floats, booleans, which typically occupy a fixed amount of memory.",
+      "prerequisites": [
+        "constant_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "object",
+      "name": "Objects",
+      "aliases": [
+        "Complex Data"
+      ],
+      "short_definition": "Data structures that can hold multiple fields, contributing to memory usage based on their structure.",
+      "prerequisites": [
+        "linear_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "pointer",
+      "name": "Pointers",
+      "aliases": [
+        "References"
+      ],
+      "short_definition": "Variables that store memory addresses, used extensively in linked data structures.",
+      "prerequisites": [
+        "constant_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "memory_leak",
+      "name": "Memory Leaks",
+      "aliases": [
+        "Unreleased Memory"
+      ],
+      "short_definition": "A type of resource leak that occurs when a computer program incorrectly manages memory allocations, causing it to consume more and more memory over time.",
+      "prerequisites": [
+        "dynamic_allocation"
+      ]
+    },
+    {
+      "concept_id": "garbage_collection",
+      "name": "Garbage Collection",
+      "aliases": [
+        "Memory Management"
+      ],
+      "short_definition": "Automatic memory management that reclaims memory occupied by objects that are no longer in use by the application.",
+      "prerequisites": [
+        "dynamic_allocation"
+      ]
+    },
+    {
+      "concept_id": "bit",
+      "name": "Bit",
+      "aliases": [
+        "Binary Digit"
+      ],
+      "short_definition": "The smallest unit of data in computing, representing either a 0 or a 1.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "byte",
+      "name": "Byte",
+      "aliases": [
+        "8 Bits"
+      ],
+      "short_definition": "A unit of digital information that most commonly consists of eight bits.",
+      "prerequisites": [
+        "bit"
+      ]
+    },
+    {
+      "concept_id": "memory_addres",
+      "name": "Memory Address",
+      "aliases": [
+        "Location"
+      ],
+      "short_definition": "A unique identifier for a location in computer memory.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    }
+  ]
+}

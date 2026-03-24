@@ -1,0 +1,112 @@
+{
+  "curriculum_id": "math_calculus_chain_rule",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Chain rule",
+  "created_at": "2026-03-23T10:53:24.217715",
+  "concepts": [
+    {
+      "concept_id": "function_composition",
+      "name": "Function Composition",
+      "aliases": [
+        "Composite Functions"
+      ],
+      "short_definition": "Combining two or more functions where the output of one function becomes the input of another.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "derivative_definition",
+      "name": "Derivative Definition",
+      "aliases": [
+        "Limit Definition of Derivative"
+      ],
+      "short_definition": "The instantaneous rate of change of a function, defined as a limit of the difference quotient.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "power_rule",
+      "name": "Power Rule",
+      "aliases": [],
+      "short_definition": "A rule for finding the derivative of a power function x^n.",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "concept_id": "constant_multiple_rule",
+      "name": "Constant Multiple Rule",
+      "aliases": [],
+      "short_definition": "The derivative of a constant times a function is the constant times the derivative of the function.",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "concept_id": "sum_and_difference_rule",
+      "name": "Sum and Difference Rules",
+      "aliases": [],
+      "short_definition": "The derivative of a sum or difference of functions is the sum or difference of their derivatives.",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "concept_id": "chain_rule",
+      "name": "Chain Rule",
+      "aliases": [],
+      "short_definition": "A rule for finding the derivative of a composite function.",
+      "prerequisites": [
+        "constant_multiple_rule",
+        "derivative_definition",
+        "function_composition",
+        "power_rule",
+        "sum_and_difference_rule"
+      ]
+    },
+    {
+      "concept_id": "outer_and_inner_function",
+      "name": "Outer and Inner Functions",
+      "aliases": [
+        "Outside Function",
+        "Inside Function"
+      ],
+      "short_definition": "Identifying the separate functions within a composite function for applying the chain rule.",
+      "prerequisites": [
+        "function_composition"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_trigonometric_function",
+      "name": "Derivative of Trigonometric Functions",
+      "aliases": [
+        "Trig Derivatives"
+      ],
+      "short_definition": "The specific rules for finding the derivatives of sine, cosine, tangent, etc.",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_exponential_function",
+      "name": "Derivative of Exponential Functions",
+      "aliases": [
+        "Exponential Derivatives"
+      ],
+      "short_definition": "The specific rules for finding the derivatives of functions like e^x or a^x.",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "concept_id": "derivative_of_logarithmic_function",
+      "name": "Derivative of Logarithmic Functions",
+      "aliases": [
+        "Logarithmic Derivatives"
+      ],
+      "short_definition": "The specific rules for finding the derivatives of functions like ln(x) or log_b(x).",
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    }
+  ]
+}

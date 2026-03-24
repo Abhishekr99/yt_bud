@@ -1,0 +1,107 @@
+{
+  "curriculum_id": "dsa_graph_kruskals_algorithm",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Kruskal’s algorithm",
+  "created_at": "2026-03-23T10:52:19.350208",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Network"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "edge_weight",
+      "name": "Edge Weight",
+      "aliases": [
+        "Cost"
+      ],
+      "short_definition": "A numerical value assigned to an edge, representing its cost or distance.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "spanning_tree",
+      "name": "Spanning Tree",
+      "aliases": [
+        "ST"
+      ],
+      "short_definition": "A subgraph that connects all vertices of a graph without forming cycles.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "minimum_spanning_tree",
+      "name": "Minimum Spanning Tree",
+      "aliases": [
+        "MST"
+      ],
+      "short_definition": "A spanning tree with the minimum possible total edge weight.",
+      "prerequisites": [
+        "edge_weight",
+        "spanning_tree"
+      ]
+    },
+    {
+      "concept_id": "disjoint_set_union",
+      "name": "Disjoint Set Union",
+      "aliases": [
+        "DSU",
+        "Union-Find"
+      ],
+      "short_definition": "A data structure that tracks a set of elements partitioned into a number of disjoint subsets.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "kruskals_algorithm",
+      "name": "Kruskal's Algorithm",
+      "aliases": [],
+      "short_definition": "A greedy algorithm to find a Minimum Spanning Tree for a connected, undirected graph.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "edge_weight",
+        "minimum_spanning_tree"
+      ]
+    },
+    {
+      "concept_id": "greedy_approach",
+      "name": "Greedy Approach",
+      "aliases": [
+        "Greedy Strategy"
+      ],
+      "short_definition": "Making the locally optimal choice at each stage with the hope of finding a global optimum.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "cycle_detection",
+      "name": "Cycle Detection",
+      "aliases": [],
+      "short_definition": "Identifying if adding an edge to a graph creates a cycle.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "sorting",
+      "name": "Sorting",
+      "aliases": [],
+      "short_definition": "Arranging elements in a specific order, typically ascending or descending.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "connected_graph",
+      "name": "Connected Graph",
+      "aliases": [],
+      "short_definition": "A graph where there is a path between every pair of vertices.",
+      "prerequisites": [
+        "graph"
+      ]
+    }
+  ]
+}

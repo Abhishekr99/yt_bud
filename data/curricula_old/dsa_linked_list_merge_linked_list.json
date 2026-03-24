@@ -1,0 +1,399 @@
+{
+  "curriculum_id": "DSA_Linked list_Merge linked lists",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Merge linked lists",
+  "created_at": "2026-03-21T10:41:24.080263",
+  "concepts": [
+    {
+      "concept_id": "linked_list",
+      "name": "Linked List",
+      "aliases": [
+        "LL"
+      ],
+      "short_definition": "A linear data structure where elements are not stored at contiguous memory locations.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [],
+      "short_definition": "The basic building block of a linked list, containing data and a pointer to the next node.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [],
+      "short_definition": "A pointer that points to the first node of a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [],
+      "short_definition": "A pointer that points to the last node of a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [],
+      "short_definition": "A pointer within a node that refers to the subsequent node in the list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "singly_linked_list",
+      "name": "Singly Linked List",
+      "aliases": [
+        "SLL"
+      ],
+      "short_definition": "A linked list where each node points only to the next node.",
+      "prerequisites": [
+        "linked_list",
+        "next_pointer",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list",
+      "name": "Doubly Linked List",
+      "aliases": [
+        "DLL"
+      ],
+      "short_definition": "A linked list where each node points to both the next and previous nodes.",
+      "prerequisites": [
+        "linked_list",
+        "next_pointer",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "circular_linked_list",
+      "name": "Circular Linked List",
+      "aliases": [
+        "CLL"
+      ],
+      "short_definition": "A linked list where the last node points back to the first node.",
+      "prerequisites": [
+        "linked_list",
+        "next_pointer",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "sorted_linked_list",
+      "name": "Sorted Linked List",
+      "aliases": [],
+      "short_definition": "A linked list where the elements are arranged in a specific order (ascending or descending).",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "unsorted_linked_list",
+      "name": "Unsorted Linked List",
+      "aliases": [],
+      "short_definition": "A linked list where the elements are not arranged in any particular order.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "merge_operation",
+      "name": "Merge Operation",
+      "aliases": [],
+      "short_definition": "The process of combining two or more linked lists into a single linked list.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "merging_sorted_list",
+      "name": "Merging Sorted Lists",
+      "aliases": [],
+      "short_definition": "Combining two sorted linked lists into a single sorted linked list.",
+      "prerequisites": [
+        "merge_operation",
+        "sorted_linked_list"
+      ]
+    },
+    {
+      "concept_id": "iterative_merging",
+      "name": "Iterative Merging",
+      "aliases": [],
+      "short_definition": "Merging linked lists using loops and explicit pointer manipulation.",
+      "prerequisites": [
+        "linked_list",
+        "merge_operation"
+      ]
+    },
+    {
+      "concept_id": "recursive_merging",
+      "name": "Recursive Merging",
+      "aliases": [],
+      "short_definition": "Merging linked lists by breaking down the problem into smaller, self-similar subproblems.",
+      "prerequisites": [
+        "linked_list",
+        "merge_operation"
+      ]
+    },
+    {
+      "concept_id": "pointer_manipulation",
+      "name": "Pointer Manipulation",
+      "aliases": [],
+      "short_definition": "The act of changing the 'next' or 'previous' pointers of nodes to restructure the list.",
+      "prerequisites": [
+        "next_pointer",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "temporary_pointer",
+      "name": "Temporary Pointer",
+      "aliases": [],
+      "short_definition": "A pointer used to hold a reference to a node during list manipulation, preventing data loss.",
+      "prerequisites": [
+        "node",
+        "pointer_manipulation"
+      ]
+    },
+    {
+      "concept_id": "dummy_node",
+      "name": "Dummy Node",
+      "aliases": [],
+      "short_definition": "A placeholder node often used at the beginning of a merged list to simplify edge cases.",
+      "prerequisites": [
+        "merge_operation",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "inplace_merge",
+      "name": "In-place Merge",
+      "aliases": [],
+      "short_definition": "Merging linked lists without allocating significant extra memory, by rearranging existing nodes.",
+      "prerequisites": [
+        "merge_operation",
+        "pointer_manipulation"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O"
+      ],
+      "short_definition": "A measure of how the execution time of an algorithm grows with the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of how the memory usage of an algorithm grows with the input size.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "comparison",
+      "name": "Comparison",
+      "aliases": [],
+      "short_definition": "The act of comparing elements from two lists to determine their order in the merged list.",
+      "prerequisites": [
+        "merge_operation"
+      ]
+    },
+    {
+      "concept_id": "iteration",
+      "name": "Iteration",
+      "aliases": [],
+      "short_definition": "Traversing through the nodes of a linked list sequentially.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "recursion",
+      "name": "Recursion",
+      "aliases": [],
+      "short_definition": "A programming technique where a function calls itself to solve a problem.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "base_case",
+      "name": "Base Case",
+      "aliases": [],
+      "short_definition": "The condition in a recursive function that stops the recursion.",
+      "prerequisites": [
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "recursive_step",
+      "name": "Recursive Step",
+      "aliases": [],
+      "short_definition": "The part of a recursive function that breaks down the problem and calls itself.",
+      "prerequisites": [
+        "base_case",
+        "recursion"
+      ]
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Cases",
+      "aliases": [],
+      "short_definition": "Unusual or extreme conditions that need to be handled in an algorithm.",
+      "prerequisites": [
+        "merge_operation"
+      ]
+    },
+    {
+      "concept_id": "empty_list",
+      "name": "Empty List",
+      "aliases": [],
+      "short_definition": "A linked list with no nodes.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "single_node_list",
+      "name": "Single Node List",
+      "aliases": [],
+      "short_definition": "A linked list containing only one node.",
+      "prerequisites": [
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "merging_empty_list",
+      "name": "Merging Empty Lists",
+      "aliases": [],
+      "short_definition": "Handling the scenario where one or both lists to be merged are empty.",
+      "prerequisites": [
+        "empty_list",
+        "merge_operation"
+      ]
+    },
+    {
+      "concept_id": "merging_single_node_list",
+      "name": "Merging Single Node Lists",
+      "aliases": [],
+      "short_definition": "Handling the scenario where one or both lists to be merged have only one node.",
+      "prerequisites": [
+        "merge_operation",
+        "single_node_list"
+      ]
+    },
+    {
+      "concept_id": "list_traversal",
+      "name": "List Traversal",
+      "aliases": [],
+      "short_definition": "Visiting each node in a linked list.",
+      "prerequisites": [
+        "linked_list"
+      ]
+    },
+    {
+      "concept_id": "node_assignment",
+      "name": "Node Assignment",
+      "aliases": [],
+      "short_definition": "Assigning a node to a pointer variable.",
+      "prerequisites": [
+        "node",
+        "pointer_manipulation"
+      ]
+    },
+    {
+      "concept_id": "pointer_comparison",
+      "name": "Pointer Comparison",
+      "aliases": [],
+      "short_definition": "Comparing the values pointed to by two pointers.",
+      "prerequisites": [
+        "pointer_manipulation"
+      ]
+    },
+    {
+      "concept_id": "tail_append",
+      "name": "Tail Append",
+      "aliases": [],
+      "short_definition": "Adding a node to the end of a linked list.",
+      "prerequisites": [
+        "linked_list",
+        "node",
+        "tail_pointer"
+      ]
+    },
+    {
+      "concept_id": "head_insertion",
+      "name": "Head Insertion",
+      "aliases": [],
+      "short_definition": "Adding a node to the beginning of a linked list.",
+      "prerequisites": [
+        "head_pointer",
+        "linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "interleaving_list",
+      "name": "Interleaving Lists",
+      "aliases": [],
+      "short_definition": "Merging lists by alternating nodes from each list.",
+      "prerequisites": [
+        "linked_list",
+        "merge_operation"
+      ]
+    },
+    {
+      "concept_id": "merge_sort_linked_list",
+      "name": "Merge Sort (Linked List)",
+      "aliases": [],
+      "short_definition": "A sorting algorithm that uses merging of linked lists.",
+      "prerequisites": [
+        "merge_operation",
+        "sorted_linked_list"
+      ]
+    },
+    {
+      "concept_id": "auxiliary_space",
+      "name": "Auxiliary Space",
+      "aliases": [],
+      "short_definition": "Extra memory used by an algorithm beyond the input storage.",
+      "prerequisites": [
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "constant_space",
+      "name": "Constant Space",
+      "aliases": [],
+      "short_definition": "An algorithm that uses a fixed amount of extra memory, regardless of input size.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    },
+    {
+      "concept_id": "linear_space",
+      "name": "Linear Space",
+      "aliases": [],
+      "short_definition": "An algorithm whose extra memory usage grows linearly with the input size.",
+      "prerequisites": [
+        "auxiliary_space",
+        "space_complexity"
+      ]
+    }
+  ]
+}

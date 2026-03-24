@@ -12,20 +12,25 @@ def precision_recall_f1(tp: int, fp: int, fn: int) -> Dict[str, float]:
     return {"precision": precision, "recall": recall, "f1": f1}
 
 
-def set_metrics(true_set: Iterable[str], pred_set: Iterable[str]) -> Dict[str, float]:
+def set_counts(true_set: Iterable[str], pred_set: Iterable[str]) -> Tuple[int, int, int]:
     true_set = set(true_set)
     pred_set = set(pred_set)
     tp = len(true_set & pred_set)
     fp = len(pred_set - true_set)
     fn = len(true_set - pred_set)
+    return tp, fp, fn
+
+
+def set_metrics(true_set: Iterable[str], pred_set: Iterable[str]) -> Dict[str, float]:
+    tp, fp, fn = set_counts(true_set, pred_set)
     return precision_recall_f1(tp, fp, fn)
 
 
-def explained_metrics(
+def explained_confusion(
     true_labels: Dict[str, int],
     pred_scores: Dict[str, float],
     threshold: float = 0.5,
-) -> Dict[str, float]:
+) -> Tuple[int, int, int, int]:
     tp = fp = fn = tn = 0
     for concept_id, true_label in true_labels.items():
         pred = 1 if pred_scores.get(concept_id, 0.0) >= threshold else 0
@@ -37,6 +42,15 @@ def explained_metrics(
             fn += 1
         else:
             tn += 1
+    return tp, fp, fn, tn
+
+
+def explained_metrics(
+    true_labels: Dict[str, int],
+    pred_scores: Dict[str, float],
+    threshold: float = 0.5,
+) -> Dict[str, float]:
+    tp, fp, fn, tn = explained_confusion(true_labels, pred_scores, threshold)
     metrics = precision_recall_f1(tp, fp, fn)
     metrics["accuracy"] = _safe_div(tp + tn, tp + tn + fp + fn)
     return metrics

@@ -1,0 +1,120 @@
+{
+  "curriculum_id": "math_probability_bayes_theorem",
+  "domain": "MATH",
+  "module": "Probability",
+  "topic": "Bayes Theorem",
+  "created_at": "2026-03-23T10:54:02.705377",
+  "concepts": [
+    {
+      "concept_id": "conditional_probability",
+      "name": "Conditional Probability",
+      "aliases": [
+        "P(A|B)"
+      ],
+      "short_definition": "The probability of an event occurring given that another event has already occurred.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "joint_probability",
+      "name": "Joint Probability",
+      "aliases": [
+        "P(A and B)"
+      ],
+      "short_definition": "The probability of two events occurring simultaneously.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "marginal_probability",
+      "name": "Marginal Probability",
+      "aliases": [
+        "P(A)"
+      ],
+      "short_definition": "The probability of a single event occurring, irrespective of other events.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "law_of_total_probability",
+      "name": "Law of Total Probability",
+      "aliases": [
+        "Law of Total Probability"
+      ],
+      "short_definition": "The probability of an event is the sum of its probabilities over all possible partitions of the sample space.",
+      "prerequisites": [
+        "joint_probability",
+        "marginal_probability"
+      ]
+    },
+    {
+      "concept_id": "bayes_theorem",
+      "name": "Bayes' Theorem",
+      "aliases": [
+        "Bayes' Rule"
+      ],
+      "short_definition": "A theorem that describes the probability of an event based on prior knowledge of conditions that might be related to the event.",
+      "prerequisites": [
+        "conditional_probability",
+        "joint_probability",
+        "law_of_total_probability"
+      ]
+    },
+    {
+      "concept_id": "prior_probability",
+      "name": "Prior Probability",
+      "aliases": [
+        "Prior"
+      ],
+      "short_definition": "The initial probability of an event before considering new evidence.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "posterior_probability",
+      "name": "Posterior Probability",
+      "aliases": [
+        "Posterior"
+      ],
+      "short_definition": "The updated probability of an event after considering new evidence.",
+      "prerequisites": [
+        "bayes_theorem",
+        "prior_probability"
+      ]
+    },
+    {
+      "concept_id": "likelihood",
+      "name": "Likelihood",
+      "aliases": [
+        "Likelihood"
+      ],
+      "short_definition": "The probability of observing the evidence given a specific hypothesis.",
+      "prerequisites": [
+        "bayes_theorem"
+      ]
+    },
+    {
+      "concept_id": "evidence",
+      "name": "Evidence",
+      "aliases": [
+        "Marginal Likelihood"
+      ],
+      "short_definition": "The total probability of observing the evidence, averaged over all possible hypotheses.",
+      "prerequisites": [
+        "bayes_theorem",
+        "law_of_total_probability"
+      ]
+    },
+    {
+      "concept_id": "bayesian_inference",
+      "name": "Bayesian Inference",
+      "aliases": [
+        "Bayesian Inference"
+      ],
+      "short_definition": "A statistical method that uses Bayes' Theorem to update the probability of a hypothesis as more evidence or information becomes available.",
+      "prerequisites": [
+        "bayes_theorem",
+        "posterior_probability",
+        "prior_probability"
+      ]
+    }
+  ]
+}

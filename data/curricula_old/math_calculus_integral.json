@@ -1,0 +1,394 @@
+{
+  "curriculum_id": "MATH_Calculus_Integrals",
+  "domain": "MATH",
+  "module": "Calculus",
+  "topic": "Integrals",
+  "created_at": "2026-03-21T11:13:23.910440",
+  "concepts": [
+    {
+      "concept_id": "antiderivative",
+      "name": "Antiderivative",
+      "aliases": [
+        "Indefinite Integral",
+        "Primitive Function"
+      ],
+      "short_definition": "A function whose derivative is a given function.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "indefinite_integration",
+      "name": "Indefinite Integration",
+      "aliases": [
+        "Finding Antiderivatives"
+      ],
+      "short_definition": "The process of finding all antiderivatives of a function.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "constant_of_integration",
+      "name": "Constant of Integration",
+      "aliases": [
+        "C"
+      ],
+      "short_definition": "The arbitrary constant added to an indefinite integral.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "power_rule_for_integration",
+      "name": "Power Rule for Integration",
+      "aliases": [],
+      "short_definition": "A rule for finding the integral of x^n.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_1x",
+      "name": "Integral of 1/x",
+      "aliases": [],
+      "short_definition": "The integral of 1/x is the natural logarithm.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_trigonometric_function",
+      "name": "Integral of Trigonometric Functions",
+      "aliases": [],
+      "short_definition": "Integrals of sine, cosine, tangent, etc.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_exponential_function",
+      "name": "Integral of Exponential Functions",
+      "aliases": [],
+      "short_definition": "Integrals of e^x and a^x.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_logarithmic_function",
+      "name": "Integral of Logarithmic Functions",
+      "aliases": [],
+      "short_definition": "Integrals of ln(x) and log_a(x).",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "sum_and_difference_rule",
+      "name": "Sum and Difference Rule",
+      "aliases": [],
+      "short_definition": "The integral of a sum/difference is the sum/difference of integrals.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "constant_multiple_rule",
+      "name": "Constant Multiple Rule",
+      "aliases": [],
+      "short_definition": "Constants can be factored out of integrals.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "substitution_rule",
+      "name": "Substitution Rule",
+      "aliases": [
+        "u-substitution"
+      ],
+      "short_definition": "A technique for simplifying integrals by changing variables.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "integration_by_part",
+      "name": "Integration by Parts",
+      "aliases": [],
+      "short_definition": "A technique for integrating products of functions.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "definite_integral",
+      "name": "Definite Integral",
+      "aliases": [],
+      "short_definition": "An integral with upper and lower limits of integration.",
+      "prerequisites": [
+        "antiderivative"
+      ]
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculus_part_1",
+      "name": "Fundamental Theorem of Calculus Part 1",
+      "aliases": [
+        "FTC Part 1"
+      ],
+      "short_definition": "Relates differentiation and integration; derivative of an integral.",
+      "prerequisites": [
+        "antiderivative",
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "fundamental_theorem_of_calculus_part_2",
+      "name": "Fundamental Theorem of Calculus Part 2",
+      "aliases": [
+        "FTC Part 2",
+        "Evaluation Theorem"
+      ],
+      "short_definition": "Evaluates definite integrals using antiderivatives.",
+      "prerequisites": [
+        "antiderivative",
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "area_under_a_curve",
+      "name": "Area Under a Curve",
+      "aliases": [],
+      "short_definition": "The definite integral represents the area between a curve and the x-axis.",
+      "prerequisites": [
+        "definite_integral",
+        "fundamental_theorem_of_calculus_part_2"
+      ]
+    },
+    {
+      "concept_id": "riemann_sum",
+      "name": "Riemann Sum",
+      "aliases": [],
+      "short_definition": "Approximation of the area under a curve using rectangles.",
+      "prerequisites": [
+        "area_under_a_curve"
+      ]
+    },
+    {
+      "concept_id": "limit_of_riemann_sum",
+      "name": "Limit of Riemann Sums",
+      "aliases": [],
+      "short_definition": "The definite integral as the limit of Riemann sums.",
+      "prerequisites": [
+        "definite_integral",
+        "riemann_sum"
+      ]
+    },
+    {
+      "concept_id": "net_signed_area",
+      "name": "Net Signed Area",
+      "aliases": [],
+      "short_definition": "The area above the x-axis minus the area below the x-axis.",
+      "prerequisites": [
+        "area_under_a_curve"
+      ]
+    },
+    {
+      "concept_id": "properties_of_definite_integral",
+      "name": "Properties of Definite Integrals",
+      "aliases": [],
+      "short_definition": "Rules for manipulating definite integrals.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "integral_of_a_constant",
+      "name": "Integral of a Constant",
+      "aliases": [],
+      "short_definition": "The integral of a constant c is cx.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_x",
+      "name": "Integral of x",
+      "aliases": [],
+      "short_definition": "The integral of x is x^2/2.",
+      "prerequisites": [
+        "power_rule_for_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_x2",
+      "name": "Integral of x^2",
+      "aliases": [],
+      "short_definition": "The integral of x^2 is x^3/3.",
+      "prerequisites": [
+        "power_rule_for_integration"
+      ]
+    },
+    {
+      "concept_id": "integral_of_sinx",
+      "name": "Integral of sin(x)",
+      "aliases": [],
+      "short_definition": "The integral of sin(x) is -cos(x).",
+      "prerequisites": [
+        "integral_of_trigonometric_function"
+      ]
+    },
+    {
+      "concept_id": "integral_of_cosx",
+      "name": "Integral of cos(x)",
+      "aliases": [],
+      "short_definition": "The integral of cos(x) is sin(x).",
+      "prerequisites": [
+        "integral_of_trigonometric_function"
+      ]
+    },
+    {
+      "concept_id": "integral_of_ex",
+      "name": "Integral of e^x",
+      "aliases": [],
+      "short_definition": "The integral of e^x is e^x.",
+      "prerequisites": [
+        "integral_of_exponential_function"
+      ]
+    },
+    {
+      "concept_id": "integral_of_ax",
+      "name": "Integral of a^x",
+      "aliases": [],
+      "short_definition": "The integral of a^x is a^x / ln(a).",
+      "prerequisites": [
+        "integral_of_exponential_function"
+      ]
+    },
+    {
+      "concept_id": "integral_of_lnx",
+      "name": "Integral of ln(x)",
+      "aliases": [],
+      "short_definition": "The integral of ln(x) is x*ln(x) - x.",
+      "prerequisites": [
+        "integration_by_part"
+      ]
+    },
+    {
+      "concept_id": "improper_integral",
+      "name": "Improper Integrals",
+      "aliases": [],
+      "short_definition": "Integrals with infinite limits or discontinuities.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "convergence_of_improper_integral",
+      "name": "Convergence of Improper Integrals",
+      "aliases": [],
+      "short_definition": "Determining if an improper integral has a finite value.",
+      "prerequisites": [
+        "improper_integral"
+      ]
+    },
+    {
+      "concept_id": "divergence_of_improper_integral",
+      "name": "Divergence of Improper Integrals",
+      "aliases": [],
+      "short_definition": "Determining if an improper integral does not have a finite value.",
+      "prerequisites": [
+        "improper_integral"
+      ]
+    },
+    {
+      "concept_id": "area_between_curve",
+      "name": "Area Between Curves",
+      "aliases": [],
+      "short_definition": "Calculating the area enclosed by two or more curves.",
+      "prerequisites": [
+        "area_under_a_curve"
+      ]
+    },
+    {
+      "concept_id": "volume_of_revolution",
+      "name": "Volume of Revolution",
+      "aliases": [],
+      "short_definition": "Calculating the volume of a solid formed by rotating a region.",
+      "prerequisites": [
+        "area_under_a_curve"
+      ]
+    },
+    {
+      "concept_id": "disk_method",
+      "name": "Disk Method",
+      "aliases": [],
+      "short_definition": "A method for finding volumes of revolution.",
+      "prerequisites": [
+        "volume_of_revolution"
+      ]
+    },
+    {
+      "concept_id": "washer_method",
+      "name": "Washer Method",
+      "aliases": [],
+      "short_definition": "A method for finding volumes of revolution with a hole.",
+      "prerequisites": [
+        "volume_of_revolution"
+      ]
+    },
+    {
+      "concept_id": "shell_method",
+      "name": "Shell Method",
+      "aliases": [],
+      "short_definition": "Another method for finding volumes of revolution.",
+      "prerequisites": [
+        "volume_of_revolution"
+      ]
+    },
+    {
+      "concept_id": "arc_length",
+      "name": "Arc Length",
+      "aliases": [],
+      "short_definition": "Calculating the length of a curve.",
+      "prerequisites": [
+        "definite_integral"
+      ]
+    },
+    {
+      "concept_id": "surface_area_of_revolution",
+      "name": "Surface Area of Revolution",
+      "aliases": [],
+      "short_definition": "Calculating the surface area of a solid of revolution.",
+      "prerequisites": [
+        "arc_length"
+      ]
+    },
+    {
+      "concept_id": "integration_technique",
+      "name": "Integration Techniques",
+      "aliases": [],
+      "short_definition": "A general term for methods used to find integrals.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    },
+    {
+      "concept_id": "trigonometric_substitution",
+      "name": "Trigonometric Substitution",
+      "aliases": [],
+      "short_definition": "A substitution technique using trigonometric identities.",
+      "prerequisites": [
+        "substitution_rule"
+      ]
+    },
+    {
+      "concept_id": "partial_fraction_decomposition",
+      "name": "Partial Fraction Decomposition",
+      "aliases": [],
+      "short_definition": "A method for integrating rational functions.",
+      "prerequisites": [
+        "indefinite_integration"
+      ]
+    }
+  ]
+}

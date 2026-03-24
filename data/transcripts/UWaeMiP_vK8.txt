@@ -1,0 +1,212 @@
+in this video we're going to have an 
+ introduction to determinants so we're 
+ familiar with that term already because 
+ we have talked about it in previous 
+ sections this is going to go a little 
+ bit more in depth as to how to compute a 
+ determinant the follow-up to this video 
+ three point one point two will go 
+ through cofactor expansion so what do we 
+ know about determinants well we already 
+ know the basics which is that if the 
+ determinant of the matrix a does not 
+ equal zero then a is an invertible 
+ matrix we also know that if we have a 4r 
+ sorry a 2x2 matrix that we can find the 
+ determinant by taking the product of a 
+ and D and subtracting the product of B 
+ and C let's change the notation just a 
+ little bit and the reason I'm doing this 
+ is of course because we're going to 
+ change the notation for different or 
+ larger matrices in just a moment so 
+ looking at a little bit of a change in 
+ notation notice all I'm doing here is 
+ I'm using our row and column for the 
+ address of each entry so a11 is of 
+ course first row first column a12 is 
+ first row second column and we continue 
+ a 2 1 a 2 2 etc so to find the 
+ determinant then my strategy isn't going 
+ to change I'm going to take the product 
+ of a 1 1 and a 2 2 and I'm going to 
+ subtract the product of a 2 1 and a 1 2 
+ for instance let's go ahead and find the 
+ determinant of a for a as 4 3 2 7 so I 
+ would take determinant of a to be 4 
+ times 7 minus 3 times 2 which is 28 
+ minus 6 which is 22 so fairly easy for a 
+ 2 by 2 matrix my problem now comes from 
+ the fact that I don't know how to 
+ compute determinant of a if a is say 3 
+ by 3 or 4 by 4 etc through and 
+ n where n is any integer I should have 
+ included that and is some integer no and 
+ is a natural number because I can't have 
+ negatives and as a natural number 
+ greater than or equal to three so I 
+ don't know how to do that yet but good 
+ news that's what we're going to learn 
+ here's our definition and just know that 
+ this definition will make a lot more 
+ sense when we actually do an example but 
+ we should talk about the actual 
+ mathematical definition first the 
+ determinant of an N by n matrix where n 
+ is greater than or equal to two and a 
+ which is our matrix is composed of all 
+ of the entries in the form a IJ where I 
+ is the row and J is the column is the 
+ sum of n terms of the form plus or minus 
+ a 1 J determinant a 1j so that might 
+ seem a little confusing because we don't 
+ know what determinant a 1j means and 
+ plus - when is it +1 is it - well plus 
+ and minus will alternate and a11 a12 all 
+ the way through a 1n are the first row 
+ entries of a so essentially what we're 
+ saying is to find the determinant of a 
+ which of course is what we're trying to 
+ find we're going to take a 1 1 times the 
+ determinant of a 1 1 and then a 1/2 and 
+ notice this one's a minus a 1/2 times 
+ the determinant of a 1/2 and this one's 
+ a plus and a 1/3 times the determinant 
+ of a 1/3 and that pattern continues and 
+ if you were really looking at the full 
+ pattern you could write it instead as 
+ the summation 
+ and again we haven't talked about what 
+ this means yet and I promise you we will 
+ in just a moment but the summation of 
+ all of those terms could be written in 
+ this form notice I have negative 1 to 
+ the 1 plus J and that is just going to 
+ tell me whether it's a plus in front a 
+ plus in front or a minus in front and 
+ then this is the same notation so a 1 J 
+ determinant a 1 J so here's what we mean 
+ by that to find a 1 J or the determinant 
+ of a 1 J 
+ it's essentially a sub matrix so it's a 
+ smaller matrix of a formed by deleting 
+ the I throw and the J column so let me 
+ show you if I were looking at a 1-1 
+ determinate a 1j here's how I would find 
+ that a 1 1 is this guy right here and 
+ then I would be finding the determinant 
+ of a 1j and a 1j is found and watch this 
+ I'm going to take away the row and the 
+ column that a 1 1 is in so whatever this 
+ term is I take away the row in the 
+ column and I write the matrix that is 
+ left over so a.22 a23 a32 a33 and good 
+ news I know how to find let me make that 
+ white because I'm a CD like that I can 
+ find the determinant of a 2 by 2 matrix 
+ very easily because we just reviewed how 
+ to do that so let's look at one more 
+ just to make sure we get it say I had a 
+ 1/3 
+ a 1/3 sorry 
+ a 1/3 determinant a 1/3 would be 
+ whatever term is in a 1 3 and then the 
+ determinant of and again if I'm looking 
+ at a 1 3 I take the row in the column 
+ and what's left over is a 2 1 a 2 2 a 
+ 3-1 a 3-2 so let's take a look at how 
+ this might actually work with an example 
+ using this definition so I want to find 
+ the determinant of a for a is this 
+ matrix so I'm going to use that 
+ definition that essentially says I'm 
+ taking plus minus a 1 J determinant a 1j 
+ where pluses and minuses are alternating 
+ so I didn't write the full summation 
+ here but you get the idea what I would 
+ do to find the determinant of a would 
+ then be to take a 1 1 and then 
+ determinant of a 1 1 minus a 1 to 
+ determine it I don't know why I can't 
+ write today determine it a 1 2 and then 
+ plus a 1 3 determine it a 1 3 
+ and I stopped there because obviously 
+ there are three rows and so I'm sorry 
+ three columns three rows and three 
+ columns but three columns telling me 
+ that that is the very last one so now 
+ let's actually start looking at some 
+ numbers the determinant of a a 1 1 is 1 
+ and then I'm going to find the 
+ determinant of and again I'm going to 
+ take out the row and column that one is 
+ in so that gives me 4 negative 1 
+ negative 2 0 so it's 1 times the 
+ determinant and then minus and then a 2 
+ a 1 2 is first row second column so 
+ that's 5 and then I'm going to find the 
+ determinant of and again I'm just going 
+ to take out that row in that column so 
+ that leads me to negative 1 0 0 and then 
+ I'm going to add a 1 3 which is 0 and 
+ then determinant of 2 4 0 negative 2 now 
+ you might have just said well it's 0 so 
+ who cares and I agree but for the sake 
+ of doing our first example very well and 
+ in a lot of detail we're going to do it 
+ just like this now I do want to point 
+ out to you notation that you will likely 
+ use instead of writing determinant each 
+ time if instead of using those square 
+ brackets that we use to show that it's a 
+ matrix I can write 1 times and then I'm 
+ going to use these straight brackets and 
+ the straight brackets tell me that I'm 
+ finding the determinant so that's what 
+ you're going to see more often is those 
+ straight brackets that tell us we're 
+ finding the determinant as opposed to 
+ writing out determinant and then writing 
+ the new matrix whoops 
+ so let's go ahead and compute this this 
+ is one times four times zero minus 
+ negative two times negative one this is 
+ 5 times 2 times 0 which is 0 minus 0 and 
+ this is 0 times negative 4 minus 0 so my 
+ determinant of a in this case is 1 times 
+ negative 2 negative 5 times 0 and 0 
+ times negative 4 which gives me negative 
+ 2 minus 0 plus 0 which is negative 2 so 
+ that means my determinant of a is 
+ negative 2 which is just fine here's one 
+ for you to try on your own so again use 
+ those same steps to find the determinant 
+ of a for this matrix a when you feel 
+ satisfied with your solution press play 
+ to see how you did all right so again to 
+ find the determinant of a I'm going to 
+ start by taking a 1 1 and then 
+ determinant of a 1 1 minus a 1 2 
+ determinant of a 1 2 plus a 1 3 
+ determinant a 1 3 so that tells me 1 
+ which is a 1 1 entry get rid of those 
+ what's left 1 1 4 2 again I'm just using 
+ that matrix the different signs on the 
+ outside the vertical lines in place of 
+ the brackets that tells me that I'm 
+ finding the determinant minus and then a 
+ 1/2 is 3 I take away that row and column 
+ 2 1 3 2 
+ and then plus and then I have five take 
+ away that row and column and that leaves 
+ me with two one three four so that means 
+ the determinant of a is 1 times 2 minus 
+ 4 minus 3 times 4 minus 3 plus 5 times 8 
+ minus 3 so the determinant of a is 1 
+ times negative 2 minus 3 times 1 plus 5 
+ times 5 which is negative 2 minus 3 plus 
+ 25 so my determinant of a is 20 
+ hopefully you did that just fine stay 
+ tuned on our next practice I'm sorry our 
+ next video we are going to go through 
+ the what's called cofactor expansion

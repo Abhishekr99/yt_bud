@@ -1,0 +1,92 @@
+ Implement stack using arrays see we can implement stack using two methods using arrays and using linked list in this video we will see how to implement stacks using arrays means we will use static memory allocation and we are going to implement all the operations of stack right so i guess everybody knows how to declare an array like this data type name of the array and size of the array right
+
+ when you declare this array it means in the memory five blocks have been allocated for this array five blocks with how many bytes five into four integer how many bytes for one integer four bytes would be allocated means 20 bytes 20 bytes would be allocated right index is 0 1 2 3 and
+
+ 4 fine suppose address is 100 so next this address for this block address is 104 because 4 bytes for one integer right next 4 byte for this right so this is how we are going to represent array in memory that thing we have already discussed now if you write down this array like this
+
+ if you rotate this array like this it means this is what a stack this is logical representation of stack fine same
+
+ 5 suppose I am taking size 5 so here I am taking int rather than a I am taking name stack you can take a b c as you wish right but we are implementing stack that is why I am taking name stack just for an understanding purpose and size as suppose I am taking 5
+
+ right 1 2 3 4 and 5 same 0 1 2 3 and 4 because using arrays i am going to implement this stack index would be started from 0 we are implementing this stack in c right so this is how we we can declare the stack right here we have fixed the size that is for five elements i want the
+
+ size in the memory 5 into 4 20 bytes would be allocated and now suppose in future i want to insert 10 elements in that case what we can do the same the simple rule is the simple rule of array is what another array would be allocated maybe of size 50 or how much size you specify of that size and all the element from the previous array would be copied there and after that you can insert new element there
+
+ right that is what the processor is because this is what static memory allocation that we have discussed already when we were discussing array now we will see how to write down a program how to implement push pop and all operations of the stack right so now we are going to define here for function push pop peak or you can say top or display or you can say traverse
+
+ right and these function we will call in main function fine you can use switch case statements for calling these function means case 1 press 1 for push operation case 2 may press 2 for pop for press 3 for peak and press 4 for display like this you can implement switch case statement i guess you can write down these function in switch case statement i am going to implement these function here
+
+ now i have declared here see in all the functions we are going to use what this top variable because from the top only we can insert we can push and delete or you can say pop element from the stack right so initially we initialize what top is equal to minus 1 fine and we are going to use this top in all the functions that is why globally i am declaring this variable
+
+ Right. And here I'm taking int stack. The name is stack. And here the size is n.
+
+ Fine, this is what I'm declaring globally after header files outside of all the functions because inside any function or inside a main function you cannot declare array something like this. You have to give here constant size because outside but outside you can declare like this and now this n is what you can give this n size using that macro definition hash define n 5 or here you can write 50, 100, 500 as you wish.
+
+ right means n value can be here i am taking n value is 5 or if you are not taking macro then simply you can write int stack here you can write size that is 5 it's up to you right so now first of all we will define what push function so now in push obviously we are going to insert the data in the stack so we will ask from the user which data he wants to insert so using printf i can take the value printf enter data
+
+ right and for storing this data obviously you need some variable right suppose i am taking x so in this you have to declare that variable x right and suppose user has entered here five now five i want to insert here now have to insert see the capacity of this stack is what five we have already declared zero one two three four zero to four and top is initially minus one
+
+ top is minus one so how to push first of all you will increase the stop after that you will put here fine but as well as we will check for the overflow condition if the stack is full in that case we cannot insert we cannot push any data fine so here first of all what you will write if now suppose top is here
+
+ Top is pointing to 4. Means here I have 1, 2, 3, 4, 5. 5 elements I have. In that case top would be pointing to 4. In that case we cannot insert any other data here. So what you will write in if. If this value the top is equal to is equal to.
+
+ n minus 1 see here i am taking what n you can simply write if you take directly here 5 so here you can write if top is equal to is equal to 4 here n minus 1 means n is 5 5 minus 1 that is 4 right so if top is 4 in that case here you can print overflow condition you cannot insert right else
+
+ else you will do what now first of all you will increase this top first you will increase top plus plus or you can say top is equal to top plus one after that you will insert the data so here now top is equal to zero here now now you will insert see array name is here i am taking stack not a now stack of top is equal to x
+
+ top value is 0 means stack of 0 here I will insert x suppose x is 5 so here I will insert
+
+ right and that's it about this push operation or here if you will not ask the data here if you want to pass the argument here then here directly you can pass right push push maybe five you can pass here you have to receive that value so void here push and here also you need to write down that int of any variable name like int x or int a
+
+ where you can receive this value fine and no need to ask no need to write here printf and scanf directly you can write down these statements right here you can write down that variable name you have taken here fine so here second method is you can pass the value in the argument so now we will define this function pop right here i am writing this coding
+
+ I am writing void pop we are not going to pass any argument in pop that I have discussed already when we were discussing that theory part that in pop always the top element would be popped out so no need to pass any argument here fine.
+
+ if you want to print that value that deleted value suppose here the top is five only i have only one element and i want to pop this and i want to print this value also fine that the popped item is five fine so in that case what you will do see
+
+ simply in the pop you will do what top minus minus as you have discussed in previous case after that top minus minus means top becomes minus one and this is now the garbage value no need to delete this value or if you want to print this value in that case first of all you will take out this value
+
+ right store this value in some another variable after that you will do top minus minus and after that you can print that variable now what you will do see obviously for taking out this value and for storing this we will take another variable that is suppose int item i am taking fine and you will also check for underflow condition if there is no data in this stack then you cannot pop anything that is underflow condition so what you will write if top equal to equal to minus one
+
+ Fine if top is minus 1 then no data is there in the list. So here you will print simple underflow. In printf you can write underflow. Else first take out this value if you want to print that the popped item is this one. So first of all simply take out this value store this in item. Item is equal to stack of top.
+
+ right now stack of top means 5 has been stored in this item now now you can do top minus minus
+
+ right and here you can print that the deleted the popped item is percentage d and item so like this here you can print printf the popped item is percentage d and here you can write item and after that you can close this else and then this pop function right and if you don't want to print this popped item then simply what you will do no need to write down this line simply do top minus minus and no need to write down this line
+
+ fine if top minus minus top would be minus one that this value become garbage and we don't care what garbage lies here because after that when you will push any other other data item then this value would be overwritten that is fine right so now this is push and pop operation now we will see what is peak operation so as we have discussed in the previous video what is this peak operation or the top operation you can see top top element
+
+ means getting the topmost element of the stack without removing that element from the stack right means without doing top minus minus i just want to check out which is the topmost element of the stack that's it right so here if you call this peak it means it should return five but we will not do top minus minus this five would still be in the stack we just want to see which element is at the top
+
+ of the stack right so how you will print that thing so now if in the stack there is nothing then the top most element is there is no element in the list so it should print stack is empty so how you will check if top equal to equal to minus one same thing it means here you can print what printf stack is empty right else
+
+ else you will print the top element so here simply you will write printf the topmost element is %d after that here the topmost element how to print name here I am taking star and here you will write in subscript top the top element right in this case top is now 0 because only one element is there so 5 would be printed
+
+ and here we will not do top minus minus because we are not going to remove this from the stack now this is the peak function now we will display the content of the stack or you can say we are going to traverse this stack fine suppose we have called this push function four times and five one six two this is now the stack these are elements in the stack
+
+ fine now i am going to traverse the stack i am going to display the content of the stack so here first of all you will display 2 then 6 then 1 then 5 they are not popping out we are just displaying the content or somewhere you also find out that they'll start the loop from here only they will display 5 1 6 2 and somewhere you find out that they'll they'll display 2 6 1 5 it's up to you here i am going to display from the top of this this one because we cannot we can access
+
+ from the top only fine so now we are going to start a for loop obviously right for that we need a variable suppose i am taking here i and here i am writing a for loop i is equal to i am starting from here from the top see top is pointing to this after pushing four data four elements so i is equal to top right till
+
+ I greater than equal to 0 till here I want to print greater than equal to 0 right and I minus minus till then I am going to print the value printf percentage d and stamp
+
+ right now you can traverse this thing i is equal to top now i is equal to in at this case top is equal to 3 so i is equal to 3 3 is greater than equal to 0 yes so control will enter into this loop printf percentage d stack of i stack of 3 in stack of 3 i have 2 so 2 would be printed right
+
+ again i minus minus now i becomes two two is greater than equal to zero condition is true control will go into this loop stack of two would be printed stack of two is now six six would be printed i minus minus now i becomes one condition is true again now what would be printed stack of one stack of one is one one would be printed minus minus zero zero greater than equal to zero condition is true again enter into this loop stack of zero is five five would be printed
+
+ Now this is the output 2, 6, 1 and 5. Right? This is how we are going to traverse the list. Traverse the stack. And these function you will write in switch case statement. I guess everybody can write down these thing in switch case statement. Case 1 means push. Then break. Case 2 means pop. Then break. Case 3 means peak. Then break. Case 4 means display. Then break. And in default case you can write down invalid choice. And you can write down the switch case into do while loop. Fine? And condition may be while.
+
+ Choice not equal to 0. If 0 you will press 0 it means exit right. See this is how you can write down the main function using the switch case statement right using do I loop do and do I loop I am taking here fine.
+
+ Enter choice one for push, then two for pop, three for peak and four for display. I'm taking a variable ch where I'm taking the choice from the user. So I'm declaring that variable here. Fine, this is for clearing the screen. Switch, here I'll pass that choice. In case one, I'll call push. When you will press one, then push should be called. And after that you are using break.
+
+ See if you do not write this break in that case if you will press 1 then push would be called after that pop would be called right. And if you will use this break means only push function would be called and after that break means again it will ask to you for the another choice right. That is why we are using here break. In case 2 we are using we are calling pop then break again.
+
+ in case three we are calling peak then break in case four we are calling display and then break default suppose if you press six in that case i want it should print some invalid message i mean proper message that is why i am taking here in default case printf is equal to invalid choice when you will enter five then it will print invalid choice right after that closing this switch and after that closing this do while choice not equal to zero it is what
+
+ 0 right if you will press 0 means you will you are going to exit fine from the output screen and then get cs this is how we are going to write down that main function i guess everybody know the syntax of switch case statement fine so this is how we are going to implement the stack using arrays in next video we will see how to implement stack using
+
+ linked list and all these operation push pop and this peak operation all these operation is going to take how much time order of one right because as you have seen in all the push pop and peak operations we haven't used any this that for loop
+
+ Fine. So that is why the time complexity is order of 1. Fine. Maybe for searching or for displaying the content it is order of n. Fine. But for these operations it is order of 1 only. Fine. So now I will see you in the next video. Till then bye bye. Take care.
+

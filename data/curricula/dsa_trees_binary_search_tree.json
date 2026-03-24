@@ -1,0 +1,124 @@
+{
+  "curriculum_id": "dsa_trees_binary_search_tree",
+  "domain": "DSA",
+  "module": "Trees",
+  "topic": "Binary Search Tree (BST)",
+  "created_at": "2026-03-23T10:53:02.876921",
+  "concepts": [
+    {
+      "concept_id": "binary_search_tree",
+      "name": "Binary Search Tree",
+      "aliases": [
+        "BST"
+      ],
+      "short_definition": "A binary tree where for each node, all values in its left subtree are less than the node's value, and all values in its right subtree are greater.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node_structure",
+      "name": "Node Structure",
+      "aliases": [
+        "Tree Node"
+      ],
+      "short_definition": "The fundamental building block of a tree, typically containing a value and pointers to its left and right children.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add Node"
+      ],
+      "short_definition": "The process of adding a new value into a BST while maintaining its ordering property.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "search",
+      "name": "Search",
+      "aliases": [
+        "Find Value"
+      ],
+      "short_definition": "The process of locating a specific value within a BST by leveraging its ordering property.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Remove Node"
+      ],
+      "short_definition": "The process of removing a value from a BST, which can involve several cases to maintain the BST property.",
+      "prerequisites": [
+        "binary_search_tree",
+        "insertion",
+        "search"
+      ]
+    },
+    {
+      "concept_id": "inorder_traversal",
+      "name": "In-order Traversal",
+      "aliases": [
+        "In-order Visit"
+      ],
+      "short_definition": "A tree traversal method that visits nodes in ascending order of their values in a BST.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "preorder_traversal",
+      "name": "Pre-order Traversal",
+      "aliases": [
+        "Pre-order Visit"
+      ],
+      "short_definition": "A tree traversal method that visits the root node first, then the left subtree, then the right subtree.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "postorder_traversal",
+      "name": "Post-order Traversal",
+      "aliases": [
+        "Post-order Visit"
+      ],
+      "short_definition": "A tree traversal method that visits the left subtree first, then the right subtree, then the root node.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "height",
+      "name": "Height",
+      "aliases": [
+        "Tree Depth"
+      ],
+      "short_definition": "The maximum number of edges from the root to the furthest leaf node in a BST.",
+      "prerequisites": [
+        "binary_search_tree",
+        "node_structure"
+      ]
+    },
+    {
+      "concept_id": "balance",
+      "name": "Balance",
+      "aliases": [
+        "Tree Balance"
+      ],
+      "short_definition": "The property of a BST where the heights of the left and right subtrees of any node differ by at most one, affecting performance.",
+      "prerequisites": [
+        "binary_search_tree",
+        "height"
+      ]
+    }
+  ]
+}

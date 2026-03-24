@@ -1,0 +1,399 @@
+{
+  "curriculum_id": "DSA_Graph_Minimum spanning tree",
+  "domain": "DSA",
+  "module": "Graph",
+  "topic": "Minimum spanning tree",
+  "created_at": "2026-03-21T10:40:43.016734",
+  "concepts": [
+    {
+      "concept_id": "graph",
+      "name": "Graph",
+      "aliases": [
+        "Network"
+      ],
+      "short_definition": "A collection of nodes (vertices) connected by edges.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "undirected_graph",
+      "name": "Undirected Graph",
+      "aliases": [
+        "Symmetric Graph"
+      ],
+      "short_definition": "A graph where edges have no direction.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "weighted_graph",
+      "name": "Weighted Graph",
+      "aliases": [
+        "Labeled Graph"
+      ],
+      "short_definition": "A graph where each edge has an associated numerical value (weight).",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "connected_graph",
+      "name": "Connected Graph",
+      "aliases": [],
+      "short_definition": "A graph where there is a path between any two vertices.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "tree",
+      "name": "Tree",
+      "aliases": [],
+      "short_definition": "A connected graph with no cycles.",
+      "prerequisites": [
+        "connected_graph",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "spanning_tree",
+      "name": "Spanning Tree",
+      "aliases": [
+        "ST"
+      ],
+      "short_definition": "A subgraph that is a tree and connects all vertices of the original graph.",
+      "prerequisites": [
+        "graph",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "minimum_spanning_tree",
+      "name": "Minimum Spanning Tree",
+      "aliases": [
+        "MST"
+      ],
+      "short_definition": "A spanning tree of a weighted, undirected graph with the minimum possible total edge weight.",
+      "prerequisites": [
+        "spanning_tree",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "edge_weight",
+      "name": "Edge Weight",
+      "aliases": [
+        "Cost"
+      ],
+      "short_definition": "The numerical value assigned to an edge in a weighted graph.",
+      "prerequisites": [
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "cycle",
+      "name": "Cycle",
+      "aliases": [],
+      "short_definition": "A path in a graph that starts and ends at the same vertex, without repeating edges.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "cut",
+      "name": "Cut",
+      "aliases": [],
+      "short_definition": "A partition of the vertices of a graph into two disjoint sets.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "cut_property",
+      "name": "Cut Property",
+      "aliases": [
+        "Cut Theorem"
+      ],
+      "short_definition": "For any cut, the minimum weight edge crossing the cut must be part of some MST.",
+      "prerequisites": [
+        "cut",
+        "minimum_spanning_tree"
+      ]
+    },
+    {
+      "concept_id": "kruskals_algorithm",
+      "name": "Kruskal's Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm to find the MST by greedily adding edges in increasing order of weight, avoiding cycles.",
+      "prerequisites": [
+        "cycle",
+        "edge_weight",
+        "minimum_spanning_tree"
+      ]
+    },
+    {
+      "concept_id": "prims_algorithm",
+      "name": "Prim's Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm to find the MST by growing a tree from an arbitrary starting vertex.",
+      "prerequisites": [
+        "connected_graph",
+        "minimum_spanning_tree"
+      ]
+    },
+    {
+      "concept_id": "disjoint_set_union",
+      "name": "Disjoint Set Union",
+      "aliases": [
+        "DSU",
+        "Union-Find"
+      ],
+      "short_definition": "A data structure that tracks a set of elements partitioned into a number of disjoint subsets.",
+      "prerequisites": [
+        "kruskals_algorithm"
+      ]
+    },
+    {
+      "concept_id": "greedy_algorithm",
+      "name": "Greedy Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm that makes the locally optimal choice at each stage with the hope of finding a global optimum.",
+      "prerequisites": [
+        "kruskals_algorithm",
+        "prims_algorithm"
+      ]
+    },
+    {
+      "concept_id": "adjacency_list",
+      "name": "Adjacency List",
+      "aliases": [],
+      "short_definition": "A representation of a graph where each vertex has a list of its adjacent vertices.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "adjacency_matrix",
+      "name": "Adjacency Matrix",
+      "aliases": [],
+      "short_definition": "A representation of a graph where a matrix indicates which vertices are adjacent.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "priority_queue",
+      "name": "Priority Queue",
+      "aliases": [],
+      "short_definition": "A data structure that stores elements with associated priorities and allows efficient retrieval of the element with the highest priority.",
+      "prerequisites": [
+        "prims_algorithm"
+      ]
+    },
+    {
+      "concept_id": "vertex",
+      "name": "Vertex",
+      "aliases": [
+        "Node"
+      ],
+      "short_definition": "A fundamental unit of a graph, representing a point or entity.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "edge",
+      "name": "Edge",
+      "aliases": [],
+      "short_definition": "A connection between two vertices in a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "graph_traversal",
+      "name": "Graph Traversal",
+      "aliases": [],
+      "short_definition": "The process of visiting each vertex in a graph.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "breadthfirst_search",
+      "name": "Breadth-First Search",
+      "aliases": [
+        "BFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores neighbors layer by layer.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "depthfirst_search",
+      "name": "Depth-First Search",
+      "aliases": [
+        "DFS"
+      ],
+      "short_definition": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "prerequisites": [
+        "graph_traversal"
+      ]
+    },
+    {
+      "concept_id": "connected_component",
+      "name": "Connected Components",
+      "aliases": [],
+      "short_definition": "Maximal connected subgraphs of a graph.",
+      "prerequisites": [
+        "connected_graph",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "forest",
+      "name": "Forest",
+      "aliases": [],
+      "short_definition": "A collection of disjoint trees.",
+      "prerequisites": [
+        "connected_component",
+        "tree"
+      ]
+    },
+    {
+      "concept_id": "acyclic_graph",
+      "name": "Acyclic Graph",
+      "aliases": [],
+      "short_definition": "A graph that contains no cycles.",
+      "prerequisites": [
+        "cycle",
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "path",
+      "name": "Path",
+      "aliases": [],
+      "short_definition": "A sequence of vertices connected by edges.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "shortest_path",
+      "name": "Shortest Path",
+      "aliases": [],
+      "short_definition": "A path between two vertices with the minimum total edge weight.",
+      "prerequisites": [
+        "path",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "dijkstras_algorithm",
+      "name": "Dijkstra's Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm to find the shortest paths from a single source vertex to all other vertices in a graph with non-negative edge weights.",
+      "prerequisites": [
+        "priority_queue",
+        "shortest_path",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "bellmanford_algorithm",
+      "name": "Bellman-Ford Algorithm",
+      "aliases": [],
+      "short_definition": "An algorithm to find the shortest paths from a single source vertex to all other vertices in a graph that may contain negative edge weights.",
+      "prerequisites": [
+        "shortest_path",
+        "weighted_graph"
+      ]
+    },
+    {
+      "concept_id": "graph_representation",
+      "name": "Graph Representation",
+      "aliases": [],
+      "short_definition": "Methods for storing and organizing graph data.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the amount of time an algorithm takes to run as a function of the input size.",
+      "prerequisites": [
+        "kruskals_algorithm",
+        "prims_algorithm"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [],
+      "short_definition": "A measure of the amount of memory an algorithm uses as a function of the input size.",
+      "prerequisites": [
+        "kruskals_algorithm",
+        "prims_algorithm"
+      ]
+    },
+    {
+      "concept_id": "data_structure",
+      "name": "Data Structures",
+      "aliases": [],
+      "short_definition": "Ways of organizing and storing data for efficient access and modification.",
+      "prerequisites": [
+        "disjoint_set_union",
+        "priority_queue"
+      ]
+    },
+    {
+      "concept_id": "algorithm_design",
+      "name": "Algorithm Design",
+      "aliases": [],
+      "short_definition": "The process of creating a step-by-step procedure to solve a problem.",
+      "prerequisites": [
+        "greedy_algorithm"
+      ]
+    },
+    {
+      "concept_id": "undirected_edge",
+      "name": "Undirected Edge",
+      "aliases": [],
+      "short_definition": "An edge that connects two vertices without a specific direction.",
+      "prerequisites": [
+        "undirected_graph"
+      ]
+    },
+    {
+      "concept_id": "graph_connectivity",
+      "name": "Graph Connectivity",
+      "aliases": [],
+      "short_definition": "Measures of how well-connected the vertices in a graph are.",
+      "prerequisites": [
+        "connected_graph"
+      ]
+    },
+    {
+      "concept_id": "edge_list",
+      "name": "Edge List",
+      "aliases": [],
+      "short_definition": "A representation of a graph as a list of all its edges.",
+      "prerequisites": [
+        "graph"
+      ]
+    },
+    {
+      "concept_id": "graph_propertie",
+      "name": "Graph Properties",
+      "aliases": [],
+      "short_definition": "Characteristics that describe a graph, such as being connected, cyclic, or bipartite.",
+      "prerequisites": [
+        "graph"
+      ]
+    }
+  ]
+}

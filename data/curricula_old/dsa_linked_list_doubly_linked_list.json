@@ -1,0 +1,477 @@
+{
+  "curriculum_id": "DSA_Linked list_Doubly linked list",
+  "domain": "DSA",
+  "module": "Linked list",
+  "topic": "Doubly linked list",
+  "created_at": "2026-03-21T10:41:15.084816",
+  "concepts": [
+    {
+      "concept_id": "doubly_linked_list",
+      "name": "Doubly Linked List",
+      "aliases": [
+        "DLL"
+      ],
+      "short_definition": "A linked list where each node has pointers to both the next and previous nodes.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "node",
+      "name": "Node",
+      "aliases": [
+        "Element",
+        "Item"
+      ],
+      "short_definition": "A fundamental building block of a linked list, containing data and pointers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "data_field",
+      "name": "Data Field",
+      "aliases": [
+        "Value",
+        "Payload"
+      ],
+      "short_definition": "The part of a node that stores the actual information.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "next_pointer",
+      "name": "Next Pointer",
+      "aliases": [
+        "Forward Pointer",
+        "Successor"
+      ],
+      "short_definition": "A pointer within a node that references the subsequent node in the list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "previous_pointer",
+      "name": "Previous Pointer",
+      "aliases": [
+        "Backward Pointer",
+        "Predecessor"
+      ],
+      "short_definition": "A pointer within a node that references the preceding node in the list.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "head_pointer",
+      "name": "Head Pointer",
+      "aliases": [
+        "Start",
+        "First Node"
+      ],
+      "short_definition": "A pointer to the first node in the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "tail_pointer",
+      "name": "Tail Pointer",
+      "aliases": [
+        "End",
+        "Last Node"
+      ],
+      "short_definition": "A pointer to the last node in the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "null_pointer",
+      "name": "Null Pointer",
+      "aliases": [
+        "Nil",
+        "None"
+      ],
+      "short_definition": "A pointer that does not point to any valid memory location, often indicating the end of a list or an empty field.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "empty_list",
+      "name": "Empty List",
+      "aliases": [
+        "Zero Nodes"
+      ],
+      "short_definition": "A doubly linked list that contains no nodes.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "insertion",
+      "name": "Insertion",
+      "aliases": [
+        "Add Node"
+      ],
+      "short_definition": "The process of adding a new node to the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "insertion_at_beginning",
+      "name": "Insertion at Beginning",
+      "aliases": [
+        "Prepend"
+      ],
+      "short_definition": "Adding a new node at the start of the doubly linked list.",
+      "prerequisites": [
+        "head_pointer",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "insertion_at_end",
+      "name": "Insertion at End",
+      "aliases": [
+        "Append"
+      ],
+      "short_definition": "Adding a new node at the end of the doubly linked list.",
+      "prerequisites": [
+        "insertion",
+        "tail_pointer"
+      ]
+    },
+    {
+      "concept_id": "insertion_in_middle",
+      "name": "Insertion in Middle",
+      "aliases": [
+        "Insert After",
+        "Insert Before"
+      ],
+      "short_definition": "Adding a new node at a specific position within the doubly linked list.",
+      "prerequisites": [
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "deletion",
+      "name": "Deletion",
+      "aliases": [
+        "Remove Node"
+      ],
+      "short_definition": "The process of removing a node from the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "deletion_from_beginning",
+      "name": "Deletion from Beginning",
+      "aliases": [
+        "Remove First"
+      ],
+      "short_definition": "Removing the first node from the doubly linked list.",
+      "prerequisites": [
+        "deletion",
+        "head_pointer"
+      ]
+    },
+    {
+      "concept_id": "deletion_from_end",
+      "name": "Deletion from End",
+      "aliases": [
+        "Remove Last"
+      ],
+      "short_definition": "Removing the last node from the doubly linked list.",
+      "prerequisites": [
+        "deletion",
+        "tail_pointer"
+      ]
+    },
+    {
+      "concept_id": "deletion_from_middle",
+      "name": "Deletion from Middle",
+      "aliases": [
+        "Remove Specific"
+      ],
+      "short_definition": "Removing a node at a specific position or with a specific value from the doubly linked list.",
+      "prerequisites": [
+        "deletion"
+      ]
+    },
+    {
+      "concept_id": "traversal",
+      "name": "Traversal",
+      "aliases": [
+        "Iteration",
+        "Scanning"
+      ],
+      "short_definition": "Visiting each node in the doubly linked list in sequence.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node"
+      ]
+    },
+    {
+      "concept_id": "forward_traversal",
+      "name": "Forward Traversal",
+      "aliases": [
+        "Left to Right"
+      ],
+      "short_definition": "Traversing the list from the head to the tail using the 'next' pointers.",
+      "prerequisites": [
+        "next_pointer",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "backward_traversal",
+      "name": "Backward Traversal",
+      "aliases": [
+        "Right to Left"
+      ],
+      "short_definition": "Traversing the list from the tail to the head using the 'previous' pointers.",
+      "prerequisites": [
+        "previous_pointer",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "search",
+      "name": "Search",
+      "aliases": [
+        "Find Node",
+        "Lookup"
+      ],
+      "short_definition": "Locating a node with a specific value within the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "update",
+      "name": "Update",
+      "aliases": [
+        "Modify Node"
+      ],
+      "short_definition": "Changing the data field of an existing node in the doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "search"
+      ]
+    },
+    {
+      "concept_id": "memory_allocation",
+      "name": "Memory Allocation",
+      "aliases": [
+        "Dynamic Allocation"
+      ],
+      "short_definition": "The process of reserving memory for a new node when it's created.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "memory_deallocation",
+      "name": "Memory Deallocation",
+      "aliases": [
+        "Freeing Memory"
+      ],
+      "short_definition": "The process of releasing memory occupied by a deleted node.",
+      "prerequisites": [
+        "node"
+      ]
+    },
+    {
+      "concept_id": "circular_doubly_linked_list",
+      "name": "Circular Doubly Linked List",
+      "aliases": [
+        "CDLL"
+      ],
+      "short_definition": "A doubly linked list where the last node's 'next' pointer points to the first node, and the first node's 'previous' pointer points to the last node.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "pointer_manipulation",
+      "name": "Pointer Manipulation",
+      "aliases": [
+        "Link Management"
+      ],
+      "short_definition": "The act of changing the 'next' and 'previous' pointers to modify the list structure.",
+      "prerequisites": [
+        "next_pointer",
+        "node",
+        "previous_pointer"
+      ]
+    },
+    {
+      "concept_id": "edge_case",
+      "name": "Edge Cases",
+      "aliases": [
+        "Special Conditions"
+      ],
+      "short_definition": "Unusual or boundary conditions that need to be handled correctly in list operations (e.g., empty list, single-node list).",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "time_complexity",
+      "name": "Time Complexity",
+      "aliases": [
+        "Big O Notation"
+      ],
+      "short_definition": "A measure of the efficiency of an algorithm in terms of the input size, often expressed using Big O notation.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "space_complexity",
+      "name": "Space Complexity",
+      "aliases": [
+        "Memory Usage"
+      ],
+      "short_definition": "A measure of the amount of memory an algorithm uses in relation to the input size.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_vs_singly_linked_list",
+      "name": "Doubly Linked List vs Singly Linked List",
+      "aliases": [
+        "DLL vs. SLL"
+      ],
+      "short_definition": "Comparing the advantages and disadvantages of doubly linked lists versus singly linked lists.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_vs_array",
+      "name": "Doubly Linked List vs Array",
+      "aliases": [
+        "DLL vs. Array"
+      ],
+      "short_definition": "Comparing the performance and use cases of doubly linked lists against arrays.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_implementation",
+      "name": "Doubly Linked List Implementation",
+      "aliases": [
+        "DLL Code"
+      ],
+      "short_definition": "Writing the actual code to create and manipulate a doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node",
+        "pointer_manipulation"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_operation",
+      "name": "Doubly Linked List Operations",
+      "aliases": [
+        "DLL Functions"
+      ],
+      "short_definition": "The set of standard procedures performed on a doubly linked list (e.g., insert, delete, traverse).",
+      "prerequisites": [
+        "deletion",
+        "doubly_linked_list",
+        "insertion",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_application",
+      "name": "Doubly Linked List Applications",
+      "aliases": [
+        "DLL Use Cases"
+      ],
+      "short_definition": "Real-world scenarios and data structures where doubly linked lists are effectively used.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_advantage",
+      "name": "Doubly Linked List Advantages",
+      "aliases": [
+        "DLL Pros"
+      ],
+      "short_definition": "The benefits of using a doubly linked list over other data structures.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_disadvantage",
+      "name": "Doubly Linked List Disadvantages",
+      "aliases": [
+        "DLL Cons"
+      ],
+      "short_definition": "The drawbacks and limitations of using a doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_memory_overhead",
+      "name": "Doubly Linked List Memory Overhead",
+      "aliases": [
+        "DLL Space Cost"
+      ],
+      "short_definition": "The extra memory required by a doubly linked list due to the additional 'previous' pointer.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "node",
+        "previous_pointer"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_reversal",
+      "name": "Doubly Linked List Reversal",
+      "aliases": [
+        "Reverse DLL"
+      ],
+      "short_definition": "The process of reversing the order of nodes in a doubly linked list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "pointer_manipulation",
+        "traversal"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_merging",
+      "name": "Doubly Linked List Merging",
+      "aliases": [
+        "Merge DLLs"
+      ],
+      "short_definition": "Combining two doubly linked lists into a single list.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "insertion"
+      ]
+    },
+    {
+      "concept_id": "doubly_linked_list_sorting",
+      "name": "Doubly Linked List Sorting",
+      "aliases": [
+        "Sort DLL"
+      ],
+      "short_definition": "Arranging the nodes of a doubly linked list in a specific order.",
+      "prerequisites": [
+        "doubly_linked_list",
+        "traversal"
+      ]
+    }
+  ]
+}

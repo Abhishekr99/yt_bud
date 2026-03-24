@@ -1,0 +1,384 @@
+In this video, we're going to talk about 
+ how to find the derivative using the 
+ definition of the derivative formula. 
+ So basically, we need to find the 
+ derivative of a function using the limit 
+ process. And frime of x represents the 
+ derivative of f ofx. And it's equal to 
+ the limit as h approaches zero of f of x 
+ + h 
+ minus f ofx 
+ / h. So that's the formula that we need 
+ to use. So let's say if f ofx is a 
+ linear function 
+ 5x - 4, 
+ what is frime of x? What's the first 
+ derivative of this function? 
+ So go ahead and try that. 
+ Now what is f ofx plus h? How can we 
+ find that? Well, if f ofx is 5x - 4, 
+ then f ofx + h is going to be 5 * x + h 
+ - 4. So all you need to do is in f ofx, 
+ wherever you see an x, replace it with x 
+ plus h. 
+ So now let's plug in everything into 
+ this formula. So it's going to be the 
+ limit 
+ as h approaches zero and then it's going 
+ to be 5 
+ x + h - 4 and then minus f ofx which fx 
+ is 5x - 4. And so we're going to divide 
+ all of this by h. 
+ Now let's simplify. So first we need to 
+ distribute five to x + h. 
+ And don't forget to rewrite the limit 
+ expression until you get your final 
+ answer. So it's going to be 5x 
+ + 5 hus 
+ 4 and then distribute the negative sign. 
+ So it's going to be - 5x 
+ + 4 / h. 
+ Now 5x and 5x they add up to zero. -4 + 
+ 4 is equal to zero. 
+ So we're left over with the limit as h 
+ approaches zero 
+ 5h / h. And the h terms cancel. hid h is 
+ one. And so the limit as h approaches 
+ zero for a constant like five since 
+ there's no h in this expression anymore. 
+ This is simply equal to 5. 
+ So that's the derivative of 5x - 4. 
+ It's five. 
+ Now let's try another example. So let's 
+ say if f ofx is equal to x^2, what is 
+ the first derivative of the function? Go 
+ ahead and use the definition of the 
+ derivative to find frime of x. 
+ So first let's use the formula frime of 
+ x 
+ is equal to the limit as h approaches 
+ zero of fx + h 
+ - fx 
+ / h. 
+ So if f ofx is equal to x^2 
+ what is f ofx plus h? That's the first 
+ thing you need to decide. So all we have 
+ to do is replace x with x + h. 
+ So it's going to be x + h^2. So we have 
+ the limit as h approaches zero 
+ x + h^2us 
+ fx which is originally just x^2 
+ / h. 
+ Now we need to foil x + h^2. 
+ So I'm going to expand it for now. 
+ So what we really have is x + h 
+ times another x + h. 
+ So let's foil 
+ x * x. That's going to be x^2. And since 
+ I'm running out of space, I'm going to 
+ put this 
+ on the top 
+ and then x * h that's xh 
+ and then we have to multiply h * x which 
+ is also xh and finally h * h that's 
+ going to be h 2 and then - x^2 
+ all / h. 
+ Now let's combine like terms and let's 
+ cancel. x^2 and x^2 adds up to zero. And 
+ xh + xh 
+ well that's 2xh. 
+ And so we're going to have the limit as 
+ h approaches zero for 2xh 
+ + h ^2 / h. 
+ Now what do you think we need to do at 
+ this point? Once you get to this step, 
+ what we need to do is factor out an h. 
+ If we take out an h, the GCF 2xh / h 
+ is 2x and h ^2 / h, 
+ well that's h. 
+ Now, we could cancel the h variables on 
+ the outside. hid h is one. So, this 
+ gives us the limit as h approaches zero 
+ for 2x + h. So now we're going to apply 
+ this limit expression. We're going to 
+ replace h with zero. So it's going to be 
+ 2x + 0 which is 2x. 
+ So if f ofx is equal to x^2, the 
+ derivative frime of x is equal to 2x 
+ based on the definition formula of the 
+ derivative. 
+ And that's the answer. 
+ Now let's work on another example. 
+ So let's say if we have 
+ 1 /x, 
+ what is the first derivative of 1 /x? By 
+ the way, feel free to pause the video 
+ and try these examples yourself. 
+ So first, let's find f ofx + h. 
+ So if we replace x with x + h, we're 
+ going to get 1 / x plus h. 
+ Now let's start with the formula. frime 
+ of x is equal to the limit as h 
+ approaches zero fx + h - fx 
+ / h. 
+ Now f ofx plus h 
+ we said it's 1 / x + h and f ofx is 1 /x 
+ and this is all divided by h. So here we 
+ have a complex fraction. What should we 
+ do in a situation like this? If you have 
+ a complex fraction, 
+ multiply the top and the bottom by the 
+ common denominator of these two 
+ fractions. So the common denominator is 
+ going to be x * x + h. 
+ Whatever you do to the top, you must 
+ also do to the bottom of the complex 
+ fraction. 
+ Now we need to multiply. So if we take 
+ this fraction and multiply by x * x + h, 
+ the x + h terms will cancel, eliminating 
+ this fraction. And what we have left 
+ over is simply x. 
+ So right now we're going to have the 
+ limit as h approaches zero and on top we 
+ have an x right now. Now let's take the 
+ second fraction multiply by that uh 
+ term. So if we do that x will cancel and 
+ we're going to get x + h with a negative 
+ sign in front of it. So this is going to 
+ be 
+ x + h. 
+ And on the bottom, we simply just need 
+ to write these things together. 
+ So, it's going to be h * x * x + h. 
+ Now, let's distribute the negative sign. 
+ So, we're going to have the limit as h 
+ approaches zero x - x - h 
+ x + x adds up to zero. And so this is 
+ going to give us the limit 
+ as h approaches zeroh 
+ / h * x * x + h 
+ / h is1. 
+ So now we have the limit as h approaches 
+ zero -1 /x * x + h. 
+ As soon as you cancel that h, you can 
+ now use direct substitution. 
+ So we can apply this limit expression. 
+ Let's replace h with zero. 
+ Now x + 0 is x. So we have x * x which 
+ is x^2. So the answer is -1 / x^2 and 
+ that is the derivative of 1 /x. 
+ Now let's say that f ofx is equal to the 
+ roo<unk> of x. 
+ What is the first derivative frime of x? 
+ Go ahead and try that. 
+ So let's start with the formula. frime 
+ of x is equal to the limit as h 
+ approaches zero fx + h 
+ minus fx over h. 
+ Now in this problem, what do you think f 
+ ofx plus h represents? 
+ Now don't forget, all we need to do is 
+ replace x with x plus h. 
+ So it's going to equal the square root 
+ of x plus h. and f ofx is simply the 
+ root of x. 
+ Now what should we do if we have 
+ radicals in a fraction? To simplify this 
+ expression, you need to multiply the top 
+ and the bottom by the conjugate of the 
+ numerator. 
+ So the conjugate is going to have the 
+ same expression square<unk> x + h and 
+ <unk>x. The difference is instead of a 
+ negative sign, we are going to have a 
+ positive sign. 
+ So now let's foil what we have on top. 
+ So the square root of x + h times 
+ itself. The square roots will cancel and 
+ you're going to get x + h. And then we 
+ have these two terms which is going to 
+ be plus <unk>x<unk> 
+ x + h. And then if we multiply those two 
+ terms, 
+ <unk>x *<unk> x + h. And finally 
+ the<unk> of x * the<unk> of x is simply 
+ x. And don't forget about the negative 
+ sign. And on the bottom, don't 
+ distribute. Simply just I would 
+ recommend just rewriting it. 
+ Now the square root of x times the 
+ square root of x + h. 
+ Um, we have a positive term and a 
+ negative one. So they're going to add up 
+ and cancel to zero. X and negative X 
+ will also add up to zero. 
+ So now we're left with the limit as h 
+ approaches zero and it's h / h * 
+ the<unk> of x + h + x. And as you know h 
+ / h is 1. 
+ So we're left with the limit 
+ as h approaches zero 
+ and we have this expression. Now what we 
+ need to do is direct substitution. We 
+ need to replace h with zero at this 
+ point. 
+ So x + 0 will simply be x. 
+ Now the square roo<unk> of x plus 
+ the<unk> of x, there's a coefficient of 
+ 1. 1 + 1 is 2. 
+ So you should get 1 / 2 <unk>x. By the 
+ way, this limit expression should no 
+ longer be here. 
+ When you replace h with zero, this 
+ expression disappears. 
+ So it shouldn't be in this step anymore. 
+ This is the final answer. 
+ So that's the first derivative of the 
+ square root of x. 
+ Now what if the square root is in the 
+ bottom of a fraction? Like if we have 8 
+ over the roo<unk> of x, what's the first 
+ derivative of this function? 
+ Well, first let's find f ofx plus h. 
+ So it's going to equal that. 
+ Now let's use the limit process to find 
+ the derivative. So f of x + h is going 
+ to be 8 over the<unk> of x + h. and I'm 
+ forgetting the limit expression. This is 
+ why it's always good to rewrite the 
+ formula 
+ just to avoid making mistakes. 
+ So we have the limit as h approaches 
+ zero and then f x plus h is 8 over 
+ the<unk> 
+ of x + h and then minus fx 
+ and then / h. So now we have a complex 
+ fraction with radicals. So basically we 
+ have two problems combined into one. We 
+ have the 1 /x problem with the square 
+ root of x problem. 
+ So what I recommend is eliminating 
+ the fractions within the larger 
+ fractions. So I'm going to multiply by 
+ the common denominator just to begin. So 
+ it's going to be the roo<unk> of x * 
+ the<unk> of x + h. 
+ So these terms will cancel leaving 
+ behind 8 * the square<unk> of x 
+ and then when I multiply this fraction 
+ by that term 
+ the square root of x will cancel leaving 
+ behind these two. So it's going to be -8 
+ <unk>x + h. And on the bottom simply 
+ rewrite these things together. So it's 
+ going to be h * the<unk> of x * the<unk> 
+ of x + h. 
+ Now what should we do at this point? 
+ What's our next move here? 
+ So since we have radicals in the 
+ numerator, we need to multiply the top 
+ and the bottom by the conjugate of the 
+ numerator. And so that's going to be 8 
+ <unk>x + 8 <unk>x + h 
+ / the same thing. 
+ So let's foil the stuff on top. 
+ So 8<unk>x * itself. 
+ What is that going to give us? 
+ Well, we know 8 * 8 is 64. And the 
+ square<unk> of x * the<unk> x is x. 
+ Next, we have 8 * 8, which is 64. And 
+ then <unk>x<unk> 
+ x + h. 
+ And then we have the two middle terms. 
+ This is going to be -64. 
+ x <unk>x + h 
+ and then finally 
+ 8 * 8 and then square<unk> x + h * 
+ itself which is just going to be x + h. 
+ And on the bottom just rewrite 
+ everything. 
+ Now this is a very long problem but if 
+ you have a problem like this on a test 
+ this is what you have to do. 
+ So first we could cancel these two terms 
+ and then let's distribute -64 to x plus 
+ h. 
+ So what we have now is 64x 
+ and then - 64x and - 64h 
+ divided by everything on the bottom. 
+ Now let's cancel those two terms. 
+ And so we're left with limit as h 
+ approaches zero -64h 
+ / everything 
+ that is in the denominator which is a 
+ lot of stuff. 
+ Now in the next step we could cancel h 
+ because as soon as we can do that we can 
+ use direct substitution. We can get rid 
+ of the other h variables in the bottom. 
+ But right now we have the limit 
+ as h approaches zero -64 
+ over <unk>x <unk>x + h 
+ and so forth. So now I'm going to 
+ replace 
+ h with zero. So I'm no longer going to 
+ write the limit expression. 
+ So it's -64 and then we have <unk>x. Now 
+ this is going to be <unk>x + 0 which is 
+ also square<unk> x and then 8 * the<unk> 
+ of x and then we're going to replace h 
+ with zero there. So that's going to be 8 
+ <unk>x as well. 
+ Now the square roo<unk> of x * the<unk> 
+ of x is x and then 8 + 8 is 16. 
+ And then we could divide -64 by 16. 
+ So we're going to get -4 over x <unk>x. 
+ And so you can leave the answer like 
+ that if you want to. x <unk>x is also x^ 
+ 3. You could write it that way too, but 
+ that's the answer. 
+ Now the last example I'm going to go 
+ over is a polomial function. 
+ So let's say we have f(x)= 
+ x^2 - 5x + 9. 
+ What's the first derivative of this 
+ function? 
+ So first what's f x + h? Let's decide 
+ that. So instead of writing x^2 we're 
+ going to write x + h 2. Instead of 
+ writing 5x is going to be 5 * x + h. 
+ So then frime of x is going to be the 
+ limit as h approaches zero and then f 
+ ofx + h that's x + h 2 - 5 x + h + 9 and 
+ then minus f ofx which is x^2 - 5 x + 9. 
+ Don't forget to distribute the negative 
+ sign and this is all divided by h. 
+ So first we need to expand x + h^2 
+ already. Now we've done that earlier in 
+ this video. 
+ So x + h * x + h. We found that it was 
+ x^2 + 2 xh + h 2. Now we need to 
+ distribute the 5. So it's going to be 
+ -5x - 5 h + 9 and then distribute this 
+ negative sign. So it's going to be x^2 + 
+ 5x - 9 
+ all / h. 
+ So x^2 and x^2 can be cancelled. 
+ -5x and 5x would disappear and 9 and9 we 
+ can get rid of. 
+ So now we have left over the limit as h 
+ approaches zero. So we have h^2 
+ plus 2xh 
+ - 5 h / h. 
+ Now let's factor out the greatest common 
+ factor in the numerator which is h. So h 
+ ^2 / h is h. 2xh / h is 2x5h 
+ / h is5. 
+ So now we could cancel those two. 
+ And so we have the limit as h approaches 
+ zero h + 2x - 5. Now let's use direct 
+ substitution. Let's replace h with zero. 
+ So 0 + 2x - 5 is simply 2x - 5. 
+ So that's the first derivative of x^2 - 
+ 5 x + 9. It's 2x - 5.

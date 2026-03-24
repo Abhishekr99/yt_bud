@@ -1,0 +1,485 @@
+{
+  "curriculum_id": "MATH_Linear Algebra_Vector Space",
+  "domain": "MATH",
+  "module": "Linear Algebra",
+  "topic": "Vector Space",
+  "created_at": "2026-03-21T11:14:42.352168",
+  "concepts": [
+    {
+      "concept_id": "vector",
+      "name": "Vector",
+      "aliases": [
+        "Vectors"
+      ],
+      "short_definition": "An object with both magnitude and direction, often represented as an ordered list of numbers.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "scalar",
+      "name": "Scalar",
+      "aliases": [
+        "Scalars"
+      ],
+      "short_definition": "A quantity that has only magnitude, not direction.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "vector_addition",
+      "name": "Vector Addition",
+      "aliases": [
+        "Vector Sum"
+      ],
+      "short_definition": "Combining two or more vectors to produce a resultant vector.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "scalar_multiplication",
+      "name": "Scalar Multiplication",
+      "aliases": [
+        "Scalar Product"
+      ],
+      "short_definition": "Multiplying a vector by a scalar, which scales its magnitude.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "zero_vector",
+      "name": "Zero Vector",
+      "aliases": [
+        "Null Vector"
+      ],
+      "short_definition": "A vector with zero magnitude and undefined direction, acting as an additive identity.",
+      "prerequisites": [
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "additive_inverse",
+      "name": "Additive Inverse",
+      "aliases": [
+        "Negative Vector"
+      ],
+      "short_definition": "For a given vector, the vector that, when added to it, results in the zero vector.",
+      "prerequisites": [
+        "vector",
+        "vector_addition",
+        "zero_vector"
+      ]
+    },
+    {
+      "concept_id": "vector_space_axiom",
+      "name": "Vector Space Axioms",
+      "aliases": [
+        "Vector Space Properties"
+      ],
+      "short_definition": "A set of ten properties that a set of vectors must satisfy to be considered a vector space.",
+      "prerequisites": [
+        "additive_inverse",
+        "scalar",
+        "scalar_multiplication",
+        "vector",
+        "vector_addition",
+        "zero_vector"
+      ]
+    },
+    {
+      "concept_id": "vector_space",
+      "name": "Vector Space",
+      "aliases": [
+        "Linear Space"
+      ],
+      "short_definition": "A set of vectors that is closed under vector addition and scalar multiplication, satisfying specific axioms.",
+      "prerequisites": [
+        "vector_space_axiom"
+      ]
+    },
+    {
+      "concept_id": "field",
+      "name": "Field",
+      "aliases": [
+        "Scalar Field"
+      ],
+      "short_definition": "A set of scalars with defined addition and multiplication operations that satisfy certain properties.",
+      "prerequisites": []
+    },
+    {
+      "concept_id": "real_vector_space",
+      "name": "Real Vector Space",
+      "aliases": [
+        "R^n"
+      ],
+      "short_definition": "A vector space where the scalars are real numbers.",
+      "prerequisites": [
+        "field",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "complex_vector_space",
+      "name": "Complex Vector Space",
+      "aliases": [
+        "C^n"
+      ],
+      "short_definition": "A vector space where the scalars are complex numbers.",
+      "prerequisites": [
+        "field",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "subspace",
+      "name": "Subspace",
+      "aliases": [
+        "Vector Subspace"
+      ],
+      "short_definition": "A subset of a vector space that is itself a vector space under the same operations.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "span",
+      "name": "Span",
+      "aliases": [
+        "Linear Span"
+      ],
+      "short_definition": "The set of all possible linear combinations of a given set of vectors.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector",
+        "vector_addition"
+      ]
+    },
+    {
+      "concept_id": "linear_combination",
+      "name": "Linear Combination",
+      "aliases": [
+        "Linear Combos"
+      ],
+      "short_definition": "A sum of vectors, each multiplied by a scalar.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector",
+        "vector_addition"
+      ]
+    },
+    {
+      "concept_id": "linearly_independent",
+      "name": "Linearly Independent",
+      "aliases": [
+        "Independent Vectors"
+      ],
+      "short_definition": "A set of vectors where the only linear combination that equals the zero vector is the trivial one (all scalars are zero).",
+      "prerequisites": [
+        "linear_combination",
+        "zero_vector"
+      ]
+    },
+    {
+      "concept_id": "linearly_dependent",
+      "name": "Linearly Dependent",
+      "aliases": [
+        "Dependent Vectors"
+      ],
+      "short_definition": "A set of vectors where a non-trivial linear combination equals the zero vector.",
+      "prerequisites": [
+        "linear_combination",
+        "zero_vector"
+      ]
+    },
+    {
+      "concept_id": "basi",
+      "name": "Basis",
+      "aliases": [
+        "Bases"
+      ],
+      "short_definition": "A set of linearly independent vectors that span the entire vector space.",
+      "prerequisites": [
+        "linearly_independent",
+        "span",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "standard_basi",
+      "name": "Standard Basis",
+      "aliases": [
+        "Canonical Basis"
+      ],
+      "short_definition": "A specific, commonly used basis for R^n, consisting of vectors with a single 1 and the rest 0s.",
+      "prerequisites": [
+        "basi",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "dimension",
+      "name": "Dimension",
+      "aliases": [
+        "Vector Space Dimension"
+      ],
+      "short_definition": "The number of vectors in any basis for a vector space.",
+      "prerequisites": [
+        "basi"
+      ]
+    },
+    {
+      "concept_id": "finitedimensional",
+      "name": "Finite-Dimensional",
+      "aliases": [
+        "Finite Dim"
+      ],
+      "short_definition": "A vector space with a finite dimension.",
+      "prerequisites": [
+        "dimension"
+      ]
+    },
+    {
+      "concept_id": "infinitedimensional",
+      "name": "Infinite-Dimensional",
+      "aliases": [
+        "Infinite Dim"
+      ],
+      "short_definition": "A vector space with an infinite dimension.",
+      "prerequisites": [
+        "dimension"
+      ]
+    },
+    {
+      "concept_id": "coordinate_vector",
+      "name": "Coordinate Vector",
+      "aliases": [
+        "Coordinates"
+      ],
+      "short_definition": "The representation of a vector as a list of scalars with respect to a chosen basis.",
+      "prerequisites": [
+        "basi",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "isomorphism",
+      "name": "Isomorphism",
+      "aliases": [
+        "Vector Space Isomorphism"
+      ],
+      "short_definition": "A linear transformation between two vector spaces that is bijective, meaning they are structurally identical.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "direct_sum",
+      "name": "Direct Sum",
+      "aliases": [
+        "Vector Space Direct Sum"
+      ],
+      "short_definition": "A way to construct a new vector space from two or more vector spaces.",
+      "prerequisites": [
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "quotient_space",
+      "name": "Quotient Space",
+      "aliases": [
+        "Factor Space"
+      ],
+      "short_definition": "A vector space formed by taking a vector space and dividing it by a subspace.",
+      "prerequisites": [
+        "subspace",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "polynomial_space",
+      "name": "Polynomial Space",
+      "aliases": [
+        "P_n"
+      ],
+      "short_definition": "The vector space of all polynomials of degree at most n.",
+      "prerequisites": [
+        "scalar",
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "function_space",
+      "name": "Function Space",
+      "aliases": [
+        "Function Vector Space"
+      ],
+      "short_definition": "A vector space where the elements are functions.",
+      "prerequisites": [
+        "scalar",
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "matrix_space",
+      "name": "Matrix Space",
+      "aliases": [
+        "M_mn"
+      ],
+      "short_definition": "The vector space of all m x n matrices.",
+      "prerequisites": [
+        "scalar",
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "inner_product_space",
+      "name": "Inner Product Space",
+      "aliases": [
+        "Euclidean Space"
+      ],
+      "short_definition": "A vector space equipped with an inner product operation.",
+      "prerequisites": [
+        "scalar",
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "inner_product",
+      "name": "Inner Product",
+      "aliases": [
+        "Dot Product"
+      ],
+      "short_definition": "A function that takes two vectors and returns a scalar, satisfying certain properties.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "norm",
+      "name": "Norm",
+      "aliases": [
+        "Vector Norm"
+      ],
+      "short_definition": "A function that assigns a length or magnitude to each vector in a vector space.",
+      "prerequisites": [
+        "scalar",
+        "vector"
+      ]
+    },
+    {
+      "concept_id": "orthogonality",
+      "name": "Orthogonality",
+      "aliases": [
+        "Orthogonal Vectors"
+      ],
+      "short_definition": "The property of two vectors being perpendicular, often indicated by an inner product of zero.",
+      "prerequisites": [
+        "inner_product"
+      ]
+    },
+    {
+      "concept_id": "orthonormal_basi",
+      "name": "Orthonormal Basis",
+      "aliases": [
+        "Orthonormal Set"
+      ],
+      "short_definition": "A basis where all basis vectors are mutually orthogonal and have a norm of 1.",
+      "prerequisites": [
+        "basi",
+        "norm",
+        "orthogonality"
+      ]
+    },
+    {
+      "concept_id": "gramschmidt_proces",
+      "name": "Gram-Schmidt Process",
+      "aliases": [
+        "Gram-Schmidt Orthonormalization"
+      ],
+      "short_definition": "An algorithm for constructing an orthonormal basis from any given basis.",
+      "prerequisites": [
+        "basi",
+        "norm",
+        "orthogonality"
+      ]
+    },
+    {
+      "concept_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "aliases": [
+        "Linear Map",
+        "Homomorphism"
+      ],
+      "short_definition": "A function between two vector spaces that preserves vector addition and scalar multiplication.",
+      "prerequisites": [
+        "scalar_multiplication",
+        "vector_addition",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "kernel",
+      "name": "Kernel",
+      "aliases": [
+        "Null Space"
+      ],
+      "short_definition": "The set of all vectors in the domain of a linear transformation that map to the zero vector in the codomain.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space",
+        "zero_vector"
+      ]
+    },
+    {
+      "concept_id": "image",
+      "name": "Image",
+      "aliases": [
+        "Range"
+      ],
+      "short_definition": "The set of all vectors in the codomain of a linear transformation that are the result of applying the transformation to some vector in the domain.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    },
+    {
+      "concept_id": "ranknullity_theorem",
+      "name": "Rank-Nullity Theorem",
+      "aliases": [
+        "Dimension Theorem"
+      ],
+      "short_definition": "A theorem relating the dimension of the kernel (nullity) and the dimension of the image (rank) of a linear transformation.",
+      "prerequisites": [
+        "dimension",
+        "image",
+        "kernel",
+        "linear_transformation"
+      ]
+    },
+    {
+      "concept_id": "dual_space",
+      "name": "Dual Space",
+      "aliases": [
+        "Dual Vector Space"
+      ],
+      "short_definition": "The vector space of all linear functionals on a given vector space.",
+      "prerequisites": [
+        "linear_transformation",
+        "vector_space"
+      ]
+    }
+  ]
+}
